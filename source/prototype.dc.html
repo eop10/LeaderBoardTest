@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0E9344"/><text x="50" y="66" font-family="sans-serif" font-size="44" font-weight="700" fill="#fff" text-anchor="middle">П</text></svg></template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:#dde4df;font-family:'Hanken Grotesk',sans-serif;color:#181c1e;font-size:16px}
+a{color:#006d30}a:hover{color:#00ab4f}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;text-align:inherit}
+input,textarea,select{font:inherit;color:#181c1e;margin:0}
+textarea{resize:vertical}
+.ms{font-family:'Material Symbols Outlined';font-weight:400;font-style:normal;font-size:24px;line-height:1;display:inline-block;white-space:nowrap;font-feature-settings:'liga';-webkit-font-smoothing:antialiased;flex:none}
+.m{font-family:Manrope,sans-serif}.b{font-weight:700}.g{color:#006d30}.vio{color:#5d3fe0}
+.row{display:flex;align-items:center;gap:12px}.col{display:flex;flex-direction:column;gap:8px}.sp{flex:1}
+.ph{width:390px;height:844px;background:#f7fafc;border:1px solid #bccaba;border-radius:36px;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,40,20,.14);flex:none}
+.sbar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font:700 15px Manrope;flex:none}
+.mh{height:56px;display:flex;align-items:center;gap:8px;padding:0 16px;background:#f7fafc;border-bottom:1px solid #e1e8e3;flex:none}
+.logo{font:800 20px Manrope;color:#006d30;flex:1}
+.hav{width:36px;height:36px;border-radius:50%;border:2px solid #006d30;display:grid;place-items:center;font:800 14px Manrope;color:#006d30;background:#fff;flex:none}
+.ib{width:44px;height:44px;display:grid;place-items:center;border-radius:8px;flex:none;transition:background .15s}.ib:hover{background:#e6ece8}
+.ib2{width:36px;height:36px;display:grid;place-items:center;border-radius:8px;flex:none;color:#3d4a3d;transition:background .15s}.ib2:hover{background:#e6ece8;color:#181c1e}
+.psc{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:16px;min-height:0}
+.tabs{height:76px;flex:none;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid #bccaba;padding:8px 4px 16px}
+.tab{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;color:#3d4a3d;font-weight:600}
+.tab .ms{width:56px;height:30px;border-radius:15px;display:grid;place-items:center;transition:background .15s}
+.tab:hover .ms{background:#e6ece8}.tab.on{color:#006d30;font-weight:800}.tab.on .ms{background:#00ab4f;color:#fff}
+.abar{flex:none;background:#fff;border-top:1px solid #bccaba;padding:12px 16px 24px;display:flex;gap:8px}
+.dsk{flex:1 1 860px;min-width:min(860px,100%);height:844px;background:#f7fafc;border:1px solid #bccaba;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;position:relative;box-shadow:0 12px 32px rgba(0,40,20,.12)}
+.dh{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:#f7fafc;border-bottom:1px solid #e1e8e3;flex:none}
+.dg{display:flex;flex:1;min-height:0}
+.sb{width:236px;flex:none;background:#fff;border-right:1px solid #bccaba;padding:24px 12px;display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+.sbu{display:flex;flex-direction:column;align-items:center;gap:2px;padding-bottom:20px;margin-bottom:8px;border-bottom:1px solid #e1e8e3;text-align:center}
+.sav{width:56px;height:56px;border-radius:50%;border:3px solid #006d30;display:grid;place-items:center;font:800 22px Manrope;color:#006d30;margin-bottom:8px}
+.mi{display:flex;align-items:center;gap:10px;min-height:44px;padding:0 12px;font-size:15px;border-radius:8px;font-weight:600;color:#3d4a3d;width:100%;transition:background .15s}
+.mi:hover{background:#eef2ef}.mi.on{background:#00ab4f;color:#fff}
+.mg{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#3d4a3d;padding:14px 14px 4px;font-weight:700}
+.main{flex:1;padding:28px;min-width:0;overflow-y:auto}
+.phd{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 24px;margin-bottom:24px;flex-wrap:wrap}
+.pt{font:800 34px/1.1 Manrope;margin:0}.pts{font:800 28px/1.15 Manrope;margin:0}
+.psub{color:#3d4a3d;margin-top:6px}
+.seg{display:flex;background:#e6ebe8;border-radius:10px;padding:4px;gap:4px;flex:none;flex-wrap:wrap}
+.seg button{padding:0 14px;height:38px;display:flex;align-items:center;border-radius:8px;font-weight:600;color:#3d4a3d;font-size:14px;white-space:nowrap;transition:background .15s}
+.seg button:hover{background:#f3f6f4}.seg .on{background:#fff;color:#006d30;font-weight:800;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.card{background:#fff;border:1px solid #bccaba;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,40,20,.06)}
+.hovc{transition:border-color .15s,box-shadow .15s;text-align:left}.hovc:hover{border-color:#006d30;box-shadow:0 4px 12px rgba(0,40,20,.1)}
+.ct{font:700 19px/1.25 Manrope;margin:0}
+.cap{font-size:13px;color:#3d4a3d}
+.btn,.btn2{height:44px;padding:0 18px;border-radius:8px;background:#0E9344;color:#fff;font:700 14px 'Hanken Grotesk';letter-spacing:.06em;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;border:1.5px solid #0E9344;flex:none;transition:background .15s,transform .08s}
+.btn2{background:#fff;color:#006d30}
+.btn .ms,.btn2 .ms{font-size:20px}
+.btn:hover{background:#0b7a38;border-color:#0b7a38}.btn2:hover{background:#eef7f1}
+.btn:active,.btn2:active{transform:scale(.97)}
+.w{width:100%}.sq{width:48px;padding:0}.dis{opacity:.4;pointer-events:none}
+.lnk{color:#006d30;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px;text-decoration:underline;min-height:36px}.lnk:hover{color:#00ab4f}
+.bd{display:inline-flex;align-items:center;gap:4px;height:24px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap;flex:none}
+.bd .ms{font-size:14px}
+.b-g{background:#e2f3e7;color:#006d30}.b-v{background:#ece8fc;color:#5d3fe0}.b-n{background:#e9edeb;color:#3d4a3d}.b-r{background:#fbe9e7;color:#ba1a1a}.b-ab{background:#fff;color:#3d4a3d;border:1px solid #bccaba}
+.chip{background:#e2f3e7;color:#006d30;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;white-space:nowrap}
+.bar{height:4px;background:#e2e8e4;border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:#006d30;transition:width .4s}
+.meta{display:flex;align-items:center;gap:8px;font-size:14px;color:#3d4a3d}.meta .ms{font-size:18px;color:#006d30}
+.lr{background:#fff;border:1px solid #bccaba;border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;min-height:64px;transition:border-color .15s,background .15s;position:relative;width:100%;text-align:left}
+.hov{cursor:pointer}.hov:hover{border-color:#006d30}
+.lr.ab{background:#eef2ef}.ab .num,.ab .tn{opacity:.55}
+.lro{min-height:52px;padding:8px 10px}
+.dov{border:2px dashed #5d3fe0}
+.hdl{color:#3d4a3d;cursor:grab}
+.num{width:32px;height:32px;border-radius:50%;background:#e9edeb;display:grid;place-items:center;font:800 14px Manrope;flex:none}
+.av{width:34px;height:34px;border-radius:50%;background:#5d3fe0;color:#fff;display:grid;place-items:center;font:700 12px Manrope;flex:none}
+.lvs{display:flex;gap:8px}
+.lv{flex:1;min-height:48px;border:1.5px solid #bccaba;border-radius:10px;display:flex;align-items:center;justify-content:center;font:800 18px Manrope;background:#fff;transition:border-color .12s,background .12s}
+.lv:hover{border-color:#006d30}.lv.on{background:#0E9344;border-color:#0E9344;color:#fff}
+.lv.ro{pointer-events:none;border-style:dashed;color:#3d4a3d}.lv.ro.on{border-style:solid;color:#fff;opacity:.75}
+.crit{display:flex;flex-direction:column;gap:12px}
+.err{border:2px solid #ba1a1a}.mut{opacity:.55}
+.dsc{font-size:14px;color:#3d4a3d}.dsc.e{color:#ba1a1a;font-weight:700}
+.inp{min-height:44px;border:1px solid #bccaba;border-radius:8px;padding:10px 14px;background:#fff;font-size:15px;display:flex;align-items:center;gap:8px;line-height:1.4;width:100%;outline:none;transition:border-color .15s,box-shadow .15s}
+.inp:focus,.inp:focus-within{border-color:#006d30;box-shadow:0 0 0 3px rgba(0,171,79,.15)}
+.ta{min-height:88px;align-items:flex-start;display:block}
+.fill{color:#181c1e}.ro-f{background:#eef2ef;border-style:dashed;color:#3d4a3d}
+.bare{border:0;outline:none;flex:1;min-width:0;background:transparent;height:42px;font-size:15px}
+.lbl{font-size:12px;color:#3d4a3d;margin-bottom:6px;font-weight:700}
+.mt{display:flex;justify-content:space-between;align-items:flex-start}
+.mv{font:800 30px/1 Manrope;margin-top:14px}.mv small{font:700 14px 'Hanken Grotesk';color:#5d3fe0;margin-left:6px}
+.bn{display:flex;gap:10px;padding:12px 16px;border-radius:8px;font-size:14px;line-height:1.4;align-items:flex-start;font-weight:600}
+.bn .ms{font-size:20px}
+.bn-r{background:#fbe9e7;color:#ba1a1a;border:1px solid #ba1a1a}.bn-n{background:#e9edeb;color:#181c1e}.bn-g{background:#e2f3e7;color:#006d30}
+.empty{color:#3d4a3d;text-align:center;padding:40px 16px;line-height:1.5;display:flex;flex-direction:column;align-items:center;gap:16px}
+.ov{position:absolute;inset:0;background:rgba(24,28,30,.45);z-index:4;animation:fade .2s}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:16px 16px 0 0;padding:12px 16px 32px;z-index:5;display:flex;flex-direction:column;gap:12px;animation:sup .25s ease-out}
+.toast{position:absolute;left:16px;right:16px;top:108px;background:#181c1e;color:#fff;border-radius:8px;padding:8px 12px 10px 16px;display:flex;gap:10px;align-items:center;font-size:14px;z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.25);overflow:hidden;animation:fin .2s ease-out;min-height:48px}
+.toast.tb{top:auto;bottom:96px}
+.toast.dk{left:24px;right:auto;top:auto;bottom:24px;max-width:520px}
+.tbar{position:absolute;left:0;bottom:0;height:3px;width:100%;background:#00ab4f;transform-origin:left;animation:shrink linear forwards}
+.tu{color:#00ab4f;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:13px;min-height:36px;display:flex;align-items:center;padding:0 4px;flex:none}
+.tr{display:grid;align-items:center;gap:12px;padding:12px 20px;border-bottom:1px solid #e1e8e3}
+.tr.hov{transition:background .15s}.tr.hov:hover{background:#f4f8f5}
+.th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#3d4a3d;font-weight:700;border-bottom:1px solid #bccaba}
+.r{text-align:right;justify-self:end}
+.st{text-decoration:line-through;color:#6b766e;font-weight:500}
+.scr{position:absolute;inset:0;background:rgba(24,28,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:24px;overflow:auto;animation:fade .15s}
+.dlg{width:540px;max-width:100%;gap:18px;box-shadow:0 16px 48px rgba(0,0,0,.25);animation:pop .18s ease-out;padding:28px;margin:auto}
+.dft{display:flex;justify-content:flex-end;gap:8px;border-top:1px solid #e1e8e3;padding-top:18px;flex-wrap:wrap}
+.pk{flex:1;border:1px solid #bccaba;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px;background:#fff;text-align:left;transition:border-color .15s}.pk:hover{border-color:#006d30}.pk.on{border:2px solid #006d30;background:#f0f8f2}
+.dd{background:#fff;border:1px solid #bccaba;border-radius:12px;padding:6px;box-shadow:0 8px 24px rgba(0,40,20,.14);display:flex;flex-direction:column}
+.dd > button{display:flex;align-items:center;gap:12px;min-height:42px;padding:0 12px;border-radius:8px;font-size:15px;width:100%;transition:background .12s}
+.dd > button:hover{background:#f0f8f2}
+.dd .red{color:#ba1a1a}
+.menu{position:absolute;right:8px;top:calc(100% + 4px);width:300px;z-index:21;animation:pop .14s ease-out}
+.catch{position:fixed;inset:0;z-index:20;cursor:default}
+.pv{display:grid;grid-template-columns:96px repeat(6,1fr);border-left:1px solid #181c1e;border-top:1px solid #181c1e;font-size:9px;color:#181c1e}
+.pv span{border-right:1px solid #181c1e;border-bottom:1px solid #181c1e;padding:3px;min-height:24px}
+.pa{width:1000px;background:#fff;padding:32px;color:#000;display:flex;flex-direction:column;gap:16px}
+.pf{display:grid;border-left:1.5px solid #000;border-top:1.5px solid #000}
+.pf > div{border-right:1px solid #000;border-bottom:1px solid #000;padding:6px 8px;overflow-wrap:anywhere;hyphens:auto;min-width:0}
+.pg{animation:fin .22s ease-out}
+@keyframes fin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes sup{from{transform:translateY(100%)}to{transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes shrink{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+@keyframes prog{from{width:0}to{width:100%}}
+.prog i{animation:prog 1.4s ease-in-out forwards}
+@media print{body *{visibility:hidden}.pa,.pa *{visibility:visible}.pa{position:fixed;left:0;top:0;width:100%;padding:0}@page{size:A4 landscape;margin:10mm}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;padding:24px;display:flex;flex-direction:column;gap:16px">
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:280px">
+      <span style="font:800 24px Manrope">Прототип · оценочные листы предзащиты</span>
+      <span style="font-size:14px;color:#3d4a3d;line-height:1.45;max-width:900px">Слева — телефон эксперта Петровой А. (ауд. 301). Справа — кабинет организатора. Данные общие: что сделано в одном окне, сразу видно в другом. После перезагрузки всё начинается заново.</span>
+    </div>
+    <button class="btn2" onClick="{{ reset }}"><span class="ms">restart_alt</span>Начать заново</button>
+  </div>
+
+  <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+
+    <div class="ph">
+      <div class="sbar"><span>9:41</span><span class="ms" style="font-size:18px">signal_cellular_alt</span></div>
+
+      <sc-if value="{{ e.isHome }}" hint-placeholder-val="{{ true }}">
+        <div class="mh"><span class="logo">Лидерборд ТПУ</span><span class="hav">П</span></div>
+        <div class="psc pg" ref="{{ eScroll }}">
+          <div><h1 class="pts">Мои предзащиты</h1><div class="psub">Мероприятия, где вы эксперт</div></div>
+          <sc-for list="{{ e.active }}" as="ac" hint-placeholder-count="1">
+            <div class="card col" style="gap:16px">
+              <div class="row" style="justify-content:space-between;align-items:flex-start"><h2 class="ct">{{ ac.name }}</h2><span class="bd b-g">Идёт оценка</span></div>
+              <div class="col"><div class="meta"><span class="ms">event</span>{{ ac.date }}</div><div class="meta"><span class="ms">meeting_room</span>Моя аудитория:<b style="color:#181c1e">{{ ac.room }}</b></div></div>
+              <div class="col"><div class="row" style="justify-content:space-between"><span class="cap">Отправлено</span><span class="b" style="white-space:nowrap">{{ ac.got }} <span class="vio" style="font-size:13px">из {{ ac.need }}</span></span></div><div class="bar"><i style="width:{{ ac.pct }}"></i></div></div>
+              <button class="btn w" onClick="{{ ac.open }}">Открыть</button>
+            </div>
+          </sc-for>
+          <sc-if value="{{ e.hasClosed }}" hint-placeholder-val="{{ false }}">
+            <div class="mg" style="padding:8px 0 0">Закрытые</div>
+            <sc-for list="{{ e.closed }}" as="cc" hint-placeholder-count="1">
+              <button class="card col hovc" style="gap:10px;width:100%" onClick="{{ cc.open }}">
+                <div class="row" style="justify-content:space-between;align-items:flex-start;width:100%"><h2 class="ct" style="color:#3d4a3d">{{ cc.name }}</h2><span class="bd b-n">Только просмотр</span></div>
+                <div class="meta"><span class="ms">event</span>{{ cc.date }} · {{ cc.room }}</div>
+                <div class="cap">Отправлено {{ cc.got }} из {{ cc.need }}</div>
+              </button>
+            </sc-for>
+          </sc-if>
+          <sc-if value="{{ e.homeEmpty }}" hint-placeholder-val="{{ false }}"><div class="empty">У вас нет активных предзащит. Организатор добавит вас в аудиторию и откроет приём оценок.</div></sc-if>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ e.isRoom }}" hint-placeholder-val="{{ false }}">
+        <div class="mh"><button class="ib" onClick="{{ e.goHome }}"><span class="ms">arrow_back</span></button><span class="logo" style="font-size:17px;color:#181c1e">Мои предзащиты</span><span class="hav">П</span></div>
+        <div class="psc pg" ref="{{ eScroll }}">
+          <sc-if value="{{ e.roomClosed }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">lock</span><span>Мероприятие закрыто. Оценки доступны только для просмотра.</span></div></sc-if>
+          <sc-if value="{{ e.allDone }}" hint-placeholder-val="{{ false }}"><div class="bn bn-g"><span class="ms">task_alt</span><span>Все команды оценены. Оценки можно менять, пока приём не закрыт.</span></div></sc-if>
+          <div class="card col" style="gap:16px">
+            <div><div class="cap">{{ e.evLine }}</div><h1 class="pts" style="margin-top:4px">{{ e.roomName }}</h1></div>
+            <div class="col"><div class="row" style="justify-content:space-between"><span class="cap">Отправлено</span><span class="b" style="white-space:nowrap">{{ e.got }} <span class="vio" style="font-size:13px">из {{ e.need }}</span></span></div><div class="bar"><i style="width:{{ e.pct }}"></i></div><sc-if value="{{ e.absLine }}" hint-placeholder-val="{{ false }}"><span class="cap">{{ e.absLine }}</span></sc-if></div>
+            <sc-if value="{{ e.canContinue }}" hint-placeholder-val="{{ false }}">
+              <button class="btn w" onClick="{{ e.cont }}">Продолжить<span class="ms">arrow_forward</span></button>
+              <div class="cap" style="text-align:center;margin-top:-6px">{{ e.nextLine }}</div>
+            </sc-if>
+          </div>
+          <div class="row" style="justify-content:space-between"><span class="mg" style="padding:0">Порядок выступления</span><span class="cap">{{ e.teamsN }}</span></div>
+          <sc-for list="{{ e.rows }}" as="er" hint-placeholder-count="8">
+            <div class="{{ er.cls }}" onClick="{{ er.open }}">
+              <span class="num">{{ er.n }}</span>
+              <div class="col" style="gap:6px;flex:1;min-width:0;align-items:flex-start"><span class="b tn" style="font-size:15px;line-height:1.3">{{ er.name }}</span><span class="{{ er.stCls }}">{{ er.st }}</span></div>
+              <sc-if value="{{ er.hasSum }}" hint-placeholder-val="{{ true }}"><span class="m b" style="font-size:16px;white-space:nowrap">{{ er.sum }}</span></sc-if>
+              <sc-if value="{{ er.canUndo }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="min-height:44px;white-space:nowrap" onClick="{{ er.undo }}">Снять отметку</button></sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ e.isForm }}" hint-placeholder-val="{{ false }}">
+        <div class="mh"><button class="ib" onClick="{{ e.toRoom }}"><span class="ms">arrow_back</span></button><div class="col" style="gap:0;flex:1;min-width:0"><span class="b m" style="font-size:15px">{{ e.roomName }}</span><span class="cap" style="font-size:12px">{{ e.evName }}</span></div><span class="hav">П</span></div>
+        <div class="psc" ref="{{ eScroll }}">
+          <sc-if value="{{ f.roBanner }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">lock</span><span>Мероприятие закрыто. Оценки доступны только для просмотра.</span></div></sc-if>
+          <sc-if value="{{ f.absBanner }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">person_off</span><div class="col" style="gap:10px;align-items:flex-start"><span>Команда отмечена как не явившаяся. Оценки не учитываются.</span><sc-if value="{{ f.canUnmark }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ f.unmark }}">Снять отметку</button></sc-if></div></div></sc-if>
+          <sc-if value="{{ f.errBanner }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r"><span class="ms">error</span><span>{{ f.errText }}</span></div></sc-if>
+          <sc-if value="{{ f.sentBanner }}" hint-placeholder-val="{{ false }}"><div class="bn bn-g"><span class="ms">check_circle</span><span>{{ f.sentText }}</span></div></sc-if>
+          <div class="col" style="gap:6px;align-items:flex-start">
+            <div class="row" style="justify-content:space-between;align-self:stretch"><span class="vio b" style="font-size:14px">{{ f.num }}</span><span class="{{ f.stCls }}">{{ f.st }}</span></div>
+            <h1 class="ct" style="font-size:24px">{{ f.team }}</h1>
+            <sc-if value="{{ f.canAbsent }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="min-height:44px;white-space:nowrap" onClick="{{ f.absent }}"><span class="ms" style="font-size:18px">person_off</span>Отметить: не явилась</button></sc-if>
+          </div>
+          <sc-for list="{{ f.crits }}" as="fc" hint-placeholder-count="4">
+            <div class="{{ fc.cls }}">
+              <div class="row" style="justify-content:space-between;align-items:flex-start"><h3 class="m b" style="margin:0;font-size:17px">{{ fc.name }}</h3><span class="cap">макс. {{ fc.max }}</span></div>
+              <div class="lvs"><sc-for list="{{ fc.lv }}" as="fl" hint-placeholder-count="3"><button class="{{ fl.cls }}" onClick="{{ fl.pick }}">{{ fl.n }}</button></sc-for></div>
+              <div class="{{ fc.dcls }}">{{ fc.desc }}</div>
+            </div>
+          </sc-for>
+          <div class="card"><div class="lbl">Комментарий команде</div><textarea class="{{ f.comCls }}" placeholder="Что получилось, что доработать к защите" value="{{ f.com }}" onChange="{{ f.setCom }}" disabled="{{ f.lock }}"></textarea></div>
+          <div class="card"><div class="mt"><span class="cap">Сумма баллов</span><span class="ms g">functions</span></div><div class="mv">{{ f.sum }}<small>из {{ f.max }}</small></div></div>
+          <div class="meta" style="justify-content:center;min-height:24px"><span class="ms">{{ f.saveIc }}</span>{{ f.save }}</div>
+        </div>
+        <div class="abar">
+          <button class="{{ f.prevCls }}" onClick="{{ f.prev }}"><span class="ms">arrow_back</span></button>
+          <button class="{{ f.priCls }}" style="flex:1" onClick="{{ f.pri }}">{{ f.priT }}</button>
+          <button class="btn2 sq" onClick="{{ e.toRoom }}"><span class="ms">format_list_numbered</span></button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ e.showTabs }}" hint-placeholder-val="{{ true }}">
+        <div class="tabs"><sc-for list="{{ e.tabs }}" as="tb" hint-placeholder-count="4"><button class="{{ tb.cls }}" onClick="{{ tb.go }}"><span class="ms">{{ tb.ic }}</span>{{ tb.t }}</button></sc-for></div>
+      </sc-if>
+
+      <sc-if value="{{ e.sheet }}" hint-placeholder-val="{{ false }}">
+        <div class="ov" onClick="{{ e.closeSheet }}"></div>
+        <div class="sheet">
+          <div style="width:40px;height:4px;border-radius:2px;background:#bccaba;align-self:center;margin-bottom:8px"></div>
+          <h2 class="ct">Отметить, что команда не явилась?</h2>
+          <div class="cap" style="font-size:15px;line-height:1.5">{{ e.sheetText }}</div>
+          <button class="btn w" style="margin-top:8px" onClick="{{ e.sheetOk }}">Отметить</button>
+          <button class="btn2 w" onClick="{{ e.closeSheet }}">Отмена</button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ e.toast }}" hint-placeholder-val="{{ false }}">
+        <div class="{{ e.toastCls }}">
+          <span class="ms" style="font-size:20px;color:#00ab4f">{{ e.toastIc }}</span>
+          <span class="sp">{{ e.toastText }}</span>
+          <sc-if value="{{ e.toastUndo }}" hint-placeholder-val="{{ false }}"><button class="tu" onClick="{{ e.undo }}">Отменить</button></sc-if>
+          <div class="tbar" style="animation-duration:{{ e.toastMs }}"></div>
+        </div>
+      </sc-if>
+    </div>
+
+    <div class="dsk">
+      <div class="dh"><span class="logo" style="flex:none;font-size:21px">Лидерборд ТПУ</span><span class="hav">П</span></div>
+      <div class="dg">
+        <div class="sb">
+          <div class="sbu"><span class="sav">П</span><span class="b m">Петрова Анна</span><span class="cap">Отделение ИТ</span></div>
+          <sc-for list="{{ o.menu }}" as="mn" hint-placeholder-count="9">
+            <sc-if value="{{ mn.g }}" hint-placeholder-val="{{ false }}"><div class="mg">{{ mn.t }}</div></sc-if>
+            <sc-if value="{{ mn.i }}" hint-placeholder-val="{{ true }}"><button class="{{ mn.cls }}" onClick="{{ mn.go }}"><span class="ms">{{ mn.ic }}</span>{{ mn.t }}</button></sc-if>
+          </sc-for>
+        </div>
+        <div class="main" ref="{{ oScroll }}">
+
+          <sc-if value="{{ o.isEvents }}" hint-placeholder-val="{{ true }}">
+            <div class="pg">
+              <div class="phd">
+                <div><h1 class="pt">Мероприятия</h1><div class="psub">Предзащиты и защиты факультета</div></div>
+                <div class="row" style="gap:12px;flex-wrap:wrap"><div class="seg"><sc-for list="{{ o.evSeg }}" as="sg" hint-placeholder-count="4"><button class="{{ sg.cls }}" onClick="{{ sg.pick }}">{{ sg.t }}</button></sc-for></div><button class="btn" onClick="{{ o.newEvent }}"><span class="ms">add</span>Создать мероприятие</button></div>
+              </div>
+              <div class="col" style="gap:12px">
+                <sc-for list="{{ o.evList }}" as="ev" hint-placeholder-count="3">
+                  <button class="card row hovc" style="gap:20px;padding:18px 22px;width:100%" onClick="{{ ev.open }}">
+                    <div class="col sp" style="gap:8px;min-width:0"><div class="row" style="flex-wrap:wrap;gap:10px"><h2 class="ct">{{ ev.name }}</h2><span class="chip">{{ ev.type }}</span></div><div class="meta"><span class="ms">event</span>{{ ev.date }}</div></div>
+                    <div class="col" style="width:140px;flex:none"><div class="meta"><span class="ms">meeting_room</span>{{ ev.rooms }}</div><div class="meta"><span class="ms">groups</span>{{ ev.teams }}</div></div>
+                    <div class="col" style="width:150px;flex:none"><div class="row" style="justify-content:space-between"><span class="cap">Оценки</span><span class="b" style="white-space:nowrap">{{ ev.got }} <span class="vio" style="font-size:13px">{{ ev.of }}</span></span></div><div class="bar"><i style="width:{{ ev.pct }}"></i></div></div>
+                    <span style="width:104px;flex:none"><span class="{{ ev.stCls }}">{{ ev.st }}</span></span>
+                    <span class="ms" style="color:#3d4a3d">chevron_right</span>
+                  </button>
+                </sc-for>
+                <sc-if value="{{ o.evEmpty }}" hint-placeholder-val="{{ false }}"><div class="empty">Нет мероприятий с таким статусом</div></sc-if>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.isEvent }}" hint-placeholder-val="{{ false }}">
+            <div class="pg">
+              <div class="cap"><button class="g b" onClick="{{ o.toEvents }}">Мероприятия</button> /</div>
+              <div class="phd" style="margin-top:6px">
+                <div style="min-width:0"><h1 class="pt">{{ v.name }}</h1><div class="row" style="margin-top:10px;flex-wrap:wrap"><span class="chip">{{ v.type }}</span><span class="meta"><span class="ms">event</span>{{ v.date }}</span><span class="{{ v.stCls }}">{{ v.st }}</span></div></div>
+                <div class="row" style="gap:8px;flex-wrap:wrap">
+                  <sc-if value="{{ v.isDraft }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.imp }}"><span class="ms">upload_file</span>Импорт из Excel</button><button class="btn" onClick="{{ v.open }}">Открыть приём оценок</button></sc-if>
+                  <sc-if value="{{ v.isOpen }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.res }}"><span class="ms">leaderboard</span>Итоги</button><button class="btn" onClick="{{ v.close }}"><span class="ms">lock</span>Закрыть</button></sc-if>
+                  <sc-if value="{{ v.isClosed }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.res }}"><span class="ms">leaderboard</span>Итоги</button><button class="btn2" onClick="{{ v.reopen }}">Вернуть в работу</button></sc-if>
+                </div>
+              </div>
+              <sc-if value="{{ v.openErr }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r" style="margin-bottom:20px;align-items:center"><span class="ms">error</span><span class="sp">{{ v.openErr }}</span><sc-if value="{{ v.hasErrRoom }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="color:#ba1a1a" onClick="{{ v.goErr }}">Перейти к аудитории</button></sc-if></div></sc-if>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:28px">
+                <div class="card"><div class="mt"><span class="cap">Аудиторий</span><span class="ms g">meeting_room</span></div><div class="mv">{{ v.roomsN }}</div></div>
+                <div class="card"><div class="mt"><span class="cap">Команд</span><span class="ms g">groups</span></div><div class="mv">{{ v.teamsN }}</div></div>
+                <div class="card"><div class="mt"><span class="cap">Оценки</span><span class="ms g">fact_check</span></div><div class="mv">{{ v.got }}<small>{{ v.of }}</small></div><div class="bar" style="margin-top:12px"><i style="width:{{ v.pct }}"></i></div></div>
+                <div class="card col" style="gap:6px"><div class="mt"><span class="cap">Оценочный лист</span><span class="ms g">assignment</span></div>
+                  <sc-if value="{{ v.isDraft }}" hint-placeholder-val="{{ false }}"><select class="inp fill" style="margin-top:6px;min-height:40px;padding:6px 10px" value="{{ v.sheetId }}" onChange="{{ v.setSheet }}"><sc-for list="{{ v.sheetOpts }}" as="so" hint-placeholder-count="3"><option value="{{ so.id }}">{{ so.name }}</option></sc-for></select></sc-if>
+                  <sc-if value="{{ v.notDraft }}" hint-placeholder-val="{{ true }}"><span class="b" style="margin-top:6px">{{ v.sheetName }}</span></sc-if>
+                  <span class="cap">{{ v.sheetCap }}</span><button class="lnk" style="align-self:flex-start" onClick="{{ v.openSheet }}">Открыть</button>
+                </div>
+              </div>
+              <div class="row" style="justify-content:space-between;margin-bottom:12px;flex-wrap:wrap"><h2 class="ct" style="font-size:22px">Аудитории</h2><span class="cap">Порядок команд меняется перетаскиванием внутри аудитории</span></div>
+              <sc-if value="{{ v.noRooms }}" hint-placeholder-val="{{ false }}"><div class="card empty"><span>В мероприятии нет аудиторий. Импортируйте команды из Excel.</span><button class="btn2" onClick="{{ v.imp }}"><span class="ms">upload_file</span>Импорт из Excel</button></div></sc-if>
+              <div class="col" style="gap:12px">
+                <sc-for list="{{ v.rooms }}" as="rm" hint-placeholder-count="3">
+                  <div class="{{ rm.cls }}">
+                    <div class="row" style="cursor:pointer;flex-wrap:wrap;gap:10px" onClick="{{ rm.toggle }}"><span class="ms">{{ rm.expIc }}</span><h3 class="ct">{{ rm.name }}</h3><span class="cap">{{ rm.cap }}</span><sc-if value="{{ rm.noExp }}" hint-placeholder-val="{{ false }}"><span class="bd b-r">Нет экспертов</span></sc-if><sc-if value="{{ rm.noTeams }}" hint-placeholder-val="{{ false }}"><span class="bd b-r">Нет команд</span></sc-if><span class="sp"></span><button class="btn2" style="height:40px" onClick="{{ rm.print }}"><span class="ms">print</span>Печать бланка</button></div>
+                    <sc-if value="{{ rm.open }}" hint-placeholder-val="{{ false }}">
+                      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;border-top:1px solid #e1e8e3;padding-top:18px;margin-top:8px;align-items:start">
+                        <div class="col">
+                          <div class="lbl">Порядок выступления</div>
+                          <sc-for list="{{ rm.teams }}" as="tm" hint-placeholder-count="8">
+                            <div class="{{ tm.cls }}" draggable="{{ tm.drag }}" onDragStart="{{ tm.ds }}" onDragOver="{{ tm.dov }}" onDrop="{{ tm.drop }}" onDragEnd="{{ tm.de }}">
+                              <span class="{{ tm.hdlCls }}" onMouseDown="{{ tm.arm }}" onMouseUp="{{ o.disarm }}">drag_indicator</span>
+                              <span class="num">{{ tm.n }}</span>
+                              <span class="sp" style="font-weight:600;min-width:0;line-height:1.3">{{ tm.name }}</span>
+                              <sc-if value="{{ tm.absent }}" hint-placeholder-val="{{ false }}"><span class="bd b-n"><span class="ms">person_off</span>Не явилась</span></sc-if>
+                              <sc-if value="{{ tm.canMenu }}" hint-placeholder-val="{{ true }}"><button class="ib2" onClick="{{ tm.menu }}"><span class="ms">more_vert</span></button></sc-if>
+                              <sc-if value="{{ tm.menuOpen }}" hint-placeholder-val="{{ false }}">
+                                <div class="catch" onClick="{{ o.closeMenu }}"></div>
+                                <div class="dd menu">
+                                  <sc-if value="{{ tm.absent }}" hint-placeholder-val="{{ false }}"><button onClick="{{ tm.unmark }}"><span class="ms" style="font-size:20px">how_to_reg</span>Снять отметку</button></sc-if>
+                                  <sc-if value="{{ tm.notAbsent }}" hint-placeholder-val="{{ true }}"><button onClick="{{ tm.mark }}"><span class="ms" style="font-size:20px">person_off</span>Отметить: не явилась</button></sc-if>
+                                  <button class="{{ tm.rmCls }}" onClick="{{ tm.remove }}"><span class="ms" style="font-size:20px">delete</span>Убрать из мероприятия</button>
+                                  <sc-if value="{{ tm.rmHint }}" hint-placeholder-val="{{ false }}"><div class="cap" style="padding:0 12px 8px">{{ tm.rmHint }}</div></sc-if>
+                                </div>
+                              </sc-if>
+                            </div>
+                          </sc-for>
+                          <sc-if value="{{ rm.noTeams }}" hint-placeholder-val="{{ false }}"><div class="cap">Команд нет — импортируйте их из Excel.</div></sc-if>
+                        </div>
+                        <div class="col">
+                          <div class="lbl">Эксперты</div>
+                          <sc-for list="{{ rm.exps }}" as="ex" hint-placeholder-count="3">
+                            <div class="row" style="min-height:56px;border-bottom:1px solid #e1e8e3"><span class="av">{{ ex.ini }}</span><div class="col sp" style="gap:2px;min-width:0"><span class="b" style="font-size:15px">{{ ex.name }}</span><span class="cap">{{ ex.cap }}</span></div><sc-if value="{{ ex.canRm }}" hint-placeholder-val="{{ true }}"><button class="ib2" onClick="{{ ex.rm }}"><span class="ms">close</span></button></sc-if></div>
+                          </sc-for>
+                          <sc-if value="{{ rm.noExp }}" hint-placeholder-val="{{ false }}"><div class="cap">Экспертов пока нет</div></sc-if>
+                          <sc-if value="{{ rm.canEdit }}" hint-placeholder-val="{{ true }}">
+                            <div style="margin-top:8px">
+                              <div class="inp" style="padding:0 12px"><span class="ms" style="color:#3d4a3d;font-size:20px">search</span><input class="bare" placeholder="Найти по ФИО" value="{{ rm.q }}" onChange="{{ rm.setQ }}"></div>
+                              <sc-if value="{{ rm.showRes }}" hint-placeholder-val="{{ false }}">
+                                <div class="dd" style="margin-top:4px">
+                                  <sc-for list="{{ rm.res }}" as="sr" hint-placeholder-count="2">
+                                    <div class="row" style="padding:8px;border-radius:8px"><span class="av">{{ sr.ini }}</span><div class="col sp" style="gap:2px;min-width:0"><span class="b" style="font-size:14px">{{ sr.name }}</span><span class="cap">{{ sr.dep }}</span></div><button class="lnk" onClick="{{ sr.add }}">Добавить</button></div>
+                                  </sc-for>
+                                  <sc-if value="{{ rm.noRes }}" hint-placeholder-val="{{ false }}"><div class="cap" style="padding:8px">Нет сотрудников с таким ФИО</div></sc-if>
+                                </div>
+                              </sc-if>
+                            </div>
+                          </sc-if>
+                        </div>
+                      </div>
+                    </sc-if>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.isResults }}" hint-placeholder-val="{{ false }}">
+            <div class="pg">
+              <div class="cap"><button class="g b" onClick="{{ o.toEvents }}">Мероприятия</button> / <button class="g b" onClick="{{ rs.toEvent }}">{{ rs.evName }}</button></div>
+              <div class="phd" style="margin-top:6px"><div><h1 class="pt">Итоги</h1><div class="psub">{{ rs.sub }}</div></div><div class="seg"><sc-for list="{{ rs.tabs }}" as="rt" hint-placeholder-count="3"><button class="{{ rt.cls }}" onClick="{{ rt.pick }}">{{ rt.t }}</button></sc-for></div></div>
+              <div class="card" style="padding:0;overflow:hidden">
+                <div class="row" style="padding:16px 20px;flex-wrap:wrap"><span class="{{ rs.badgeCls }}"><span class="ms">{{ rs.badgeIc }}</span>{{ rs.badge }}</span><span class="cap sp">{{ rs.cap }}</span><select class="inp fill" style="width:240px;min-height:40px;padding:6px 10px" value="{{ rs.sort }}" onChange="{{ rs.setSort }}"><option value="avg">Сортировка: по среднему</option><option value="order">По порядку выступления</option><option value="name">По названию</option></select></div>
+                <div style="overflow-x:auto"><div style="min-width:{{ rs.minW }}"><div class="tr th" style="grid-template-columns:{{ rs.cols }}"><span>Место</span><span>Команда</span><sc-for list="{{ rs.exps }}" as="rx" hint-placeholder-count="3"><span class="row" style="gap:6px;min-width:0" title="{{ rx.full }}"><span class="av" style="width:22px;height:22px;font-size:9px">{{ rx.ini }}</span><span style="white-space:nowrap;text-transform:none;letter-spacing:0;font-size:13px">{{ rx.short }}</span></span></sc-for><span class="r">Среднее</span></div>
+                <sc-for list="{{ rs.rows }}" as="rr" hint-placeholder-count="8">
+                  <div class="tr" style="grid-template-columns:{{ rr.cols }}">
+                    <span class="m b" style="font-size:17px">{{ rr.place }}</span>
+                    <div class="row" style="min-width:0;gap:10px"><span class="av">{{ rr.ini }}</span><div class="col" style="gap:6px;min-width:0"><span class="b" style="font-size:15px;line-height:1.3">{{ rr.name }}</span><sc-if value="{{ rr.abs }}" hint-placeholder-val="{{ false }}"><div class="row" style="gap:8px;flex-wrap:wrap"><span class="bd b-n"><span class="ms">person_off</span>Не явилась</span><span class="cap">Оценки не учитываются</span></div></sc-if></div></div>
+                    <sc-for list="{{ rr.sc }}" as="sv" hint-placeholder-count="3"><span class="{{ sv.cls }}">{{ sv.t }}</span></sc-for>
+                    <span class="{{ rr.avgCls }}">{{ rr.avg }}</span>
+                  </div>
+                </sc-for>
+                </div></div>
+                <sc-if value="{{ rs.empty }}" hint-placeholder-val="{{ false }}"><div class="empty">В аудитории нет команд</div></sc-if>
+              </div>
+              <div class="cap" style="margin-top:12px">Среднее считается по отправленным оценкам, черновики не учитываются. Тире — эксперт ещё не отправил оценку.</div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.isSheets }}" hint-placeholder-val="{{ false }}">
+            <div class="pg">
+              <div class="phd"><div><h1 class="pt">Оценочные листы</h1><div class="psub">Критерии и уровни для предзащит и защит</div></div><button class="btn" onClick="{{ o.createSheet }}"><span class="ms">add</span>Создать лист</button></div>
+              <div class="card" style="padding:0;overflow:hidden">
+                <div style="padding:16px 20px"><select class="inp fill" style="width:240px;min-height:40px;padding:6px 10px" value="{{ o.sheetFilter }}" onChange="{{ o.setSheetFilter }}"><option value="all">Статус: все</option><option value="draft">Черновик</option><option value="locked">Заблокирован</option></select></div>
+                <div class="tr th" style="grid-template-columns:minmax(0,1fr) 90px 90px 140px 130px"><span>Название</span><span>Критериев</span><span>Макс.</span><span>Статус</span><span class="r">Действия</span></div>
+                <sc-for list="{{ o.sheets }}" as="sh" hint-placeholder-count="3">
+                  <div class="tr hov" style="grid-template-columns:minmax(0,1fr) 90px 90px 140px 130px;cursor:pointer" onClick="{{ sh.open }}">
+                    <div class="row" style="min-width:0"><span class="av" style="background:#e2f3e7;color:#006d30"><span class="ms" style="font-size:20px">assignment</span></span><div class="col" style="gap:2px;min-width:0"><span class="b" style="white-space:nowrap">{{ sh.name }}</span><span class="cap">{{ sh.cap }}</span></div></div>
+                    <span class="m b">{{ sh.n }}</span>
+                    <span class="m b">{{ sh.max }}</span>
+                    <span><span class="{{ sh.stCls }}"><span class="ms">{{ sh.stIc }}</span>{{ sh.st }}</span></span>
+                    <button class="lnk r" onClick="{{ sh.dup }}"><span class="ms" style="font-size:18px">content_copy</span>Дублировать</button>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ o.sheetsEmpty }}" hint-placeholder-val="{{ false }}"><div class="empty">Нет листов с таким статусом</div></sc-if>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.isBuilder }}" hint-placeholder-val="{{ false }}">
+            <div class="pg">
+              <div class="cap"><button class="g b" onClick="{{ o.toSheets }}">Оценочные листы</button> /</div>
+              <div class="phd" style="margin-top:6px"><h1 class="pt" style="min-width:0">{{ b.title }}</h1><div class="row"><span class="{{ b.stCls }}"><span class="ms">{{ b.stIc }}</span>{{ b.st }}</span><sc-if value="{{ b.ed }}" hint-placeholder-val="{{ true }}"><span class="meta"><span class="ms">cloud_done</span>Сохранено</span></sc-if></div></div>
+              <sc-if value="{{ b.ro }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="margin-bottom:20px;align-items:center;flex-wrap:wrap"><span class="ms">lock</span><span class="sp" style="min-width:240px">Лист используется в мероприятии, где открыт приём оценок. Чтобы изменить критерии, создайте копию.</span><button class="btn" onClick="{{ b.dup }}"><span class="ms">content_copy</span>Дублировать</button></div></sc-if>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;align-items:start">
+                <div class="col" style="gap:16px">
+                  <div class="card col" style="gap:0">
+                    <div class="lbl">Название листа</div><input class="{{ b.fCls }}" value="{{ b.name }}" onChange="{{ b.setName }}" disabled="{{ b.ro }}" placeholder="Например, Предзащита ИТ">
+                    <div class="lbl" style="margin-top:14px">Описание</div><textarea class="{{ b.taCls }}" value="{{ b.desc }}" onChange="{{ b.setDesc }}" disabled="{{ b.ro }}" placeholder="Для каких мероприятий этот лист"></textarea>
+                  </div>
+                  <div class="row" style="justify-content:space-between;flex-wrap:wrap"><h2 class="ct" style="font-size:22px">Критерии</h2><span class="cap">Максимум листа: <b class="g">{{ b.maxT }}</b> · считается автоматически</span></div>
+                  <sc-if value="{{ b.noCrits }}" hint-placeholder-val="{{ false }}"><div class="card empty">В листе пока нет критериев</div></sc-if>
+                  <sc-for list="{{ b.crits }}" as="cr" hint-placeholder-count="4">
+                    <div class="{{ cr.cls }}" draggable="{{ cr.drag }}" onDragStart="{{ cr.ds }}" onDragOver="{{ cr.dov }}" onDrop="{{ cr.drop }}" onDragEnd="{{ cr.de }}">
+                      <div class="row" style="align-items:flex-end;gap:12px">
+                        <span class="{{ cr.hdlCls }}" style="margin-bottom:10px" onMouseDown="{{ cr.arm }}" onMouseUp="{{ o.disarm }}">drag_indicator</span>
+                        <div class="sp" style="min-width:0"><div class="lbl">Название критерия</div><input class="{{ b.fCls }}" value="{{ cr.name }}" onChange="{{ cr.setName }}" disabled="{{ b.ro }}" placeholder="Например, Демонстрация"></div>
+                        <div style="width:96px;flex:none"><div class="lbl">Максимум</div><div class="inp ro-f" style="justify-content:space-between"><b class="m" style="color:#181c1e">{{ cr.max }}</b><span class="ms" style="font-size:18px">lock</span></div></div>
+                        <sc-if value="{{ b.ed }}" hint-placeholder-val="{{ true }}"><button class="ib2" style="margin-bottom:4px" onClick="{{ cr.del }}"><span class="ms">delete</span></button></sc-if>
+                      </div>
+                      <div style="padding-left:36px"><div class="lbl">Описание</div><input class="{{ b.fCls }}" value="{{ cr.desc }}" onChange="{{ cr.setDesc }}" disabled="{{ b.ro }}" placeholder="Что оценивается"></div>
+                      <div class="col" style="padding-left:36px">
+                        <div class="row th" style="padding:0 0 6px;gap:12px;border-bottom:1px solid #e1e8e3"><span style="width:64px">Балл</span><span class="sp">Описание уровня</span></div>
+                        <sc-for list="{{ cr.lv }}" as="bl" hint-placeholder-count="3">
+                          <div class="row" style="gap:12px"><div class="inp ro-f" style="width:64px;flex:none;justify-content:center;font-weight:700;color:#181c1e">{{ bl.n }}</div><input class="{{ b.fCls }}" style="flex:1" value="{{ bl.d }}" onChange="{{ bl.setD }}" disabled="{{ b.ro }}" placeholder="Описание уровня"><sc-if value="{{ b.ed }}" hint-placeholder-val="{{ true }}"><button class="{{ bl.delCls }}" onClick="{{ bl.del }}"><span class="ms">close</span></button></sc-if></div>
+                        </sc-for>
+                        <sc-if value="{{ b.ed }}" hint-placeholder-val="{{ true }}"><button class="lnk" style="text-decoration:none;align-self:flex-start" onClick="{{ cr.addLv }}"><span class="ms" style="font-size:18px">add</span>уровень</button></sc-if>
+                      </div>
+                    </div>
+                  </sc-for>
+                  <sc-if value="{{ b.ed }}" hint-placeholder-val="{{ true }}"><button class="btn2 w" style="border-style:dashed" onClick="{{ b.addCrit }}"><span class="ms">add</span>Критерий</button></sc-if>
+                </div>
+                <div class="card col" style="gap:14px;position:sticky;top:0">
+                  <h2 class="ct">Предпросмотр бланка</h2>
+                  <div style="border:1px solid #181c1e;padding:12px;background:#fff">
+                    <div style="font:700 12px Manrope">{{ b.title }}</div>
+                    <div style="font-size:9px;margin:2px 0 8px">Колонки — команды аудитории · макс. {{ b.max }}</div>
+                    <div class="pv">
+                      <span>Критерий</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+                      <sc-for list="{{ b.crits }}" as="pc" hint-placeholder-count="4"><span>{{ pc.nameP }}</span><span></span><span></span><span></span><span></span><span></span><span></span></sc-for>
+                      <span style="font-weight:700">Итого</span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="cap">Обновляется при каждом изменении. Команды подставляются из мероприятия при печати.</div>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+        </div>
+      </div>
+
+      <sc-if value="{{ o.dlg }}" hint-placeholder-val="{{ false }}">
+        <div class="scr" onClick="{{ o.dlgBg }}">
+
+          <sc-if value="{{ o.dCreate }}" hint-placeholder-val="{{ false }}">
+            <div class="card col dlg" style="width:580px">
+              <div class="row" style="justify-content:space-between"><h2 class="ct" style="font-size:24px">Новое мероприятие</h2><button class="ib2" onClick="{{ o.closeDlg }}"><span class="ms">close</span></button></div>
+              <div><div class="lbl">Название</div><input class="{{ n.nameCls }}" placeholder="Например, Предзащита, весна 2027" value="{{ n.name }}" onChange="{{ n.setName }}"><sc-if value="{{ n.err }}" hint-placeholder-val="{{ false }}"><div class="cap" style="color:#ba1a1a;margin-top:6px;font-weight:700">Введите название</div></sc-if></div>
+              <div><div class="lbl">Тип</div><div class="row" style="align-items:stretch"><sc-for list="{{ n.types }}" as="ty" hint-placeholder-count="2"><button class="{{ ty.cls }}" onClick="{{ ty.pick }}"><span class="ms g">{{ ty.ic }}</span><span class="b" style="white-space:nowrap">{{ ty.t }}</span><span class="cap">{{ ty.d }}</span></button></sc-for></div></div>
+              <div><div class="lbl">Дата</div><input type="date" class="inp fill" value="{{ n.date }}" onChange="{{ n.setDate }}"></div>
+              <div><div class="lbl">Оценочный лист</div><select class="inp fill" value="{{ n.sheetId }}" onChange="{{ n.setSheet }}"><sc-for list="{{ n.sheets }}" as="ns" hint-placeholder-count="3"><option value="{{ ns.id }}">{{ ns.name }}</option></sc-for></select><div class="cap" style="margin-top:6px">Можно поменять, пока приём оценок не открыт</div></div>
+              <div class="dft"><button class="btn2" onClick="{{ o.closeDlg }}">Отмена</button><button class="btn" onClick="{{ n.create }}">Создать</button></div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.dImport }}" hint-placeholder-val="{{ false }}">
+            <div class="card col dlg" style="width:680px">
+              <div class="row" style="justify-content:space-between"><h2 class="ct" style="font-size:24px">Импорт команд из Excel</h2><button class="ib2" onClick="{{ o.closeDlg }}"><span class="ms">close</span></button></div>
+              <div class="row" style="justify-content:space-between;border-bottom:1px solid #e1e8e3;padding-bottom:18px;flex-wrap:wrap">
+                <div class="col" style="gap:4px"><span class="b">1. Скачайте шаблон</span><span class="cap">Колонки: <b style="font-family:ui-monospace,Menlo,monospace;color:#181c1e">Аудитория | Порядок | team_id</b></span></div>
+                <button class="btn2" onClick="{{ im.tpl }}"><span class="ms">download</span>Скачать шаблон</button>
+              </div>
+              <div class="row" style="justify-content:space-between;border-bottom:1px solid #e1e8e3;padding-bottom:18px;flex-wrap:wrap">
+                <div class="col" style="gap:4px"><span class="b">2. Загрузите заполненный файл</span><sc-if value="{{ im.hasFile }}" hint-placeholder-val="{{ false }}"><span class="meta"><span class="ms">description</span>spisok_komand_osen_2026.xlsx · 16 строк</span></sc-if><sc-if value="{{ im.noFile }}" hint-placeholder-val="{{ true }}"><span class="cap">Файл .xlsx по шаблону</span></sc-if></div>
+                <button class="btn2" onClick="{{ im.pick }}">{{ im.pickT }}</button>
+              </div>
+              <sc-if value="{{ im.checking }}" hint-placeholder-val="{{ false }}"><div class="col"><span class="b">Проверяем файл…</span><div class="bar prog"><i></i></div><span class="cap">Сверяем team_id с проектами и аудиториями</span></div></sc-if>
+              <sc-if value="{{ im.ready }}" hint-placeholder-val="{{ false }}">
+                <div class="col" style="gap:14px">
+                  <div class="row" style="flex-wrap:wrap"><span class="b">3. Проверьте</span><span class="bd b-g">16 строк готовы</span><span class="cap">Будут созданы:</span><span class="chip">ауд. 401</span><span class="chip">ауд. 402</span></div>
+                  <div style="border:1px solid #bccaba;border-radius:8px;overflow:hidden">
+                    <div class="tr th" style="grid-template-columns:100px 80px 90px minmax(0,1fr);padding:8px 14px"><span>Аудитория</span><span>Порядок</span><span>team_id</span><span>Команда</span></div>
+                    <sc-for list="{{ im.rows }}" as="ir" hint-placeholder-count="4"><div class="tr" style="grid-template-columns:100px 80px 90px minmax(0,1fr);padding:8px 14px;font-size:14px"><span>{{ ir.room }}</span><span>{{ ir.ord }}</span><span style="font-family:ui-monospace,Menlo,monospace">{{ ir.tid }}</span><span>{{ ir.name }}</span></div></sc-for>
+                    <div class="cap" style="padding:8px 14px">Ещё 12 строк без ошибок</div>
+                  </div>
+                  <sc-if value="{{ im.replace }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">info</span><span>Текущие аудитории и порядок выступления заменятся данными из файла.</span></div></sc-if>
+                </div>
+              </sc-if>
+              <div class="dft"><button class="btn2" onClick="{{ o.closeDlg }}">Отмена</button><button class="{{ im.applyCls }}" onClick="{{ im.apply }}">Применить</button></div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.dConfirm }}" hint-placeholder-val="{{ false }}">
+            <div class="card col dlg">
+              <h2 class="ct" style="font-size:24px">{{ d.title }}</h2>
+              <sc-if value="{{ d.banner }}" hint-placeholder-val="{{ false }}"><div class="{{ d.bCls }}"><span class="ms">{{ d.bIc }}</span><span>{{ d.banner }}</span></div></sc-if>
+              <div style="line-height:1.5">{{ d.text }}</div>
+              <div class="dft"><button class="btn2" onClick="{{ o.closeDlg }}">Отмена</button><button class="btn" onClick="{{ d.ok }}">{{ d.okT }}</button></div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.dPrint }}" hint-placeholder-val="{{ false }}">
+            <div class="card col dlg" style="width:960px">
+              <div class="row" style="justify-content:space-between"><h2 class="ct" style="font-size:24px">{{ pr.title }}</h2><button class="ib2" onClick="{{ o.closeDlg }}"><span class="ms">close</span></button></div>
+              <div style="overflow:auto;max-height:520px;background:#e9edeb;padding:16px;border-radius:8px">
+                <div class="pa">
+                  <div class="row" style="justify-content:space-between;align-items:flex-end;border-bottom:2px solid #000;padding-bottom:10px">
+                    <div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700">Оценочный лист</div><div class="m" style="font-size:24px;font-weight:800;margin-top:4px">{{ pr.evName }}</div></div>
+                    <div style="text-align:right"><div class="m" style="font-size:17px;font-weight:800">{{ pr.line }}</div><div style="font-size:12px;margin-top:4px">{{ pr.sub }}</div></div>
+                  </div>
+                  <div class="pf" style="grid-template-columns:{{ pr.cols }}">
+                    <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Критерий / уровни</div>
+                    <sc-for list="{{ pr.teams }}" as="pt" hint-placeholder-count="8"><div style="font-size:11px;line-height:1.3"><b>{{ pt.n }}.</b> {{ pt.name }}</div></sc-for>
+                    <sc-for list="{{ pr.rows }}" as="pw" hint-placeholder-count="4">
+                      <div style="min-height:96px"><div style="font-size:14px;font-weight:700;margin-bottom:6px">{{ pw.name }}</div><sc-for list="{{ pw.lv }}" as="pl" hint-placeholder-count="3"><div style="font-size:11px;line-height:1.5">{{ pl.t }}</div></sc-for></div>
+                      <sc-for list="{{ pw.cells }}" as="pz" hint-placeholder-count="8"><div></div></sc-for>
+                    </sc-for>
+                    <div style="font-size:14px;font-weight:800;min-height:48px;display:flex;align-items:center">{{ pr.total }}</div>
+                    <sc-for list="{{ pr.tcells }}" as="pq" hint-placeholder-count="8"><div></div></sc-for>
+                  </div>
+                </div>
+              </div>
+              <div class="dft" style="align-items:center"><span class="cap sp">A4 альбомный, чёрно-белый. Команды — в порядке выступления, включая «Не явилась».</span><button class="btn2" onClick="{{ o.closeDlg }}">Закрыть</button><button class="btn" onClick="{{ pr.print }}"><span class="ms">print</span>Печать</button></div>
+            </div>
+          </sc-if>
+
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ o.toast }}" hint-placeholder-val="{{ false }}">
+        <div class="toast dk">
+          <span class="ms" style="font-size:20px;color:#00ab4f">check_circle</span>
+          <span class="sp">{{ o.toastText }}</span>
+          <sc-if value="{{ o.toastUndo }}" hint-placeholder-val="{{ false }}"><button class="tu" onClick="{{ o.undo }}">Отменить</button></sc-if>
+          <div class="tbar" style="animation-duration:{{ o.toastMs }}"></div>
+        </div>
+      </sc-if>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  uid = 100;
+  tid = 0;
+  timers = {};
+  drag = null;
+  eScroll = React.createRef();
+  oScroll = React.createRef();
+  state = this.seed();
+
+  componentWillUnmount() { Object.values(this.timers).forEach(clearTimeout); }
+
+  nid(p) { this.uid += 1; return p + this.uid; }
+  L3() { return ['Не раскрыто', 'Частично', 'Полностью']; }
+  mkCrit(name, desc) { return { id: this.nid('c'), name, desc, levels: this.L3().map((d, n) => ({ n, d })) }; }
+  selFor(total, n) { const a = []; let r = total; for (let i = 0; i < n; i++) { const v = Math.min(2, Math.max(0, r)); a.push(v); r -= v; } return a; }
+  staff() {
+    return {
+      pa: { name: 'Петрова Анна Сергеевна', dep: 'Отделение ИТ' }, kd: { name: 'Козлов Дмитрий Викторович', dep: 'Отделение ИТ' },
+      se: { name: 'Смирнова Елена Игоревна', dep: 'Отделение ИТ' }, sp: { name: 'Сидоров Павел Игоревич', dep: 'Отделение ИТ' },
+      sm: { name: 'Сидорова Мария Олеговна', dep: 'Отделение электроники' }, ia: { name: 'Иванов Алексей Петрович', dep: 'Отделение ИТ' },
+      nk: { name: 'Никитина Ксения Андреевна', dep: 'Отделение автоматизации' }, vt: { name: 'Волков Тимур Ренатович', dep: 'Отделение ИТ' },
+      fo: { name: 'Фролова Ольга Дмитриевна', dep: 'Отделение электроники' }, ms: { name: 'Морозов Сергей Ильич', dep: 'Отделение автоматизации' }
+    };
+  }
+
+  seed() {
+    const T = ['Система бронирования аудиторий', 'Чат-бот приёмной комиссии', 'Автоматизированная система графиков', 'Трекер посещаемости занятий', 'Платформа поиска стажировок', 'Цифровой двойник лаборатории', 'Мобильный гид по кампусу', 'Сервис обмена учебниками',
+      'Электронная очередь в деканат', 'Поиск соседей по общежитию', 'Конструктор расписания экзаменов', 'Бот записи в спортзал', 'Карта свободных розеток', 'Учёт лабораторного оборудования', 'Сервис совместных поездок', 'Маркетплейс студенческих услуг',
+      'Планировщик курсовых работ', 'Чат поддержки первокурсников', 'Голосование студсовета', 'Трекер волонтёрских часов', 'Агрегатор олимпиад', 'Сканер библиотечных книг', 'Бронирование переговорных', 'Афиша студенческих клубов',
+      'Напоминания о дедлайнах', 'Обмен конспектами', 'Запись к психологу онлайн', 'Пропуска в общежитие', 'Бюро находок кампуса', 'Расписание шаттлов кампуса',
+      'Платформа менторства', 'Квиз-бот к экзаменам', 'Очередь в столовой', 'Поиск команды для хакатона', 'Трекер привычек', 'Заявки на ремонт в общежитии', 'Каталог дипломных работ', 'Опросы о качестве курсов',
+      'Прокат спортинвентаря', 'Навигатор по корпусам', 'Учёт практик студентов', 'Репетиторы-старшекурсники', 'Генератор отчётов по лабораторным', 'Карта доступной среды', 'Портфолио студента', 'Обратная связь преподавателям'].map(x => x + ' · весна 2026');
+    this.POOL = T;
+    const C = (a, b) => this.mkCrit(a, b);
+    const sheets = [
+      { id: 's1', name: 'Предзащита ИТ, базовый', desc: 'Для предзащит проектов направления ИТ. Каждый критерий оценивается от 0 до 2.', crits: [C('Актуальность', 'Проблема и пользователи проекта обоснованы'), C('Техническая реализация', 'Архитектура, качество кода, выбор технологий'), C('Демонстрация', 'Работающий прототип показан вживую'), C('Речь и ответы на вопросы', 'Структура доклада, ответы на вопросы комиссии')] },
+      { id: 's2', name: 'Защита ВКР, расширенный', desc: 'Итоговая защита выпускных работ.', crits: [C('Актуальность', 'Проблема и пользователи обоснованы'), C('Новизна', 'Чем решение отличается от существующих'), C('Техническая реализация', 'Архитектура и качество кода'), C('Пояснительная записка', 'Структура и оформление'), C('Демонстрация', 'Работающий продукт показан вживую'), C('Ответы на вопросы', 'Уверенность и точность ответов')] },
+      { id: 's3', name: 'Хакатон, экспресс', desc: 'Короткая оценка для хакатонов.', crits: [C('Идея', 'Насколько задача важна и понятна'), C('Прототип', 'Что работает к моменту показа'), C('Питч', 'Ясность и укладывание во время')] }
+    ];
+    const R = {};
+    const put = (tid, x, total, n) => { const sel = this.selFor(total, n); (R[tid] = R[tid] || {})[x] = { sel: [...sel], com: '', sent: { sel, com: '', at: '10:' + String(10 + (total * 7) % 50) } }; };
+    const team = i => ({ id: 't' + i, name: T[i], absent: false });
+    const r301 = { id: 'r1', name: 'ауд. 301', teams: [0, 1, 2, 3, 4, 5, 6, 7].map(team), experts: ['pa', 'kd', 'se'] };
+    r301.teams[3].absent = true;
+    [[2, 7, 7, 6], [0, 6, 7, 6], [4, 5, 6, 6], [1, null, 5, 6], [6, null, null, 5], [5, null, 4, 5], [7, null, 4, 3], [3, null, 3, 2]].forEach(([i, p, k, s]) => {
+      [['pa', p], ['kd', k], ['se', s]].forEach(([x, v]) => { if (v != null) put('t' + i, x, v, 4); });
+    });
+    R.t5.pa = { sel: [2, 1, 1, null], com: '', sent: null };
+    const gen = (id, name, from, n, exps, full) => {
+      const room = { id, name, teams: [], experts: exps };
+      for (let i = 0; i < n; i++) room.teams.push(team(from + i));
+      room.teams.forEach((t, i) => exps.forEach((x, j) => { if (full || (i * 3 + j * 5) % 7 < 4) put(t.id, x, 3 + (i * 2 + j * 3) % 6, 4); }));
+      return room;
+    };
+    const events = [
+      { id: 'e1', name: 'Предзащита, осень 2026', type: 'Предзащита', date: '2026-10-20', sheetId: 's1', status: 'open', rooms: [r301, gen('r2', 'ауд. 303', 8, 8, ['ia', 'nk', 'fo']), gen('r3', 'ауд. 305', 16, 8, ['vt', 'ms'])] },
+      { id: 'e2', name: 'Защита, осень 2026', type: 'Защита', date: '2026-12-15', sheetId: 's2', status: 'draft', rooms: [] },
+      { id: 'e3', name: 'Предзащита, весна 2026', type: 'Предзащита', date: '2026-04-14', sheetId: 's1', status: 'closed', rooms: [gen('r4', 'ауд. 303', 24, 6, ['pa', 'kd'], true)] }
+    ];
+    return {
+      v: 0, sheets, events, R,
+      oPage: 'events', oEv: 'e1', oSheet: 's1', oOpenRooms: { r1: true }, oResRoom: null, oSort: 'avg', oEvFilter: 'all', oSheetFilter: 'all',
+      oMenu: null, oSearch: {}, oDlg: null, oToast: null, oErrRoom: null, oOpenErr: '', oDov: null, oArm: null, newEv: null, imp: null,
+      ePage: 'home', eEv: null, eTeam: null, eSheet: false, eToast: null, eErr: false
+    };
+  }
+
+  touch() { this.setState(s => ({ v: s.v + 1 })); }
+  reset() { Object.values(this.timers).forEach(clearTimeout); this.timers = {}; this.setState(this.seed()); }
+  toast(side, text, undo, ms, bottom, ic) {
+    ms = ms || 3500; const k = side + 'Toast'; clearTimeout(this.timers[side]);
+    const id = ++this.tid, t = { id, text, undo: undo || null, ms, bottom: !!bottom, ic: ic || 'check_circle' };
+    this.setState({ [k]: null }, () => requestAnimationFrame(() => this.setState({ [k]: t })));
+    this.timers[side] = setTimeout(() => { const c = this.state[k]; if (c && c.id === id) this.setState({ [k]: null }); }, ms + 50);
+  }
+  ev(id) { return this.state.events.find(x => x.id === id); }
+  sheet(id) { return this.state.sheets.find(x => x.id === id); }
+  maxOf(sh) { return sh.crits.reduce((a, c) => a + (c.levels.length ? c.levels[c.levels.length - 1].n : 0), 0); }
+  rat(tid) { return this.state.R[tid] || {}; }
+  cnt(tid) { return Object.keys(this.rat(tid)).length; }
+  sentBy(tid, x) { const r = this.rat(tid)[x]; return !!(r && r.sent); }
+  roomSt(room) { const act = room.teams.filter(t => !t.absent); let got = 0; act.forEach(t => room.experts.forEach(x => { if (this.sentBy(t.id, x)) got++; })); return { teams: room.teams.length, need: act.length * room.experts.length, got }; }
+  evSt(ev) { let need = 0, got = 0, teams = 0; ev.rooms.forEach(r => { const s = this.roomSt(r); need += s.need; got += s.got; teams += s.teams; }); return { need, got, teams }; }
+  locked(sh) { return this.state.events.some(x => x.sheetId === sh.id && x.status !== 'draft'); }
+  fmtDate(iso) { const M = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']; const p = (iso || '').split('-').map(Number); return p.length === 3 && p[1] ? p[2] + ' ' + M[p[1] - 1] + ' ' + p[0] : '—'; }
+  now() { const d = new Date(); return d.getHours() + ':' + String(d.getMinutes()).padStart(2, '0'); }
+  myRoom(ev) { return ev ? ev.rooms.find(r => r.experts.includes('pa')) : null; }
+  mineSt(room) { const act = room.teams.filter(t => !t.absent); return { got: act.filter(t => this.sentBy(t.id, 'pa')).length, need: act.length, abs: room.teams.length - act.length }; }
+  findTeam(tid) { for (const ev of this.state.events) for (const room of ev.rooms) { const team = room.teams.find(t => t.id === tid); if (team) return { ev, room, team }; } return null; }
+  findRoom(rid) { for (const ev of this.state.events) { const room = ev.rooms.find(r => r.id === rid); if (room) return { ev, room }; } return null; }
+
+  // expert
+  eTop() { const el = this.eScroll.current; if (el) el.scrollTop = 0; }
+  eOpenRoom(id) { this.setState({ ePage: 'room', eEv: id, eErr: false, eSheet: false }, () => this.eTop()); }
+  eGoForm(tid) { this.setState({ ePage: 'form', eTeam: tid, eErr: false, eSheet: false }, () => this.eTop()); }
+  eCtx() { const ev = this.ev(this.state.eEv), room = this.myRoom(ev), team = room.teams.find(t => t.id === this.state.eTeam); return { ev, room, team, sh: this.sheet(ev.sheetId), idx: room.teams.indexOf(team) }; }
+  eRat(create) { const { team, sh } = this.eCtx(), R = this.state.R; if (!R[team.id]) R[team.id] = {}; if (!R[team.id].pa && create) R[team.id].pa = { sel: sh.crits.map(() => null), com: '', sent: null }; return R[team.id].pa; }
+  eSet(i, n) { const { ev, team } = this.eCtx(); if (ev.status !== 'open' || team.absent) return; this.eRat(true).sel[i] = n; this.touch(); }
+  eCom(val) { const { ev, team } = this.eCtx(); if (ev.status !== 'open' || team.absent) return; this.eRat(true).com = val; this.touch(); }
+  eNext(room, from) { const ts = room.teams; for (let k = 1; k <= ts.length; k++) { const t = ts[(from + k + ts.length) % ts.length]; if (!t.absent && !this.sentBy(t.id, 'pa')) return t; } return null; }
+  eSend() {
+    const { room, sh, idx } = this.eCtx(); const r = this.eRat(false);
+    const miss = sh.crits.filter((c, i) => !r || r.sel[i] == null).length;
+    if (miss) { this.setState({ eErr: true }, () => this.eTop()); return; }
+    const resend = !!r.sent; r.sent = { sel: [...r.sel], com: r.com, at: this.now() };
+    if (resend) { this.setState({ eErr: false }); this.toast('e', 'Оценка обновлена'); return; }
+    const nx = this.eNext(room, idx);
+    this.toast('e', 'Оценка команды №' + (idx + 1) + ' отправлена');
+    if (nx) this.eGoForm(nx.id); else this.setState({ ePage: 'room', eErr: false }, () => this.eTop());
+  }
+  eAbsent() { const { team } = this.eCtx(); if (this.cnt(team.id) > 0) this.setState({ eSheet: true }); else this.eMark(); }
+  eMark() {
+    const { room, team, idx } = this.eCtx(); team.absent = true; this.setState({ eSheet: false, eErr: false }); clearTimeout(this.timers.eAdv);
+    this.toast('e', 'Команда отмечена как не явившаяся', () => { team.absent = false; clearTimeout(this.timers.eAdv); this.touch(); }, 5000, true, 'person_off');
+    this.timers.eAdv = setTimeout(() => { const S = this.state; if (S.ePage === 'form' && S.eTeam === team.id && team.absent) { const nx = this.eNext(room, idx); if (nx) this.eGoForm(nx.id); else this.setState({ ePage: 'room' }); } }, 5000);
+  }
+  unmark(team, side) { team.absent = false; this.setState({ oMenu: null }); this.toast(side, 'Отметка «Не явилась» снята, оценки снова учитываются'); }
+
+  // organizer
+  oGo(p, x) { this.setState(Object.assign({ oPage: p, oMenu: null, oOpenErr: '', oErrRoom: null }, x || {}), () => { const el = this.oScroll.current; if (el) el.scrollTop = 0; }); }
+  oToast(t, u, ms) { this.toast('o', t, u, ms); }
+  oNewEvent() { this.setState({ oDlg: { t: 'create' }, newEv: { name: '', type: 'Предзащита', date: '2026-11-20', sheetId: 's1', err: false } }); }
+  oCreate() {
+    const n = this.state.newEv; if (!n.name.trim()) { n.err = true; this.touch(); return; }
+    const ev = { id: this.nid('e'), name: n.name.trim(), type: n.type, date: n.date || '2026-11-20', sheetId: n.sheetId, status: 'draft', rooms: [] };
+    this.state.events.unshift(ev); this.setState({ oDlg: null, oEvFilter: 'all' }); this.oGo('event', { oEv: ev.id }); this.oToast('Мероприятие создано — импортируйте команды');
+  }
+  impRows() { const P = this.POOL, rows = []; for (let i = 0; i < 16; i++) rows.push({ room: i < 8 ? 'ауд. 401' : 'ауд. 402', ord: i % 8 + 1, tid: 'T-' + (1200 + i * 7), name: P[30 + i] }); return rows; }
+  impPick() {
+    this.setState({ imp: Object.assign({}, this.state.imp, { step: 'check' }) }); clearTimeout(this.timers.imp);
+    this.timers.imp = setTimeout(() => { const im = this.state.imp; if (im && im.step === 'check') this.setState({ imp: Object.assign({}, im, { step: 'ready' }) }); }, 1400);
+  }
+  impApply() {
+    const ev = this.ev(this.state.oEv), map = {}, open = {};
+    this.impRows().forEach(r => { if (!map[r.room]) map[r.room] = { id: this.nid('r'), name: r.room, teams: [], experts: [] }; map[r.room].teams.push({ id: this.nid('t'), name: r.name, absent: false }); });
+    ev.rooms = Object.values(map); ev.rooms.forEach(r => { open[r.id] = true; });
+    this.setState({ oDlg: null, imp: null, oOpenRooms: Object.assign({}, this.state.oOpenRooms, open), oOpenErr: '', oErrRoom: null });
+    this.oToast('Импортировано 16 команд в 2 аудитории. Добавьте экспертов', null, 5000);
+  }
+  oOpen() {
+    const ev = this.ev(this.state.oEv);
+    if (!ev.rooms.length) { this.setState({ oOpenErr: 'Нельзя открыть приём оценок: в мероприятии нет аудиторий. Импортируйте команды из Excel.', oErrRoom: null }); return; }
+    const bad = ev.rooms.find(r => !r.experts.length || !r.teams.length);
+    if (bad) { this.setState({ oOpenErr: 'Нельзя открыть приём оценок: в ' + bad.name + ' нет ' + (!bad.teams.length ? 'команд' : 'экспертов'), oErrRoom: bad.id }); return; }
+    this.setState({ oOpenErr: '', oErrRoom: null, oDlg: { t: 'open' } });
+  }
+  oSetStatus(st, msg) { const ev = this.ev(this.state.oEv); ev.status = st; this.setState({ oDlg: null }); this.oToast(msg, null, 4500); }
+  oMark(t) { const c = this.cnt(t.id); this.setState({ oMenu: null }); if (c) this.setState({ oDlg: { t: 'absent', tid: t.id, n: c } }); else this.oDoMark(t); }
+  oDoMark(t) { t.absent = true; this.setState({ oDlg: null }); this.oToast('Команда отмечена как не явившаяся', () => { t.absent = false; this.touch(); }, 5000); }
+  oRemoveTeam(room, t) { const i = room.teams.indexOf(t); room.teams.splice(i, 1); this.setState({ oMenu: null }); this.oToast('Команда убрана из мероприятия', () => { room.teams.splice(i, 0, t); this.touch(); }, 5000); }
+  oRmExpert(room, x) { const n = room.teams.filter(t => this.sentBy(t.id, x)).length; if (n) this.setState({ oDlg: { t: 'rmExp', rid: room.id, xid: x, n } }); else this.oDoRmExp(room, x); }
+  oDoRmExp(room, x) { const i = room.experts.indexOf(x); if (i < 0) return; room.experts.splice(i, 1); this.setState({ oDlg: null }); this.oToast('Эксперт убран из ' + room.name, () => { room.experts.splice(i, 0, x); this.touch(); }, 5000); }
+  endDrag() { this.drag = null; this.setState({ oDov: null, oArm: null }); }
+  bDup(sh) {
+    const cp = { id: this.nid('s'), name: sh.name + ' (копия)', desc: sh.desc, crits: sh.crits.map(c => ({ id: this.nid('c'), name: c.name, desc: c.desc, levels: c.levels.map(l => ({ n: l.n, d: l.d })) })) };
+    const arr = this.state.sheets; arr.splice(arr.indexOf(sh) + 1, 0, cp); this.oGo('builder', { oSheet: cp.id }); this.oToast('Создана копия листа — её можно править');
+  }
+
+  renderVals() {
+    const S = this.state, ST = this.staff();
+    const pl = (n, a, b, c) => { const m = n % 10, h = n % 100; return n + ' ' + (m === 1 && h !== 11 ? a : m >= 2 && m <= 4 && (h < 12 || h > 14) ? b : c); };
+    const sumA = a => a.reduce((x, y) => x + (y || 0), 0);
+    const ini = s => s.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
+    const shortN = s => { const p = s.split(' '); return p[0] + ' ' + (p[1] ? p[1][0] + '.' : ''); };
+    const stop = x => { if (x && x.stopPropagation) x.stopPropagation(); };
+    const pct = (a, b) => (b ? Math.round(a / b * 100) : 0) + '%';
+    const fmt = n => n.toFixed(1).replace('.', ',');
+
+    // ---------- expert ----------
+    let ePage = S.ePage;
+    const cev = this.ev(S.eEv), croom = this.myRoom(cev);
+    const cteam = croom ? croom.teams.find(t => t.id === S.eTeam) : null;
+    if (ePage !== 'home' && (!croom || cev.status === 'draft')) ePage = 'home';
+    if (ePage === 'form' && !cteam) ePage = 'room';
+    const mine = S.events.filter(x => x.status !== 'draft' && this.myRoom(x));
+    const mk = x => { const rm = this.myRoom(x), m = this.mineSt(rm); return { name: x.name, date: this.fmtDate(x.date), room: rm.name, got: m.got, need: m.need, pct: pct(m.got, m.need), open: () => this.eOpenRoom(x.id) }; };
+    const active = mine.filter(x => x.status === 'open').map(mk), closedC = mine.filter(x => x.status === 'closed').map(mk);
+    const et = S.eToast;
+    const e = {
+      isHome: ePage === 'home', isRoom: ePage === 'room', isForm: ePage === 'form', active, closed: closedC, hasClosed: closedC.length > 0, homeEmpty: !active.length && !closedC.length,
+      goHome: () => this.setState({ ePage: 'home' }, () => this.eTop()), toRoom: () => this.setState({ ePage: 'room', eErr: false, eSheet: false }, () => this.eTop()),
+      showTabs: ePage !== 'form',
+      tabs: [['fact_check', 'Предзащиты'], ['leaderboard', 'Рейтинг'], ['person', 'Кабинет'], ['menu', 'Ещё']].map((x, i) => ({ ic: x[0], t: x[1], cls: 'tab' + (i === 0 ? ' on' : ''), go: i === 0 ? () => this.setState({ ePage: 'home' }) : () => this.toast('e', 'Раздел есть в продукте, в прототипе не показан', null, 2500, false, 'info') })),
+      sheet: S.eSheet && ePage === 'form', closeSheet: () => this.setState({ eSheet: false }), sheetOk: () => this.eMark(), sheetText: '',
+      toast: !!et, toastText: et ? et.text : '', toastUndo: !!(et && et.undo), toastMs: (et ? et.ms : 0) + 'ms', toastIc: et ? et.ic : '', toastCls: 'toast' + (et && et.bottom ? ' tb' : ''),
+      undo: () => { if (et && et.undo) et.undo(); this.setState({ eToast: null }); }
+    };
+    let f = { crits: [] };
+    if (croom && ePage !== 'home') {
+      const m = this.mineSt(croom), sh = this.sheet(cev.sheetId), mx = this.maxOf(sh), open = cev.status === 'open';
+      const nx = open ? this.eNext(croom, -1) : null;
+      Object.assign(e, {
+        evLine: cev.name + ' · ' + this.fmtDate(cev.date), roomName: croom.name, evName: cev.name, got: m.got, need: m.need, pct: pct(m.got, m.need),
+        absLine: m.abs ? pl(m.abs, 'команда не явилась', 'команды не явились', 'команд не явились') + ' — в счёт не входят' : '', canContinue: !!nx, cont: () => nx && this.eGoForm(nx.id),
+        nextLine: nx ? 'Следующая: №' + (croom.teams.indexOf(nx) + 1) + ' «' + nx.name.replace(' · весна 2026', '') + '»' : '',
+        allDone: open && !nx && m.need > 0, roomClosed: cev.status === 'closed', teamsN: pl(croom.teams.length, 'команда', 'команды', 'команд'),
+        rows: croom.teams.map((t, i) => {
+          const r = this.rat(t.id).pa; let st, cls;
+          if (t.absent) { st = 'Не явилась'; cls = 'bd b-ab'; } else if (r && r.sent) { st = 'Отправлена'; cls = 'bd b-g'; } else if (r) { st = 'Черновик'; cls = 'bd b-v'; } else { st = 'Не оценена'; cls = 'bd b-n'; }
+          return { n: i + 1, name: t.name, st, stCls: cls, hasSum: !t.absent, sum: (r ? sumA(r.sel) : '—') + ' / ' + mx, canUndo: t.absent && open, undo: x => { stop(x); this.unmark(t, 'e'); }, open: () => this.eGoForm(t.id), cls: 'lr hov' + (t.absent ? ' ab' : '') };
+        })
+      });
+      if (cteam) {
+        const idx = croom.teams.indexOf(cteam), r = this.rat(cteam.id).pa, ro = !open, dis = cteam.absent, lock = ro || dis;
+        const sel = r ? r.sel : sh.crits.map(() => null);
+        const dirty = !!(r && r.sent && (JSON.stringify(r.sel) !== JSON.stringify(r.sent.sel) || r.com !== r.sent.com));
+        const miss = sh.crits.filter((c, i) => sel[i] == null).length;
+        const nextOrd = idx < croom.teams.length - 1 ? croom.teams[idx + 1] : null;
+        const goNextOrd = () => nextOrd ? this.eGoForm(nextOrd.id) : this.setState({ ePage: 'room' });
+        let st = 'Не оценена', stCls = 'bd b-n';
+        if (dis) { st = 'Не явилась'; stCls = 'bd b-ab'; } else if (r && r.sent) { st = 'Отправлена'; stCls = 'bd b-g'; } else if (r) { st = 'Черновик'; stCls = 'bd b-v'; }
+        let priT = 'Отправить и далее', priCls = 'btn', pri = () => this.eSend();
+        if (ro) { priT = nextOrd ? 'Следующая' : 'К списку'; priCls = 'btn2'; pri = goNextOrd; }
+        else if (dis) { priT = nextOrd ? 'Далее' : 'К списку'; pri = goNextOrd; }
+        else if (r && r.sent) { priT = 'Отправить снова'; priCls = 'btn' + (dirty ? '' : ' dis'); }
+        const c0 = this.cnt(cteam.id);
+        e.sheetText = 'У команды ' + pl(c0, 'оценка', 'оценки', 'оценок') + '. Они сохранятся, но перестанут учитываться в итогах. Отметку можно будет снять.';
+        f = {
+          roBanner: ro, absBanner: dis, canUnmark: dis && open, unmark: () => { clearTimeout(this.timers.eAdv); this.unmark(cteam, 'e'); },
+          errBanner: S.eErr && miss > 0 && !lock, errText: 'Оцените все критерии: пропущено ' + miss + ' из ' + sh.crits.length,
+          sentBanner: !!(r && r.sent) && !lock, sentText: r && r.sent ? (dirty ? 'Есть изменения после отправки в ' + r.sent.at + '. Отправьте оценку снова.' : 'Оценка отправлена в ' + r.sent.at + '. Изменения нужно отправить снова.') : '',
+          num: (idx + 1) + ' из ' + croom.teams.length, st, stCls, team: cteam.name, canAbsent: open && !dis, absent: () => this.eAbsent(),
+          crits: sh.crits.map((c, i) => {
+            const s = sel[i], err = S.eErr && s == null && !lock, lv = c.levels.find(l => l.n === s);
+            return { name: c.name, max: c.levels.length ? c.levels[c.levels.length - 1].n : 0, cls: 'card crit' + (err ? ' err' : '') + (dis ? ' mut' : ''),
+              lv: c.levels.map(l => ({ n: l.n, cls: 'lv' + (s === l.n ? ' on' : '') + (lock ? ' ro' : ''), pick: () => this.eSet(i, l.n) })),
+              desc: s == null ? (err ? 'Выберите уровень, чтобы отправить' : 'Уровень не выбран') : (lv && lv.d ? lv.d : 'Балл ' + s), dcls: 'dsc' + (err ? ' e' : '') };
+          }),
+          com: r ? r.com : '', setCom: x => this.eCom(x.target.value), lock, comCls: 'inp ta' + (lock ? ' ro-f' : ' fill'),
+          sum: sumA(sel), max: mx, save: ro ? 'Только просмотр' : r ? 'Сохранено' : 'Изменения сохраняются автоматически', saveIc: ro ? 'visibility' : r ? 'cloud_done' : 'cloud',
+          prev: () => idx > 0 && this.eGoForm(croom.teams[idx - 1].id), prevCls: 'btn2 sq' + (idx > 0 ? '' : ' dis'), priT, priCls, pri
+        };
+      }
+    }
+
+    // ---------- organizer ----------
+    const oP = S.oPage, dl = S.oDlg, ot = S.oToast;
+    const act = { sheets: oP === 'sheets' || oP === 'builder', events: oP === 'events' || oP === 'event' || oP === 'results' };
+    const menu = [['leaderboard', 'Рейтинг', ''], ['person', 'Личный кабинет', ''], ['g', 'Эксперт'], ['fact_check', 'Мои предзащиты', 'exp'], ['g', 'Организатор'], ['assignment', 'Оценочные листы', 'sheets'], ['event', 'Мероприятия', 'events'], ['g', ' '], ['settings', 'Настройки', '']].map(x => x[0] === 'g' ? { g: true, i: false, t: x[1] } : {
+      g: false, i: true, ic: x[0], t: x[1], cls: 'mi' + (act[x[2]] ? ' on' : ''),
+      go: x[2] === 'sheets' || x[2] === 'events' ? () => this.oGo(x[2]) : x[2] === 'exp' ? () => this.oToast('Экраны эксперта — в телефоне слева') : () => this.oToast('Раздел есть в продукте, в прототипе не показан')
+    });
+    const evFilt = S.oEvFilter;
+    const evList = S.events.filter(x => evFilt === 'all' || x.status === evFilt).map(x => {
+      const s = this.evSt(x), dr = x.status === 'draft';
+      return { name: x.name, type: x.type, date: this.fmtDate(x.date), rooms: x.rooms.length ? pl(x.rooms.length, 'аудитория', 'аудитории', 'аудиторий') : 'нет аудиторий', teams: s.teams ? pl(s.teams, 'команда', 'команды', 'команд') : 'нет команд',
+        got: dr ? '—' : s.got, of: dr ? '' : 'из ' + s.need, pct: dr ? '0%' : pct(s.got, s.need), st: { draft: 'Черновик', open: 'Идёт оценка', closed: 'Закрыто' }[x.status], stCls: { draft: 'bd b-v', open: 'bd b-g', closed: 'bd b-n' }[x.status], open: () => this.oGo('event', { oEv: x.id }) };
+    });
+    const sheetsV = S.sheets.filter(sh => S.oSheetFilter === 'all' || (S.oSheetFilter === 'locked') === this.locked(sh)).map(sh => {
+      const lk = this.locked(sh), used = S.events.filter(x => x.sheetId === sh.id);
+      return { name: sh.name || 'Без названия', cap: used.length ? (lk ? 'Используется: ' : 'Выбран в черновике: ') + used.map(x => x.name).join('; ') : 'Не используется', n: sh.crits.length, max: this.maxOf(sh),
+        st: lk ? 'Заблокирован' : 'Черновик', stCls: lk ? 'bd b-n' : 'bd b-v', stIc: lk ? 'lock' : 'edit', open: () => this.oGo('builder', { oSheet: sh.id }), dup: x => { stop(x); this.bDup(sh); } };
+    });
+    const o = {
+      isEvents: oP === 'events', isEvent: oP === 'event', isSheets: oP === 'sheets', isBuilder: oP === 'builder', isResults: oP === 'results', menu,
+      toEvents: () => this.oGo('events'), toSheets: () => this.oGo('sheets'), newEvent: () => this.oNewEvent(),
+      createSheet: () => { const sh = { id: this.nid('s'), name: 'Новый лист', desc: '', crits: [] }; S.sheets.unshift(sh); this.oGo('builder', { oSheet: sh.id }); },
+      closeDlg: () => this.setState({ oDlg: null }), dlgBg: x => { if (x.target === x.currentTarget) this.setState({ oDlg: null }); },
+      closeMenu: x => { stop(x); this.setState({ oMenu: null }); }, disarm: () => this.setState({ oArm: null }),
+      evSeg: [['all', 'Все'], ['draft', 'Черновики'], ['open', 'Идёт оценка'], ['closed', 'Закрытые']].map(x => ({ t: x[1], cls: evFilt === x[0] ? 'on' : '', pick: () => this.setState({ oEvFilter: x[0] }) })),
+      evList, evEmpty: !evList.length, sheets: sheetsV, sheetsEmpty: !sheetsV.length, sheetFilter: S.oSheetFilter, setSheetFilter: x => this.setState({ oSheetFilter: x.target.value }),
+      dlg: !!dl, dCreate: !!dl && dl.t === 'create', dImport: !!dl && dl.t === 'import', dPrint: !!dl && dl.t === 'print', dConfirm: !!dl && ['open', 'close', 'reopen', 'absent', 'rmExp', 'delCrit'].includes(dl.t),
+      toast: !!ot, toastText: ot ? ot.text : '', toastUndo: !!(ot && ot.undo), toastMs: (ot ? ot.ms : 0) + 'ms', undo: () => { if (ot && ot.undo) ot.undo(); this.setState({ oToast: null }); }
+    };
+
+    // event page
+    const ev = this.ev(S.oEv);
+    let v = { rooms: [], sheetOpts: [] };
+    if (ev && oP === 'event') {
+      const sh = this.sheet(ev.sheetId), es = this.evSt(ev), dr = ev.status === 'draft', editable = ev.status !== 'closed';
+      v = {
+        name: ev.name, type: ev.type, date: this.fmtDate(ev.date), st: { draft: 'Черновик', open: 'Идёт оценка', closed: 'Закрыто' }[ev.status], stCls: { draft: 'bd b-v', open: 'bd b-g', closed: 'bd b-n' }[ev.status],
+        isDraft: dr, notDraft: !dr, isOpen: ev.status === 'open', isClosed: ev.status === 'closed',
+        imp: () => this.setState({ oDlg: { t: 'import' }, imp: { step: 'start' } }), open: () => this.oOpen(), close: () => this.setState({ oDlg: { t: 'close' } }), reopen: () => this.setState({ oDlg: { t: 'reopen' } }),
+        res: () => this.oGo('results', { oResRoom: ev.rooms[0] ? ev.rooms[0].id : null }),
+        openErr: S.oOpenErr, hasErrRoom: !!S.oErrRoom, goErr: () => { S.oOpenRooms[S.oErrRoom] = true; this.touch(); },
+        roomsN: ev.rooms.length, teamsN: es.teams, got: dr ? '—' : es.got, of: dr ? '' : 'из ' + es.need, pct: dr ? '0%' : pct(es.got, es.need),
+        sheetId: sh.id, sheetName: sh.name, sheetCap: pl(sh.crits.length, 'критерий', 'критерия', 'критериев') + ' · макс. ' + this.maxOf(sh),
+        sheetOpts: S.sheets.map(x => ({ id: x.id, name: x.name || 'Без названия' })), setSheet: x => { ev.sheetId = x.target.value; this.touch(); },
+        openSheet: () => this.oGo('builder', { oSheet: sh.id }), noRooms: !ev.rooms.length,
+        rooms: ev.rooms.map(room => {
+          const st = this.roomSt(room), op = !!S.oOpenRooms[room.id], act0 = room.teams.filter(t => !t.absent).length;
+          const q = S.oSearch[room.id] || '', ql = q.trim().toLowerCase();
+          const res = ql.length >= 2 ? Object.keys(ST).filter(id => !room.experts.includes(id) && ST[id].name.toLowerCase().includes(ql)).map(id => ({
+            ini: ini(ST[id].name), name: ST[id].name, dep: ST[id].dep,
+            add: () => { room.experts.push(id); S.oSearch[room.id] = ''; const ok = S.oErrRoom === room.id && room.teams.length; this.setState(ok ? { oOpenErr: '', oErrRoom: null } : {}); this.oToast('Эксперт ' + shortN(ST[id].name) + ' добавлен в ' + room.name); }
+          })) : [];
+          return {
+            name: room.name, open: op, expIc: op ? 'expand_less' : 'expand_more', toggle: () => { S.oOpenRooms[room.id] = !op; this.touch(); },
+            cap: pl(st.teams, 'команда', 'команды', 'команд') + ' · ' + pl(room.experts.length, 'эксперт', 'эксперта', 'экспертов') + (dr ? '' : ' · оценки ' + st.got + ' из ' + st.need),
+            noExp: !room.experts.length, noTeams: !room.teams.length, cls: 'card col' + (S.oErrRoom === room.id ? ' err' : ''),
+            print: x => { stop(x); this.setState({ oDlg: { t: 'print', rid: room.id } }); }, canEdit: editable,
+            teams: room.teams.map((t, i) => {
+              const c = this.cnt(t.id), mo = S.oMenu === t.id;
+              return {
+                n: i + 1, name: t.name, absent: t.absent, notAbsent: !t.absent, canMenu: editable, menuOpen: mo && editable,
+                menu: x => { stop(x); this.setState({ oMenu: mo ? null : t.id }); }, mark: x => { stop(x); this.oMark(t); }, unmark: x => { stop(x); this.unmark(t, 'o'); },
+                rmCls: c ? 'red dis' : 'red', remove: x => { stop(x); if (!c) this.oRemoveTeam(room, t); }, rmHint: c ? 'Недоступно: у команды есть ' + pl(c, 'оценка', 'оценки', 'оценок') : '',
+                cls: 'lr lro' + (S.oDov === t.id ? ' dov' : ''), hdlCls: 'ms hdl' + (editable ? '' : ' dis'), drag: editable && S.oArm === t.id,
+                arm: () => editable && this.setState({ oArm: t.id }),
+                ds: x => { this.drag = { kind: 'team', room: room.id, i }; try { x.dataTransfer.effectAllowed = 'move'; x.dataTransfer.setData('text/plain', t.id); } catch (err) {} },
+                dov: x => { const d0 = this.drag; if (d0 && d0.kind === 'team' && d0.room === room.id) { x.preventDefault(); if (this.state.oDov !== t.id) this.setState({ oDov: t.id }); } },
+                drop: x => { x.preventDefault(); const d0 = this.drag; if (d0 && d0.kind === 'team' && d0.room === room.id && d0.i !== i) { const mv = room.teams.splice(d0.i, 1)[0]; room.teams.splice(i, 0, mv); this.oToast('Порядок выступления в ' + room.name + ' обновлён'); } this.endDrag(); },
+                de: () => this.endDrag()
+              };
+            }),
+            exps: room.experts.map(id => { const p = ST[id], sent = room.teams.filter(t => !t.absent && this.sentBy(t.id, id)).length; return { ini: ini(p.name), name: p.name, cap: dr ? p.dep : 'Отправлено ' + sent + ' из ' + act0, canRm: editable, rm: () => this.oRmExpert(room, id) }; }),
+            q, setQ: x => { S.oSearch[room.id] = x.target.value; this.touch(); }, showRes: ql.length >= 2, res, noRes: ql.length >= 2 && !res.length
+          };
+        })
+      };
+    }
+
+    // results
+    let rs = { tabs: [], exps: [], rows: [] };
+    if (ev && oP === 'results') {
+      const sh = this.sheet(ev.sheetId), rm = ev.rooms.find(r => r.id === S.oResRoom) || ev.rooms[0];
+      rs = { evName: ev.name, toEvent: () => this.oGo('event', { oEv: ev.id }), sub: 'Лист «' + sh.name + '» · максимум ' + pl(this.maxOf(sh), 'балл', 'балла', 'баллов'),
+        tabs: ev.rooms.map(r => ({ t: r.name, cls: rm && r.id === rm.id ? 'on' : '', pick: () => this.setState({ oResRoom: r.id }) })), sort: S.oSort, setSort: x => this.setState({ oSort: x.target.value }), exps: [], rows: [], empty: true, cols: '1fr' };
+      if (rm) {
+        const st = this.roomSt(rm), miss = st.need - st.got, exps = rm.experts.slice();
+        rm.teams.forEach(t => Object.keys(this.rat(t.id)).forEach(x => { if (this.rat(t.id)[x].sent && !exps.includes(x)) exps.push(x); }));
+        const rows = rm.teams.map((t, i) => { const sc = exps.map(x => { const r = this.rat(t.id)[x]; return r && r.sent ? sumA(r.sent.sel) : null; }); const vals = sc.filter(y => y != null); return { t, i, sc, avg: vals.length ? vals.reduce((a, b2) => a + b2, 0) / vals.length : null, place: null }; });
+        const ranked = rows.filter(r => !r.t.absent && r.avg != null).sort((a, b2) => b2.avg - a.avg); ranked.forEach((r, k) => { r.place = k + 1; });
+        let main = rows.filter(r => !r.t.absent);
+        if (S.oSort === 'avg') main = ranked.concat(main.filter(r => r.avg == null)); else if (S.oSort === 'name') main.sort((a, b2) => a.t.name.localeCompare(b2.t.name, 'ru'));
+        const cols = '44px minmax(240px,1fr) repeat(' + exps.length + ',112px) 76px';
+        const closed = ev.status === 'closed';
+        Object.assign(rs, {
+          empty: !rm.teams.length, cols, minW: (44 + 240 + exps.length * 112 + 76 + (exps.length + 3) * 12 + 40) + 'px',
+          badge: miss > 0 ? 'Не хватает ' + pl(miss, 'оценки', 'оценок', 'оценок') : 'Все оценки получены', badgeCls: miss > 0 ? 'bd b-v' : 'bd b-g', badgeIc: miss > 0 ? 'hourglass_top' : 'task_alt',
+          cap: closed ? 'Приём закрыт — итоги окончательные' : 'Приём оценок открыт — итоги предварительные',
+          exps: exps.map(x => ({ ini: ini(ST[x].name), full: ST[x].name, short: shortN(ST[x].name) + (rm.experts.includes(x) ? '' : ' (убран)') })),
+          rows: main.concat(rows.filter(r => r.t.absent)).map(r => ({
+            cols, place: r.t.absent ? '' : (r.place || '—'), ini: ini(r.t.name), name: r.t.name, abs: r.t.absent,
+            sc: r.sc.map(y => ({ t: y == null ? '—' : String(y), cls: y == null ? 'cap' : (r.t.absent ? 'm st' : 'm b') })),
+            avg: r.t.absent ? '' : (r.avg == null ? '—' : fmt(r.avg)), avgCls: r.avg == null || r.t.absent ? 'cap r' : 'm b g r'
+          }))
+        });
+      }
+    }
+
+    // builder
+    let b = { crits: [] };
+    const bs = this.sheet(S.oSheet);
+    if (bs && oP === 'builder') {
+      const lk = this.locked(bs), ed = !lk, mx = this.maxOf(bs);
+      b = {
+        title: bs.name || 'Без названия', name: bs.name, desc: bs.desc, ro: lk, ed, st: lk ? 'Заблокирован' : 'Черновик', stCls: lk ? 'bd b-n' : 'bd b-v', stIc: lk ? 'lock' : 'edit',
+        fCls: ed ? 'inp fill' : 'inp ro-f', taCls: ed ? 'inp fill ta' : 'inp ro-f ta', max: mx, maxT: pl(mx, 'балл', 'балла', 'баллов'),
+        setName: x => { bs.name = x.target.value; this.touch(); }, setDesc: x => { bs.desc = x.target.value; this.touch(); },
+        dup: () => this.bDup(bs), noCrits: !bs.crits.length,
+        addCrit: () => { bs.crits.push(this.mkCrit('', '')); this.touch(); },
+        crits: bs.crits.map((c, i) => ({
+          name: c.name, desc: c.desc, nameP: c.name || '—', max: c.levels.length ? c.levels[c.levels.length - 1].n : 0,
+          setName: x => { c.name = x.target.value; this.touch(); }, setDesc: x => { c.desc = x.target.value; this.touch(); },
+          cls: 'card col' + (S.oDov === c.id ? ' dov' : ''), hdlCls: 'ms hdl' + (ed ? '' : ' dis'), drag: ed && S.oArm === c.id, arm: () => ed && this.setState({ oArm: c.id }),
+          ds: x => { this.drag = { kind: 'crit', i }; try { x.dataTransfer.effectAllowed = 'move'; x.dataTransfer.setData('text/plain', c.id); } catch (err) {} },
+          dov: x => { if (this.drag && this.drag.kind === 'crit') { x.preventDefault(); if (this.state.oDov !== c.id) this.setState({ oDov: c.id }); } },
+          drop: x => { x.preventDefault(); const d0 = this.drag; if (d0 && d0.kind === 'crit' && d0.i !== i) { const mv = bs.crits.splice(d0.i, 1)[0]; bs.crits.splice(i, 0, mv); } this.endDrag(); },
+          de: () => this.endDrag(),
+          del: () => this.setState({ oDlg: { t: 'delCrit', cid: c.id } }),
+          addLv: () => { c.levels.push({ n: c.levels.length, d: '' }); this.touch(); },
+          lv: c.levels.map((l, k) => ({
+            n: l.n, d: l.d, setD: x => { l.d = x.target.value; this.touch(); }, delCls: 'ib2' + (c.levels.length <= 2 ? ' dis' : ''),
+            del: () => {
+              if (c.levels.length <= 2) return;
+              const rem = c.levels.splice(k, 1)[0]; c.levels.forEach((q, j) => { q.n = j; }); this.touch();
+              this.oToast('Уровень «' + rem.n + ' — ' + (rem.d || 'без описания') + '» удалён', () => { c.levels.splice(k, 0, rem); c.levels.forEach((q, j) => { q.n = j; }); this.touch(); }, 5000);
+            }
+          }))
+        }))
+      };
+    }
+
+    // dialogs
+    let n = { types: [], sheets: [] };
+    if (dl && dl.t === 'create' && S.newEv) {
+      const ne = S.newEv;
+      n = {
+        name: ne.name, err: ne.err, nameCls: 'inp fill' + (ne.err ? ' err' : ''), setName: x => { ne.name = x.target.value; ne.err = false; this.touch(); },
+        types: [['Предзащита', 'co_present', 'Промежуточный показ проекта'], ['Защита', 'school', 'Итоговая оценка проекта']].map(x => ({ t: x[0], ic: x[1], d: x[2], cls: 'pk' + (ne.type === x[0] ? ' on' : ''), pick: () => { ne.type = x[0]; this.touch(); } })),
+        date: ne.date, setDate: x => { ne.date = x.target.value; this.touch(); },
+        sheetId: ne.sheetId, setSheet: x => { ne.sheetId = x.target.value; this.touch(); }, sheets: S.sheets.map(x => ({ id: x.id, name: x.name || 'Без названия' })),
+        create: () => this.oCreate()
+      };
+    }
+    let im = { rows: [] };
+    if (dl && dl.t === 'import' && S.imp && ev) {
+      const step = S.imp.step;
+      im = {
+        tpl: () => this.oToast('Шаблон predzashchita_shablon.xlsx скачан'), pick: () => this.impPick(), pickT: step === 'start' ? 'Выбрать файл' : 'Выбрать другой файл',
+        hasFile: step !== 'start', noFile: step === 'start', checking: step === 'check', ready: step === 'ready',
+        rows: this.impRows().slice(0, 4), applyCls: step === 'ready' ? 'btn' : 'btn dis', apply: () => step === 'ready' && this.impApply(), replace: ev.rooms.length > 0
+      };
+    }
+    let d = { title: '', text: '', banner: '', bCls: '', bIc: '', okT: '', ok: null };
+    if (o.dConfirm && ev) {
+      const sh = this.sheet(ev.sheetId), es = this.evSt(ev);
+      if (dl.t === 'open') d = { title: 'Открыть приём оценок?', text: 'Эксперты ' + ev.rooms.length + ' ' + (ev.rooms.length === 1 ? 'аудитории' : 'аудиторий') + ' увидят мероприятие в «Мои предзащиты» и смогут ставить оценки.', banner: 'Лист «' + sh.name + '» будет заблокирован для изменений', bCls: 'bn bn-n', bIc: 'lock', okT: 'Открыть приём', ok: () => this.oSetStatus('open', 'Приём оценок открыт — эксперты видят мероприятие') };
+      else if (dl.t === 'close') { const miss = es.need - es.got; d = { title: 'Закрыть приём оценок?', banner: miss > 0 ? 'Не хватает ' + pl(miss, 'оценки', 'оценок', 'оценок') + ' из ' + es.need : '', bCls: 'bn bn-r', bIc: 'warning', text: 'Эксперты увидят формы только для чтения. Итоги станут окончательными.', okT: 'Закрыть', ok: () => this.oSetStatus('closed', 'Приём закрыт, итоги окончательные') }; }
+      else if (dl.t === 'reopen') d = { title: 'Вернуть мероприятие в работу?', text: 'Эксперты снова смогут менять и отправлять оценки. Итоги станут предварительными.', banner: '', okT: 'Вернуть в работу', ok: () => this.oSetStatus('open', 'Мероприятие снова в работе') };
+      else if (dl.t === 'absent') d = { title: 'Отметить, что команда не явилась?', text: 'У команды ' + pl(dl.n, 'оценка', 'оценки', 'оценок') + '. Они сохранятся, но перестанут учитываться в итогах. Отметку можно будет снять.', banner: '', okT: 'Отметить', ok: () => { const ft = this.findTeam(dl.tid); if (ft) this.oDoMark(ft.team); } };
+      else if (dl.t === 'rmExp') { const fr = this.findRoom(dl.rid); d = { title: 'Убрать эксперта из ' + fr.room.name + '?', text: ST[dl.xid].name + ' больше не увидит эту аудиторию. ' + pl(dl.n, 'отправленная оценка останется', 'отправленные оценки останутся', 'отправленных оценок останутся') + ' в итогах.', banner: '', okT: 'Убрать', ok: () => this.oDoRmExp(fr.room, dl.xid) }; }
+    }
+    if (dl && dl.t === 'delCrit' && bs) {
+      const c = bs.crits.find(x => x.id === dl.cid), a = this.maxOf(bs), cm = c && c.levels.length ? c.levels[c.levels.length - 1].n : 0;
+      d = { title: 'Удалить критерий «' + ((c && c.name) || 'без названия') + '»?', text: 'Максимум листа уменьшится с ' + a + ' до ' + pl(a - cm, 'балла', 'баллов', 'баллов') + '. Строка исчезнет из бланка.', banner: '', okT: 'Удалить', ok: () => { const i = bs.crits.indexOf(c); if (i >= 0) bs.crits.splice(i, 1); this.setState({ oDlg: null }); this.oToast('Критерий удалён'); } };
+    }
+    let pr = { teams: [], rows: [], tcells: [] };
+    if (dl && dl.t === 'print') {
+      const fr = this.findRoom(dl.rid);
+      if (fr) {
+        const sh = this.sheet(fr.ev.sheetId), mx = this.maxOf(sh), N = Math.max(fr.room.teams.length, 1), cells = fr.room.teams.map((t, i) => ({ i }));
+        pr = { title: 'Печать бланка · ' + fr.room.name, evName: fr.ev.name, line: this.fmtDate(fr.ev.date) + ' · ' + fr.room.name, sub: 'Лист «' + sh.name + '» · максимум ' + mx,
+          cols: '190px repeat(' + N + ',minmax(0,1fr))', teams: fr.room.teams.map((t, i) => ({ n: i + 1, name: t.name })),
+          rows: sh.crits.map(c => ({ name: c.name, lv: c.levels.map(l => ({ t: l.n + ' — ' + (l.d || '') })), cells })), tcells: cells, total: 'Итого (из ' + mx + ')', print: () => window.print() };
+      }
+    }
+
+    return { e, f, o, v, rs, b, n, im, d, pr, eScroll: this.eScroll, oScroll: this.oScroll, reset: () => this.reset() };
+  }
+}
+</script>
+</body>
+</html>
