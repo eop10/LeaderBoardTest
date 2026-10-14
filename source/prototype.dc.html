@@ -24,13 +24,14 @@ textarea{resize:vertical}
 .m{font-family:Manrope,sans-serif}.b{font-weight:700}.g{color:#006d30}.vio{color:#5d3fe0}
 .row{display:flex;align-items:center;gap:12px}.col{display:flex;flex-direction:column;gap:8px}.sp{flex:1}
 .ph{width:390px;height:844px;background:#f7fafc;border:1px solid #bccaba;border-radius:36px;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,40,20,.14);flex:none}
-.sbar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font:700 15px Manrope;flex:none}
+.sbar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font:700 15px Manrope,sans-serif;flex:none}
 .mh{height:56px;display:flex;align-items:center;gap:8px;padding:0 16px;background:#f7fafc;border-bottom:1px solid #e1e8e3;flex:none}
-.logo{font:800 20px Manrope;color:#006d30;flex:1}
-.hav{width:36px;height:36px;border-radius:50%;border:2px solid #006d30;display:grid;place-items:center;font:800 14px Manrope;color:#006d30;background:#fff;flex:none}
+.logo{font:800 20px Manrope,sans-serif;color:#006d30;flex:1}
+.hav{width:36px;height:36px;border-radius:50%;border:2px solid #006d30;display:grid;place-items:center;font:800 14px Manrope,sans-serif;color:#006d30;background:#fff;flex:none}
 .ib{width:44px;height:44px;display:grid;place-items:center;border-radius:8px;flex:none;transition:background .15s}.ib:hover{background:#e6ece8}
 .ib2{width:36px;height:36px;display:grid;place-items:center;border-radius:8px;flex:none;color:#3d4a3d;transition:background .15s}.ib2:hover{background:#e6ece8;color:#181c1e}
 .psc{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:16px;min-height:0}
+.psc > *,.sb > *{flex-shrink:0}
 .tabs{height:76px;flex:none;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid #bccaba;padding:8px 4px 16px}
 .tab{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;color:#3d4a3d;font-weight:600}
 .tab .ms{width:56px;height:30px;border-radius:15px;display:grid;place-items:center;transition:background .15s}
@@ -41,22 +42,22 @@ textarea{resize:vertical}
 .dg{display:flex;flex:1;min-height:0}
 .sb{width:236px;flex:none;background:#fff;border-right:1px solid #bccaba;padding:24px 12px;display:flex;flex-direction:column;gap:2px;overflow-y:auto}
 .sbu{display:flex;flex-direction:column;align-items:center;gap:2px;padding-bottom:20px;margin-bottom:8px;border-bottom:1px solid #e1e8e3;text-align:center}
-.sav{width:56px;height:56px;border-radius:50%;border:3px solid #006d30;display:grid;place-items:center;font:800 22px Manrope;color:#006d30;margin-bottom:8px}
+.sav{width:56px;height:56px;border-radius:50%;border:3px solid #006d30;display:grid;place-items:center;font:800 22px Manrope,sans-serif;color:#006d30;margin-bottom:8px}
 .mi{display:flex;align-items:center;gap:10px;min-height:44px;padding:0 12px;font-size:15px;border-radius:8px;font-weight:600;color:#3d4a3d;width:100%;transition:background .15s}
 .mi:hover{background:#eef2ef}.mi.on{background:#00ab4f;color:#fff}
 .mg{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#3d4a3d;padding:14px 14px 4px;font-weight:700}
 .main{flex:1;padding:28px;min-width:0;overflow-y:auto}
 .phd{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 24px;margin-bottom:24px;flex-wrap:wrap}
-.pt{font:800 34px/1.1 Manrope;margin:0}.pts{font:800 28px/1.15 Manrope;margin:0}
+.pt{font:800 34px/1.1 Manrope,sans-serif;margin:0}.pts{font:800 28px/1.15 Manrope,sans-serif;margin:0}
 .psub{color:#3d4a3d;margin-top:6px}
 .seg{display:flex;background:#e6ebe8;border-radius:10px;padding:4px;gap:4px;flex:none;flex-wrap:wrap}
 .seg button{padding:0 14px;height:38px;display:flex;align-items:center;border-radius:8px;font-weight:600;color:#3d4a3d;font-size:14px;white-space:nowrap;transition:background .15s}
 .seg button:hover{background:#f3f6f4}.seg .on{background:#fff;color:#006d30;font-weight:800;box-shadow:0 1px 2px rgba(0,0,0,.08)}
 .card{background:#fff;border:1px solid #bccaba;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,40,20,.06)}
 .hovc{transition:border-color .15s,box-shadow .15s;text-align:left}.hovc:hover{border-color:#006d30;box-shadow:0 4px 12px rgba(0,40,20,.1)}
-.ct{font:700 19px/1.25 Manrope;margin:0}
+.ct{font:700 19px/1.25 Manrope,sans-serif;margin:0}
 .cap{font-size:13px;color:#3d4a3d}
-.btn,.btn2{height:44px;padding:0 18px;border-radius:8px;background:#0E9344;color:#fff;font:700 14px 'Hanken Grotesk';letter-spacing:.06em;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;border:1.5px solid #0E9344;flex:none;transition:background .15s,transform .08s}
+.btn,.btn2{height:44px;padding:0 18px;border-radius:8px;background:#0E9344;color:#fff;font:700 14px 'Hanken Grotesk',sans-serif;letter-spacing:.06em;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;border:1.5px solid #0E9344;flex:none;transition:background .15s,transform .08s}
 .btn2{background:#fff;color:#006d30}
 .btn .ms,.btn2 .ms{font-size:20px}
 .btn:hover{background:#0b7a38;border-color:#0b7a38}.btn2:hover{background:#eef7f1}
@@ -75,10 +76,10 @@ textarea{resize:vertical}
 .lro{min-height:52px;padding:8px 10px}
 .dov{border:2px dashed #5d3fe0}
 .hdl{color:#3d4a3d;cursor:grab}
-.num{width:32px;height:32px;border-radius:50%;background:#e9edeb;display:grid;place-items:center;font:800 14px Manrope;flex:none}
-.av{width:34px;height:34px;border-radius:50%;background:#5d3fe0;color:#fff;display:grid;place-items:center;font:700 12px Manrope;flex:none}
+.num{width:32px;height:32px;border-radius:50%;background:#e9edeb;display:grid;place-items:center;font:800 14px Manrope,sans-serif;flex:none}
+.av{width:34px;height:34px;border-radius:50%;background:#5d3fe0;color:#fff;display:grid;place-items:center;font:700 12px Manrope,sans-serif;flex:none}
 .lvs{display:flex;gap:8px}
-.lv{flex:1;min-height:48px;border:1.5px solid #bccaba;border-radius:10px;display:flex;align-items:center;justify-content:center;font:800 18px Manrope;background:#fff;transition:border-color .12s,background .12s}
+.lv{flex:1;min-height:48px;border:1.5px solid #bccaba;border-radius:10px;display:flex;align-items:center;justify-content:center;font:800 18px Manrope,sans-serif;background:#fff;transition:border-color .12s,background .12s}
 .lv:hover{border-color:#006d30}.lv.on{background:#0E9344;border-color:#0E9344;color:#fff}
 .lv.ro{pointer-events:none;border-style:dashed;color:#3d4a3d}.lv.ro.on{border-style:solid;color:#fff;opacity:.75}
 .crit{display:flex;flex-direction:column;gap:12px}
@@ -91,7 +92,7 @@ textarea{resize:vertical}
 .bare{border:0;outline:none;flex:1;min-width:0;background:transparent;height:42px;font-size:15px}
 .lbl{font-size:12px;color:#3d4a3d;margin-bottom:6px;font-weight:700}
 .mt{display:flex;justify-content:space-between;align-items:flex-start}
-.mv{font:800 30px/1 Manrope;margin-top:14px}.mv small{font:700 14px 'Hanken Grotesk';color:#5d3fe0;margin-left:6px}
+.mv{font:800 30px/1 Manrope,sans-serif;margin-top:14px}.mv small{font:700 14px 'Hanken Grotesk',sans-serif;color:#5d3fe0;margin-left:6px}
 .bn{display:flex;gap:10px;padding:12px 16px;border-radius:8px;font-size:14px;line-height:1.4;align-items:flex-start;font-weight:600}
 .bn .ms{font-size:20px}
 .bn-r{background:#fbe9e7;color:#ba1a1a;border:1px solid #ba1a1a}.bn-n{background:#e9edeb;color:#181c1e}.bn-g{background:#e2f3e7;color:#006d30}
@@ -119,10 +120,10 @@ textarea{resize:vertical}
 .menu{position:absolute;right:8px;top:calc(100% + 4px);width:300px;z-index:21;animation:pop .14s ease-out}
 .catch{position:fixed;inset:0;z-index:20;cursor:default}
 .pv{display:grid;grid-template-columns:96px repeat(6,1fr);border-left:1px solid #181c1e;border-top:1px solid #181c1e;font-size:9px;color:#181c1e}
-.pv span{border-right:1px solid #181c1e;border-bottom:1px solid #181c1e;padding:3px;min-height:24px}
-.pa{width:1000px;background:#fff;padding:32px;color:#000;display:flex;flex-direction:column;gap:16px}
+.pv > span{border-right:1px solid #181c1e;border-bottom:1px solid #181c1e;padding:3px;min-height:24px;overflow-wrap:break-word;hyphens:auto;min-width:0}
+.pa{width:100%;min-width:760px;background:#fff;padding:32px;color:#000;display:flex;flex-direction:column;gap:16px}
 .pf{display:grid;border-left:1.5px solid #000;border-top:1.5px solid #000}
-.pf > div{border-right:1px solid #000;border-bottom:1px solid #000;padding:6px 8px;overflow-wrap:anywhere;hyphens:auto;min-width:0}
+.pf > div{border-right:1px solid #000;border-bottom:1px solid #000;padding:6px 8px;overflow-wrap:break-word;hyphens:auto;min-width:0}
 .pg{animation:fin .22s ease-out}
 @keyframes fin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes sup{from{transform:translateY(100%)}to{transform:none}}
@@ -138,7 +139,7 @@ textarea{resize:vertical}
 <div style="min-height:100vh;padding:24px;display:flex;flex-direction:column;gap:16px">
   <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
     <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:280px">
-      <span style="font:800 24px Manrope">Прототип · оценочные листы предзащиты</span>
+      <span style="font:800 24px Manrope,sans-serif">Прототип · оценочные листы предзащиты</span>
       <span style="font-size:14px;color:#3d4a3d;line-height:1.45;max-width:900px">Слева — телефон эксперта Петровой А. (ауд. 301). Справа — кабинет организатора. Данные общие: что сделано в одном окне, сразу видно в другом. После перезагрузки всё начинается заново.</span>
     </div>
     <button class="btn2" onClick="{{ reset }}"><span class="ms">restart_alt</span>Начать заново</button>
@@ -275,9 +276,9 @@ textarea{resize:vertical}
               </div>
               <div class="col" style="gap:12px">
                 <sc-for list="{{ o.evList }}" as="ev" hint-placeholder-count="3">
-                  <button class="card row hovc" style="gap:20px;padding:18px 22px;width:100%" onClick="{{ ev.open }}">
-                    <div class="col sp" style="gap:8px;min-width:0"><div class="row" style="flex-wrap:wrap;gap:10px"><h2 class="ct">{{ ev.name }}</h2><span class="chip">{{ ev.type }}</span></div><div class="meta"><span class="ms">event</span>{{ ev.date }}</div></div>
-                    <div class="col" style="width:140px;flex:none"><div class="meta"><span class="ms">meeting_room</span>{{ ev.rooms }}</div><div class="meta"><span class="ms">groups</span>{{ ev.teams }}</div></div>
+                  <button class="card row hovc" style="gap:16px 20px;padding:18px 22px;width:100%;flex-wrap:wrap" onClick="{{ ev.open }}">
+                    <div class="col" style="gap:8px;min-width:0;flex:1 1 240px"><div class="row" style="flex-wrap:wrap;gap:10px"><h2 class="ct">{{ ev.name }}</h2><span class="chip">{{ ev.type }}</span></div><div class="meta" style="white-space:nowrap"><span class="ms">event</span>{{ ev.date }}</div></div>
+                    <div class="col" style="width:150px;flex:none"><div class="meta" style="white-space:nowrap"><span class="ms">meeting_room</span>{{ ev.rooms }}</div><div class="meta" style="white-space:nowrap"><span class="ms">groups</span>{{ ev.teams }}</div></div>
                     <div class="col" style="width:150px;flex:none"><div class="row" style="justify-content:space-between"><span class="cap">Оценки</span><span class="b" style="white-space:nowrap">{{ ev.got }} <span class="vio" style="font-size:13px">{{ ev.of }}</span></span></div><div class="bar"><i style="width:{{ ev.pct }}"></i></div></div>
                     <span style="width:104px;flex:none"><span class="{{ ev.stCls }}">{{ ev.st }}</span></span>
                     <span class="ms" style="color:#3d4a3d">chevron_right</span>
@@ -373,7 +374,7 @@ textarea{resize:vertical}
               <div class="cap"><button class="g b" onClick="{{ o.toEvents }}">Мероприятия</button> / <button class="g b" onClick="{{ rs.toEvent }}">{{ rs.evName }}</button></div>
               <div class="phd" style="margin-top:6px"><div><h1 class="pt">Итоги</h1><div class="psub">{{ rs.sub }}</div></div><div class="seg"><sc-for list="{{ rs.tabs }}" as="rt" hint-placeholder-count="3"><button class="{{ rt.cls }}" onClick="{{ rt.pick }}">{{ rt.t }}</button></sc-for></div></div>
               <div class="card" style="padding:0;overflow:hidden">
-                <div class="row" style="padding:16px 20px;flex-wrap:wrap"><span class="{{ rs.badgeCls }}"><span class="ms">{{ rs.badgeIc }}</span>{{ rs.badge }}</span><span class="cap sp">{{ rs.cap }}</span><select class="inp fill" style="width:240px;min-height:40px;padding:6px 10px" value="{{ rs.sort }}" onChange="{{ rs.setSort }}"><option value="avg">Сортировка: по среднему</option><option value="order">По порядку выступления</option><option value="name">По названию</option></select></div>
+                <div class="row" style="padding:16px 20px;flex-wrap:wrap"><span class="{{ rs.badgeCls }}"><span class="ms">{{ rs.badgeIc }}</span>{{ rs.badge }}</span><span class="cap sp" style="min-width:200px">{{ rs.cap }}</span><select class="inp fill" style="width:240px;min-height:40px;padding:6px 10px" value="{{ rs.sort }}" onChange="{{ rs.setSort }}"><option value="avg">Сортировка: по среднему</option><option value="order">По порядку выступления</option><option value="name">По названию</option></select></div>
                 <div style="overflow-x:auto"><div style="min-width:{{ rs.minW }}"><div class="tr th" style="grid-template-columns:{{ rs.cols }}"><span>Место</span><span>Команда</span><sc-for list="{{ rs.exps }}" as="rx" hint-placeholder-count="3"><span class="row" style="gap:6px;min-width:0" title="{{ rx.full }}"><span class="av" style="width:22px;height:22px;font-size:9px">{{ rx.ini }}</span><span style="white-space:nowrap;text-transform:none;letter-spacing:0;font-size:13px">{{ rx.short }}</span></span></sc-for><span class="r">Среднее</span></div>
                 <sc-for list="{{ rs.rows }}" as="rr" hint-placeholder-count="8">
                   <div class="tr" style="grid-template-columns:{{ rr.cols }}">
@@ -446,9 +447,9 @@ textarea{resize:vertical}
                 <div class="card col" style="gap:14px;position:sticky;top:0">
                   <h2 class="ct">Предпросмотр бланка</h2>
                   <div style="border:1px solid #181c1e;padding:12px;background:#fff">
-                    <div style="font:700 12px Manrope">{{ b.title }}</div>
+                    <div style="font:700 12px Manrope,sans-serif">{{ b.title }}</div>
                     <div style="font-size:9px;margin:2px 0 8px">Колонки — команды аудитории · макс. {{ b.max }}</div>
-                    <div class="pv">
+                    <div class="pv" lang="ru">
                       <span>Критерий</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
                       <sc-for list="{{ b.crits }}" as="pc" hint-placeholder-count="4"><span>{{ pc.nameP }}</span><span></span><span></span><span></span><span></span><span></span><span></span></sc-for>
                       <span style="font-weight:700">Итого</span><span></span><span></span><span></span><span></span><span></span><span></span>
@@ -517,7 +518,7 @@ textarea{resize:vertical}
             <div class="card col dlg" style="width:960px">
               <div class="row" style="justify-content:space-between"><h2 class="ct" style="font-size:24px">{{ pr.title }}</h2><button class="ib2" onClick="{{ o.closeDlg }}"><span class="ms">close</span></button></div>
               <div style="overflow:auto;max-height:520px;background:#e9edeb;padding:16px;border-radius:8px">
-                <div class="pa">
+                <div class="pa" lang="ru">
                   <div class="row" style="justify-content:space-between;align-items:flex-end;border-bottom:2px solid #000;padding-bottom:10px">
                     <div><div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700">Оценочный лист</div><div class="m" style="font-size:24px;font-weight:800;margin-top:4px">{{ pr.evName }}</div></div>
                     <div style="text-align:right"><div class="m" style="font-size:17px;font-weight:800">{{ pr.line }}</div><div style="font-size:12px;margin-top:4px">{{ pr.sub }}</div></div>
