@@ -159,7 +159,8 @@ textarea{resize:vertical}
 .fb:hover{border-color:#006d30}.fb.set{border-color:#006d30;color:#006d30}.fb.dis{opacity:.45;cursor:not-allowed}.fb .ms{font-size:18px}
 .fdd{position:absolute;top:calc(100% + 4px);left:0;z-index:21;min-width:180px;animation:pop .14s ease-out}
 .fdd > button{min-height:38px;font-size:14px}.fdd > button.on{color:#006d30;font-weight:700}
-.mvr{display:flex;align-items:center;gap:8px;height:38px;margin-top:8px;min-width:0}
+.mvr{display:flex;align-items:center;gap:8px;min-height:38px;margin-top:8px;min-width:0}
+.cl2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3;min-width:0;overflow-wrap:anywhere}
 .ell{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 .pg{animation:fin .22s ease-out}
 @keyframes fin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -324,7 +325,7 @@ textarea{resize:vertical}
                     <sc-if value="{{ fd.open }}" hint-placeholder-val="{{ false }}"><button class="catch" onClick="{{ fd.toggle }}"></button><div class="dd fdd"><sc-for list="{{ fd.opts }}" as="fo" hint-placeholder-count="3"><button class="{{ fo.cls }}" onClick="{{ fo.pick }}">{{ fo.t }}</button></sc-for></div></sc-if>
                   </div>
                 </sc-for>
-                <div class="fs" style="flex:1 1 96px;min-width:96px;min-height:34px;padding:0 6px 0 10px"><span class="ms" style="font-size:18px">search</span><input class="bare" style="height:32px;font-size:13px" placeholder="Поиск по названию" title="Поиск по названию" value="{{ o.fQ }}" onChange="{{ o.setQ }}"></div>
+                <div class="fs" style="flex:1 1 104px;min-width:104px;min-height:34px;padding:0 6px 0 10px"><span class="ms" style="font-size:18px">search</span><input class="bare" style="height:32px;font-size:13px" placeholder="Поиск" title="Поиск по названию" value="{{ o.fQ }}" onChange="{{ o.setQ }}"></div>
                 <sc-if value="{{ o.fDirty }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="font-size:13px;min-height:34px" onClick="{{ o.fReset }}">Сбросить</button></sc-if>
               </div>
               <div class="card" style="padding:0;overflow:hidden"><div>
@@ -363,18 +364,18 @@ textarea{resize:vertical}
                 </div>
               </div>
               <sc-if value="{{ v.openErr }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r" style="margin-bottom:20px;align-items:center;flex-wrap:wrap"><span class="ms">error</span><span class="sp" style="min-width:240px">{{ v.openErr }}</span><sc-if value="{{ v.errLink }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="color:#ba1a1a" onClick="{{ v.goErr }}">{{ v.errLink }}</button></sc-if></div></sc-if>
-              <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px">
-                <div class="card" style="flex:.5 1 94px;padding:14px 16px;min-width:0"><div class="mt"><span class="cap" style="white-space:nowrap">Аудиторий</span></div><div class="mvr"><span class="ms g" style="font-size:20px">meeting_room</span><span class="mv" style="margin:0">{{ v.roomsN }}</span></div></div>
-                <div class="card" style="flex:.5 1 94px;padding:14px 16px;min-width:0"><div class="mt"><span class="cap" style="white-space:nowrap">Команд</span></div><div class="mvr"><span class="ms g" style="font-size:20px">groups</span><span class="mv" style="margin:0">{{ v.teamsN }}</span></div></div>
-                <div class="card" style="flex:.6 1 120px;padding:14px 16px;min-width:0;position:relative"><div class="mt"><span class="cap" style="white-space:nowrap">Оценки</span></div><div class="mvr"><span class="ms g" style="font-size:20px">fact_check</span><span class="mv" style="margin:0;white-space:nowrap">{{ v.got }}<small>{{ v.of }}</small></span></div><div class="bar" style="position:absolute;left:16px;right:16px;bottom:10px;height:4px"><i style="width:{{ v.pct }}"></i></div></div>
-                <div class="card" style="flex:4 1 150px;padding:14px 16px;min-width:0"><div class="mt"><span class="cap" style="white-space:nowrap">Оценочный лист</span></div>
+              <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px;align-items:flex-start">
+                <div class="card" style="flex:1 1 104px;padding:14px 16px;min-width:104px"><div class="mt"><span class="cap" style="white-space:nowrap">Аудиторий</span></div><div class="mvr"><span class="ms g" style="font-size:20px">meeting_room</span><span class="mv" style="margin:0">{{ v.roomsN }}</span></div></div>
+                <div class="card" style="flex:1 1 104px;padding:14px 16px;min-width:104px"><div class="mt"><span class="cap" style="white-space:nowrap">Команд</span></div><div class="mvr"><span class="ms g" style="font-size:20px">groups</span><span class="mv" style="margin:0">{{ v.teamsN }}</span></div></div>
+                <div class="card" style="flex:1 1 126px;padding:14px 16px;min-width:126px;position:relative"><div class="mt"><span class="cap" style="white-space:nowrap">Оценки</span></div><div class="mvr"><span class="ms g" style="font-size:20px">fact_check</span><span class="mv" style="margin:0;white-space:nowrap">{{ v.got }}<small>{{ v.of }}</small></span></div><div class="bar" style="position:absolute;left:16px;right:16px;bottom:10px;height:4px"><i style="width:{{ v.pct }}"></i></div></div>
+                <div class="card" style="flex:3 1 200px;padding:14px 16px;min-width:200px"><div class="mt"><span class="cap" style="white-space:nowrap">Оценочный лист</span></div>
                   <div class="mvr" title="{{ v.sheetTitle }}">
                     <sc-if value="{{ v.sheetEd }}" hint-placeholder-val="{{ false }}"><select class="inp fill ell" style="min-height:36px;height:36px;padding:0 8px;width:100%;font-size:14px" title="{{ v.sheetTitle }}" value="{{ v.sheetId }}" onChange="{{ v.setSheet }}"><sc-for list="{{ v.sheetOpts }}" as="so" hint-placeholder-count="3"><option value="{{ so.id }}">{{ so.name }}</option></sc-for></select></sc-if>
-                    <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><span class="b ell sp" style="font-size:15px">{{ v.sheetName }}</span><span class="ms" style="font-size:16px;color:#3d4a3d">lock</span></sc-if>
+                    <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><span class="b cl2 sp" style="font-size:15px" title="{{ v.sheetTitle }}">{{ v.sheetName }}</span><span class="ms" style="font-size:16px;color:#3d4a3d">lock</span></sc-if>
                     <button class="lnk" style="min-height:0;font-size:13px;flex:none" onClick="{{ v.openSheet }}">Открыть</button>
                   </div>
                 </div>
-                <sc-if value="{{ v.isPre }}" hint-placeholder-val="{{ false }}"><div class="card" style="flex:.6 1 127px;padding:14px 16px;min-width:0"><div class="mt"><span class="cap" style="white-space:nowrap">Проходной балл</span></div>
+                <sc-if value="{{ v.isPre }}" hint-placeholder-val="{{ false }}"><div class="card" style="flex:1 1 140px;padding:14px 16px;min-width:140px"><div class="mt"><span class="cap" style="white-space:nowrap">Проходной балл</span></div>
                   <div class="mvr" title="{{ v.passHint }}"><span class="ms g" style="font-size:20px">flag</span>
                     <sc-if value="{{ v.sheetEd }}" hint-placeholder-val="{{ false }}"><div class="{{ v.passCls }}" style="min-height:36px;height:36px;padding:0 8px;width:100%"><input class="bare" style="height:34px;width:44px;flex:none" type="number" min="0" value="{{ v.pass }}" onChange="{{ v.setPass }}"><span class="cap sp ell" style="text-align:right">из {{ v.max }}</span></div></sc-if>
                     <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><span class="mv" style="margin:0;white-space:nowrap">{{ v.pass }}<small>из {{ v.max }}</small></span><span class="ms" style="font-size:16px;color:#3d4a3d">lock</span></sc-if>
@@ -398,14 +399,14 @@ textarea{resize:vertical}
                   <div class="{{ rm.cls }}">
                     <div class="row" style="cursor:pointer;flex-wrap:wrap;gap:10px" onClick="{{ rm.toggle }}"><span class="ms">{{ rm.expIc }}</span><h3 class="ct">{{ rm.name }}</h3><span class="cap">{{ rm.cap }}</span><sc-if value="{{ rm.noExp }}" hint-placeholder-val="{{ false }}"><span class="bd b-r">Нет экспертов</span></sc-if><sc-if value="{{ rm.noTeams }}" hint-placeholder-val="{{ false }}"><span class="bd b-r">Нет команд</span></sc-if><span class="sp"></span><button class="btn2" style="height:40px" onClick="{{ rm.print }}"><span class="ms">print</span>Печать бланка</button></div>
                     <sc-if value="{{ rm.open }}" hint-placeholder-val="{{ false }}">
-                      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;border-top:1px solid #e1e8e3;padding-top:18px;margin-top:8px;align-items:start">
+                      <div style="display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:24px;border-top:1px solid #e1e8e3;padding-top:18px;margin-top:8px;align-items:start">
                         <div class="col">
                           <div class="lbl">Порядок выступления</div>
                           <sc-for list="{{ rm.teams }}" as="tm" hint-placeholder-count="8">
                             <div class="{{ tm.cls }}" draggable="{{ tm.drag }}" onDragStart="{{ tm.ds }}" onDragOver="{{ tm.dov }}" onDrop="{{ tm.drop }}" onDragEnd="{{ tm.de }}">
                               <span class="{{ tm.hdlCls }}" onMouseDown="{{ tm.arm }}" onMouseUp="{{ o.disarm }}">drag_indicator</span>
                               <span class="num">{{ tm.n }}</span>
-                              <span class="sp" style="font-weight:600;min-width:0;line-height:1.3">{{ tm.name }}</span>
+                              <span class="sp cl2" style="font-weight:600" title="{{ tm.name }}">{{ tm.name }}</span>
                               <sc-if value="{{ tm.absent }}" hint-placeholder-val="{{ false }}"><span class="bd b-n"><span class="ms">person_off</span>Не явилась</span></sc-if>
                               <sc-if value="{{ tm.canMenu }}" hint-placeholder-val="{{ true }}"><button class="ib2" onClick="{{ tm.menu }}"><span class="ms">more_vert</span></button></sc-if>
                               <sc-if value="{{ tm.menuOpen }}" hint-placeholder-val="{{ false }}">
@@ -953,6 +954,7 @@ class Component extends DCLogic {
       E({ id: 'e1', type: 'pre', name: 'Предзащита, осень 2026', date: '2026-10-20', desc: PRE, acc: 'open', sheetId: 's1', pass: 6, rooms: [r301, gen('r2', 'ауд. 303', 8, 8, ['ia', 'nk', 'fo']), gen('r3', 'ауд. 305', 16, 8, ['vt', 'ms'])] }),
       E({ id: 'e5', type: 'pre', name: 'Предзащита, магистратура, осень 2026', date: '2026-10-22', t2: '15:00', desc: 'Магистранты показывают промежуточные результаты проектов. На доклад — 7 минут, на вопросы — 5 минут.', pub: false, sheetId: 's1', pass: 5, rooms: [{ id: 'r6', name: 'ауд. 210', teams: [40, 41, 42, 43].map(i => team(i)), experts: [] }], loose: [team(44), team(45)] }),
       E({ id: 'e3', type: 'pre', name: 'Предзащита, весна 2026', date: '2026-04-14', desc: PRE, acc: 'done', sheetId: 's1', pass: 6, defId: 'e4', rooms: [gen('r4', 'ауд. 303', 24, 6, ['pa', 'kd'], true)] }),
+      E({ id: 'e6', type: 'pre', name: 'Предзащита, бакалавриат, осень 2026', date: '2026-10-15', desc: PRE, acc: 'done', sheetId: 's1', pass: 6, rooms: [gen('r7', 'ауд. 214', 30, 6, ['pa', 'kd'], true, 'b')] }),
       E({ id: 'e4', type: 'def', name: 'Защита, весна 2026', date: '2026-06-16', t2: '18:00', place: 'Главный корпус', desc: 'Итоговая защита проектов команд, прошедших предзащиту.', acc: 'done', sheetId: 's2', fromId: 'e3', rooms: [gen('r5', 'ауд. 301', 24, 4, ['kd', 'se'], true, 'd')] }),
       E({ id: 'a1', type: 'acc', name: 'Акселератор «Старт в ИТ»', date: '2026-11-05', desc: ACC1, dirs: [
         D('d1', 'Бэкенд', 'ауд. 301', 'Проектирование REST API, работа с базой данных, ревью кода на реальном сервисе.', [tr('or', 'Ведущий разработчик', 'ТомскСофт'), tr('be', 'Тимлид', 'Контур-Т')], [{ id: 'f1', name: 'Ревью кода на примерах', ext: 'pptx', size: 14.8, by: 'be', when: '6 ноября' }]),
