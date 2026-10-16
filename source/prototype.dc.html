@@ -150,6 +150,17 @@ textarea{resize:vertical}
 .fic{width:40px;height:40px;border-radius:8px;background:#e2f3e7;color:#006d30;display:grid;place-items:center;flex:none}
 .clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5;font-size:14px;color:#3d4a3d}
 .sm{min-height:38px;padding:4px 8px}
+.fc{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid #bccaba;background:#fff;color:#3d4a3d;white-space:nowrap;flex:none;transition:background .15s,border-color .15s}
+.fc:hover{border-color:#006d30}.fc.on{background:#e2f3e7;border-color:#e2f3e7;color:#006d30}
+.fs{min-height:40px;padding:0 6px 0 12px;border:1px solid #bccaba;border-radius:8px;background:#fff;display:flex;align-items:center;gap:6px;font-size:14px;white-space:nowrap}
+.fs:focus-within{border-color:#006d30}.fs .ms{font-size:20px;color:#3d4a3d}.fs.dis{opacity:.45}
+.fsel{border:0;background:transparent;font:inherit;font-weight:700;color:#181c1e;height:38px;outline:none;cursor:pointer}.fsel:disabled{cursor:not-allowed}
+.fb{display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 6px 0 12px;border:1px solid #bccaba;border-radius:8px;background:#fff;font-size:13px;font-weight:600;color:#3d4a3d;white-space:nowrap;flex:none;transition:border-color .15s}
+.fb:hover{border-color:#006d30}.fb.set{border-color:#006d30;color:#006d30}.fb.dis{opacity:.45;cursor:not-allowed}.fb .ms{font-size:18px}
+.fdd{position:absolute;top:calc(100% + 4px);left:0;z-index:21;min-width:180px;animation:pop .14s ease-out}
+.fdd > button{min-height:38px;font-size:14px}.fdd > button.on{color:#006d30;font-weight:700}
+.mvr{display:flex;align-items:center;gap:8px;height:38px;margin-top:8px;min-width:0}
+.ell{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 .pg{animation:fin .22s ease-out}
 @keyframes fin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes sup{from{transform:translateY(100%)}to{transform:none}}
@@ -184,7 +195,7 @@ textarea{resize:vertical}
           <div><h1 class="pts">Мои предзащиты</h1><div class="psub">Мероприятия, где вы эксперт</div></div>
           <sc-for list="{{ e.active }}" as="ac" hint-placeholder-count="1">
             <div class="card col" style="gap:16px">
-              <div class="row" style="justify-content:space-between;align-items:flex-start"><h2 class="ct">{{ ac.name }}</h2><span class="bd b-g">Идёт оценка</span></div>
+              <div class="row" style="justify-content:space-between;align-items:flex-start"><h2 class="ct">{{ ac.name }}</h2><span class="bd b-g">Активно</span></div>
               <div class="col"><div class="meta"><span class="ms">event</span>{{ ac.date }}</div><div class="meta"><span class="ms">meeting_room</span>Моя аудитория:<b style="color:#181c1e">{{ ac.room }}</b></div></div>
               <div class="col"><div class="row" style="justify-content:space-between"><span class="cap">Отправлено</span><span class="b" style="white-space:nowrap">{{ ac.got }} <span class="vio" style="font-size:13px">из {{ ac.need }}</span></span></div><div class="bar"><i style="width:{{ ac.pct }}"></i></div></div>
               <button class="btn w" onClick="{{ ac.open }}">Открыть</button>
@@ -299,24 +310,37 @@ textarea{resize:vertical}
           <sc-if value="{{ o.isEvents }}" hint-placeholder-val="{{ true }}">
             <div class="pg">
               <div class="phd">
-                <div><h1 class="pt">Мероприятия</h1><div class="psub">Предзащиты, защиты и акселераторы факультета</div></div>
+                <div><div class="row" style="gap:12px;flex-wrap:wrap"><h1 class="pt">Мероприятия</h1><sc-if value="{{ o.fCount }}" hint-placeholder-val="{{ false }}"><span class="bd b-n" style="height:28px;font-size:13px;padding:0 12px">{{ o.fCountT }}</span></sc-if></div><div class="psub">Предзащиты, защиты и акселераторы факультета</div></div>
                 <button class="btn" onClick="{{ o.newEvent }}"><span class="ms">add</span>Создать мероприятие</button>
               </div>
-              <div class="row" style="margin-bottom:16px"><div class="seg"><sc-for list="{{ o.evSeg }}" as="sg" hint-placeholder-count="4"><button class="{{ sg.cls }}" onClick="{{ sg.pick }}">{{ sg.t }}</button></sc-for></div></div>
-              <div class="card" style="padding:0;overflow:hidden"><div style="overflow-x:auto"><div style="min-width:900px">
-                <div class="tr th" style="grid-template-columns:minmax(220px,1fr) 136px 140px 130px 110px 130px"><span>Название</span><span>Тип</span><span>Дата и время</span><span>Публикация</span><span>Приём оценок</span><span>Прогресс оценок</span></div>
+              <div class="row" style="margin-bottom:12px"><div class="seg"><sc-for list="{{ o.evSeg }}" as="sg" hint-placeholder-count="3"><button class="{{ sg.cls }}" onClick="{{ sg.pick }}">{{ sg.t }}</button></sc-for></div></div>
+              <div class="row" style="gap:6px;flex-wrap:wrap;margin-bottom:16px">
+                <span class="lbl" style="margin:0 2px 0 0">Тип</span>
+                <sc-for list="{{ o.fTypes }}" as="ft" hint-placeholder-count="3"><button class="{{ ft.cls }}" style="height:34px;padding:0 8px;font-size:13px" onClick="{{ ft.pick }}">{{ ft.t }}</button></sc-for>
+                <sc-for list="{{ o.fDrops }}" as="fd" hint-placeholder-count="2">
+                  <div class="hw">
+                    <button class="{{ fd.cls }}" onClick="{{ fd.toggle }}">{{ fd.label }}<sc-if value="{{ fd.val }}" hint-placeholder-val="{{ false }}"><b>: {{ fd.val }}</b></sc-if><span class="ms">{{ fd.ic }}</span></button>
+                    <sc-if value="{{ fd.tip }}" hint-placeholder-val="{{ false }}"><span class="tip">У акселератора нет оценок</span></sc-if>
+                    <sc-if value="{{ fd.open }}" hint-placeholder-val="{{ false }}"><button class="catch" onClick="{{ fd.toggle }}"></button><div class="dd fdd"><sc-for list="{{ fd.opts }}" as="fo" hint-placeholder-count="3"><button class="{{ fo.cls }}" onClick="{{ fo.pick }}">{{ fo.t }}</button></sc-for></div></sc-if>
+                  </div>
+                </sc-for>
+                <div class="fs" style="flex:1 1 96px;min-width:96px;min-height:34px;padding:0 6px 0 10px"><span class="ms" style="font-size:18px">search</span><input class="bare" style="height:32px;font-size:13px" placeholder="Поиск по названию" title="Поиск по названию" value="{{ o.fQ }}" onChange="{{ o.setQ }}"></div>
+                <sc-if value="{{ o.fDirty }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="font-size:13px;min-height:34px" onClick="{{ o.fReset }}">Сбросить</button></sc-if>
+              </div>
+              <div class="card" style="padding:0;overflow:hidden"><div>
+                <div class="tr th" style="grid-template-columns:minmax(0,1fr) 112px 96px 104px 84px 84px;gap:10px;padding:12px 16px;font-size:11px;letter-spacing:.04em"><span>Название</span><span>Тип</span><span>Дата и время</span><span>Публикация</span><span>Приём оценок</span><span>Прогресс оценок</span></div>
                 <sc-for list="{{ o.evList }}" as="ev" hint-placeholder-count="5">
-                  <div class="tr hov" style="grid-template-columns:minmax(220px,1fr) 136px 140px 130px 110px 130px;cursor:pointer" onClick="{{ ev.open }}">
-                    <span class="b" style="min-width:0;line-height:1.3">{{ ev.name }}</span>
-                    <span><span class="ty"><span class="ms">{{ ev.tic }}</span>{{ ev.type }}</span></span>
-                    <div class="col" style="gap:2px"><span style="white-space:nowrap">{{ ev.date }}</span><span class="cap">{{ ev.time }}</span></div>
+                  <div class="tr hov" style="grid-template-columns:minmax(0,1fr) 112px 96px 104px 84px 84px;gap:10px;padding:12px 16px;cursor:pointer" onClick="{{ ev.open }}">
+                    <span class="b" style="min-width:0;line-height:1.3;font-size:15px;overflow-wrap:anywhere">{{ ev.name }}</span>
+                    <span><span class="ty" style="height:24px;padding:0 8px;gap:4px;font-size:12px"><span class="ms" style="font-size:14px">{{ ev.tic }}</span>{{ ev.type }}</span></span>
+                    <div class="col" style="gap:2px"><span style="white-space:nowrap;font-size:14px">{{ ev.dateS }}</span><span class="cap">{{ ev.time }}</span></div>
                     <span><span class="{{ ev.pubCls }}">{{ ev.pub }}</span></span>
                     <span><span class="{{ ev.accCls }}">{{ ev.acc }}</span></span>
                     <div><sc-if value="{{ ev.hasProg }}" hint-placeholder-val="{{ false }}"><div class="col" style="gap:6px"><span class="b" style="white-space:nowrap">{{ ev.got }} <span class="vio" style="font-size:13px">{{ ev.of }}</span></span><div class="bar"><i style="width:{{ ev.pct }}"></i></div></div></sc-if><sc-if value="{{ ev.noProg }}" hint-placeholder-val="{{ true }}"><span class="cap b">—</span></sc-if></div>
                   </div>
                 </sc-for>
               </div></div>
-                <sc-if value="{{ o.evEmpty }}" hint-placeholder-val="{{ false }}"><div class="empty">Нет мероприятий этого типа</div></sc-if>
+                <sc-if value="{{ o.evEmpty }}" hint-placeholder-val="{{ false }}"><div class="empty" style="color:#6b766e"><span class="ms" style="font-size:36px;color:#9aa79d">{{ o.emptyIc }}</span><span>{{ o.emptyT }}</span><sc-if value="{{ o.fDirty }}" hint-placeholder-val="{{ false }}"><button class="lnk" onClick="{{ o.fReset }}">Сбросить фильтры</button></sc-if></div></sc-if>
               </div>
             </div>
           </sc-if>
@@ -339,18 +363,22 @@ textarea{resize:vertical}
                 </div>
               </div>
               <sc-if value="{{ v.openErr }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r" style="margin-bottom:20px;align-items:center;flex-wrap:wrap"><span class="ms">error</span><span class="sp" style="min-width:240px">{{ v.openErr }}</span><sc-if value="{{ v.errLink }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="color:#ba1a1a" onClick="{{ v.goErr }}">{{ v.errLink }}</button></sc-if></div></sc-if>
-              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:28px">
-                <div class="card"><div class="mt"><span class="cap">Аудиторий</span><span class="ms g">meeting_room</span></div><div class="mv">{{ v.roomsN }}</div></div>
-                <div class="card"><div class="mt"><span class="cap">Команд</span><span class="ms g">groups</span></div><div class="mv">{{ v.teamsN }}</div></div>
-                <div class="card"><div class="mt"><span class="cap">Оценки</span><span class="ms g">fact_check</span></div><div class="mv">{{ v.got }}<small>{{ v.of }}</small></div><div class="bar" style="margin-top:12px"><i style="width:{{ v.pct }}"></i></div></div>
-                <div class="card col" style="gap:6px"><div class="mt"><span class="cap">Оценочный лист</span><span class="ms g">assignment</span></div>
-                  <sc-if value="{{ v.sheetEd }}" hint-placeholder-val="{{ false }}"><select class="inp fill" style="margin-top:6px;min-height:40px;padding:6px 10px" value="{{ v.sheetId }}" onChange="{{ v.setSheet }}"><sc-for list="{{ v.sheetOpts }}" as="so" hint-placeholder-count="3"><option value="{{ so.id }}">{{ so.name }}</option></sc-for></select></sc-if>
-                  <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><span class="b" style="margin-top:6px">{{ v.sheetName }}</span></sc-if>
-                  <span class="cap">{{ v.sheetCap }}</span><sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ false }}"><span class="cap row" style="gap:4px"><span class="ms" style="font-size:16px">lock</span>Только чтение после публикации</span></sc-if><button class="lnk" style="align-self:flex-start" onClick="{{ v.openSheet }}">Открыть</button>
+              <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px">
+                <div class="card" style="flex:.5 1 94px;padding:14px 16px;min-width:0"><div class="mt"><span class="cap" style="white-space:nowrap">Аудиторий</span></div><div class="mvr"><span class="ms g" style="font-size:20px">meeting_room</span><span class="mv" style="margin:0">{{ v.roomsN }}</span></div></div>
+                <div class="card" style="flex:.5 1 94px;padding:14px 16px;min-width:0"><div class="mt"><span class="cap" style="white-space:nowrap">Команд</span></div><div class="mvr"><span class="ms g" style="font-size:20px">groups</span><span class="mv" style="margin:0">{{ v.teamsN }}</span></div></div>
+                <div class="card" style="flex:.6 1 120px;padding:14px 16px;min-width:0;position:relative"><div class="mt"><span class="cap" style="white-space:nowrap">Оценки</span></div><div class="mvr"><span class="ms g" style="font-size:20px">fact_check</span><span class="mv" style="margin:0;white-space:nowrap">{{ v.got }}<small>{{ v.of }}</small></span></div><div class="bar" style="position:absolute;left:16px;right:16px;bottom:10px;height:4px"><i style="width:{{ v.pct }}"></i></div></div>
+                <div class="card" style="flex:4 1 150px;padding:14px 16px;min-width:0"><div class="mt"><span class="cap" style="white-space:nowrap">Оценочный лист</span></div>
+                  <div class="mvr" title="{{ v.sheetTitle }}">
+                    <sc-if value="{{ v.sheetEd }}" hint-placeholder-val="{{ false }}"><select class="inp fill ell" style="min-height:36px;height:36px;padding:0 8px;width:100%;font-size:14px" title="{{ v.sheetTitle }}" value="{{ v.sheetId }}" onChange="{{ v.setSheet }}"><sc-for list="{{ v.sheetOpts }}" as="so" hint-placeholder-count="3"><option value="{{ so.id }}">{{ so.name }}</option></sc-for></select></sc-if>
+                    <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><span class="b ell sp" style="font-size:15px">{{ v.sheetName }}</span><span class="ms" style="font-size:16px;color:#3d4a3d">lock</span></sc-if>
+                    <button class="lnk" style="min-height:0;font-size:13px;flex:none" onClick="{{ v.openSheet }}">Открыть</button>
+                  </div>
                 </div>
-                <sc-if value="{{ v.isPre }}" hint-placeholder-val="{{ false }}"><div class="card col" style="gap:6px"><div class="mt"><span class="cap">Проходной балл</span><span class="ms g">flag</span></div>
-                  <sc-if value="{{ v.sheetEd }}" hint-placeholder-val="{{ false }}"><div class="{{ v.passCls }}" style="margin-top:6px;min-height:40px;padding:0 10px"><input class="bare" style="height:38px;width:56px;flex:none" type="number" min="0" value="{{ v.pass }}" onChange="{{ v.setPass }}"><span class="cap sp" style="text-align:right">из {{ v.max }} возможных</span></div><span class="cap">{{ v.passHint }}</span></sc-if>
-                  <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><div class="mv">{{ v.pass }}<small>из {{ v.max }}</small></div></sc-if>
+                <sc-if value="{{ v.isPre }}" hint-placeholder-val="{{ false }}"><div class="card" style="flex:.6 1 127px;padding:14px 16px;min-width:0"><div class="mt"><span class="cap" style="white-space:nowrap">Проходной балл</span></div>
+                  <div class="mvr" title="{{ v.passHint }}"><span class="ms g" style="font-size:20px">flag</span>
+                    <sc-if value="{{ v.sheetEd }}" hint-placeholder-val="{{ false }}"><div class="{{ v.passCls }}" style="min-height:36px;height:36px;padding:0 8px;width:100%"><input class="bare" style="height:34px;width:44px;flex:none" type="number" min="0" value="{{ v.pass }}" onChange="{{ v.setPass }}"><span class="cap sp ell" style="text-align:right">из {{ v.max }}</span></div></sc-if>
+                    <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><span class="mv" style="margin:0;white-space:nowrap">{{ v.pass }}<small>из {{ v.max }}</small></span><span class="ms" style="font-size:16px;color:#3d4a3d">lock</span></sc-if>
+                  </div>
                 </div></sc-if>
               </div>
               <sc-if value="{{ v.hasLoose }}" hint-placeholder-val="{{ false }}">
@@ -940,7 +968,7 @@ class Component extends DCLogic {
     ];
     return {
       v: 0, sheets, events, R, role: 'org', today: '2026-10-16', enroll: { a1: 'd1' }, cr: null, acErr: '', acErrDir: null, acTried: false, dq: {}, ds: {}, upl: null, stPage: 'lk', stEv: null, nr: null, atQ: '', oErrLoose: false,
-      oPage: 'events', oEv: 'e1', oSheet: 's1', oOpenRooms: { r1: true }, oResRoom: null, oSort: 'avg', oEvFilter: 'all', oSheetFilter: 'all',
+      oPage: 'events', oEv: 'e1', oSheet: 's1', oOpenRooms: { r1: true }, oResRoom: null, oSort: 'avg', oEvFilter: 'up', fOpen: null, oSheetFilter: 'all', fT: { pre: true, def: true, acc: true }, fPub: 'all', fAcc: 'all', fQ: '',
       oMenu: null, oSearch: {}, oDlg: null, oToast: null, oErrRoom: null, oOpenErr: '', oDov: null, oArm: null, newEv: null, imp: null,
       ePage: 'home', eEv: null, eTeam: null, eSheet: false, eToast: null, eErr: false
     };
@@ -1001,6 +1029,7 @@ class Component extends DCLogic {
   oGo(p, x) { this.setState(Object.assign({ oPage: p, oMenu: null, oOpenErr: '', oErrRoom: null, oErrLoose: false, acErr: '', acErrDir: null }, x || {}), () => { const el = this.oScroll.current; if (el) el.scrollTop = 0; }); }
   oToast(t, u, ms) { this.toast('o', t, u, ms); }
   pl(n, a, b, c) { const m = n % 10, h = n % 100; return n + ' ' + (m === 1 && h !== 11 ? a : m >= 2 && m <= 4 && (h < 12 || h > 14) ? b : c); }
+  fmtMon(iso) { const M = ['янв.', 'февр.', 'марта', 'апр.', 'мая', 'июня', 'июля', 'авг.', 'сент.', 'окт.', 'нояб.', 'дек.'], d = iso.split('-'); return Number(d[2]) + ' ' + M[Number(d[1]) - 1] + ' ' + d[0]; }
   fmtShort(iso) { const s = this.fmtDate(iso); return s.replace(/ \d{4}$/, ''); }
   when(ev) { return this.fmtShort(ev.date) + ', ' + ev.t1 + '–' + ev.t2; }
   past(ev) { return ev.date < this.state.today; }
@@ -1043,7 +1072,7 @@ class Component extends DCLogic {
     if (c.type === 'acc') ev.dirs = c.dirs.map(d => ({ id: d.id, role: d.role.trim(), room: d.room.trim(), desc: d.desc.trim(), tr: d.tr, files: [] }));
     if (c.type === 'def') { const pre = this.ev(c.fromId); ev.fromId = pre.id; pre.defId = ev.id; ev.loose = this.preTeams(pre).filter(x => c.picks[x.t.id]).map(x => ({ id: this.nid('t'), name: x.t.name, absent: false, origin: 'pre' })); }
     this.state.events.unshift(ev);
-    this.oGo(c.type === 'acc' ? 'accel' : 'event', { oEv: ev.id, cr: null, oDlg: null, oEvFilter: 'all', acErr: '', acTried: false });
+    this.oGo(c.type === 'acc' ? 'accel' : 'event', { oEv: ev.id, cr: null, oDlg: null, acErr: '', acTried: false });
     this.oToast(publish ? 'Мероприятие опубликовано — анонс в личных кабинетах' : 'Черновик сохранён', null, 4000);
   }
   oPublishEv(ev) {
@@ -1320,16 +1349,18 @@ class Component extends DCLogic {
     const act = { sheets: oP === 'sheets' || oP === 'builder', events: ['events', 'event', 'results', 'create', 'accel'].includes(oP) }, org = S.role === 'org';
     const TYN = { pre: ['Предзащита', 'co_present'], def: ['Защита', 'school'], acc: ['Акселератор', 'rocket_launch'] };
     const PUB = p => p ? { t: 'Опубликовано', c: 'bd b-g' } : { t: 'Черновик', c: 'bd b-v' };
-    const ACC = a => ({ none: { t: 'Не открыт', c: 'ac' }, open: { t: 'Идёт', c: 'ac ac-1' }, done: { t: 'Завершён', c: 'ac ac-2' } })[a];
+    const ACC = a => ({ none: { t: 'Не открыт', c: 'ac' }, open: { t: 'Активно', c: 'ac ac-1' }, done: { t: 'Завершён', c: 'ac ac-2' } })[a];
     const NA = () => this.oToast('Раздел есть в продукте, в прототипе не показан');
     const MI = (ic, t, on, go) => ({ g: false, i: true, ic, t, cls: 'mi' + (on ? ' on' : ''), go: go || NA }), G = t => ({ g: true, i: false, t });
     const menu = S.role === 'stu' ? [MI('leaderboard', 'Рейтинг'), MI('person', 'Личный кабинет', true, () => this.setState({ stPage: 'lk' })), MI('settings', 'Настройки')]
       : S.role === 'tr' ? [MI('leaderboard', 'Рейтинг'), MI('person', 'Личный кабинет'), MI('co_present', 'Мои мероприятия', true), MI('settings', 'Настройки')]
       : [MI('leaderboard', 'Рейтинг'), MI('person', 'Личный кабинет'), G('Эксперт'), MI('fact_check', 'Мои предзащиты', false, () => this.oToast('Экраны эксперта — в телефоне слева')), G('Организатор'), MI('assignment', 'Оценочные листы', act.sheets, () => this.oGo('sheets')), MI('event', 'Мероприятия', act.events, () => this.oGo('events')), G(' '), MI('settings', 'Настройки')];
-    const evFilt = S.oEvFilter;
-    const evList = S.events.slice().sort((a, b2) => b2.date.localeCompare(a.date)).filter(x => evFilt === 'all' || x.type === evFilt).map(x => {
+    const evFilt = S.oEvFilter, fT = S.fT, onlyAcc = !fT.pre && !fT.def && fT.acc, fAccV = onlyAcc ? 'all' : S.fAcc, fq = S.fQ.trim().toLowerCase();
+    const fDirty = !(fT.pre && fT.def && fT.acc) || S.fPub !== 'all' || fAccV !== 'all' || !!fq, F0 = { fT: { pre: true, def: true, acc: true }, fPub: 'all', fAcc: 'all', fQ: '' };
+    const evList = S.events.slice().sort((a, b2) => evFilt === 'up' ? (a.date.localeCompare(b2.date) || a.t1.localeCompare(b2.t1)) : (b2.date.localeCompare(a.date) || b2.t1.localeCompare(a.t1))).filter(x => (evFilt === 'all' || (evFilt === 'up' ? x.date >= S.today : x.date < S.today)) && fT[x.type]
+      && (S.fPub === 'all' || (S.fPub === 'p') === x.pub) && (fAccV === 'all' || (x.type !== 'acc' && x.acc === fAccV)) && (!fq || x.name.toLowerCase().includes(fq))).map(x => {
       const s = this.evSt(x), isA = x.type === 'acc', hp = !isA && x.acc !== 'none';
-      return { name: x.name, type: TYN[x.type][0], tic: TYN[x.type][1], date: this.fmtDate(x.date), time: x.t1 + '–' + x.t2, pub: PUB(x.pub).t, pubCls: PUB(x.pub).c, acc: isA ? '—' : ACC(x.acc).t, accCls: isA ? 'cap b' : ACC(x.acc).c,
+      return { name: x.name, type: TYN[x.type][0], tic: TYN[x.type][1], dateS: this.fmtMon(x.date), date: this.fmtDate(x.date), time: x.t1 + '–' + x.t2, pub: PUB(x.pub).t, pubCls: PUB(x.pub).c, acc: isA ? '—' : ACC(x.acc).t, accCls: isA ? 'cap b' : ACC(x.acc).c,
         hasProg: hp, noProg: !hp, got: s.got, of: 'из ' + s.need, pct: pct(s.got, s.need), open: () => this.oGo(isA ? 'accel' : 'event', { oEv: x.id }) };
     });
     const sheetsV = S.sheets.filter(sh => S.oSheetFilter === 'all' || (S.oSheetFilter === 'locked') === this.locked(sh)).map(sh => {
@@ -1343,7 +1374,16 @@ class Component extends DCLogic {
       createSheet: () => { const sh = { id: this.nid('s'), name: 'Новый лист', desc: '', crits: [] }; S.sheets.unshift(sh); this.oGo('builder', { oSheet: sh.id }); },
       closeDlg: () => this.setState({ oDlg: null }), dlgBg: x => { if (x.target === x.currentTarget) this.setState({ oDlg: null }); },
       closeMenu: x => { stop(x); this.setState({ oMenu: null }); }, disarm: () => this.setState({ oArm: null }),
-      evSeg: [['all', 'Все'], ['pre', 'Предзащиты'], ['def', 'Защиты'], ['acc', 'Акселераторы']].map(x => ({ t: x[1], cls: evFilt === x[0] ? 'on' : '', pick: () => this.setState({ oEvFilter: x[0] }) })),
+      fTypes: [['pre', 'Предзащита'], ['def', 'Защита'], ['acc', 'Акселератор']].map(([k, t]) => ({ t, cls: 'fc' + (fT[k] ? ' on' : ''), pick: () => { const n = Object.assign({}, fT, { [k]: !fT[k] }); if (!n.pre && !n.def && !n.acc) return; this.setState({ fT: n, fAcc: !n.pre && !n.def ? 'all' : S.fAcc }); } })),
+      fDrops: [['pub', 'Публикация', S.fPub, [['all', 'Все'], ['d', 'Черновик'], ['p', 'Опубликовано']], false], ['acc', 'Приём оценок', fAccV, [['all', 'Все'], ['none', 'Не открыт'], ['open', 'Активно'], ['done', 'Завершён']], onlyAcc]].map(([k, label, cur, opts, dis]) => {
+        const open = S.fOpen === k && !dis, key = k === 'pub' ? 'fPub' : 'fAcc';
+        return { label, val: cur === 'all' ? '' : opts.find(o2 => o2[0] === cur)[1], cls: 'fb' + (dis ? ' dis' : cur !== 'all' ? ' set' : ''), ic: open ? 'expand_less' : 'expand_more', tip: dis, open,
+          toggle: () => { if (!dis) this.setState({ fOpen: open ? null : k }); }, opts: opts.map(([v2, t]) => ({ t, cls: cur === v2 ? 'on' : '', pick: () => this.setState({ [key]: v2, fOpen: null }) })) };
+      }),
+      emptyIc: fDirty ? 'filter_alt_off' : 'event_busy', emptyT: fDirty ? 'По фильтрам ничего не найдено' : evFilt === 'up' ? 'Нет предстоящих мероприятий' : evFilt === 'past' ? 'Нет прошедших мероприятий' : 'Мероприятий пока нет',
+      fQ: S.fQ, setQ: x => this.setState({ fQ: x.target.value }), fDirty, fReset: () => this.setState(Object.assign({ fOpen: null }, F0)),
+      fCount: fDirty && evList.length > 0, fCountT: 'Найдено: ' + evList.length,
+      evSeg: [['up', 'Предстоящие'], ['past', 'Прошедшие'], ['all', 'Все']].map(x => ({ t: x[1], cls: evFilt === x[0] ? 'on' : '', pick: () => this.setState({ oEvFilter: x[0] }) })),
       evList, evEmpty: !evList.length, sheets: sheetsV, sheetsEmpty: !sheetsV.length, sheetFilter: S.oSheetFilter, setSheetFilter: x => this.setState({ oSheetFilter: x.target.value }),
       dlg: !!dl, dCreate: !!dl && dl.t === 'create', dImport: !!dl && dl.t === 'import', dPrint: !!dl && dl.t === 'print', dConfirm: !!dl && ['open', 'close', 'reopen', 'absent', 'rmExp', 'delCrit', 'publish'].includes(dl.t), dAddTeam: !!dl && dl.t === 'addTeam', dAddRoom: !!dl && dl.t === 'addRoom', dUpload: !!dl && dl.t === 'upload',
       toast: !!ot, toastText: ot ? ot.text : '', toastUndo: !!(ot && ot.undo), toastMs: (ot ? ot.ms : 0) + 'ms', undo: () => { if (ot && ot.undo) ot.undo(); this.setState({ oToast: null }); }
@@ -1360,7 +1400,7 @@ class Component extends DCLogic {
         name: ev.name, type: TYN[ev.type][0], tic: TYN[ev.type][1], date: this.fmtDate(ev.date), time: ev.t1 + '–' + ev.t2, whenT: this.fmtDate(ev.date) + ', ' + ev.t1 + '–' + ev.t2, place: ev.place,
         hasFrom: !!from, fromName: from ? from.name : '', goFrom: () => from && this.oGo('event', { oEv: from.id }),
         pub: PUB(ev.pub).t, pubCls: PUB(ev.pub).c, acc: ACC(ev.acc).t, accCls: ACC(ev.acc).c,
-        isPre, passT: ev.pass + ' из ' + mx, pass: ev.pass, max: mx, passCls: 'inp fill' + (passBad ? ' err' : ''), passHint: passBad ? 'Укажите число от 0 до ' + mx : 'Можно менять до публикации',
+        isPre, passT: ev.pass + ' из ' + mx, pass: ev.pass, max: mx, passCls: 'inp fill' + (passBad ? ' err' : ''), passHint: passBad ? 'Укажите число от 0 до ' + mx : ev.pub ? 'Проходной балл ' + ev.pass + ' из ' + mx + ' · только чтение после публикации' : 'Из ' + mx + ' возможных · можно менять до публикации',
         setPass: x => { ev.pass = x.target.value === '' ? '' : Number(x.target.value); this.touch(); },
         sheetEd: !ev.pub, sheetRo: ev.pub, canImp: dr, canPub: !ev.pub,
         publish: () => { if (passBad) { this.oToast('Укажите проходной балл от 0 до ' + mx); return; } this.oPublishEv(ev); },
@@ -1371,7 +1411,7 @@ class Component extends DCLogic {
         openErr: S.oOpenErr, errLink: defErr && def ? def.name : S.oErrRoom ? 'Перейти к аудитории' : '',
         goErr: () => { if (defErr && def) { this.oGo('event', { oEv: def.id }); return; } S.oOpenRooms[S.oErrRoom] = true; this.touch(); },
         roomsN: ev.rooms.length, teamsN: es.teams + ev.loose.length, got: dr ? '—' : es.got, of: dr ? '' : 'из ' + es.need, pct: dr ? '0%' : pct(es.got, es.need),
-        sheetId: sh.id, sheetName: sh.name, sheetCap: pl(sh.crits.length, 'критерий', 'критерия', 'критериев') + ' · макс. ' + mx,
+        sheetTitle: sh.name + ' · ' + pl(sh.crits.length, 'критерий', 'критерия', 'критериев') + ', макс. ' + mx + (ev.pub ? ' · только чтение после публикации' : ''), sheetId: sh.id, sheetName: sh.name, sheetCap: pl(sh.crits.length, 'критерий', 'критерия', 'критериев') + ' · макс. ' + mx,
         sheetOpts: S.sheets.map(x => ({ id: x.id, name: x.name || 'Без названия' })), setSheet: x => { ev.sheetId = x.target.value; const m2 = this.maxOf(this.sheet(ev.sheetId)); if (isPre && ev.pass > m2) ev.pass = m2; this.touch(); },
         openSheet: () => this.oGo('builder', { oSheet: sh.id }), noRooms: !ev.rooms.length,
         hasLoose: ev.loose.length > 0, looseN: ev.loose.length, looseCls: 'card col' + (S.oErrLoose ? ' err' : ''), canEdit: dr,
@@ -1431,7 +1471,7 @@ class Component extends DCLogic {
         Object.assign(rs, {
           empty: !rm.teams.length, cols, minW: (44 + 240 + exps.length * 112 + 76 + (isPre ? 122 : 0) + (exps.length + 3) * 12 + 40) + 'px',
           badge: miss > 0 ? 'Не хватает ' + pl(miss, 'оценки', 'оценок', 'оценок') : 'Все оценки получены', badgeCls: miss > 0 ? 'bd b-v' : 'bd b-g', badgeIc: miss > 0 ? 'hourglass_top' : 'task_alt',
-          cap: closed ? 'Приём оценок завершён — итоги окончательные' : 'Приём оценок идёт — итоги предварительные',
+          cap: closed ? 'Приём оценок завершён — итоги окончательные' : 'Приём оценок активен — итоги предварительные',
           exps: exps.map(x => ({ ini: ini(ST[x].name), full: ST[x].name, short: shortN(ST[x].name) + (rm.experts.includes(x) ? '' : ' (убран)') })),
           rows: (() => { const all = main.concat(rows.filter(r => r.t.absent)), ps = r => !r.t.absent && r.avg != null && r.avg >= ev.pass; return all.map((r, k) => ({
             cols, place: r.t.absent ? '' : (r.place || '—'), ini: ini(r.t.name), name: r.t.name, abs: r.t.absent,
