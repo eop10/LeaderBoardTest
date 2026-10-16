@@ -124,6 +124,32 @@ textarea{resize:vertical}
 .pa{width:100%;min-width:760px;background:#fff;padding:32px;color:#000;display:flex;flex-direction:column;gap:16px}
 .pf{display:grid;border-left:1.5px solid #000;border-top:1.5px solid #000}
 .pf > div{border-right:1px solid #000;border-bottom:1px solid #000;padding:6px 8px;overflow-wrap:break-word;hyphens:auto;min-width:0}
+.ty{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid #bccaba;background:#fff;color:#181c1e;white-space:nowrap;flex:none}
+.ty .ms{font-size:16px;color:#006d30}
+.ac{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:4px;font-size:12px;font-weight:700;white-space:nowrap;flex:none;border:1.5px solid #bccaba;color:#3d4a3d;background:#fff}
+.ac-1{border-color:#006d30;color:#006d30}.ac-2{background:#3d4a3d;border-color:#3d4a3d;color:#fff}
+.hw{position:relative;display:inline-flex}
+.tip{position:absolute;top:calc(100% + 8px);left:0;z-index:6;background:#181c1e;color:#fff;font-size:12px;font-weight:600;padding:6px 10px;border-radius:6px;white-space:nowrap;display:none}
+.tip:before{content:'';position:absolute;left:16px;top:-5px;border-bottom:6px solid #181c1e;border-left:6px solid transparent;border-right:6px solid transparent}
+.hw:hover .tip{display:block}
+.cb{width:20px;height:20px;border:2px solid #3d4a3d;border-radius:4px;display:grid;place-items:center;flex:none;background:#fff;color:#fff}
+.cb.on{background:#006d30;border-color:#006d30}.cb .ms{font-size:16px}
+.pl{position:relative;height:0;border-top:2px solid #006d30;margin:0 20px}
+.pl span{position:absolute;right:0;top:-12px;background:#006d30;color:#fff;font:700 12px Manrope,sans-serif;padding:3px 10px;border-radius:999px}
+.et{color:#ba1a1a;font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;margin-top:6px}.et .ms{font-size:18px}
+.wn{color:#8a5a00;font-size:12px;font-weight:700;display:flex;align-items:center;gap:4px}.wn .ms{font-size:16px}
+.stp{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:#3d4a3d}
+.stp i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:800 13px Manrope,sans-serif;font-style:normal;background:#e9edeb}
+.stp.on{color:#006d30}.stp.on i{background:#006d30;color:#fff}
+.inner{background:#f7fafc;border:1px solid #bccaba;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:14px}
+.inner.err{border:2px solid #ba1a1a}
+.ex{border:1.5px dashed #9aa79d;border-radius:12px;background:repeating-linear-gradient(135deg,#eef2ef 0 10px,#f7faf8 10px 20px);display:flex;align-items:center;justify-content:center;color:#3d4a3d;font-size:14px;font-weight:600;gap:8px;text-align:center;padding:12px}
+.dz{border:2px dashed #9aa79d;border-radius:12px;background:#f7faf8;padding:24px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;transition:border-color .15s,background .15s}
+.dz .ms{font-size:34px;color:#006d30}.dz.on{border-color:#006d30;background:#eef7f1}.dz.err{border-color:#ba1a1a;background:#fdf3f2}
+.fi{display:flex;align-items:center;gap:12px;min-height:58px;border-bottom:1px solid #e1e8e3;padding:8px 0}
+.fic{width:40px;height:40px;border-radius:8px;background:#e2f3e7;color:#006d30;display:grid;place-items:center;flex:none}
+.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5;font-size:14px;color:#3d4a3d}
+.sm{min-height:38px;padding:4px 8px}
 .pg{animation:fin .22s ease-out}
 @keyframes fin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes sup{from{transform:translateY(100%)}to{transform:none}}
@@ -139,9 +165,11 @@ textarea{resize:vertical}
 <div style="min-height:100vh;padding:24px;display:flex;flex-direction:column;gap:16px">
   <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
     <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:280px">
-      <span style="font:800 24px Manrope,sans-serif">Прототип · оценочные листы предзащиты</span>
-      <span style="font-size:14px;color:#3d4a3d;line-height:1.45;max-width:900px">Слева — телефон эксперта Петровой А. (ауд. 301). Справа — кабинет организатора. Данные общие: что сделано в одном окне, сразу видно в другом. После перезагрузки всё начинается заново.</span>
+      <span style="font:800 24px Manrope,sans-serif">Прототип · мероприятия, оценки, акселераторы</span>
+      <span style="font-size:14px;color:#3d4a3d;line-height:1.45;max-width:900px">Слева — телефон эксперта Петровой А. (ауд. 301). Справа — окно выбранной роли. Данные общие: что сделано в одном окне, сразу видно в другом. Студент Иванов М. записан на «Старт в ИТ», направление «Бэкенд» (сама запись проектируется отдельно). После перезагрузки всё начинается заново.</span>
     </div>
+    <div class="col" style="gap:4px"><span class="cap b">Окно справа</span><div class="seg"><sc-for list="{{ roles }}" as="rl" hint-placeholder-count="3"><button class="{{ rl.cls }}" onClick="{{ rl.pick }}">{{ rl.t }}</button></sc-for></div></div>
+    <div class="col" style="gap:4px"><span class="cap b">Сегодня в прототипе</span><div class="seg"><sc-for list="{{ days }}" as="dy" hint-placeholder-count="2"><button class="{{ dy.cls }}" onClick="{{ dy.pick }}">{{ dy.t }}</button></sc-for></div></div>
     <button class="btn2" onClick="{{ reset }}"><span class="ms">restart_alt</span>Начать заново</button>
   </div>
 
@@ -257,10 +285,10 @@ textarea{resize:vertical}
     </div>
 
     <div class="dsk">
-      <div class="dh"><span class="logo" style="flex:none;font-size:21px">Лидерборд ТПУ</span><span class="hav">П</span></div>
+      <div class="dh"><span class="logo" style="flex:none;font-size:21px">Лидерборд ТПУ</span><span class="hav">{{ who.ini }}</span></div>
       <div class="dg">
         <div class="sb">
-          <div class="sbu"><span class="sav">П</span><span class="b m">Петрова Анна</span><span class="cap">Отделение ИТ</span></div>
+          <div class="sbu"><span class="sav">{{ who.ini }}</span><span class="b m">{{ who.name }}</span><span class="cap">{{ who.dep }}</span></div>
           <sc-for list="{{ o.menu }}" as="mn" hint-placeholder-count="9">
             <sc-if value="{{ mn.g }}" hint-placeholder-val="{{ false }}"><div class="mg">{{ mn.t }}</div></sc-if>
             <sc-if value="{{ mn.i }}" hint-placeholder-val="{{ true }}"><button class="{{ mn.cls }}" onClick="{{ mn.go }}"><span class="ms">{{ mn.ic }}</span>{{ mn.t }}</button></sc-if>
@@ -271,20 +299,24 @@ textarea{resize:vertical}
           <sc-if value="{{ o.isEvents }}" hint-placeholder-val="{{ true }}">
             <div class="pg">
               <div class="phd">
-                <div><h1 class="pt">Мероприятия</h1><div class="psub">Предзащиты и защиты факультета</div></div>
-                <div class="row" style="gap:12px;flex-wrap:wrap"><div class="seg"><sc-for list="{{ o.evSeg }}" as="sg" hint-placeholder-count="4"><button class="{{ sg.cls }}" onClick="{{ sg.pick }}">{{ sg.t }}</button></sc-for></div><button class="btn" onClick="{{ o.newEvent }}"><span class="ms">add</span>Создать мероприятие</button></div>
+                <div><h1 class="pt">Мероприятия</h1><div class="psub">Предзащиты, защиты и акселераторы факультета</div></div>
+                <button class="btn" onClick="{{ o.newEvent }}"><span class="ms">add</span>Создать мероприятие</button>
               </div>
-              <div class="col" style="gap:12px">
-                <sc-for list="{{ o.evList }}" as="ev" hint-placeholder-count="3">
-                  <button class="card row hovc" style="gap:16px 20px;padding:18px 22px;width:100%;flex-wrap:wrap" onClick="{{ ev.open }}">
-                    <div class="col" style="gap:8px;min-width:0;flex:1 1 240px"><div class="row" style="flex-wrap:wrap;gap:10px"><h2 class="ct">{{ ev.name }}</h2><span class="chip">{{ ev.type }}</span></div><div class="meta" style="white-space:nowrap"><span class="ms">event</span>{{ ev.date }}</div></div>
-                    <div class="col" style="width:150px;flex:none"><div class="meta" style="white-space:nowrap"><span class="ms">meeting_room</span>{{ ev.rooms }}</div><div class="meta" style="white-space:nowrap"><span class="ms">groups</span>{{ ev.teams }}</div></div>
-                    <div class="col" style="width:150px;flex:none"><div class="row" style="justify-content:space-between"><span class="cap">Оценки</span><span class="b" style="white-space:nowrap">{{ ev.got }} <span class="vio" style="font-size:13px">{{ ev.of }}</span></span></div><div class="bar"><i style="width:{{ ev.pct }}"></i></div></div>
-                    <span style="width:104px;flex:none"><span class="{{ ev.stCls }}">{{ ev.st }}</span></span>
-                    <span class="ms" style="color:#3d4a3d">chevron_right</span>
-                  </button>
+              <div class="row" style="margin-bottom:16px"><div class="seg"><sc-for list="{{ o.evSeg }}" as="sg" hint-placeholder-count="4"><button class="{{ sg.cls }}" onClick="{{ sg.pick }}">{{ sg.t }}</button></sc-for></div></div>
+              <div class="card" style="padding:0;overflow:hidden"><div style="overflow-x:auto"><div style="min-width:900px">
+                <div class="tr th" style="grid-template-columns:minmax(220px,1fr) 136px 140px 130px 110px 130px"><span>Название</span><span>Тип</span><span>Дата и время</span><span>Публикация</span><span>Приём оценок</span><span>Прогресс оценок</span></div>
+                <sc-for list="{{ o.evList }}" as="ev" hint-placeholder-count="5">
+                  <div class="tr hov" style="grid-template-columns:minmax(220px,1fr) 136px 140px 130px 110px 130px;cursor:pointer" onClick="{{ ev.open }}">
+                    <span class="b" style="min-width:0;line-height:1.3">{{ ev.name }}</span>
+                    <span><span class="ty"><span class="ms">{{ ev.tic }}</span>{{ ev.type }}</span></span>
+                    <div class="col" style="gap:2px"><span style="white-space:nowrap">{{ ev.date }}</span><span class="cap">{{ ev.time }}</span></div>
+                    <span><span class="{{ ev.pubCls }}">{{ ev.pub }}</span></span>
+                    <span><span class="{{ ev.accCls }}">{{ ev.acc }}</span></span>
+                    <div><sc-if value="{{ ev.hasProg }}" hint-placeholder-val="{{ false }}"><div class="col" style="gap:6px"><span class="b" style="white-space:nowrap">{{ ev.got }} <span class="vio" style="font-size:13px">{{ ev.of }}</span></span><div class="bar"><i style="width:{{ ev.pct }}"></i></div></div></sc-if><sc-if value="{{ ev.noProg }}" hint-placeholder-val="{{ true }}"><span class="cap b">—</span></sc-if></div>
+                  </div>
                 </sc-for>
-                <sc-if value="{{ o.evEmpty }}" hint-placeholder-val="{{ false }}"><div class="empty">Нет мероприятий с таким статусом</div></sc-if>
+              </div></div>
+                <sc-if value="{{ o.evEmpty }}" hint-placeholder-val="{{ false }}"><div class="empty">Нет мероприятий этого типа</div></sc-if>
               </div>
             </div>
           </sc-if>
@@ -292,27 +324,47 @@ textarea{resize:vertical}
           <sc-if value="{{ o.isEvent }}" hint-placeholder-val="{{ false }}">
             <div class="pg">
               <div class="cap"><button class="g b" onClick="{{ o.toEvents }}">Мероприятия</button> /</div>
-              <div class="phd" style="margin-top:6px">
-                <div style="min-width:0"><h1 class="pt">{{ v.name }}</h1><div class="row" style="margin-top:10px;flex-wrap:wrap"><span class="chip">{{ v.type }}</span><span class="meta"><span class="ms">event</span>{{ v.date }}</span><span class="{{ v.stCls }}">{{ v.st }}</span></div></div>
-                <div class="row" style="gap:8px;flex-wrap:wrap">
-                  <sc-if value="{{ v.isDraft }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.imp }}"><span class="ms">upload_file</span>Импорт из Excel</button><button class="btn" onClick="{{ v.open }}">Открыть приём оценок</button></sc-if>
-                  <sc-if value="{{ v.isOpen }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.res }}"><span class="ms">leaderboard</span>Итоги</button><button class="btn" onClick="{{ v.close }}"><span class="ms">lock</span>Закрыть</button></sc-if>
-                  <sc-if value="{{ v.isClosed }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.res }}"><span class="ms">leaderboard</span>Итоги</button><button class="btn2" onClick="{{ v.reopen }}">Вернуть в работу</button></sc-if>
+              <div class="phd" style="margin-top:6px;align-items:flex-start">
+                <div style="min-width:0">
+                  <h1 class="pt">{{ v.name }}</h1>
+                  <div class="row" style="margin-top:10px;flex-wrap:wrap;gap:8px 14px"><span class="ty"><span class="ms">{{ v.tic }}</span>{{ v.type }}</span><span class="meta"><span class="ms">event</span>{{ v.whenT }}</span><span class="meta"><span class="ms">location_on</span>{{ v.place }}</span><sc-if value="{{ v.hasFrom }}" hint-placeholder-val="{{ false }}"><span class="meta"><span class="ms">link</span>На основе:<button class="lnk" style="min-height:0" onClick="{{ v.goFrom }}">{{ v.fromName }}</button></span></sc-if></div>
+                  <div class="row" style="margin-top:10px;flex-wrap:wrap;gap:8px"><span class="cap">Публикация</span><span class="{{ v.pubCls }}">{{ v.pub }}</span><span class="cap" style="margin-left:6px">Приём оценок</span><span class="{{ v.accCls }}">{{ v.acc }}</span><sc-if value="{{ v.isPre }}" hint-placeholder-val="{{ false }}"><span class="cap" style="margin-left:6px">Проходной балл</span><span class="b">{{ v.passT }}</span><sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ false }}"><span class="ms" style="font-size:16px;color:#3d4a3d">lock</span></sc-if></sc-if></div>
+                </div>
+                <div class="row" style="gap:8px;flex-wrap:wrap;align-items:flex-start">
+                  <sc-if value="{{ v.canImp }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.imp }}"><span class="ms">upload_file</span>Импорт из Excel</button></sc-if>
+                  <sc-if value="{{ v.canPub }}" hint-placeholder-val="{{ false }}"><button class="btn" onClick="{{ v.publish }}"><span class="ms">public</span>Опубликовать</button></sc-if>
+                  <sc-if value="{{ v.accNone }}" hint-placeholder-val="{{ false }}"><div class="hw"><button class="{{ v.openCls }}" onClick="{{ v.open }}">Открыть приём оценок</button><sc-if value="{{ v.needPub }}" hint-placeholder-val="{{ false }}"><span class="tip">Сначала опубликуйте</span></sc-if></div></sc-if>
+                  <sc-if value="{{ v.accOpen }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.res }}"><span class="ms">leaderboard</span>Итоги</button><button class="btn" onClick="{{ v.close }}"><span class="ms">stop_circle</span>Завершить приём</button></sc-if>
+                  <sc-if value="{{ v.accDone }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ v.res }}"><span class="ms">leaderboard</span>Итоги</button><button class="btn2" onClick="{{ v.reopen }}">Вернуть в работу</button></sc-if>
                 </div>
               </div>
-              <sc-if value="{{ v.openErr }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r" style="margin-bottom:20px;align-items:center"><span class="ms">error</span><span class="sp">{{ v.openErr }}</span><sc-if value="{{ v.hasErrRoom }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="color:#ba1a1a" onClick="{{ v.goErr }}">Перейти к аудитории</button></sc-if></div></sc-if>
+              <sc-if value="{{ v.openErr }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r" style="margin-bottom:20px;align-items:center;flex-wrap:wrap"><span class="ms">error</span><span class="sp" style="min-width:240px">{{ v.openErr }}</span><sc-if value="{{ v.errLink }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="color:#ba1a1a" onClick="{{ v.goErr }}">{{ v.errLink }}</button></sc-if></div></sc-if>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:28px">
                 <div class="card"><div class="mt"><span class="cap">Аудиторий</span><span class="ms g">meeting_room</span></div><div class="mv">{{ v.roomsN }}</div></div>
                 <div class="card"><div class="mt"><span class="cap">Команд</span><span class="ms g">groups</span></div><div class="mv">{{ v.teamsN }}</div></div>
                 <div class="card"><div class="mt"><span class="cap">Оценки</span><span class="ms g">fact_check</span></div><div class="mv">{{ v.got }}<small>{{ v.of }}</small></div><div class="bar" style="margin-top:12px"><i style="width:{{ v.pct }}"></i></div></div>
                 <div class="card col" style="gap:6px"><div class="mt"><span class="cap">Оценочный лист</span><span class="ms g">assignment</span></div>
-                  <sc-if value="{{ v.isDraft }}" hint-placeholder-val="{{ false }}"><select class="inp fill" style="margin-top:6px;min-height:40px;padding:6px 10px" value="{{ v.sheetId }}" onChange="{{ v.setSheet }}"><sc-for list="{{ v.sheetOpts }}" as="so" hint-placeholder-count="3"><option value="{{ so.id }}">{{ so.name }}</option></sc-for></select></sc-if>
-                  <sc-if value="{{ v.notDraft }}" hint-placeholder-val="{{ true }}"><span class="b" style="margin-top:6px">{{ v.sheetName }}</span></sc-if>
-                  <span class="cap">{{ v.sheetCap }}</span><button class="lnk" style="align-self:flex-start" onClick="{{ v.openSheet }}">Открыть</button>
+                  <sc-if value="{{ v.sheetEd }}" hint-placeholder-val="{{ false }}"><select class="inp fill" style="margin-top:6px;min-height:40px;padding:6px 10px" value="{{ v.sheetId }}" onChange="{{ v.setSheet }}"><sc-for list="{{ v.sheetOpts }}" as="so" hint-placeholder-count="3"><option value="{{ so.id }}">{{ so.name }}</option></sc-for></select></sc-if>
+                  <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><span class="b" style="margin-top:6px">{{ v.sheetName }}</span></sc-if>
+                  <span class="cap">{{ v.sheetCap }}</span><sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ false }}"><span class="cap row" style="gap:4px"><span class="ms" style="font-size:16px">lock</span>Только чтение после публикации</span></sc-if><button class="lnk" style="align-self:flex-start" onClick="{{ v.openSheet }}">Открыть</button>
                 </div>
+                <sc-if value="{{ v.isPre }}" hint-placeholder-val="{{ false }}"><div class="card col" style="gap:6px"><div class="mt"><span class="cap">Проходной балл</span><span class="ms g">flag</span></div>
+                  <sc-if value="{{ v.sheetEd }}" hint-placeholder-val="{{ false }}"><div class="{{ v.passCls }}" style="margin-top:6px;min-height:40px;padding:0 10px"><input class="bare" style="height:38px;width:56px;flex:none" type="number" min="0" value="{{ v.pass }}" onChange="{{ v.setPass }}"><span class="cap sp" style="text-align:right">из {{ v.max }} возможных</span></div><span class="cap">{{ v.passHint }}</span></sc-if>
+                  <sc-if value="{{ v.sheetRo }}" hint-placeholder-val="{{ true }}"><div class="mv">{{ v.pass }}<small>из {{ v.max }}</small></div></sc-if>
+                </div></sc-if>
               </div>
-              <div class="row" style="justify-content:space-between;margin-bottom:12px;flex-wrap:wrap"><h2 class="ct" style="font-size:22px">Аудитории</h2><span class="cap">Порядок команд меняется перетаскиванием внутри аудитории</span></div>
-              <sc-if value="{{ v.noRooms }}" hint-placeholder-val="{{ false }}"><div class="card empty"><span>В мероприятии нет аудиторий. Импортируйте команды из Excel.</span><button class="btn2" onClick="{{ v.imp }}"><span class="ms">upload_file</span>Импорт из Excel</button></div></sc-if>
+              <sc-if value="{{ v.hasLoose }}" hint-placeholder-val="{{ false }}">
+                <div class="{{ v.looseCls }}" style="margin-bottom:24px;gap:12px">
+                  <div class="row" style="flex-wrap:wrap"><h2 class="ct" style="font-size:22px">Команды без аудитории</h2><span class="bd b-n">{{ v.looseN }}</span><span class="sp"></span><sc-if value="{{ v.canEdit }}" hint-placeholder-val="{{ false }}"><button class="btn2" style="height:40px" onClick="{{ v.addTeam }}"><span class="ms">add</span>Добавить команду</button></sc-if></div>
+                  <div class="bn bn-n"><span class="ms">info</span><span>Аудитории и время назначит система записи. Распределить команды можно и вручную.</span></div>
+                  <sc-for list="{{ v.loose }}" as="lt" hint-placeholder-count="3">
+                    <div class="lr lro" style="flex-wrap:wrap"><span class="sp" style="font-weight:600;min-width:180px;line-height:1.3">{{ lt.name }}</span><sc-if value="{{ lt.o }}" hint-placeholder-val="{{ false }}"><span class="{{ lt.oCls }}">{{ lt.o }}</span></sc-if><sc-if value="{{ v.canEdit }}" hint-placeholder-val="{{ false }}"><select class="inp fill sm" style="width:170px" value="" onChange="{{ lt.assign }}"><option value="">В аудиторию</option><sc-for list="{{ v.roomOpts }}" as="ro" hint-placeholder-count="2"><option value="{{ ro.id }}">{{ ro.name }}</option></sc-for></select><button class="ib2" title="Убрать из мероприятия" onClick="{{ lt.remove }}"><span class="ms">close</span></button></sc-if></div>
+                  </sc-for>
+                  <sc-if value="{{ v.noRoomOpts }}" hint-placeholder-val="{{ false }}"><span class="cap">Чтобы распределить вручную, сначала добавьте аудиторию.</span></sc-if>
+                </div>
+              </sc-if>
+              <div class="row" style="justify-content:space-between;margin-bottom:12px;flex-wrap:wrap"><h2 class="ct" style="font-size:22px">Аудитории</h2><span class="cap sp">Порядок команд меняется перетаскиванием внутри аудитории</span><sc-if value="{{ v.addTeamHdr }}" hint-placeholder-val="{{ false }}"><button class="btn2" style="height:40px" onClick="{{ v.addTeam }}"><span class="ms">add</span>Добавить команду</button></sc-if><sc-if value="{{ v.canEdit }}" hint-placeholder-val="{{ false }}"><button class="btn2" style="height:40px" onClick="{{ v.addRoom }}"><span class="ms">add</span>Аудитория</button></sc-if></div>
+              <sc-if value="{{ v.noRooms }}" hint-placeholder-val="{{ false }}"><div class="card empty"><span>В мероприятии нет аудиторий. Добавьте аудиторию или импортируйте команды из Excel.</span><button class="btn2" onClick="{{ v.imp }}"><span class="ms">upload_file</span>Импорт из Excel</button></div></sc-if>
               <div class="col" style="gap:12px">
                 <sc-for list="{{ v.rooms }}" as="rm" hint-placeholder-count="3">
                   <div class="{{ rm.cls }}">
@@ -372,22 +424,24 @@ textarea{resize:vertical}
           <sc-if value="{{ o.isResults }}" hint-placeholder-val="{{ false }}">
             <div class="pg">
               <div class="cap"><button class="g b" onClick="{{ o.toEvents }}">Мероприятия</button> / <button class="g b" onClick="{{ rs.toEvent }}">{{ rs.evName }}</button></div>
-              <div class="phd" style="margin-top:6px"><div><h1 class="pt">Итоги</h1><div class="psub">{{ rs.sub }}</div></div><div class="seg"><sc-for list="{{ rs.tabs }}" as="rt" hint-placeholder-count="3"><button class="{{ rt.cls }}" onClick="{{ rt.pick }}">{{ rt.t }}</button></sc-for></div></div>
+              <div class="phd" style="margin-top:6px"><div><h1 class="pt">Итоги</h1><div class="psub">{{ rs.sub }}</div></div><div class="row" style="gap:12px;flex-wrap:wrap"><sc-if value="{{ rs.canDef }}" hint-placeholder-val="{{ false }}"><button class="btn" onClick="{{ rs.mkDef }}"><span class="ms">school</span>Создать защиту</button></sc-if><sc-if value="{{ rs.hasDef }}" hint-placeholder-val="{{ false }}"><div class="col" style="gap:0;align-items:flex-end"><button class="lnk" onClick="{{ rs.goDef }}"><span class="ms" style="font-size:18px">school</span>{{ rs.defName }}</button><span class="cap">Защита уже создана</span></div></sc-if><div class="seg"><sc-for list="{{ rs.tabs }}" as="rt" hint-placeholder-count="3"><button class="{{ rt.cls }}" onClick="{{ rt.pick }}">{{ rt.t }}</button></sc-for></div></div></div>
               <div class="card" style="padding:0;overflow:hidden">
                 <div class="row" style="padding:16px 20px;flex-wrap:wrap"><span class="{{ rs.badgeCls }}"><span class="ms">{{ rs.badgeIc }}</span>{{ rs.badge }}</span><span class="cap sp" style="min-width:200px">{{ rs.cap }}</span><select class="inp fill" style="width:240px;min-height:40px;padding:6px 10px" value="{{ rs.sort }}" onChange="{{ rs.setSort }}"><option value="avg">Сортировка: по среднему</option><option value="order">По порядку выступления</option><option value="name">По названию</option></select></div>
-                <div style="overflow-x:auto"><div style="min-width:{{ rs.minW }}"><div class="tr th" style="grid-template-columns:{{ rs.cols }}"><span>Место</span><span>Команда</span><sc-for list="{{ rs.exps }}" as="rx" hint-placeholder-count="3"><span class="row" style="gap:6px;min-width:0" title="{{ rx.full }}"><span class="av" style="width:22px;height:22px;font-size:9px">{{ rx.ini }}</span><span style="white-space:nowrap;text-transform:none;letter-spacing:0;font-size:13px">{{ rx.short }}</span></span></sc-for><span class="r">Среднее</span></div>
+                <div style="overflow-x:auto"><div style="min-width:{{ rs.minW }}"><div class="tr th" style="grid-template-columns:{{ rs.cols }}"><span>Место</span><span>Команда</span><sc-for list="{{ rs.exps }}" as="rx" hint-placeholder-count="3"><span class="row" style="gap:6px;min-width:0" title="{{ rx.full }}"><span class="av" style="width:22px;height:22px;font-size:9px">{{ rx.ini }}</span><span style="white-space:nowrap;text-transform:none;letter-spacing:0;font-size:13px">{{ rx.short }}</span></span></sc-for><span class="r">Среднее</span><sc-if value="{{ rs.isPre }}" hint-placeholder-val="{{ false }}"><span>Итог</span></sc-if></div>
                 <sc-for list="{{ rs.rows }}" as="rr" hint-placeholder-count="8">
                   <div class="tr" style="grid-template-columns:{{ rr.cols }}">
                     <span class="m b" style="font-size:17px">{{ rr.place }}</span>
-                    <div class="row" style="min-width:0;gap:10px"><span class="av">{{ rr.ini }}</span><div class="col" style="gap:6px;min-width:0"><span class="b" style="font-size:15px;line-height:1.3">{{ rr.name }}</span><sc-if value="{{ rr.abs }}" hint-placeholder-val="{{ false }}"><div class="row" style="gap:8px;flex-wrap:wrap"><span class="bd b-n"><span class="ms">person_off</span>Не явилась</span><span class="cap">Оценки не учитываются</span></div></sc-if></div></div>
+                    <div class="row" style="min-width:0;gap:10px"><span class="av">{{ rr.ini }}</span><div class="col" style="gap:6px;min-width:0"><span class="b" style="font-size:15px;line-height:1.3">{{ rr.name }}</span><sc-if value="{{ rr.abs }}" hint-placeholder-val="{{ false }}"><span class="cap">Оценки не учитываются</span></sc-if></div></div>
                     <sc-for list="{{ rr.sc }}" as="sv" hint-placeholder-count="3"><span class="{{ sv.cls }}">{{ sv.t }}</span></sc-for>
                     <span class="{{ rr.avgCls }}">{{ rr.avg }}</span>
+                    <sc-if value="{{ rs.isPre }}" hint-placeholder-val="{{ false }}"><span><span class="{{ rr.vCls }}">{{ rr.v }}</span></span></sc-if>
                   </div>
+                  <sc-if value="{{ rr.line }}" hint-placeholder-val="{{ false }}"><div class="pl"><span>{{ rs.lineT }}</span></div></sc-if>
                 </sc-for>
                 </div></div>
                 <sc-if value="{{ rs.empty }}" hint-placeholder-val="{{ false }}"><div class="empty">В аудитории нет команд</div></sc-if>
               </div>
-              <div class="cap" style="margin-top:12px">Среднее считается по отправленным оценкам, черновики не учитываются. Тире — эксперт ещё не отправил оценку.</div>
+              <div class="cap" style="margin-top:12px">{{ rs.foot }}</div>
             </div>
           </sc-if>
 
@@ -415,7 +469,7 @@ textarea{resize:vertical}
             <div class="pg">
               <div class="cap"><button class="g b" onClick="{{ o.toSheets }}">Оценочные листы</button> /</div>
               <div class="phd" style="margin-top:6px"><h1 class="pt" style="min-width:0">{{ b.title }}</h1><div class="row"><span class="{{ b.stCls }}"><span class="ms">{{ b.stIc }}</span>{{ b.st }}</span><sc-if value="{{ b.ed }}" hint-placeholder-val="{{ true }}"><span class="meta"><span class="ms">cloud_done</span>Сохранено</span></sc-if></div></div>
-              <sc-if value="{{ b.ro }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="margin-bottom:20px;align-items:center;flex-wrap:wrap"><span class="ms">lock</span><span class="sp" style="min-width:240px">Лист используется в мероприятии, где открыт приём оценок. Чтобы изменить критерии, создайте копию.</span><button class="btn" onClick="{{ b.dup }}"><span class="ms">content_copy</span>Дублировать</button></div></sc-if>
+              <sc-if value="{{ b.ro }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="margin-bottom:20px;align-items:center;flex-wrap:wrap"><span class="ms">lock</span><span class="sp" style="min-width:240px">Лист выбран в опубликованном мероприятии. Чтобы изменить критерии, создайте копию.</span><button class="btn" onClick="{{ b.dup }}"><span class="ms">content_copy</span>Дублировать</button></div></sc-if>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;align-items:start">
                 <div class="col" style="gap:16px">
                   <div class="card col" style="gap:0">
@@ -461,22 +515,231 @@ textarea{resize:vertical}
             </div>
           </sc-if>
 
+
+          <sc-if value="{{ o.isCreate }}" hint-placeholder-val="{{ false }}">
+            <div class="pg">
+              <div class="cap"><button class="g b" onClick="{{ o.toEvents }}">Мероприятия</button> /</div>
+              <h1 class="pt" style="margin:6px 0 18px">Новое мероприятие</h1>
+              <div class="row" style="gap:14px;margin-bottom:24px;flex-wrap:wrap"><span class="{{ cr.s1Cls }}"><i>{{ cr.s1N }}</i>Тип</span><span style="width:40px;height:2px;background:#bccaba"></span><span class="{{ cr.s2Cls }}"><i>2</i>Параметры</span><sc-if value="{{ cr.step2 }}" hint-placeholder-val="{{ false }}"><span class="ty" style="margin-left:12px"><span class="ms">{{ cr.tic }}</span>{{ cr.typeT }}</span></sc-if></div>
+              <sc-if value="{{ cr.step1 }}" hint-placeholder-val="{{ false }}">
+                <div class="card col" style="gap:20px;max-width:980px">
+                  <div><h2 class="ct" style="font-size:22px">Какое мероприятие создаём?</h2><div class="cap" style="margin-top:6px">После создания тип не меняется</div></div>
+                  <div class="row" style="align-items:stretch;gap:16px;flex-wrap:wrap">
+                    <sc-for list="{{ cr.types }}" as="ty" hint-placeholder-count="3">
+                      <button class="{{ ty.cls }}" style="min-height:200px;padding:20px;gap:10px;flex:1 1 200px" onClick="{{ ty.pick }}">
+                        <span class="row" style="width:100%"><span class="av" style="width:44px;height:44px;background:#e2f3e7;color:#006d30"><span class="ms">{{ ty.ic }}</span></span><span class="sp"></span><sc-if value="{{ ty.on }}" hint-placeholder-val="{{ false }}"><span class="ms g">check_circle</span></sc-if></span>
+                        <span class="m b" style="font-size:19px">{{ ty.t }}</span>
+                        <span style="font-size:14px;line-height:1.5;color:#3d4a3d">{{ ty.d }}</span>
+                        <span class="cap" style="margin-top:auto">{{ ty.f }}</span>
+                      </button>
+                    </sc-for>
+                  </div>
+                  <div class="dft"><button class="btn2" onClick="{{ o.toEvents }}">Отмена</button><button class="btn" onClick="{{ cr.next }}">Далее</button></div>
+                </div></sc-if>
+              <sc-if value="{{ cr.step2 }}" hint-placeholder-val="{{ false }}">
+                <div class="col" style="gap:20px;max-width:980px">
+                  <div class="card col" style="gap:14px">
+                    <h2 class="ct">Основное</h2>
+                    <div><div class="lbl">Название</div><input class="{{ cr.nameCls }}" placeholder="Например, Предзащита, весна 2027" value="{{ cr.name }}" onChange="{{ cr.setName }}"><sc-if value="{{ cr.nameErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>Введите название</span></sc-if></div>
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+                    <div><div class="lbl">Дата</div><input type="date" class="inp fill" value="{{ cr.date }}" onChange="{{ cr.setDate }}"></div>
+                    <div><div class="lbl">Начало</div><input type="time" class="inp fill" value="{{ cr.t1 }}" onChange="{{ cr.setT1 }}"></div>
+                    <div><div class="lbl">Окончание</div><input type="time" class="{{ cr.t2Cls }}" value="{{ cr.t2 }}" onChange="{{ cr.setT2 }}"><sc-if value="{{ cr.timeErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>Позже времени начала</span></sc-if></div>
+                  </div>
+                  <div><div class="lbl">Место</div><input class="inp fill" placeholder="Например, Учебный корпус № 10" value="{{ cr.place }}" onChange="{{ cr.setPlace }}"></div>
+                  <div><div class="lbl">Описание для анонса</div><textarea class="inp fill ta" placeholder="Что будет на мероприятии и кому оно подойдёт" value="{{ cr.desc }}" onChange="{{ cr.setDesc }}"></textarea><div class="cap" style="margin-top:6px">Студенты увидят его в карточке анонса в личном кабинете</div></div>
+                  </div>
+                  <sc-if value="{{ cr.isPre }}" hint-placeholder-val="{{ false }}"><div class="card col" style="gap:14px"><h2 class="ct">Оценка</h2>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+                      <div><div class="lbl">Оценочный лист</div><select class="inp fill" value="{{ cr.sheetId }}" onChange="{{ cr.setSheet }}"><sc-for list="{{ cr.sheets }}" as="so" hint-placeholder-count="3"><option value="{{ so.id }}">{{ so.name }}</option></sc-for></select><div class="cap" style="margin-top:6px">{{ cr.sheetCap }}</div></div>
+                      <div><div class="lbl">Проходной балл *</div><div class="{{ cr.passCls }}" style="padding:0 14px"><input class="bare" type="number" min="0" style="width:70px;flex:none" value="{{ cr.pass }}" onChange="{{ cr.setPass }}" placeholder="—"><span class="cap sp" style="text-align:right">из {{ cr.max }} возможных</span></div><sc-if value="{{ cr.passErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>{{ cr.passErr }}</span></sc-if><sc-if value="{{ cr.passOk }}" hint-placeholder-val="{{ false }}"><div class="cap row" style="margin-top:6px;gap:4px"><span class="ms" style="font-size:16px">edit</span>Можно менять до публикации</div></sc-if></div>
+                    </div></div></sc-if>
+                  <sc-if value="{{ cr.isDef }}" hint-placeholder-val="{{ false }}"><div class="card col" style="gap:14px"><h2 class="ct">Оценка и команды</h2>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+                      <div><div class="lbl">Оценочный лист</div><select class="inp fill" value="{{ cr.sheetId }}" onChange="{{ cr.setSheet }}"><sc-for list="{{ cr.sheets }}" as="so" hint-placeholder-count="3"><option value="{{ so.id }}">{{ so.name }}</option></sc-for></select><div class="cap" style="margin-top:6px">{{ cr.sheetCap }}</div></div>
+                      <div><div class="lbl">На основе предзащиты</div><select class="{{ cr.fromCls }}" value="{{ cr.fromId }}" onChange="{{ cr.setFrom }}"><option value="">Выберите предзащиту</option><sc-for list="{{ cr.froms }}" as="fo" hint-placeholder-count="1"><option value="{{ fo.id }}">{{ fo.name }}</option></sc-for></select><div class="cap" style="margin-top:6px">Только завершённые и ещё не использованные</div><sc-if value="{{ cr.fromErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>Выберите предзащиту</span></sc-if><sc-if value="{{ cr.noFroms }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">info</span>Нет завершённых предзащит без защиты. Завершите приём оценок у предзащиты.</span></sc-if></div>
+                    </div>
+                    <sc-if value="{{ cr.hasFrom }}" hint-placeholder-val="{{ false }}"><div style="border:1px solid #bccaba;border-radius:8px;overflow:hidden"><div style="overflow-x:auto"><div style="min-width:640px">
+                      <div class="tr th" style="grid-template-columns:24px minmax(0,1fr) 110px 120px 120px;padding:10px 14px"><button class="{{ cr.allCb }}" onClick="{{ cr.toggleAll }}"><span class="ms">{{ cr.allIc }}</span></button><span>Команда</span><span>Средний итог</span><span>Оценок</span><span>Итог</span></div>
+                      <sc-for list="{{ cr.dteams }}" as="dt" hint-placeholder-count="6">
+                        <div class="tr hov" style="grid-template-columns:24px minmax(0,1fr) 110px 120px 120px;padding:10px 14px;cursor:pointer" onClick="{{ dt.toggle }}"><span class="{{ dt.cb }}"><span class="ms">{{ dt.cbIc }}</span></span><div class="col" style="gap:4px;min-width:0"><span class="b" style="font-size:15px;line-height:1.3">{{ dt.name }}</span><sc-if value="{{ dt.warn }}" hint-placeholder-val="{{ false }}"><span class="wn"><span class="ms">warning</span>{{ dt.warn }}</span></sc-if></div><span class="m b">{{ dt.avg }}</span><span class="{{ dt.nCls }}">{{ dt.nT }}</span><span><span class="{{ dt.vCls }}">{{ dt.v }}</span></span></div>
+                      </sc-for>
+                    </div></div></div>
+                    <div class="col" style="gap:4px"><span class="m b" style="font-size:18px">{{ cr.willT }}</span><span class="cap">Аудитории и время выступления назначит система записи</span></div></sc-if>
+                  </div></sc-if>
+                  <sc-if value="{{ cr.isAcc }}" hint-placeholder-val="{{ false }}"><div class="card col" style="gap:16px">
+                    <div class="row" style="flex-wrap:wrap"><h2 class="ct sp">Направления</h2><span class="cap">Роль и аудитория не должны повторяться</span></div>
+                    <sc-for list="{{ cr.dirs }}" as="d" hint-placeholder-count="1">
+                  <div class="{{ d.cls }}" id="{{ d.domId }}">
+                    <div class="row"><span class="b">Направление {{ d.n }}</span><span class="sp"></span><button class="ib2" title="Удалить направление" onClick="{{ d.del }}"><span class="ms">delete</span></button></div>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+                      <div><div class="lbl">Роль</div><input class="{{ d.roleCls }}" placeholder="Например, Бэкенд" value="{{ d.role }}" onChange="{{ d.setRole }}"><sc-if value="{{ d.roleErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>{{ d.roleErr }}</span></sc-if></div>
+                      <div><div class="lbl">Аудитория</div><input class="{{ d.roomCls }}" placeholder="Например, ауд. 301" value="{{ d.room }}" onChange="{{ d.setRoom }}"><sc-if value="{{ d.roomErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>{{ d.roomErr }}</span></sc-if></div>
+                    </div>
+                    <div><div class="lbl">Описание</div><textarea class="inp fill ta" style="min-height:64px" placeholder="Чему научатся участники" value="{{ d.desc }}" onChange="{{ d.setDesc }}"></textarea></div>
+                    <div class="col" style="gap:8px">
+                      <div class="lbl" style="margin:0">Тренеры</div>
+                      <sc-for list="{{ d.tr }}" as="t" hint-placeholder-count="1">
+                        <div style="display:grid;grid-template-columns:minmax(170px,1.3fr) minmax(110px,1fr) minmax(110px,1fr) 36px;gap:10px;align-items:center">
+                          <div class="inp fill" style="padding:4px 10px"><span class="av" style="width:30px;height:30px;font-size:11px">{{ t.ini }}</span><span class="sp" style="font-size:14px;line-height:1.3">{{ t.name }}</span></div>
+                          <input class="inp fill" placeholder="Должность" value="{{ t.pos }}" onChange="{{ t.setPos }}">
+                          <input class="inp fill" placeholder="Компания" value="{{ t.co }}" onChange="{{ t.setCo }}">
+                          <button class="ib2" title="Убрать тренера" onClick="{{ t.rm }}"><span class="ms">close</span></button>
+                        </div>
+                      </sc-for>
+                      <sc-if value="{{ d.noTr }}" hint-placeholder-val="{{ false }}"><div class="{{ d.noTrCls }}" style="align-items:center"><span class="ms">{{ d.noTrIc }}</span><span>У направления нет тренера</span></div></sc-if>
+                      <sc-if value="{{ d.searching }}" hint-placeholder-val="{{ false }}"><div style="max-width:440px"><div class="inp" style="padding:0 6px 0 12px"><span class="ms" style="color:#3d4a3d;font-size:20px">search</span><input class="bare" placeholder="Найти пользователя лидерборда по ФИО" value="{{ d.q }}" onChange="{{ d.setQ }}"><button class="ib2" onClick="{{ d.stopSearch }}"><span class="ms">close</span></button></div>
+                        <sc-if value="{{ d.showRes }}" hint-placeholder-val="{{ false }}"><div class="dd" style="margin-top:4px"><sc-for list="{{ d.res }}" as="sr" hint-placeholder-count="2"><button onClick="{{ sr.add }}"><span class="av" style="width:30px;height:30px;font-size:11px">{{ sr.ini }}</span><span class="col sp" style="gap:0;align-items:flex-start"><span class="b" style="font-size:14px">{{ sr.name }}</span><span class="cap">{{ sr.mail }}</span></span></button></sc-for><sc-if value="{{ d.noRes }}" hint-placeholder-val="{{ false }}"><div class="cap" style="padding:8px 12px">Нет пользователей с таким ФИО</div></sc-if></div></sc-if>
+                        <div class="cap" style="margin-top:4px">Начните вводить ФИО, например «Ким» или «Соколов»</div></div></sc-if>
+                      <sc-if value="{{ d.notSearching }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="text-decoration:none;align-self:flex-start" onClick="{{ d.startSearch }}"><span class="ms" style="font-size:18px">add</span>тренер</button></sc-if>
+                    </div>
+                  </div>
+                    </sc-for>
+                    <button class="btn2 w" style="border-style:dashed" onClick="{{ cr.addDir }}"><span class="ms">add</span>Направление</button>
+                  </div></sc-if>
+                  <sc-if value="{{ cr.err }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r" style="align-items:center"><span class="ms">error</span><span>{{ cr.err }}</span></div></sc-if>
+                  <div class="row" style="border-top:1px solid #bccaba;padding-top:20px;flex-wrap:wrap"><button class="lnk" onClick="{{ cr.back }}"><span class="ms" style="font-size:18px">arrow_back</span>Назад</button><span class="sp"></span><button class="btn2" onClick="{{ cr.saveDraft }}">Сохранить черновик</button><button class="btn" onClick="{{ cr.publish }}"><span class="ms">public</span>Опубликовать</button></div>
+                </div></sc-if>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.isAccel }}" hint-placeholder-val="{{ false }}">
+            <div class="pg">
+              <div class="cap"><button class="g b" onClick="{{ o.toEvents }}">Мероприятия</button> /</div>
+              <div class="phd" style="margin-top:6px;align-items:flex-start">
+                <div style="min-width:0"><h1 class="pt">{{ ac.title }}</h1>
+                  <div class="row" style="margin-top:10px;flex-wrap:wrap;gap:8px"><span class="ty"><span class="ms">rocket_launch</span>Акселератор</span><span class="cap" style="margin-left:6px">Публикация</span><span class="{{ ac.pubCls }}">{{ ac.pub }}</span><span class="cap" style="margin-left:6px">Приём оценок</span><span class="cap b">—</span></div></div>
+                <div class="row" style="gap:12px"><span class="meta"><span class="ms">cloud_done</span>Сохранено</span><sc-if value="{{ ac.canPub }}" hint-placeholder-val="{{ false }}"><button class="btn" onClick="{{ ac.publish }}"><span class="ms">public</span>Опубликовать</button></sc-if></div>
+              </div>
+              <sc-if value="{{ ac.err }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r" style="margin-bottom:20px;align-items:center;flex-wrap:wrap"><span class="ms">error</span><span class="sp" style="min-width:240px">{{ ac.err }}</span><sc-if value="{{ ac.errLink }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="color:#ba1a1a" onClick="{{ ac.goErr }}">Перейти к направлению</button></sc-if></div></sc-if>
+              <div class="col" style="gap:20px;max-width:980px">
+                <div class="card col" style="gap:14px">
+                  <h2 class="ct">О мероприятии</h2>
+                  <div><div class="lbl">Название</div><input class="{{ ac.nameCls }}" placeholder="Например, Предзащита, весна 2027" value="{{ ac.name }}" onChange="{{ ac.setName }}"><sc-if value="{{ ac.nameErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>Введите название</span></sc-if></div>
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+                    <div><div class="lbl">Дата</div><input type="date" class="inp fill" value="{{ ac.date }}" onChange="{{ ac.setDate }}"></div>
+                    <div><div class="lbl">Начало</div><input type="time" class="inp fill" value="{{ ac.t1 }}" onChange="{{ ac.setT1 }}"></div>
+                    <div><div class="lbl">Окончание</div><input type="time" class="{{ ac.t2Cls }}" value="{{ ac.t2 }}" onChange="{{ ac.setT2 }}"><sc-if value="{{ ac.timeErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>Позже времени начала</span></sc-if></div>
+                  </div>
+                  <div><div class="lbl">Место</div><input class="inp fill" placeholder="Например, Учебный корпус № 10" value="{{ ac.place }}" onChange="{{ ac.setPlace }}"></div>
+                  <div><div class="lbl">Описание для анонса</div><textarea class="inp fill ta" placeholder="Что будет на мероприятии и кому оно подойдёт" value="{{ ac.desc }}" onChange="{{ ac.setDesc }}"></textarea><div class="cap" style="margin-top:6px">Студенты увидят его в карточке анонса в личном кабинете</div></div>
+                </div>
+                <div class="card col" style="gap:16px">
+                  <div class="row" style="flex-wrap:wrap"><h2 class="ct sp">Направления</h2><span class="cap">Роль и аудитория не должны повторяться</span></div>
+                  <sc-for list="{{ ac.dirs }}" as="d" hint-placeholder-count="3">
+                  <div class="{{ d.cls }}" id="{{ d.domId }}">
+                    <div class="row"><span class="b">Направление {{ d.n }}</span><span class="sp"></span><button class="ib2" title="Удалить направление" onClick="{{ d.del }}"><span class="ms">delete</span></button></div>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+                      <div><div class="lbl">Роль</div><input class="{{ d.roleCls }}" placeholder="Например, Бэкенд" value="{{ d.role }}" onChange="{{ d.setRole }}"><sc-if value="{{ d.roleErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>{{ d.roleErr }}</span></sc-if></div>
+                      <div><div class="lbl">Аудитория</div><input class="{{ d.roomCls }}" placeholder="Например, ауд. 301" value="{{ d.room }}" onChange="{{ d.setRoom }}"><sc-if value="{{ d.roomErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>{{ d.roomErr }}</span></sc-if></div>
+                    </div>
+                    <div><div class="lbl">Описание</div><textarea class="inp fill ta" style="min-height:64px" placeholder="Чему научатся участники" value="{{ d.desc }}" onChange="{{ d.setDesc }}"></textarea></div>
+                    <div class="col" style="gap:8px">
+                      <div class="lbl" style="margin:0">Тренеры</div>
+                      <sc-for list="{{ d.tr }}" as="t" hint-placeholder-count="1">
+                        <div style="display:grid;grid-template-columns:minmax(170px,1.3fr) minmax(110px,1fr) minmax(110px,1fr) 36px;gap:10px;align-items:center">
+                          <div class="inp fill" style="padding:4px 10px"><span class="av" style="width:30px;height:30px;font-size:11px">{{ t.ini }}</span><span class="sp" style="font-size:14px;line-height:1.3">{{ t.name }}</span></div>
+                          <input class="inp fill" placeholder="Должность" value="{{ t.pos }}" onChange="{{ t.setPos }}">
+                          <input class="inp fill" placeholder="Компания" value="{{ t.co }}" onChange="{{ t.setCo }}">
+                          <button class="ib2" title="Убрать тренера" onClick="{{ t.rm }}"><span class="ms">close</span></button>
+                        </div>
+                      </sc-for>
+                      <sc-if value="{{ d.noTr }}" hint-placeholder-val="{{ false }}"><div class="{{ d.noTrCls }}" style="align-items:center"><span class="ms">{{ d.noTrIc }}</span><span>У направления нет тренера</span></div></sc-if>
+                      <sc-if value="{{ d.searching }}" hint-placeholder-val="{{ false }}"><div style="max-width:440px"><div class="inp" style="padding:0 6px 0 12px"><span class="ms" style="color:#3d4a3d;font-size:20px">search</span><input class="bare" placeholder="Найти пользователя лидерборда по ФИО" value="{{ d.q }}" onChange="{{ d.setQ }}"><button class="ib2" onClick="{{ d.stopSearch }}"><span class="ms">close</span></button></div>
+                        <sc-if value="{{ d.showRes }}" hint-placeholder-val="{{ false }}"><div class="dd" style="margin-top:4px"><sc-for list="{{ d.res }}" as="sr" hint-placeholder-count="2"><button onClick="{{ sr.add }}"><span class="av" style="width:30px;height:30px;font-size:11px">{{ sr.ini }}</span><span class="col sp" style="gap:0;align-items:flex-start"><span class="b" style="font-size:14px">{{ sr.name }}</span><span class="cap">{{ sr.mail }}</span></span></button></sc-for><sc-if value="{{ d.noRes }}" hint-placeholder-val="{{ false }}"><div class="cap" style="padding:8px 12px">Нет пользователей с таким ФИО</div></sc-if></div></sc-if>
+                        <div class="cap" style="margin-top:4px">Начните вводить ФИО, например «Ким» или «Соколов»</div></div></sc-if>
+                      <sc-if value="{{ d.notSearching }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="text-decoration:none;align-self:flex-start" onClick="{{ d.startSearch }}"><span class="ms" style="font-size:18px">add</span>тренер</button></sc-if>
+                    </div>
+                  </div>
+                  </sc-for>
+                  <button class="btn2 w" style="border-style:dashed" onClick="{{ ac.addDir }}"><span class="ms">add</span>Направление</button>
+                </div>
+                <div class="cap">Изменения сохраняются автоматически{{ ac.pubNote }}</div>
+              </div>
+            </div>
+          </sc-if>
+
+
+          <sc-if value="{{ st.isLk }}" hint-placeholder-val="{{ false }}">
+            <div class="pg col" style="gap:20px">
+              <h1 class="pt">Личный кабинет</h1>
+              <div class="ex" style="min-height:120px"><span class="ms">badge</span>Карточка профиля · существующий блок, без изменений</div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px"><div class="ex" style="min-height:90px">Метрика</div><div class="ex" style="min-height:90px">Метрика</div><div class="ex" style="min-height:90px">Метрика</div><div class="ex" style="min-height:90px">Метрика</div></div>
+              <div class="col" style="gap:14px">
+                <div class="row" style="flex-wrap:wrap"><h2 class="ct sp" style="font-size:22px">Ближайшие мероприятия</h2><span class="cap">Опубликованные анонсы факультета</span></div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px">
+                  <sc-for list="{{ st.cards }}" as="sc" hint-placeholder-count="3">
+                    <button class="card col hovc" style="gap:10px;align-items:stretch" onClick="{{ sc.open }}">
+                      <span class="row" style="gap:8px;flex-wrap:wrap"><span class="ty"><span class="ms">{{ sc.tic }}</span>{{ sc.type }}</span><sc-if value="{{ sc.past }}" hint-placeholder-val="{{ false }}"><span class="bd b-n">Состоялся</span></sc-if></span>
+                      <span class="ct">{{ sc.name }}</span>
+                      <span class="col" style="gap:4px"><span class="meta"><span class="ms">event</span>{{ sc.when }}</span><span class="meta"><span class="ms">location_on</span>{{ sc.place }}</span></span>
+                      <span class="clamp">{{ sc.desc }}</span>
+                      <sc-if value="{{ sc.hasRoles }}" hint-placeholder-val="{{ false }}"><span class="row" style="gap:6px;flex-wrap:wrap"><sc-for list="{{ sc.roles }}" as="r" hint-placeholder-count="2"><span class="chip">{{ r }}</span></sc-for></span></sc-if>
+                      <sc-if value="{{ sc.signup }}" hint-placeholder-val="{{ false }}"><span class="col" style="gap:4px;margin-top:auto;padding-top:6px"><span class="btn dis" style="align-self:flex-start">Записаться</span><span class="cap">Запись скоро откроется</span></span></sc-if>
+                      <sc-if value="{{ sc.mat }}" hint-placeholder-val="{{ false }}"><span class="meta" style="margin-top:auto"><span class="ms">folder</span>{{ sc.matT }}</span></sc-if>
+                    </button>
+                  </sc-for>
+                </div>
+                <sc-if value="{{ st.empty }}" hint-placeholder-val="{{ false }}"><div class="card empty"><span class="ms" style="font-size:36px;color:#9aa79d">event_busy</span>Ближайших мероприятий нет</div></sc-if>
+              </div>
+              <div class="ex" style="min-height:150px"><span class="ms">folder</span>Проекты · существующий блок, без изменений</div>
+              <div class="ex" style="min-height:150px"><span class="ms">show_chart</span>График · существующий блок, без изменений</div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ st.isAnn }}" hint-placeholder-val="{{ false }}">
+            <div class="pg">
+              <div class="cap"><button class="g b" onClick="{{ st.toLk }}">Личный кабинет</button> / Мероприятия</div>
+              <div class="row" style="align-items:flex-start;gap:24px;flex-wrap:wrap;margin-top:12px">
+                <div class="col" style="gap:16px;flex:1 1 420px;min-width:0">
+                  <div class="row" style="gap:8px;flex-wrap:wrap"><span class="ty"><span class="ms">{{ an.tic }}</span>{{ an.type }}</span><sc-if value="{{ an.past }}" hint-placeholder-val="{{ false }}"><span class="bd b-n">Состоялся</span></sc-if></div>
+                  <h1 class="pt">{{ an.name }}</h1>
+                  <div class="row" style="gap:16px;flex-wrap:wrap"><div class="meta"><span class="ms">event</span>{{ an.when }}</div><div class="meta"><span class="ms">location_on</span>{{ an.place }}</div></div>
+                  <div style="line-height:1.6;white-space:pre-line">{{ an.desc }}</div>
+                  <sc-if value="{{ an.isAcc }}" hint-placeholder-val="{{ false }}"><h2 class="ct" style="font-size:22px;margin-top:8px">Направления</h2>
+                  <sc-for list="{{ an.dirs }}" as="ad" hint-placeholder-count="3">
+                    <div class="card col" style="gap:12px">
+                      <div class="row" style="flex-wrap:wrap"><h3 class="ct sp">{{ ad.role }}</h3><sc-if value="{{ ad.mine }}" hint-placeholder-val="{{ false }}"><span class="bd b-g"><span class="ms">check</span>Вы записаны</span></sc-if><div class="meta"><span class="ms">meeting_room</span>{{ ad.room }}</div></div>
+                      <div style="line-height:1.5;color:#3d4a3d">{{ ad.desc }}</div>
+                      <div class="lbl" style="margin:0">Тренеры</div>
+                      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px"><sc-for list="{{ ad.tr }}" as="t" hint-placeholder-count="2"><div class="row"><span class="av">{{ t.ini }}</span><div class="col" style="gap:2px;min-width:0"><span class="b" style="font-size:15px">{{ t.name }}</span><span class="cap">{{ t.sub }}</span></div></div></sc-for></div>
+                      <sc-if value="{{ ad.noTr }}" hint-placeholder-val="{{ false }}"><span class="cap">Тренеры появятся позже</span></sc-if>
+                    </div>
+                  </sc-for></sc-if>
+                </div>
+                <div class="card col" style="gap:8px;flex:0 1 360px;min-width:280px;position:sticky;top:0">
+                  <sc-if value="{{ an.signup }}" hint-placeholder-val="{{ false }}"><span class="btn dis w">Записаться</span><span class="cap">Запись скоро откроется</span></sc-if>
+                  <sc-if value="{{ an.mat }}" hint-placeholder-val="{{ false }}"><h2 class="ct">Материалы направления</h2><span class="cap">{{ an.matSub }}</span>
+                    <sc-for list="{{ an.files }}" as="fl" hint-placeholder-count="2"><div class="fi"><span class="fic"><span class="ms">{{ fl.ic }}</span></span><div class="col sp" style="gap:2px;min-width:0"><span class="b" style="font-size:15px">{{ fl.name }}</span><span class="cap">{{ fl.cap }}</span></div><button class="btn2" style="height:38px;padding:0 12px" onClick="{{ fl.open }}">Открыть</button></div></sc-for>
+                    <sc-if value="{{ an.noFiles }}" hint-placeholder-val="{{ false }}"><div class="empty" style="padding:24px 8px"><span class="ms" style="font-size:36px;color:#9aa79d">folder_open</span>Тренеры ещё не выложили материалы</div></sc-if></sc-if>
+                  <sc-if value="{{ an.pastNo }}" hint-placeholder-val="{{ false }}"><span class="b">Мероприятие состоялось</span><span class="cap">{{ an.when }}</span></sc-if>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ tr.isMine }}" hint-placeholder-val="{{ false }}">
+            <div class="pg">
+              <div class="phd"><div><h1 class="pt">Мои мероприятия</h1><div class="psub">Акселераторы, где вы тренер</div></div></div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px">
+                <sc-for list="{{ tr.cards }}" as="tc" hint-placeholder-count="2">
+                  <div class="card col" style="gap:14px">
+                    <div class="row" style="align-items:flex-start"><h2 class="ct sp">{{ tc.name }}</h2><span class="{{ tc.bdCls }}">{{ tc.bd }}</span></div>
+                    <div class="col" style="gap:6px"><div class="meta"><span class="ms">event</span>{{ tc.when }}</div><div class="meta"><span class="ms">co_present</span>Ваше направление:<b style="color:#181c1e">{{ tc.dir }}</b></div><div class="meta"><span class="ms">meeting_room</span>{{ tc.room }}</div></div>
+                    <div class="row" style="gap:8px;flex-wrap:wrap"><span class="cap">Со-тренеры:</span><sc-for list="{{ tc.co }}" as="c" hint-placeholder-count="1"><span class="row" style="gap:6px"><span class="av" style="width:26px;height:26px;font-size:10px">{{ c.ini }}</span><span class="cap" style="color:#181c1e;font-weight:600">{{ c.short }}</span></span></sc-for><sc-if value="{{ tc.noCo }}" hint-placeholder-val="{{ false }}"><span class="cap">нет</span></sc-if></div>
+                    <div class="row" style="border-top:1px solid #e1e8e3;padding-top:14px;flex-wrap:wrap"><div class="hw"><button class="{{ tc.btnCls }}" onClick="{{ tc.up }}"><span class="ms">upload_file</span>Выложить презентацию</button><sc-if value="{{ tc.tip }}" hint-placeholder-val="{{ false }}"><span class="tip">Доступно после окончания</span></sc-if></div><span class="cap">{{ tc.files }}</span></div>
+                  </div>
+                </sc-for>
+              </div>
+              <sc-if value="{{ tr.empty }}" hint-placeholder-val="{{ false }}"><div class="card empty"><span class="ms" style="font-size:36px;color:#9aa79d">co_present</span>Вы пока не назначены тренером</div></sc-if>
+            </div>
+          </sc-if>
+
         </div>
       </div>
 
       <sc-if value="{{ o.dlg }}" hint-placeholder-val="{{ false }}">
         <div class="scr" onClick="{{ o.dlgBg }}">
-
-          <sc-if value="{{ o.dCreate }}" hint-placeholder-val="{{ false }}">
-            <div class="card col dlg" style="width:580px">
-              <div class="row" style="justify-content:space-between"><h2 class="ct" style="font-size:24px">Новое мероприятие</h2><button class="ib2" onClick="{{ o.closeDlg }}"><span class="ms">close</span></button></div>
-              <div><div class="lbl">Название</div><input class="{{ n.nameCls }}" placeholder="Например, Предзащита, весна 2027" value="{{ n.name }}" onChange="{{ n.setName }}"><sc-if value="{{ n.err }}" hint-placeholder-val="{{ false }}"><div class="cap" style="color:#ba1a1a;margin-top:6px;font-weight:700">Введите название</div></sc-if></div>
-              <div><div class="lbl">Тип</div><div class="row" style="align-items:stretch"><sc-for list="{{ n.types }}" as="ty" hint-placeholder-count="2"><button class="{{ ty.cls }}" onClick="{{ ty.pick }}"><span class="ms g">{{ ty.ic }}</span><span class="b" style="white-space:nowrap">{{ ty.t }}</span><span class="cap">{{ ty.d }}</span></button></sc-for></div></div>
-              <div><div class="lbl">Дата</div><input type="date" class="inp fill" value="{{ n.date }}" onChange="{{ n.setDate }}"></div>
-              <div><div class="lbl">Оценочный лист</div><select class="inp fill" value="{{ n.sheetId }}" onChange="{{ n.setSheet }}"><sc-for list="{{ n.sheets }}" as="ns" hint-placeholder-count="3"><option value="{{ ns.id }}">{{ ns.name }}</option></sc-for></select><div class="cap" style="margin-top:6px">Можно поменять, пока приём оценок не открыт</div></div>
-              <div class="dft"><button class="btn2" onClick="{{ o.closeDlg }}">Отмена</button><button class="btn" onClick="{{ n.create }}">Создать</button></div>
-            </div>
-          </sc-if>
 
           <sc-if value="{{ o.dImport }}" hint-placeholder-val="{{ false }}">
             <div class="card col dlg" style="width:680px">
@@ -539,6 +802,48 @@ textarea{resize:vertical}
             </div>
           </sc-if>
 
+
+          <sc-if value="{{ o.dAddTeam }}" hint-placeholder-val="{{ false }}">
+            <div class="card col dlg">
+              <div class="row" style="justify-content:space-between"><h2 class="ct" style="font-size:24px">Добавить команду</h2><button class="ib2" onClick="{{ o.closeDlg }}"><span class="ms">close</span></button></div>
+              <div class="inp" style="padding:0 12px"><span class="ms" style="color:#3d4a3d;font-size:20px">search</span><input class="bare" placeholder="Найти команду по названию" value="{{ at.q }}" onChange="{{ at.setQ }}"></div>
+              <div class="col" style="gap:0;max-height:300px;overflow:auto">
+                <sc-for list="{{ at.res }}" as="ar" hint-placeholder-count="4"><div class="row" style="min-height:52px;border-bottom:1px solid #e1e8e3"><span class="av" style="background:#e2f3e7;color:#006d30"><span class="ms" style="font-size:20px">groups</span></span><span class="sp b" style="font-size:15px;line-height:1.3">{{ ar.name }}</span><sc-if value="{{ ar.can }}" hint-placeholder-val="{{ false }}"><button class="lnk" onClick="{{ ar.add }}">Добавить</button></sc-if><sc-if value="{{ ar.in }}" hint-placeholder-val="{{ false }}"><span class="cap">Уже в мероприятии</span></sc-if></div></sc-for>
+              </div>
+              <sc-if value="{{ at.none }}" hint-placeholder-val="{{ false }}"><div class="cap">Нет команд с таким названием</div></sc-if>
+              <div class="cap">Команда попадёт в «Команды без аудитории» с пометкой «добавлена вручную».</div>
+              <div class="dft"><button class="btn2" onClick="{{ o.closeDlg }}">Готово</button></div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.dAddRoom }}" hint-placeholder-val="{{ false }}">
+            <div class="card col dlg" style="width:440px">
+              <h2 class="ct" style="font-size:24px">Новая аудитория</h2>
+              <div><div class="lbl">Название</div><input class="{{ nr.cls }}" placeholder="Например, ауд. 307" value="{{ nr.name }}" onChange="{{ nr.set }}"><sc-if value="{{ nr.err }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>{{ nr.err }}</span></sc-if></div>
+              <div class="dft"><button class="btn2" onClick="{{ o.closeDlg }}">Отмена</button><button class="btn" onClick="{{ nr.ok }}">Добавить</button></div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ o.dUpload }}" hint-placeholder-val="{{ false }}">
+            <div class="card col dlg" style="width:620px">
+              <div class="row" style="align-items:flex-start"><div class="col sp" style="gap:4px"><h2 class="ct" style="font-size:24px">Выложить презентацию</h2><span class="cap">{{ up.sub }}</span></div><button class="ib2" onClick="{{ o.closeDlg }}"><span class="ms">close</span></button></div>
+              <div><div class="lbl">Название</div><input class="{{ up.titleCls }}" placeholder="Например, «Слайды с занятия»" value="{{ up.title }}" onChange="{{ up.setTitle }}"><sc-if value="{{ up.titleErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>Введите название</span></sc-if></div>
+              <sc-if value="{{ up.showDrop }}" hint-placeholder-val="{{ false }}">
+                <div class="{{ up.dzCls }}" onDragOver="{{ up.dov }}" onDragLeave="{{ up.dlv }}" onDrop="{{ up.drop }}"><span class="ms">upload_file</span><span class="b">Перетащите файл или <button class="lnk" style="font-size:16px;min-height:0" onClick="{{ up.pick }}">выберите</button></span><span class="cap">PDF или PPTX, до 50 МБ</span><input type="file" accept=".pdf,.pptx" style="display:none" ref="{{ up.ref }}" onChange="{{ up.onFile }}"></div>
+                <sc-if value="{{ up.picked }}" hint-placeholder-val="{{ false }}"><div class="fi" style="border:0;padding:0"><span class="fic"><span class="ms">{{ up.pIc }}</span></span><div class="col sp" style="gap:2px;min-width:0"><span class="b" style="font-size:15px">{{ up.pName }}</span><span class="cap">{{ up.pSize }}</span></div><button class="ib2" onClick="{{ up.unpick }}"><span class="ms">close</span></button></div></sc-if>
+                <sc-if value="{{ up.err }}" hint-placeholder-val="{{ false }}"><div class="col" style="gap:2px"><span class="et" style="margin:0"><span class="ms">error</span>{{ up.err }}</span><span class="cap">{{ up.errFile }}</span></div></sc-if>
+                <div class="row" style="gap:4px 10px;flex-wrap:wrap"><span class="cap">Нет файла под рукой? Демо:</span><button class="lnk" style="font-size:13px;min-height:28px" onClick="{{ up.demoOk }}">PDF, 19 МБ</button><button class="lnk" style="font-size:13px;min-height:28px" onClick="{{ up.demoBig }}">PPTX, 82 МБ</button><button class="lnk" style="font-size:13px;min-height:28px" onClick="{{ up.demoDoc }}">DOCX</button></div>
+              </sc-if>
+              <sc-if value="{{ up.uploading }}" hint-placeholder-val="{{ false }}"><div class="card col" style="gap:10px;padding:14px;box-shadow:none"><div class="row"><span class="fic"><span class="ms">{{ up.pIc }}</span></span><div class="col sp" style="gap:2px;min-width:0"><span class="b" style="font-size:15px">{{ up.pName }}</span><span class="cap">{{ up.progT }}</span></div><button class="ib2" title="Отменить загрузку" onClick="{{ up.cancel }}"><span class="ms">close</span></button></div><div class="bar" style="height:6px"><i style="width:{{ up.pct }}"></i></div></div></sc-if>
+              <div class="col" style="gap:0">
+                <div class="row" style="justify-content:space-between;flex-wrap:wrap;gap:4px 12px"><span class="b">Выложенные файлы</span><span class="cap">Увидят студенты, записавшиеся на направление</span></div>
+                <sc-for list="{{ up.files }}" as="uf" hint-placeholder-count="1"><div class="fi"><span class="fic"><span class="ms">{{ uf.ic }}</span></span><div class="col sp" style="gap:2px;min-width:0"><span class="b" style="font-size:15px">{{ uf.name }}</span><span class="cap">{{ uf.cap }}</span></div><sc-if value="{{ uf.mine }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="color:#ba1a1a" onClick="{{ uf.del }}">Удалить</button></sc-if></div></sc-for>
+                <sc-if value="{{ up.noFiles }}" hint-placeholder-val="{{ false }}"><div class="cap" style="padding:12px 0">Пока ничего не выложено</div></sc-if>
+              </div>
+              <div class="dft"><button class="btn2" onClick="{{ o.closeDlg }}">Закрыть</button><button class="{{ up.okCls }}" onClick="{{ up.ok }}">Выложить</button></div>
+            </div>
+          </sc-if>
+
         </div>
       </sc-if>
 
@@ -597,26 +902,44 @@ class Component extends DCLogic {
     ];
     const R = {};
     const put = (tid, x, total, n) => { const sel = this.selFor(total, n); (R[tid] = R[tid] || {})[x] = { sel: [...sel], com: '', sent: { sel, com: '', at: '10:' + String(10 + (total * 7) % 50) } }; };
-    const team = i => ({ id: 't' + i, name: T[i], absent: false });
-    const r301 = { id: 'r1', name: 'ауд. 301', teams: [0, 1, 2, 3, 4, 5, 6, 7].map(team), experts: ['pa', 'kd', 'se'] };
+    const team = (i, p) => ({ id: (p || 't') + i, name: T[i], absent: false });
+    const r301 = { id: 'r1', name: 'ауд. 301', teams: [0, 1, 2, 3, 4, 5, 6, 7].map(i => team(i)), experts: ['pa', 'kd', 'se'] };
     r301.teams[3].absent = true;
     [[2, 7, 7, 6], [0, 6, 7, 6], [4, 5, 6, 6], [1, null, 5, 6], [6, null, null, 5], [5, null, 4, 5], [7, null, 4, 3], [3, null, 3, 2]].forEach(([i, p, k, s]) => {
       [['pa', p], ['kd', k], ['se', s]].forEach(([x, v]) => { if (v != null) put('t' + i, x, v, 4); });
     });
     R.t5.pa = { sel: [2, 1, 1, null], com: '', sent: null };
-    const gen = (id, name, from, n, exps, full) => {
+    const gen = (id, name, from, n, exps, full, p) => {
       const room = { id, name, teams: [], experts: exps };
-      for (let i = 0; i < n; i++) room.teams.push(team(from + i));
+      for (let i = 0; i < n; i++) room.teams.push(team(from + i, p));
       room.teams.forEach((t, i) => exps.forEach((x, j) => { if (full || (i * 3 + j * 5) % 7 < 4) put(t.id, x, 3 + (i * 2 + j * 3) % 6, 4); }));
       return room;
     };
+    this.LB = { or: { name: 'Орлов Игорь Андреевич', mail: 'orlov.ia@tomsksoft.ru' }, be: { name: 'Белова Ирина Сергеевна', mail: 'belova.is@kontur-t.ru' }, ki: { name: 'Ким Артём Валерьевич', mail: 'kim.av@tomsksoft.ru' }, kd: { name: 'Кимова Дарья Олеговна', mail: 'kimova.do@tpu.ru' }, le: { name: 'Лебедева Наталья Петровна', mail: 'lebedeva.np@datavey.ru' }, so: { name: 'Соколов Глеб Викторович', mail: 'sokolov.gv@datavey.ru' } };
+    const PRE = 'Команды показывают промежуточные результаты проектов экспертной комиссии. На доклад — 7 минут, на вопросы — 5 минут. По итогам определяются команды, которые выйдут на защиту. Возьмите ноутбук с работающим прототипом.';
+    const ACC1 = 'Однодневный интенсив с практикующими разработчиками: разбор реальных задач, ревью кода и ответы на вопросы о первой работе в ИТ. Подойдёт студентам 2–4 курсов. Выберите одно направление — весь день вы проведёте с его тренерами.';
+    const tr = (uid, pos, co) => ({ uid, pos, co });
+    const D = (id, role, room, desc, trs, files) => ({ id, role, room, desc, tr: trs, files: files || [] });
+    const E = o => Object.assign({ t1: '10:00', t2: '17:00', place: 'Учебный корпус № 10', desc: '', pub: true, acc: 'none', sheetId: null, pass: null, rooms: [], loose: [], dirs: [], fromId: null, defId: null }, o);
     const events = [
-      { id: 'e1', name: 'Предзащита, осень 2026', type: 'Предзащита', date: '2026-10-20', sheetId: 's1', status: 'open', rooms: [r301, gen('r2', 'ауд. 303', 8, 8, ['ia', 'nk', 'fo']), gen('r3', 'ауд. 305', 16, 8, ['vt', 'ms'])] },
-      { id: 'e2', name: 'Защита, осень 2026', type: 'Защита', date: '2026-12-15', sheetId: 's2', status: 'draft', rooms: [] },
-      { id: 'e3', name: 'Предзащита, весна 2026', type: 'Предзащита', date: '2026-04-14', sheetId: 's1', status: 'closed', rooms: [gen('r4', 'ауд. 303', 24, 6, ['pa', 'kd'], true)] }
+      E({ id: 'e1', type: 'pre', name: 'Предзащита, осень 2026', date: '2026-10-20', desc: PRE, acc: 'open', sheetId: 's1', pass: 6, rooms: [r301, gen('r2', 'ауд. 303', 8, 8, ['ia', 'nk', 'fo']), gen('r3', 'ауд. 305', 16, 8, ['vt', 'ms'])] }),
+      E({ id: 'e5', type: 'pre', name: 'Предзащита, магистратура, осень 2026', date: '2026-10-22', t2: '15:00', desc: 'Магистранты показывают промежуточные результаты проектов. На доклад — 7 минут, на вопросы — 5 минут.', pub: false, sheetId: 's1', pass: 5, rooms: [{ id: 'r6', name: 'ауд. 210', teams: [40, 41, 42, 43].map(i => team(i)), experts: [] }], loose: [team(44), team(45)] }),
+      E({ id: 'e3', type: 'pre', name: 'Предзащита, весна 2026', date: '2026-04-14', desc: PRE, acc: 'done', sheetId: 's1', pass: 6, defId: 'e4', rooms: [gen('r4', 'ауд. 303', 24, 6, ['pa', 'kd'], true)] }),
+      E({ id: 'e4', type: 'def', name: 'Защита, весна 2026', date: '2026-06-16', t2: '18:00', place: 'Главный корпус', desc: 'Итоговая защита проектов команд, прошедших предзащиту.', acc: 'done', sheetId: 's2', fromId: 'e3', rooms: [gen('r5', 'ауд. 301', 24, 4, ['kd', 'se'], true, 'd')] }),
+      E({ id: 'a1', type: 'acc', name: 'Акселератор «Старт в ИТ»', date: '2026-11-05', desc: ACC1, dirs: [
+        D('d1', 'Бэкенд', 'ауд. 301', 'Проектирование REST API, работа с базой данных, ревью кода на реальном сервисе.', [tr('or', 'Ведущий разработчик', 'ТомскСофт'), tr('be', 'Тимлид', 'Контур-Т')], [{ id: 'f1', name: 'Ревью кода на примерах', ext: 'pptx', size: 14.8, by: 'be', when: '6 ноября' }]),
+        D('d2', 'Фронтенд', 'ауд. 303', 'Компоненты интерфейса, состояние приложения, доступность и вёрстка под разные экраны.', [tr('ki', 'Фронтенд-разработчик', 'ТомскСофт')]),
+        D('d3', 'Аналитик данных', 'ауд. 305', 'SQL, продуктовые метрики, как собрать выводы в короткую презентацию.', [tr('le', 'Аналитик', 'Датавей')])] }),
+      E({ id: 'a2', type: 'acc', name: 'Акселератор «Карьера в аналитике»', date: '2026-12-03', t1: '14:00', t2: '18:00', place: 'Учебный корпус № 19', desc: 'Практикующие аналитики и инженеры данных показывают, как устроена работа с данными в компаниях, и разбирают тестовые задания на стажировку.', dirs: [
+        D('d4', 'Инженер данных', 'ауд. 214', 'Пайплайны данных, хранилища, контроль качества данных.', [tr('or', 'Ведущий разработчик', 'ТомскСофт'), tr('le', 'Аналитик', 'Датавей')]),
+        D('d5', 'Продуктовый аналитик', 'ауд. 216', 'Метрики продукта, A/B-тесты, исследования пользователей.', [tr('so', 'Продакт-менеджер', 'Датавей')])] }),
+      E({ id: 'a3', type: 'acc', name: 'Акселератор «Весенний старт в ИТ»', date: '2027-03-18', pub: false, desc: 'Однодневный интенсив с практикующими разработчиками: разбор реальных задач и ревью кода.', dirs: [
+        D('d6', 'Бэкенд', 'ауд. 301', 'Проектирование REST API, работа с базой данных, ревью кода.', [tr('or', 'Ведущий разработчик', 'ТомскСофт'), tr('be', 'Тимлид', 'Контур-Т')]),
+        D('d7', 'Фронтенд', 'ауд. 303', 'Компоненты интерфейса, состояние приложения, доступность.', []),
+        D('d8', 'Аналитик данных', 'ауд. 305', 'SQL, продуктовые метрики, презентация выводов.', [tr('le', 'Аналитик', 'Датавей')])] })
     ];
     return {
-      v: 0, sheets, events, R,
+      v: 0, sheets, events, R, role: 'org', today: '2026-10-16', enroll: { a1: 'd1' }, cr: null, acErr: '', acErrDir: null, acTried: false, dq: {}, ds: {}, upl: null, stPage: 'lk', stEv: null, nr: null, atQ: '', oErrLoose: false,
       oPage: 'events', oEv: 'e1', oSheet: 's1', oOpenRooms: { r1: true }, oResRoom: null, oSort: 'avg', oEvFilter: 'all', oSheetFilter: 'all',
       oMenu: null, oSearch: {}, oDlg: null, oToast: null, oErrRoom: null, oOpenErr: '', oDov: null, oArm: null, newEv: null, imp: null,
       ePage: 'home', eEv: null, eTeam: null, eSheet: false, eToast: null, eErr: false
@@ -639,7 +962,7 @@ class Component extends DCLogic {
   sentBy(tid, x) { const r = this.rat(tid)[x]; return !!(r && r.sent); }
   roomSt(room) { const act = room.teams.filter(t => !t.absent); let got = 0; act.forEach(t => room.experts.forEach(x => { if (this.sentBy(t.id, x)) got++; })); return { teams: room.teams.length, need: act.length * room.experts.length, got }; }
   evSt(ev) { let need = 0, got = 0, teams = 0; ev.rooms.forEach(r => { const s = this.roomSt(r); need += s.need; got += s.got; teams += s.teams; }); return { need, got, teams }; }
-  locked(sh) { return this.state.events.some(x => x.sheetId === sh.id && x.status !== 'draft'); }
+  locked(sh) { return this.state.events.some(x => x.sheetId === sh.id && x.pub); }
   fmtDate(iso) { const M = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']; const p = (iso || '').split('-').map(Number); return p.length === 3 && p[1] ? p[2] + ' ' + M[p[1] - 1] + ' ' + p[0] : '—'; }
   now() { const d = new Date(); return d.getHours() + ':' + String(d.getMinutes()).padStart(2, '0'); }
   myRoom(ev) { return ev ? ev.rooms.find(r => r.experts.includes('pa')) : null; }
@@ -653,8 +976,8 @@ class Component extends DCLogic {
   eGoForm(tid) { this.setState({ ePage: 'form', eTeam: tid, eErr: false, eSheet: false }, () => this.eTop()); }
   eCtx() { const ev = this.ev(this.state.eEv), room = this.myRoom(ev), team = room.teams.find(t => t.id === this.state.eTeam); return { ev, room, team, sh: this.sheet(ev.sheetId), idx: room.teams.indexOf(team) }; }
   eRat(create) { const { team, sh } = this.eCtx(), R = this.state.R; if (!R[team.id]) R[team.id] = {}; if (!R[team.id].pa && create) R[team.id].pa = { sel: sh.crits.map(() => null), com: '', sent: null }; return R[team.id].pa; }
-  eSet(i, n) { const { ev, team } = this.eCtx(); if (ev.status !== 'open' || team.absent) return; this.eRat(true).sel[i] = n; this.touch(); }
-  eCom(val) { const { ev, team } = this.eCtx(); if (ev.status !== 'open' || team.absent) return; this.eRat(true).com = val; this.touch(); }
+  eSet(i, n) { const { ev, team } = this.eCtx(); if (ev.acc !== 'open' || team.absent) return; this.eRat(true).sel[i] = n; this.touch(); }
+  eCom(val) { const { ev, team } = this.eCtx(); if (ev.acc !== 'open' || team.absent) return; this.eRat(true).com = val; this.touch(); }
   eNext(room, from) { const ts = room.teams; for (let k = 1; k <= ts.length; k++) { const t = ts[(from + k + ts.length) % ts.length]; if (!t.absent && !this.sentBy(t.id, 'pa')) return t; } return null; }
   eSend() {
     const { room, sh, idx } = this.eCtx(); const r = this.eRat(false);
@@ -675,13 +998,84 @@ class Component extends DCLogic {
   unmark(team, side) { team.absent = false; this.setState({ oMenu: null }); this.toast(side, 'Отметка «Не явилась» снята, оценки снова учитываются'); }
 
   // organizer
-  oGo(p, x) { this.setState(Object.assign({ oPage: p, oMenu: null, oOpenErr: '', oErrRoom: null }, x || {}), () => { const el = this.oScroll.current; if (el) el.scrollTop = 0; }); }
+  oGo(p, x) { this.setState(Object.assign({ oPage: p, oMenu: null, oOpenErr: '', oErrRoom: null, oErrLoose: false, acErr: '', acErrDir: null }, x || {}), () => { const el = this.oScroll.current; if (el) el.scrollTop = 0; }); }
   oToast(t, u, ms) { this.toast('o', t, u, ms); }
-  oNewEvent() { this.setState({ oDlg: { t: 'create' }, newEv: { name: '', type: 'Предзащита', date: '2026-11-20', sheetId: 's1', err: false } }); }
-  oCreate() {
-    const n = this.state.newEv; if (!n.name.trim()) { n.err = true; this.touch(); return; }
-    const ev = { id: this.nid('e'), name: n.name.trim(), type: n.type, date: n.date || '2026-11-20', sheetId: n.sheetId, status: 'draft', rooms: [] };
-    this.state.events.unshift(ev); this.setState({ oDlg: null, oEvFilter: 'all' }); this.oGo('event', { oEv: ev.id }); this.oToast('Мероприятие создано — импортируйте команды');
+  pl(n, a, b, c) { const m = n % 10, h = n % 100; return n + ' ' + (m === 1 && h !== 11 ? a : m >= 2 && m <= 4 && (h < 12 || h > 14) ? b : c); }
+  fmtShort(iso) { const s = this.fmtDate(iso); return s.replace(/ \d{4}$/, ''); }
+  when(ev) { return this.fmtShort(ev.date) + ', ' + ev.t1 + '–' + ev.t2; }
+  past(ev) { return ev.date < this.state.today; }
+  mb(b) { return (b / 1048576).toFixed(1).replace('.', ',') + ' МБ'; }
+  newDir() { return { id: this.nid('d'), role: '', room: '', desc: '', tr: [], files: [] }; }
+  oNewEvent() { this.oGo('create', { cr: { step: 1, type: 'pre', name: '', date: '2026-11-20', t1: '10:00', t2: '17:00', place: 'Учебный корпус № 10', desc: '', sheetId: 's1', pass: '', fromId: '', picks: {}, dirs: [this.newDir()], tried: false, pubTried: false } }); }
+  dirErrs(dirs, tried) {
+    const out = {}, norm = s => (s || '').trim().toLowerCase();
+    dirs.forEach((d, i) => {
+      const e = { role: '', room: '' };
+      const r1 = dirs.findIndex(x => norm(x.role) && norm(x.role) === norm(d.role)), r2 = dirs.findIndex(x => norm(x.room) && norm(x.room) === norm(d.room));
+      if (norm(d.role) && r1 < i) e.role = 'Такая роль уже есть в направлении ' + (r1 + 1); else if (tried && !norm(d.role)) e.role = 'Укажите роль';
+      if (norm(d.room) && r2 < i) e.room = 'Аудитория уже занята направлением ' + (r2 + 1); else if (tried && !norm(d.room)) e.room = 'Укажите аудиторию';
+      out[d.id] = e;
+    });
+    return out;
+  }
+  dirsBlock(dirs) { const er = this.dirErrs(dirs, true); return dirs.some(d => er[d.id].role || er[d.id].room); }
+  noTrainer(dirs) { return dirs.find(d => !d.tr.length); }
+  preTeams(pre) {
+    const out = [];
+    pre.rooms.forEach(room => room.teams.forEach(t => {
+      const vals = room.experts.map(x => this.rat(t.id)[x]).filter(r => r && r.sent).map(r => r.sent.sel.reduce((a, b) => a + (b || 0), 0));
+      const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+      out.push({ t, n: vals.length, need: room.experts.length, avg, verdict: t.absent ? 'abs' : avg != null && avg >= pre.pass ? 'pass' : 'fail' });
+    }));
+    return out.sort((a, b) => (a.verdict === 'abs') - (b.verdict === 'abs') || (b.avg || 0) - (a.avg || 0));
+  }
+  crCheck(publish) {
+    const c = this.state.cr; c.tried = true; if (publish) c.pubTried = true;
+    let ok = !!c.name.trim() && c.t2 > c.t1;
+    if (c.type === 'pre') { const sh = this.sheet(c.sheetId), mx = this.maxOf(sh), p = Number(c.pass); if (c.pass === '' || isNaN(p) || p < 0 || p > mx) ok = false; }
+    if (c.type === 'def' && !c.fromId) ok = false;
+    if (c.type === 'acc') { if (!c.dirs.length || this.dirsBlock(c.dirs)) ok = false; if (publish && this.noTrainer(c.dirs)) ok = false; }
+    this.touch(); return ok;
+  }
+  crSave(publish) {
+    const c = this.state.cr;
+    const ev = { id: this.nid('e'), type: c.type, name: c.name.trim(), date: c.date || '2026-11-20', t1: c.t1, t2: c.t2, place: c.place.trim() || '—', desc: c.desc.trim(), pub: !!publish, acc: 'none', sheetId: c.type === 'acc' ? null : c.sheetId, pass: c.type === 'pre' ? Number(c.pass) : null, rooms: [], loose: [], dirs: [], fromId: null, defId: null };
+    if (c.type === 'acc') ev.dirs = c.dirs.map(d => ({ id: d.id, role: d.role.trim(), room: d.room.trim(), desc: d.desc.trim(), tr: d.tr, files: [] }));
+    if (c.type === 'def') { const pre = this.ev(c.fromId); ev.fromId = pre.id; pre.defId = ev.id; ev.loose = this.preTeams(pre).filter(x => c.picks[x.t.id]).map(x => ({ id: this.nid('t'), name: x.t.name, absent: false, origin: 'pre' })); }
+    this.state.events.unshift(ev);
+    this.oGo(c.type === 'acc' ? 'accel' : 'event', { oEv: ev.id, cr: null, oDlg: null, oEvFilter: 'all', acErr: '', acTried: false });
+    this.oToast(publish ? 'Мероприятие опубликовано — анонс в личных кабинетах' : 'Черновик сохранён', null, 4000);
+  }
+  oPublishEv(ev) {
+    if (ev.type === 'acc') {
+      const nt = this.noTrainer(ev.dirs);
+      if (!ev.dirs.length) { this.setState({ acErr: 'Нельзя опубликовать: добавьте хотя бы одно направление', acErrDir: null }); return; }
+      if (this.dirsBlock(ev.dirs)) { this.setState({ acErr: 'Нельзя опубликовать: исправьте ошибки в направлениях', acErrDir: null, acTried: true }); return; }
+      if (nt) { this.setState({ acErr: 'Нельзя опубликовать: у направления „' + (nt.role || 'без роли') + '“ нет тренера', acErrDir: nt.id }); return; }
+    }
+    this.setState({ acErr: '', acErrDir: null, oDlg: { t: 'publish', id: ev.id } });
+  }
+  upOpen(aid, did) { clearTimeout(this.timers.up); this.setState({ oDlg: { t: 'upload' }, upl: { aid, did, title: '', file: null, err: '', errFile: '', pct: 0, busy: false, tried: false, over: false } }); }
+  upFile(name, size, blob) {
+    const u = this.state.upl; if (!u || u.busy) return; const ext = (name.split('.').pop() || '').toLowerCase(); u.err = ''; u.file = null; u.over = false;
+    if (!['pdf', 'pptx'].includes(ext)) { u.err = 'Нужен PDF или PPTX'; u.errFile = name + ' · ' + this.mb(size); }
+    else if (size > 52428800) { u.err = 'Файл больше 50 МБ'; u.errFile = name + ' · ' + this.mb(size); }
+    else { u.file = { name, size, ext, blob: blob || null }; if (!u.title.trim()) u.title = name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' '); }
+    this.touch();
+  }
+  upStart() {
+    const u = this.state.upl; u.tried = true; if (!u.title.trim() || !u.file || u.busy) { this.touch(); return; }
+    u.busy = true; u.pct = 0; this.touch();
+    const step = () => {
+      const c = this.state.upl; if (!c || !c.busy) return;
+      c.pct = Math.min(100, c.pct + 8);
+      if (c.pct < 100) { this.touch(); this.timers.up = setTimeout(step, 140); return; }
+      const ev = this.ev(c.aid), d = ev.dirs.find(x => x.id === c.did);
+      d.files.unshift({ id: this.nid('f'), name: c.title.trim(), ext: c.file.ext, size: c.file.size / 1048576, by: 'or', when: this.fmtShort(this.state.today), url: c.file.blob ? URL.createObjectURL(c.file.blob) : null });
+      Object.assign(c, { busy: false, file: null, title: '', tried: false, pct: 0 }); this.touch();
+      this.oToast('Презентация выложена — её видят студенты направления «' + d.role + '»', null, 4500);
+    };
+    this.timers.up = setTimeout(step, 140);
   }
   impRows() { const P = this.POOL, rows = []; for (let i = 0; i < 16; i++) rows.push({ room: i < 8 ? 'ауд. 401' : 'ауд. 402', ord: i % 8 + 1, tid: 'T-' + (1200 + i * 7), name: P[30 + i] }); return rows; }
   impPick() {
@@ -696,13 +1090,17 @@ class Component extends DCLogic {
     this.oToast('Импортировано 16 команд в 2 аудитории. Добавьте экспертов', null, 5000);
   }
   oOpen() {
-    const ev = this.ev(this.state.oEv);
-    if (!ev.rooms.length) { this.setState({ oOpenErr: 'Нельзя открыть приём оценок: в мероприятии нет аудиторий. Импортируйте команды из Excel.', oErrRoom: null }); return; }
-    const bad = ev.rooms.find(r => !r.experts.length || !r.teams.length);
-    if (bad) { this.setState({ oOpenErr: 'Нельзя открыть приём оценок: в ' + bad.name + ' нет ' + (!bad.teams.length ? 'команд' : 'экспертов'), oErrRoom: bad.id }); return; }
-    this.setState({ oOpenErr: '', oErrRoom: null, oDlg: { t: 'open' } });
+    const ev = this.ev(this.state.oEv); if (!ev.pub) return;
+    const parts = [], noExp = ev.rooms.filter(r => !r.experts.length), noT = ev.rooms.filter(r => !r.teams.length);
+    if (ev.loose.length) parts.push(this.pl(ev.loose.length, 'команда', 'команды', 'команд') + ' без аудитории');
+    if (!ev.rooms.length && !ev.loose.length) parts.push('в мероприятии нет команд');
+    if (noExp.length) parts.push('в ' + noExp.map(r => r.name).join(', ') + ' нет экспертов');
+    if (noT.length) parts.push('в ' + noT.map(r => r.name).join(', ') + ' нет команд');
+    const bad = noExp[0] || noT[0];
+    if (parts.length) { this.setState({ oOpenErr: 'Нельзя открыть приём оценок: ' + parts.join(', '), oErrRoom: bad ? bad.id : null, oErrLoose: !!ev.loose.length }); return; }
+    this.setState({ oOpenErr: '', oErrRoom: null, oErrLoose: false, oDlg: { t: 'open' } });
   }
-  oSetStatus(st, msg) { const ev = this.ev(this.state.oEv); ev.status = st; this.setState({ oDlg: null }); this.oToast(msg, null, 4500); }
+  oSetStatus(st, msg) { const ev = this.ev(this.state.oEv); ev.acc = st; this.setState({ oDlg: null }); this.oToast(msg, null, 4500); }
   oMark(t) { const c = this.cnt(t.id); this.setState({ oMenu: null }); if (c) this.setState({ oDlg: { t: 'absent', tid: t.id, n: c } }); else this.oDoMark(t); }
   oDoMark(t) { t.absent = true; this.setState({ oDlg: null }); this.oToast('Команда отмечена как не явившаяся', () => { t.absent = false; this.touch(); }, 5000); }
   oRemoveTeam(room, t) { const i = room.teams.indexOf(t); room.teams.splice(i, 1); this.setState({ oMenu: null }); this.oToast('Команда убрана из мероприятия', () => { room.teams.splice(i, 0, t); this.touch(); }, 5000); }
@@ -712,6 +1110,132 @@ class Component extends DCLogic {
   bDup(sh) {
     const cp = { id: this.nid('s'), name: sh.name + ' (копия)', desc: sh.desc, crits: sh.crits.map(c => ({ id: this.nid('c'), name: c.name, desc: c.desc, levels: c.levels.map(l => ({ n: l.n, d: l.d })) })) };
     const arr = this.state.sheets; arr.splice(arr.indexOf(sh) + 1, 0, cp); this.oGo('builder', { oSheet: cp.id }); this.oToast('Создана копия листа — её можно править');
+  }
+
+  xVals(pl, ini, shortN) {
+    const S = this.state, LB = this.LB, dl = S.oDlg, ME = 'or', stop = x => { if (x && x.stopPropagation) x.stopPropagation(); };
+    const TYN = { pre: ['Предзащита', 'co_present'], def: ['Защита', 'school'], acc: ['Акселератор', 'rocket_launch'] };
+    const EXT = { pdf: 'picture_as_pdf', pptx: 'slideshow' };
+    const sn = s => { const p = s.split(' '); return p[0] + ' ' + p.slice(1).map(w => w[0] + '.').join(' '); };
+    const top = () => { const el = this.oScroll.current; if (el) el.scrollTop = 0; };
+    const WHO = { org: { ini: 'П', name: 'Петрова Анна', dep: 'Отделение ИТ' }, stu: { ini: 'И', name: 'Иванов Максим', dep: 'Группа 8К41' }, tr: { ini: 'О', name: 'Орлов Игорь', dep: 'ТомскСофт' } };
+    const roles = [['org', 'Организатор'], ['stu', 'Студент'], ['tr', 'Тренер']].map(([k, t]) => ({ t, cls: S.role === k ? 'on' : '', pick: () => this.setState({ role: k, oDlg: null, oMenu: null }, top) }));
+    const days = [['2026-10-16', '16 октября'], ['2026-11-10', '10 ноября · после «Старт в ИТ»']].map(([k, t]) => ({ t, cls: S.today === k ? 'on' : '', pick: () => { this.setState({ today: k }); this.oToast('Дата в прототипе: ' + this.fmtDate(k)); } }));
+    const fileCap = fl => sn(LB[fl.by].name) + ' · ' + fl.ext.toUpperCase() + ', ' + fl.size.toFixed(1).replace('.', ',') + ' МБ';
+    const fieldsV = (x, tried) => ({ name: x.name, nameCls: 'inp fill' + (tried && !x.name.trim() ? ' err' : ''), nameErr: tried && !x.name.trim(), setName: e => { x.name = e.target.value; this.touch(); },
+      date: x.date, setDate: e => { x.date = e.target.value; this.touch(); }, t1: x.t1, setT1: e => { x.t1 = e.target.value; this.touch(); }, t2: x.t2, setT2: e => { x.t2 = e.target.value; this.touch(); },
+      t2Cls: 'inp fill' + (x.t2 <= x.t1 ? ' err' : ''), timeErr: x.t2 <= x.t1, place: x.place, setPlace: e => { x.place = e.target.value; this.touch(); }, desc: x.desc, setDesc: e => { x.desc = e.target.value; this.touch(); } });
+    const dirV = (dirs, tried, pubTried, errDir) => { const er = this.dirErrs(dirs, tried); return dirs.map((d, i) => {
+      const e = er[d.id], searching = !!S.ds[d.id], q = S.dq[d.id] || '', ql = q.trim().toLowerCase();
+      const res = ql.length >= 2 ? Object.keys(LB).filter(u => !d.tr.some(t => t.uid === u) && LB[u].name.toLowerCase().includes(ql)).map(u => ({ ini: ini(LB[u].name), name: LB[u].name, mail: LB[u].mail,
+        add: () => { d.tr.push({ uid: u, pos: '', co: '' }); S.ds[d.id] = false; S.dq[d.id] = ''; if (S.acErrDir === d.id) this.setState({ acErr: '', acErrDir: null }); this.touch(); } })) : [];
+      const redTr = !d.tr.length && (pubTried || errDir === d.id);
+      return { domId: 'dir-' + d.id, n: i + 1, role: d.role, room: d.room, desc: d.desc, roleErr: e.role, roomErr: e.room,
+        cls: 'inner' + (redTr ? ' err' : ''), roleCls: 'inp fill' + (e.role ? ' err' : ''), roomCls: 'inp fill' + (e.room ? ' err' : ''),
+        setRole: x => { d.role = x.target.value; this.touch(); }, setRoom: x => { d.room = x.target.value; this.touch(); }, setDesc: x => { d.desc = x.target.value; this.touch(); },
+        del: () => { const k = dirs.indexOf(d); dirs.splice(k, 1); this.oToast('Направление удалено', () => { dirs.splice(k, 0, d); this.touch(); }, 5000); },
+        tr: d.tr.map(t => ({ ini: ini(LB[t.uid].name), name: LB[t.uid].name, pos: t.pos, co: t.co, setPos: x => { t.pos = x.target.value; this.touch(); }, setCo: x => { t.co = x.target.value; this.touch(); }, rm: () => { d.tr.splice(d.tr.indexOf(t), 1); this.touch(); } })),
+        noTr: !d.tr.length && !searching, noTrCls: redTr ? 'bn bn-r' : 'bn bn-n', noTrIc: redTr ? 'error' : 'info',
+        searching, notSearching: !searching, q, setQ: x => { S.dq[d.id] = x.target.value; this.touch(); }, startSearch: () => { S.ds[d.id] = true; this.touch(); }, stopSearch: () => { S.ds[d.id] = false; S.dq[d.id] = ''; this.touch(); },
+        showRes: ql.length >= 2, res, noRes: ql.length >= 2 && !res.length };
+    }); };
+
+    let cr = { types: [], sheets: [], froms: [], dteams: [], dirs: [] };
+    const c = S.cr;
+    if (c) {
+      const sh = this.sheet(c.sheetId) || S.sheets[0], mx = this.maxOf(sh), p = Number(c.pass);
+      const passErr = c.tried && (c.pass === '' || isNaN(p)) ? 'Укажите проходной балл' : c.pass !== '' && p > mx ? 'Не больше ' + mx : c.pass !== '' && p < 0 ? 'Не меньше 0' : '';
+      const froms = S.events.filter(x => x.type === 'pre' && x.acc === 'done' && !x.defId);
+      const pre = c.fromId ? this.ev(c.fromId) : null, list = pre ? this.preTeams(pre) : [], nSel = list.filter(x => c.picks[x.t.id]).length;
+      const VT = { pass: ['Прошла', 'bd b-g'], fail: ['Не прошла', 'bd b-r'], abs: ['Не явилась', 'bd b-n'] }, nt = this.noTrainer(c.dirs);
+      cr = Object.assign(fieldsV(c, c.tried), {
+        step1: c.step === 1, step2: c.step === 2, s1Cls: 'stp' + (c.step === 1 ? ' on' : ''), s1N: c.step === 1 ? '1' : '✓', s2Cls: 'stp' + (c.step === 2 ? ' on' : ''), tic: TYN[c.type][1], typeT: TYN[c.type][0],
+        types: [['pre', 'Промежуточный показ проектов. Эксперты оценивают команды по оценочному листу.', 'Оценочный лист · проходной балл'], ['def', 'Итоговая оценка проектов. Команды переходят из завершённой предзащиты.', 'Оценочный лист · команды из предзащиты'], ['acc', 'Интенсив с тренерами по направлениям. Оценок нет.', 'Направления · тренеры']]
+          .map(([k, d0, f0]) => ({ t: TYN[k][0], ic: TYN[k][1], d: d0, f: f0, on: c.type === k, cls: 'pk' + (c.type === k ? ' on' : ''), pick: () => { c.type = k; c.sheetId = k === 'def' ? 's2' : 's1'; this.touch(); } })),
+        next: () => { c.step = 2; this.touch(); top(); }, back: () => { c.step = 1; c.tried = false; c.pubTried = false; this.touch(); },
+        isPre: c.type === 'pre', isDef: c.type === 'def', isAcc: c.type === 'acc',
+        sheets: S.sheets.map(x => ({ id: x.id, name: x.name || 'Без названия' })), sheetId: sh.id, setSheet: e => { c.sheetId = e.target.value; this.touch(); }, sheetCap: pl(sh.crits.length, 'критерий', 'критерия', 'критериев') + ' · максимум ' + pl(mx, 'балл', 'балла', 'баллов'),
+        pass: c.pass, max: mx, setPass: e => { c.pass = e.target.value; this.touch(); }, passErr, passOk: !passErr, passCls: 'inp fill' + (passErr ? ' err' : ''),
+        froms: froms.map(x => ({ id: x.id, name: x.name })), fromId: c.fromId, fromCls: 'inp fill' + (c.tried && !c.fromId ? ' err' : ''), fromErr: c.tried && !c.fromId && froms.length > 0, noFroms: !froms.length && !c.fromId,
+        setFrom: e => { c.fromId = e.target.value; c.picks = {}; if (c.fromId) this.preTeams(this.ev(c.fromId)).forEach(x => { if (x.verdict === 'pass') c.picks[x.t.id] = true; }); this.touch(); },
+        hasFrom: !!pre, willT: 'В защиту перейдут ' + pl(nSel, 'команда', 'команды', 'команд'),
+        allCb: 'cb' + (nSel ? ' on' : ''), allIc: nSel === list.length && list.length ? 'check' : nSel ? 'remove' : '',
+        toggleAll: x => { stop(x); const on = nSel !== list.length; list.forEach(y => { c.picks[y.t.id] = on; }); this.touch(); },
+        dteams: list.map(x => { const on = !!c.picks[x.t.id]; return { name: x.t.name, avg: x.avg == null ? '—' : x.avg.toFixed(1).replace('.', ','), nT: 'оценок ' + x.n + ' из ' + x.need, nCls: x.n < x.need ? 'b' : 'cap',
+          warn: !x.t.absent && x.n < x.need ? 'Неполные оценки: итог по ' + pl(x.n, 'оценке', 'оценкам', 'оценкам') + ' из ' + x.need : '', v: VT[x.verdict][0], vCls: VT[x.verdict][1], cb: 'cb' + (on ? ' on' : ''), cbIc: on ? 'check' : '', toggle: () => { c.picks[x.t.id] = !on; this.touch(); } }; }),
+        dirs: dirV(c.dirs, c.tried, c.pubTried, null), addDir: () => { c.dirs.push(this.newDir()); this.touch(); },
+        err: c.pubTried && c.type === 'acc' && nt ? 'Нельзя опубликовать: у направления „' + (nt.role || 'без роли') + '“ нет тренера' : '',
+        saveDraft: () => { if (this.crCheck(false)) this.crSave(false); }, publish: () => { if (this.crCheck(true)) this.setState({ oDlg: { t: 'publish', id: 'create' } }); }
+      });
+    }
+
+    let ac = { dirs: [] };
+    const ae = S.oPage === 'accel' ? this.ev(S.oEv) : null;
+    if (ae) ac = Object.assign(fieldsV(ae, true), { title: ae.name || 'Без названия', pub: ae.pub ? 'Опубликовано' : 'Черновик', pubCls: ae.pub ? 'bd b-g' : 'bd b-v', canPub: !ae.pub, publish: () => this.oPublishEv(ae),
+      err: S.acErr, errLink: !!S.acErrDir, goErr: () => { const el = document.getElementById('dir-' + S.acErrDir), sc = this.oScroll.current; if (el && sc) sc.scrollTop += el.getBoundingClientRect().top - sc.getBoundingClientRect().top - 24; S.ds[S.acErrDir] = true; this.touch(); },
+      dirs: dirV(ae.dirs, S.acTried, false, S.acErrDir), addDir: () => { ae.dirs.push(this.newDir()); this.touch(); }, pubNote: ae.pub ? ' и сразу видны в анонсе.' : '.' });
+
+    const enr = S.enroll, openAnn = x => this.setState({ stPage: 'ann', stEv: x.id }, top);
+    const cards = S.events.filter(x => x.pub && (!this.past(x) || (x.type === 'acc' && enr[x.id]))).sort((a, b) => a.date.localeCompare(b.date)).map(x => {
+      const past = this.past(x), md = x.type === 'acc' && enr[x.id] ? x.dirs.find(d => d.id === enr[x.id]) : null;
+      return { type: TYN[x.type][0], tic: TYN[x.type][1], name: x.name, when: this.when(x), place: x.place, desc: x.desc, roles: x.dirs.map(d => d.role), hasRoles: x.type === 'acc' && x.dirs.length > 0, past, signup: !past, mat: past && !!md, matT: md ? 'Материалы направления: ' + pl(md.files.length, 'файл', 'файла', 'файлов') : '', open: () => openAnn(x) };
+    });
+    const st = { isLk: S.role === 'stu' && S.stPage === 'lk', isAnn: S.role === 'stu' && S.stPage === 'ann', cards, empty: !cards.length, toLk: () => this.setState({ stPage: 'lk' }, top) };
+    let an = { dirs: [], files: [] };
+    const sx = st.isAnn ? this.ev(S.stEv) : null;
+    if (sx) {
+      const past = this.past(sx), isAcc = sx.type === 'acc', md = isAcc && enr[sx.id] ? sx.dirs.find(d => d.id === enr[sx.id]) : null;
+      an = { type: TYN[sx.type][0], tic: TYN[sx.type][1], name: sx.name, when: this.when(sx), place: sx.place, desc: sx.desc || 'Описание появится позже.', past, isAcc,
+        dirs: sx.dirs.map(d => ({ role: d.role, room: d.room, desc: d.desc, mine: !!md && d.id === md.id, tr: d.tr.map(t => ({ ini: ini(LB[t.uid].name), name: LB[t.uid].name, sub: [t.pos, t.co].filter(Boolean).join(' · ') })), noTr: !d.tr.length })),
+        signup: !past, mat: past && !!md, pastNo: past && !md, matSub: md ? md.role + ' · ' + md.room : '',
+        files: md ? md.files.map(fl => ({ ic: EXT[fl.ext] || 'description', name: fl.name, cap: fileCap(fl), open: () => { if (fl.url) window.open(fl.url, '_blank'); else this.oToast('Файл «' + fl.name + '» откроется в новой вкладке'); } })) : [],
+        noFiles: !!md && !md.files.length };
+    }
+
+    const tcs = S.events.filter(x => x.type === 'acc' && x.pub && x.dirs.some(d => d.tr.some(t => t.uid === ME)))
+      .sort((a, b) => (this.past(a) - this.past(b)) || a.date.localeCompare(b.date)).map(x => {
+        const d = x.dirs.find(dd => dd.tr.some(t => t.uid === ME)), past = this.past(x);
+        return { name: x.name, when: this.when(x), dir: d.role, room: d.room + ', ' + x.place, co: d.tr.filter(t => t.uid !== ME).map(t => ({ ini: ini(LB[t.uid].name), short: sn(LB[t.uid].name) })), noCo: d.tr.length === 1,
+          bd: past ? 'Состоялся' : 'Предстоит', bdCls: past ? 'bd b-n' : 'bd b-v', btnCls: 'btn' + (past ? '' : ' dis'), tip: !past, files: past ? (d.files.length ? 'Выложено: ' + pl(d.files.length, 'файл', 'файла', 'файлов') : 'Файлов пока нет') : '', up: () => past && this.upOpen(x.id, d.id) };
+      });
+    const tr = { isMine: S.role === 'tr', cards: tcs, empty: !tcs.length };
+
+    let up = { files: [] };
+    const u = S.upl;
+    if (dl && dl.t === 'upload' && u) {
+      const ue = this.ev(u.aid), ud = ue.dirs.find(d => d.id === u.did), MB = 1048576;
+      if (!this.upRef) this.upRef = React.createRef();
+      up = { sub: ue.name + ' · направление «' + ud.role + '»', title: u.title, setTitle: e => { u.title = e.target.value; this.touch(); }, titleErr: u.tried && !u.title.trim(), titleCls: 'inp fill' + (u.tried && !u.title.trim() ? ' err' : ''),
+        showDrop: !u.busy, dzCls: 'dz' + (u.over ? ' on' : u.err ? ' err' : ''), ref: this.upRef, pick: () => this.upRef.current && this.upRef.current.click(),
+        onFile: e => { const fl = e.target.files && e.target.files[0]; if (fl) this.upFile(fl.name, fl.size, fl); e.target.value = ''; },
+        dov: e => { e.preventDefault(); if (!u.over) { u.over = true; this.touch(); } }, dlv: () => { u.over = false; this.touch(); },
+        drop: e => { e.preventDefault(); u.over = false; const fl = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]; if (fl) this.upFile(fl.name, fl.size, fl); else this.touch(); },
+        picked: !!u.file && !u.busy, pIc: u.file ? EXT[u.file.ext] : 'description', pName: u.file ? u.file.name : '', pSize: u.file ? this.mb(u.file.size) : '', unpick: () => { u.file = null; this.touch(); },
+        err: u.err, errFile: u.errFile,
+        demoOk: () => this.upFile('rest-api-intro.pdf', 19.3 * MB), demoBig: () => this.upFile('lecture-recording.pptx', 82 * MB), demoDoc: () => this.upFile('notes.docx', 1.2 * MB),
+        uploading: u.busy, pct: u.pct + '%', progT: u.file ? 'Загружено ' + this.mb(u.file.size * u.pct / 100) + ' из ' + this.mb(u.file.size) : '',
+        cancel: () => { clearTimeout(this.timers.up); u.busy = false; u.pct = 0; this.touch(); this.oToast('Загрузка отменена'); },
+        files: ud.files.map(fl => ({ ic: EXT[fl.ext] || 'description', name: fl.name, cap: fileCap(fl) + ' · ' + fl.when, mine: fl.by === ME,
+          del: () => { const k = ud.files.indexOf(fl); ud.files.splice(k, 1); this.oToast('Файл «' + fl.name + '» удалён', () => { ud.files.splice(k, 0, fl); this.touch(); }, 5000); } })),
+        noFiles: !ud.files.length, okCls: 'btn' + (u.file && !u.busy ? '' : ' dis'), ok: () => this.upStart() };
+    }
+
+    let at = { res: [] };
+    if (dl && dl.t === 'addTeam') {
+      const ev = this.ev(S.oEv), q = S.atQ.trim().toLowerCase(), inEv = new Set();
+      ev.rooms.forEach(r => r.teams.forEach(t => inEv.add(t.name))); ev.loose.forEach(t => inEv.add(t.name));
+      const res = this.POOL.filter(n => !q || n.toLowerCase().includes(q)).slice(0, 8).map(name => ({ name, in: inEv.has(name), can: !inEv.has(name),
+        add: () => { ev.loose.push({ id: this.nid('t'), name, absent: false, origin: 'manual' }); this.oToast('Команда добавлена в «Команды без аудитории»'); } }));
+      at = { q: S.atQ, setQ: e => this.setState({ atQ: e.target.value }), res, none: !res.length };
+    }
+    let nr = {};
+    if (dl && dl.t === 'addRoom' && S.nr) {
+      const ev = this.ev(S.oEv), r0 = S.nr;
+      nr = { name: r0.name, err: r0.err, cls: 'inp fill' + (r0.err ? ' err' : ''), set: e => { r0.name = e.target.value; r0.err = ''; this.touch(); },
+        ok: () => { const nm = r0.name.trim(); if (!nm) { r0.err = 'Введите название'; this.touch(); return; } if (ev.rooms.some(r => r.name.toLowerCase() === nm.toLowerCase())) { r0.err = 'Такая аудитория уже есть'; this.touch(); return; }
+          const room = { id: this.nid('r'), name: nm, teams: [], experts: [] }; ev.rooms.push(room); S.oOpenRooms[room.id] = true; this.setState({ oDlg: null }); this.oToast('Аудитория ' + nm + ' добавлена — назначьте экспертов'); } };
+    }
+    return { roles, days, who: WHO[S.role], cr, ac, st, an, tr, up, at, nr };
   }
 
   renderVals() {
@@ -728,11 +1252,11 @@ class Component extends DCLogic {
     let ePage = S.ePage;
     const cev = this.ev(S.eEv), croom = this.myRoom(cev);
     const cteam = croom ? croom.teams.find(t => t.id === S.eTeam) : null;
-    if (ePage !== 'home' && (!croom || cev.status === 'draft')) ePage = 'home';
+    if (ePage !== 'home' && (!croom || cev.acc === 'none')) ePage = 'home';
     if (ePage === 'form' && !cteam) ePage = 'room';
-    const mine = S.events.filter(x => x.status !== 'draft' && this.myRoom(x));
+    const mine = S.events.filter(x => x.acc !== 'none' && this.myRoom(x));
     const mk = x => { const rm = this.myRoom(x), m = this.mineSt(rm); return { name: x.name, date: this.fmtDate(x.date), room: rm.name, got: m.got, need: m.need, pct: pct(m.got, m.need), open: () => this.eOpenRoom(x.id) }; };
-    const active = mine.filter(x => x.status === 'open').map(mk), closedC = mine.filter(x => x.status === 'closed').map(mk);
+    const active = mine.filter(x => x.acc === 'open').map(mk), closedC = mine.filter(x => x.acc === 'done').map(mk);
     const et = S.eToast;
     const e = {
       isHome: ePage === 'home', isRoom: ePage === 'room', isForm: ePage === 'form', active, closed: closedC, hasClosed: closedC.length > 0, homeEmpty: !active.length && !closedC.length,
@@ -745,13 +1269,13 @@ class Component extends DCLogic {
     };
     let f = { crits: [] };
     if (croom && ePage !== 'home') {
-      const m = this.mineSt(croom), sh = this.sheet(cev.sheetId), mx = this.maxOf(sh), open = cev.status === 'open';
+      const m = this.mineSt(croom), sh = this.sheet(cev.sheetId), mx = this.maxOf(sh), open = cev.acc === 'open';
       const nx = open ? this.eNext(croom, -1) : null;
       Object.assign(e, {
         evLine: cev.name + ' · ' + this.fmtDate(cev.date), roomName: croom.name, evName: cev.name, got: m.got, need: m.need, pct: pct(m.got, m.need),
         absLine: m.abs ? pl(m.abs, 'команда не явилась', 'команды не явились', 'команд не явились') + ' — в счёт не входят' : '', canContinue: !!nx, cont: () => nx && this.eGoForm(nx.id),
         nextLine: nx ? 'Следующая: №' + (croom.teams.indexOf(nx) + 1) + ' «' + nx.name.replace(' · весна 2026', '') + '»' : '',
-        allDone: open && !nx && m.need > 0, roomClosed: cev.status === 'closed', teamsN: pl(croom.teams.length, 'команда', 'команды', 'команд'),
+        allDone: open && !nx && m.need > 0, roomClosed: cev.acc === 'done', teamsN: pl(croom.teams.length, 'команда', 'команды', 'команд'),
         rows: croom.teams.map((t, i) => {
           const r = this.rat(t.id).pa; let st, cls;
           if (t.absent) { st = 'Не явилась'; cls = 'bd b-ab'; } else if (r && r.sent) { st = 'Отправлена'; cls = 'bd b-g'; } else if (r) { st = 'Черновик'; cls = 'bd b-v'; } else { st = 'Не оценена'; cls = 'bd b-n'; }
@@ -772,7 +1296,7 @@ class Component extends DCLogic {
         else if (dis) { priT = nextOrd ? 'Далее' : 'К списку'; pri = goNextOrd; }
         else if (r && r.sent) { priT = 'Отправить снова'; priCls = 'btn' + (dirty ? '' : ' dis'); }
         const c0 = this.cnt(cteam.id);
-        e.sheetText = 'У команды ' + pl(c0, 'оценка', 'оценки', 'оценок') + '. Они сохранятся, но перестанут учитываться в итогах. Отметку можно будет снять.';
+        e.sheetText = 'У команды ' + pl(c0, 'оценка', 'оценки', 'оценок') + '. Они сохранятся, но перестанут учитываться в итогах. Отметку можно снять.';
         f = {
           roBanner: ro, absBanner: dis, canUnmark: dis && open, unmark: () => { clearTimeout(this.timers.eAdv); this.unmark(cteam, 'e'); },
           errBanner: S.eErr && miss > 0 && !lock, errText: 'Оцените все критерии: пропущено ' + miss + ' из ' + sh.crits.length,
@@ -793,16 +1317,20 @@ class Component extends DCLogic {
 
     // ---------- organizer ----------
     const oP = S.oPage, dl = S.oDlg, ot = S.oToast;
-    const act = { sheets: oP === 'sheets' || oP === 'builder', events: oP === 'events' || oP === 'event' || oP === 'results' };
-    const menu = [['leaderboard', 'Рейтинг', ''], ['person', 'Личный кабинет', ''], ['g', 'Эксперт'], ['fact_check', 'Мои предзащиты', 'exp'], ['g', 'Организатор'], ['assignment', 'Оценочные листы', 'sheets'], ['event', 'Мероприятия', 'events'], ['g', ' '], ['settings', 'Настройки', '']].map(x => x[0] === 'g' ? { g: true, i: false, t: x[1] } : {
-      g: false, i: true, ic: x[0], t: x[1], cls: 'mi' + (act[x[2]] ? ' on' : ''),
-      go: x[2] === 'sheets' || x[2] === 'events' ? () => this.oGo(x[2]) : x[2] === 'exp' ? () => this.oToast('Экраны эксперта — в телефоне слева') : () => this.oToast('Раздел есть в продукте, в прототипе не показан')
-    });
+    const act = { sheets: oP === 'sheets' || oP === 'builder', events: ['events', 'event', 'results', 'create', 'accel'].includes(oP) }, org = S.role === 'org';
+    const TYN = { pre: ['Предзащита', 'co_present'], def: ['Защита', 'school'], acc: ['Акселератор', 'rocket_launch'] };
+    const PUB = p => p ? { t: 'Опубликовано', c: 'bd b-g' } : { t: 'Черновик', c: 'bd b-v' };
+    const ACC = a => ({ none: { t: 'Не открыт', c: 'ac' }, open: { t: 'Идёт', c: 'ac ac-1' }, done: { t: 'Завершён', c: 'ac ac-2' } })[a];
+    const NA = () => this.oToast('Раздел есть в продукте, в прототипе не показан');
+    const MI = (ic, t, on, go) => ({ g: false, i: true, ic, t, cls: 'mi' + (on ? ' on' : ''), go: go || NA }), G = t => ({ g: true, i: false, t });
+    const menu = S.role === 'stu' ? [MI('leaderboard', 'Рейтинг'), MI('person', 'Личный кабинет', true, () => this.setState({ stPage: 'lk' })), MI('settings', 'Настройки')]
+      : S.role === 'tr' ? [MI('leaderboard', 'Рейтинг'), MI('person', 'Личный кабинет'), MI('co_present', 'Мои мероприятия', true), MI('settings', 'Настройки')]
+      : [MI('leaderboard', 'Рейтинг'), MI('person', 'Личный кабинет'), G('Эксперт'), MI('fact_check', 'Мои предзащиты', false, () => this.oToast('Экраны эксперта — в телефоне слева')), G('Организатор'), MI('assignment', 'Оценочные листы', act.sheets, () => this.oGo('sheets')), MI('event', 'Мероприятия', act.events, () => this.oGo('events')), G(' '), MI('settings', 'Настройки')];
     const evFilt = S.oEvFilter;
-    const evList = S.events.filter(x => evFilt === 'all' || x.status === evFilt).map(x => {
-      const s = this.evSt(x), dr = x.status === 'draft';
-      return { name: x.name, type: x.type, date: this.fmtDate(x.date), rooms: x.rooms.length ? pl(x.rooms.length, 'аудитория', 'аудитории', 'аудиторий') : 'нет аудиторий', teams: s.teams ? pl(s.teams, 'команда', 'команды', 'команд') : 'нет команд',
-        got: dr ? '—' : s.got, of: dr ? '' : 'из ' + s.need, pct: dr ? '0%' : pct(s.got, s.need), st: { draft: 'Черновик', open: 'Идёт оценка', closed: 'Закрыто' }[x.status], stCls: { draft: 'bd b-v', open: 'bd b-g', closed: 'bd b-n' }[x.status], open: () => this.oGo('event', { oEv: x.id }) };
+    const evList = S.events.slice().sort((a, b2) => b2.date.localeCompare(a.date)).filter(x => evFilt === 'all' || x.type === evFilt).map(x => {
+      const s = this.evSt(x), isA = x.type === 'acc', hp = !isA && x.acc !== 'none';
+      return { name: x.name, type: TYN[x.type][0], tic: TYN[x.type][1], date: this.fmtDate(x.date), time: x.t1 + '–' + x.t2, pub: PUB(x.pub).t, pubCls: PUB(x.pub).c, acc: isA ? '—' : ACC(x.acc).t, accCls: isA ? 'cap b' : ACC(x.acc).c,
+        hasProg: hp, noProg: !hp, got: s.got, of: 'из ' + s.need, pct: pct(s.got, s.need), open: () => this.oGo(isA ? 'accel' : 'event', { oEv: x.id }) };
     });
     const sheetsV = S.sheets.filter(sh => S.oSheetFilter === 'all' || (S.oSheetFilter === 'locked') === this.locked(sh)).map(sh => {
       const lk = this.locked(sh), used = S.events.filter(x => x.sheetId === sh.id);
@@ -810,14 +1338,14 @@ class Component extends DCLogic {
         st: lk ? 'Заблокирован' : 'Черновик', stCls: lk ? 'bd b-n' : 'bd b-v', stIc: lk ? 'lock' : 'edit', open: () => this.oGo('builder', { oSheet: sh.id }), dup: x => { stop(x); this.bDup(sh); } };
     });
     const o = {
-      isEvents: oP === 'events', isEvent: oP === 'event', isSheets: oP === 'sheets', isBuilder: oP === 'builder', isResults: oP === 'results', menu,
+      isEvents: org && oP === 'events', isEvent: org && oP === 'event', isSheets: org && oP === 'sheets', isBuilder: org && oP === 'builder', isResults: org && oP === 'results', isCreate: org && oP === 'create' && !!S.cr, isAccel: org && oP === 'accel', menu,
       toEvents: () => this.oGo('events'), toSheets: () => this.oGo('sheets'), newEvent: () => this.oNewEvent(),
       createSheet: () => { const sh = { id: this.nid('s'), name: 'Новый лист', desc: '', crits: [] }; S.sheets.unshift(sh); this.oGo('builder', { oSheet: sh.id }); },
       closeDlg: () => this.setState({ oDlg: null }), dlgBg: x => { if (x.target === x.currentTarget) this.setState({ oDlg: null }); },
       closeMenu: x => { stop(x); this.setState({ oMenu: null }); }, disarm: () => this.setState({ oArm: null }),
-      evSeg: [['all', 'Все'], ['draft', 'Черновики'], ['open', 'Идёт оценка'], ['closed', 'Закрытые']].map(x => ({ t: x[1], cls: evFilt === x[0] ? 'on' : '', pick: () => this.setState({ oEvFilter: x[0] }) })),
+      evSeg: [['all', 'Все'], ['pre', 'Предзащиты'], ['def', 'Защиты'], ['acc', 'Акселераторы']].map(x => ({ t: x[1], cls: evFilt === x[0] ? 'on' : '', pick: () => this.setState({ oEvFilter: x[0] }) })),
       evList, evEmpty: !evList.length, sheets: sheetsV, sheetsEmpty: !sheetsV.length, sheetFilter: S.oSheetFilter, setSheetFilter: x => this.setState({ oSheetFilter: x.target.value }),
-      dlg: !!dl, dCreate: !!dl && dl.t === 'create', dImport: !!dl && dl.t === 'import', dPrint: !!dl && dl.t === 'print', dConfirm: !!dl && ['open', 'close', 'reopen', 'absent', 'rmExp', 'delCrit'].includes(dl.t),
+      dlg: !!dl, dCreate: !!dl && dl.t === 'create', dImport: !!dl && dl.t === 'import', dPrint: !!dl && dl.t === 'print', dConfirm: !!dl && ['open', 'close', 'reopen', 'absent', 'rmExp', 'delCrit', 'publish'].includes(dl.t), dAddTeam: !!dl && dl.t === 'addTeam', dAddRoom: !!dl && dl.t === 'addRoom', dUpload: !!dl && dl.t === 'upload',
       toast: !!ot, toastText: ot ? ot.text : '', toastUndo: !!(ot && ot.undo), toastMs: (ot ? ot.ms : 0) + 'ms', undo: () => { if (ot && ot.undo) ot.undo(); this.setState({ oToast: null }); }
     };
 
@@ -825,17 +1353,33 @@ class Component extends DCLogic {
     const ev = this.ev(S.oEv);
     let v = { rooms: [], sheetOpts: [] };
     if (ev && oP === 'event') {
-      const sh = this.sheet(ev.sheetId), es = this.evSt(ev), dr = ev.status === 'draft', editable = ev.status !== 'closed';
+      const sh = this.sheet(ev.sheetId), es = this.evSt(ev), dr = ev.acc === 'none', editable = ev.acc !== 'done', mx = this.maxOf(sh), isPre = ev.type === 'pre';
+      const from = ev.fromId ? this.ev(ev.fromId) : null, def = ev.defId ? this.ev(ev.defId) : null, pv = Number(ev.pass), passBad = isPre && (ev.pass === '' || isNaN(pv) || pv < 0 || pv > mx);
+      const defErr = (S.oOpenErr || '').indexOf('Предзащиту') === 0;
       v = {
-        name: ev.name, type: ev.type, date: this.fmtDate(ev.date), st: { draft: 'Черновик', open: 'Идёт оценка', closed: 'Закрыто' }[ev.status], stCls: { draft: 'bd b-v', open: 'bd b-g', closed: 'bd b-n' }[ev.status],
-        isDraft: dr, notDraft: !dr, isOpen: ev.status === 'open', isClosed: ev.status === 'closed',
-        imp: () => this.setState({ oDlg: { t: 'import' }, imp: { step: 'start' } }), open: () => this.oOpen(), close: () => this.setState({ oDlg: { t: 'close' } }), reopen: () => this.setState({ oDlg: { t: 'reopen' } }),
+        name: ev.name, type: TYN[ev.type][0], tic: TYN[ev.type][1], date: this.fmtDate(ev.date), time: ev.t1 + '–' + ev.t2, whenT: this.fmtDate(ev.date) + ', ' + ev.t1 + '–' + ev.t2, place: ev.place,
+        hasFrom: !!from, fromName: from ? from.name : '', goFrom: () => from && this.oGo('event', { oEv: from.id }),
+        pub: PUB(ev.pub).t, pubCls: PUB(ev.pub).c, acc: ACC(ev.acc).t, accCls: ACC(ev.acc).c,
+        isPre, passT: ev.pass + ' из ' + mx, pass: ev.pass, max: mx, passCls: 'inp fill' + (passBad ? ' err' : ''), passHint: passBad ? 'Укажите число от 0 до ' + mx : 'Можно менять до публикации',
+        setPass: x => { ev.pass = x.target.value === '' ? '' : Number(x.target.value); this.touch(); },
+        sheetEd: !ev.pub, sheetRo: ev.pub, canImp: dr, canPub: !ev.pub,
+        publish: () => { if (passBad) { this.oToast('Укажите проходной балл от 0 до ' + mx); return; } this.oPublishEv(ev); },
+        accNone: dr, needPub: !ev.pub, openCls: 'btn' + (ev.pub ? '' : ' dis'), accOpen: ev.acc === 'open', accDone: ev.acc === 'done',
+        imp: () => this.setState({ oDlg: { t: 'import' }, imp: { step: 'start' } }), open: () => this.oOpen(), close: () => this.setState({ oDlg: { t: 'close' } }),
+        reopen: () => { if (def) { this.setState({ oOpenErr: 'Предзащиту нельзя вернуть в работу: из неё создана защита', oErrRoom: null }); return; } this.setState({ oDlg: { t: 'reopen' } }); },
         res: () => this.oGo('results', { oResRoom: ev.rooms[0] ? ev.rooms[0].id : null }),
-        openErr: S.oOpenErr, hasErrRoom: !!S.oErrRoom, goErr: () => { S.oOpenRooms[S.oErrRoom] = true; this.touch(); },
-        roomsN: ev.rooms.length, teamsN: es.teams, got: dr ? '—' : es.got, of: dr ? '' : 'из ' + es.need, pct: dr ? '0%' : pct(es.got, es.need),
-        sheetId: sh.id, sheetName: sh.name, sheetCap: pl(sh.crits.length, 'критерий', 'критерия', 'критериев') + ' · макс. ' + this.maxOf(sh),
-        sheetOpts: S.sheets.map(x => ({ id: x.id, name: x.name || 'Без названия' })), setSheet: x => { ev.sheetId = x.target.value; this.touch(); },
+        openErr: S.oOpenErr, errLink: defErr && def ? def.name : S.oErrRoom ? 'Перейти к аудитории' : '',
+        goErr: () => { if (defErr && def) { this.oGo('event', { oEv: def.id }); return; } S.oOpenRooms[S.oErrRoom] = true; this.touch(); },
+        roomsN: ev.rooms.length, teamsN: es.teams + ev.loose.length, got: dr ? '—' : es.got, of: dr ? '' : 'из ' + es.need, pct: dr ? '0%' : pct(es.got, es.need),
+        sheetId: sh.id, sheetName: sh.name, sheetCap: pl(sh.crits.length, 'критерий', 'критерия', 'критериев') + ' · макс. ' + mx,
+        sheetOpts: S.sheets.map(x => ({ id: x.id, name: x.name || 'Без названия' })), setSheet: x => { ev.sheetId = x.target.value; const m2 = this.maxOf(this.sheet(ev.sheetId)); if (isPre && ev.pass > m2) ev.pass = m2; this.touch(); },
         openSheet: () => this.oGo('builder', { oSheet: sh.id }), noRooms: !ev.rooms.length,
+        hasLoose: ev.loose.length > 0, looseN: ev.loose.length, looseCls: 'card col' + (S.oErrLoose ? ' err' : ''), canEdit: dr,
+        loose: ev.loose.map(t => ({ name: t.name, o: t.origin === 'pre' ? 'из предзащиты' : t.origin === 'manual' ? 'добавлена вручную' : '', oCls: t.origin === 'manual' ? 'bd b-v' : 'bd b-n',
+          assign: x => { const r = ev.rooms.find(q => q.id === x.target.value); if (!r) return; ev.loose.splice(ev.loose.indexOf(t), 1); r.teams.push(t); S.oOpenRooms[r.id] = true; if (!ev.loose.length) this.setState({ oErrLoose: false }); this.oToast('Команда добавлена в ' + r.name + ' под №' + r.teams.length); },
+          remove: () => { const i = ev.loose.indexOf(t); ev.loose.splice(i, 1); this.oToast('Команда убрана из мероприятия', () => { ev.loose.splice(i, 0, t); this.touch(); }, 5000); } })),
+        roomOpts: ev.rooms.map(r => ({ id: r.id, name: r.name })), noRoomOpts: dr && ev.loose.length > 0 && !ev.rooms.length,
+        addTeam: () => this.setState({ oDlg: { t: 'addTeam' }, atQ: '' }), addTeamHdr: dr && !ev.loose.length, addRoom: () => this.setState({ oDlg: { t: 'addRoom' }, nr: { name: '', err: '' } }),
         rooms: ev.rooms.map(room => {
           const st = this.roomSt(room), op = !!S.oOpenRooms[room.id], act0 = room.teams.filter(t => !t.absent).length;
           const q = S.oSearch[room.id] || '', ql = q.trim().toLowerCase();
@@ -882,20 +1426,30 @@ class Component extends DCLogic {
         const ranked = rows.filter(r => !r.t.absent && r.avg != null).sort((a, b2) => b2.avg - a.avg); ranked.forEach((r, k) => { r.place = k + 1; });
         let main = rows.filter(r => !r.t.absent);
         if (S.oSort === 'avg') main = ranked.concat(main.filter(r => r.avg == null)); else if (S.oSort === 'name') main.sort((a, b2) => a.t.name.localeCompare(b2.t.name, 'ru'));
-        const cols = '44px minmax(240px,1fr) repeat(' + exps.length + ',112px) 76px';
-        const closed = ev.status === 'closed';
+        const isPre = ev.type === 'pre', cols = '44px minmax(240px,1fr) repeat(' + exps.length + ',112px) 76px' + (isPre ? ' 110px' : '');
+        const closed = ev.acc === 'done';
         Object.assign(rs, {
-          empty: !rm.teams.length, cols, minW: (44 + 240 + exps.length * 112 + 76 + (exps.length + 3) * 12 + 40) + 'px',
+          empty: !rm.teams.length, cols, minW: (44 + 240 + exps.length * 112 + 76 + (isPre ? 122 : 0) + (exps.length + 3) * 12 + 40) + 'px',
           badge: miss > 0 ? 'Не хватает ' + pl(miss, 'оценки', 'оценок', 'оценок') : 'Все оценки получены', badgeCls: miss > 0 ? 'bd b-v' : 'bd b-g', badgeIc: miss > 0 ? 'hourglass_top' : 'task_alt',
-          cap: closed ? 'Приём закрыт — итоги окончательные' : 'Приём оценок открыт — итоги предварительные',
+          cap: closed ? 'Приём оценок завершён — итоги окончательные' : 'Приём оценок идёт — итоги предварительные',
           exps: exps.map(x => ({ ini: ini(ST[x].name), full: ST[x].name, short: shortN(ST[x].name) + (rm.experts.includes(x) ? '' : ' (убран)') })),
-          rows: main.concat(rows.filter(r => r.t.absent)).map(r => ({
+          rows: (() => { const all = main.concat(rows.filter(r => r.t.absent)), ps = r => !r.t.absent && r.avg != null && r.avg >= ev.pass; return all.map((r, k) => ({
             cols, place: r.t.absent ? '' : (r.place || '—'), ini: ini(r.t.name), name: r.t.name, abs: r.t.absent,
             sc: r.sc.map(y => ({ t: y == null ? '—' : String(y), cls: y == null ? 'cap' : (r.t.absent ? 'm st' : 'm b') })),
-            avg: r.t.absent ? '' : (r.avg == null ? '—' : fmt(r.avg)), avgCls: r.avg == null || r.t.absent ? 'cap r' : 'm b g r'
-          }))
+            avg: r.t.absent ? '' : (r.avg == null ? '—' : fmt(r.avg)), avgCls: r.avg == null || r.t.absent ? 'cap r' : 'm b g r',
+            v: r.t.absent ? 'Не явилась' : r.avg == null ? '—' : ps(r) ? 'Прошла' : 'Не прошла', vCls: r.t.absent ? 'bd b-n' : r.avg == null ? 'cap' : ps(r) ? 'bd b-g' : 'bd b-r',
+            line: isPre && S.oSort === 'avg' && ps(r) && !(all[k + 1] && ps(all[k + 1]))
+          })); })()
         });
       }
+    }
+
+    if (ev && oP === 'results') {
+      const isPre = ev.type === 'pre', def = ev.defId ? this.ev(ev.defId) : null;
+      Object.assign(rs, { isPre, lineT: 'Проходной балл ' + ev.pass, sub: rs.sub + (isPre ? ' · проходной балл ' + ev.pass : ''),
+        canDef: isPre && ev.acc === 'done' && !def, hasDef: !!def, defName: def ? def.name : '', goDef: () => def && this.oGo('event', { oEv: def.id }),
+        mkDef: () => { const picks = {}; this.preTeams(ev).forEach(x => { if (x.verdict === 'pass') picks[x.t.id] = true; }); this.oGo('create', { cr: { step: 2, type: 'def', name: ev.name.replace('Предзащита', 'Защита'), date: '2026-12-15', t1: '10:00', t2: '17:00', place: 'Главный корпус', desc: '', sheetId: 's2', pass: '', fromId: ev.id, picks, dirs: [this.newDir()], tried: false, pubTried: false } }); },
+        foot: 'Среднее считается по отправленным оценкам, черновики не учитываются. Тире — эксперт ещё не отправил оценку.' + (isPre ? ' «Прошла» — среднее не меньше проходного балла.' : '') });
     }
 
     // builder
@@ -953,12 +1507,17 @@ class Component extends DCLogic {
       };
     }
     let d = { title: '', text: '', banner: '', bCls: '', bIc: '', okT: '', ok: null };
-    if (o.dConfirm && ev) {
+    if (dl && dl.t === 'publish') {
+      const pe = dl.id === 'create' ? null : this.ev(dl.id), c = S.cr, ty = pe ? pe.type : c.type, nm = pe ? pe.name : c.name.trim();
+      d = { title: 'Опубликовать «' + nm + '»?', text: 'Анонс увидят все пользователи лидерборда.', banner: ty === 'acc' ? '' : 'Оценочный лист и проходной балл станут неизменяемыми', bCls: 'bn bn-n', bIc: 'lock', okT: 'Опубликовать',
+        ok: () => { if (!pe) { this.crSave(true); return; } pe.pub = true; this.setState({ oDlg: null }); this.oToast('Опубликовано — анонс в личных кабинетах', null, 4000); } };
+    }
+    if (o.dConfirm && ev && dl.t !== 'publish') {
       const sh = this.sheet(ev.sheetId), es = this.evSt(ev);
       if (dl.t === 'open') d = { title: 'Открыть приём оценок?', text: 'Эксперты ' + ev.rooms.length + ' ' + (ev.rooms.length === 1 ? 'аудитории' : 'аудиторий') + ' увидят мероприятие в «Мои предзащиты» и смогут ставить оценки.', banner: 'Лист «' + sh.name + '» будет заблокирован для изменений', bCls: 'bn bn-n', bIc: 'lock', okT: 'Открыть приём', ok: () => this.oSetStatus('open', 'Приём оценок открыт — эксперты видят мероприятие') };
-      else if (dl.t === 'close') { const miss = es.need - es.got; d = { title: 'Закрыть приём оценок?', banner: miss > 0 ? 'Не хватает ' + pl(miss, 'оценки', 'оценок', 'оценок') + ' из ' + es.need : '', bCls: 'bn bn-r', bIc: 'warning', text: 'Эксперты увидят формы только для чтения. Итоги станут окончательными.', okT: 'Закрыть', ok: () => this.oSetStatus('closed', 'Приём закрыт, итоги окончательные') }; }
+      else if (dl.t === 'close') { const miss = es.need - es.got; d = { title: 'Завершить приём оценок?', banner: miss > 0 ? 'Не хватает ' + pl(miss, 'оценки', 'оценок', 'оценок') + ' из ' + es.need : '', bCls: 'bn bn-r', bIc: 'warning', text: 'Эксперты увидят формы только для чтения. Итоги станут окончательными.', okT: 'Завершить', ok: () => this.oSetStatus('done', 'Приём оценок завершён, итоги окончательные') }; }
       else if (dl.t === 'reopen') d = { title: 'Вернуть мероприятие в работу?', text: 'Эксперты снова смогут менять и отправлять оценки. Итоги станут предварительными.', banner: '', okT: 'Вернуть в работу', ok: () => this.oSetStatus('open', 'Мероприятие снова в работе') };
-      else if (dl.t === 'absent') d = { title: 'Отметить, что команда не явилась?', text: 'У команды ' + pl(dl.n, 'оценка', 'оценки', 'оценок') + '. Они сохранятся, но перестанут учитываться в итогах. Отметку можно будет снять.', banner: '', okT: 'Отметить', ok: () => { const ft = this.findTeam(dl.tid); if (ft) this.oDoMark(ft.team); } };
+      else if (dl.t === 'absent') d = { title: 'Отметить, что команда не явилась?', text: 'У команды ' + pl(dl.n, 'оценка', 'оценки', 'оценок') + '. Они сохранятся, но перестанут учитываться в итогах. Отметку можно снять.', banner: '', okT: 'Отметить', ok: () => { const ft = this.findTeam(dl.tid); if (ft) this.oDoMark(ft.team); } };
       else if (dl.t === 'rmExp') { const fr = this.findRoom(dl.rid); d = { title: 'Убрать эксперта из ' + fr.room.name + '?', text: ST[dl.xid].name + ' больше не увидит эту аудиторию. ' + pl(dl.n, 'отправленная оценка останется', 'отправленные оценки останутся', 'отправленных оценок останутся') + ' в итогах.', banner: '', okT: 'Убрать', ok: () => this.oDoRmExp(fr.room, dl.xid) }; }
     }
     if (dl && dl.t === 'delCrit' && bs) {
@@ -976,7 +1535,7 @@ class Component extends DCLogic {
       }
     }
 
-    return { e, f, o, v, rs, b, n, im, d, pr, eScroll: this.eScroll, oScroll: this.oScroll, reset: () => this.reset() };
+    return Object.assign({ e, f, o, v, rs, b, n, im, d, pr, eScroll: this.eScroll, oScroll: this.oScroll, reset: () => this.reset() }, this.xVals(pl, ini, shortN));
   }
 }
 </script>
