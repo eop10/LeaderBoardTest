@@ -328,7 +328,7 @@ textarea{resize:vertical}
                 <div class="fs" style="flex:1 1 104px;min-width:104px;min-height:34px;padding:0 6px 0 10px"><span class="ms" style="font-size:18px">search</span><input class="bare" style="height:32px;font-size:13px" placeholder="Поиск" title="Поиск по названию" value="{{ o.fQ }}" onChange="{{ o.setQ }}"></div>
                 <sc-if value="{{ o.fDirty }}" hint-placeholder-val="{{ false }}"><button class="lnk" style="font-size:13px;min-height:34px" onClick="{{ o.fReset }}">Сбросить</button></sc-if>
               </div>
-              <div class="card" style="padding:0;overflow:hidden"><div>
+              <div class="card" style="padding:0;overflow:hidden"><div><div>
                 <div class="tr th" style="grid-template-columns:minmax(0,1fr) 112px 96px 104px 84px 84px;gap:10px;padding:12px 16px;font-size:11px;letter-spacing:.04em"><span>Название</span><span>Тип</span><span>Дата и время</span><span>Публикация</span><span>Приём оценок</span><span>Прогресс оценок</span></div>
                 <sc-for list="{{ o.evList }}" as="ev" hint-placeholder-count="5">
                   <div class="tr hov" style="grid-template-columns:minmax(0,1fr) 112px 96px 104px 84px 84px;gap:10px;padding:12px 16px;cursor:pointer" onClick="{{ ev.open }}">
