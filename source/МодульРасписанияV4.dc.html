@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<style>
+*{box-sizing:border-box}
+.schm a{color:#006d30}
+.schm a:hover{color:#00ab4f}
+.schm button{font:inherit;cursor:pointer}
+.schm .ms{font-family:'Material Symbols Outlined';font-weight:400;font-style:normal;font-size:24px;line-height:1;display:inline-block;white-space:nowrap;font-feature-settings:'liga';-webkit-font-smoothing:antialiased;flex:none}
+.schm .m{font-family:Manrope,sans-serif}
+.schm .b{font-weight:700}
+.schm .g{color:#006d30}
+.schm .row{display:flex;align-items:center;gap:12px}
+.schm .col{display:flex;flex-direction:column;gap:8px}
+.schm .sp{flex:1}
+.schm .dh{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(247,250,252,.85);border-bottom:1px solid #e1e8e3;flex:none}
+.schm .logo{font:800 22px Manrope;color:#006d30}
+.schm .hav{width:36px;height:36px;border-radius:50%;border:2px solid #006d30;display:grid;place-items:center;font:800 14px Manrope;color:#006d30;background:#fff;flex:none}
+.schm .sb{width:236px;flex:none;background:#fff;border-right:1px solid #bccaba;padding:24px 12px;overflow-y:auto;display:flex;flex-direction:column;gap:4px}
+.schm .sbu{display:flex;flex-direction:column;align-items:center;gap:2px;padding-bottom:24px;margin-bottom:8px;border-bottom:1px solid #e1e8e3;text-align:center}
+.schm .sav{width:56px;height:56px;border-radius:50%;border:3px solid #006d30;display:grid;place-items:center;font:800 22px Manrope;color:#006d30;margin-bottom:10px}
+.schm .mi{display:flex;align-items:center;gap:10px;height:44px;font-size:15px;padding:0 12px;border-radius:8px;font-weight:600;color:#3d4a3d;cursor:pointer}
+.schm .mi:hover{background:#f0f8f2}
+.schm .mi.on{background:#00ab4f;color:#fff}
+.schm .mg{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#3d4a3d;padding:16px 16px 4px;font-weight:700;min-height:12px}
+.schm .main{flex:1;min-width:0}
+.schm .wrap{max-width:1280px;width:100%}
+.schm .phd{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.schm .pt{font:800 34px/1.1 Manrope;margin:0}
+.schm .pts{font:800 28px/1.15 Manrope;margin:0}
+.schm .psub{color:#3d4a3d;margin-top:8px}
+.schm .seg{display:flex;background:#e6ebe8;border-radius:10px;padding:4px;gap:4px;flex:none;flex-wrap:nowrap}
+.schm .seg span{padding:0 14px;height:36px;display:flex;align-items:center;border-radius:8px;font-weight:600;color:#3d4a3d;font-size:14px;white-space:nowrap;cursor:pointer}
+.schm .seg .on{background:#fff;color:#006d30;font-weight:800;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.schm .card{background:#fff;border:1px solid #bccaba;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,40,20,.06)}
+.schm .ct{font:700 19px/1.25 Manrope;margin:0}
+.schm .cap{font-size:13px;color:#3d4a3d;line-height:1.4}
+.schm .btn,.schm .btn2{height:48px;padding:0 20px;border-radius:8px;background:#0E9344;color:#fff;font:700 14px 'Hanken Grotesk',sans-serif;letter-spacing:.06em;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;border:1.5px solid #0E9344;flex:none;cursor:pointer}
+.schm .btn2{background:#fff;color:#006d30}
+.schm .btn:hover{background:#006d30}
+.schm .btn2:hover{background:#f0f8f2}
+.schm .btn .ms,.schm .btn2 .ms{font-size:20px}
+.schm .w{width:100%}
+.schm .dis{opacity:.4;pointer-events:none}
+.schm .lnk{color:#006d30;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px;text-decoration:underline;cursor:pointer;background:none;border:0;padding:0}
+.schm .bd{display:inline-flex;align-items:center;gap:4px;min-height:24px;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap;flex:none}
+.schm .bd .ms{font-size:14px}
+.schm .b-g{background:#e2f3e7;color:#006d30}
+.schm .b-v{background:#ece8fc;color:#5d3fe0}
+.schm .b-n{background:#e9edeb;color:#3d4a3d}
+.schm .b-r{background:#fbe9e7;color:#ba1a1a}
+.schm .b-w{background:#fff4e0;color:#8a5a00}
+.schm .chip{background:#e2f3e7;color:#006d30;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;white-space:nowrap}
+.schm .bar{height:6px;background:#e2e8e4;border-radius:4px;overflow:hidden}
+.schm .bar i{display:block;height:100%;background:#006d30}
+.schm .meta{display:flex;align-items:center;gap:8px;font-size:14px;color:#3d4a3d}
+.schm .meta .ms{font-size:18px;color:#006d30}
+.schm .lr{background:#fff;border:1px solid #bccaba;border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;min-height:56px}
+.schm .lr.cl{cursor:pointer}
+.schm .lr.cl:hover{border-color:#006d30}
+.schm .num{width:32px;height:32px;border-radius:50%;background:#e9edeb;display:grid;place-items:center;font:800 14px Manrope;flex:none}
+.schm .av{width:36px;height:36px;border-radius:50%;background:#5d3fe0;color:#fff;display:grid;place-items:center;font:700 13px Manrope;flex:none}
+.schm .inp{min-height:48px;border:1px solid #bccaba;border-radius:8px;padding:10px 14px;color:#181c1e;background:#fff;font:inherit;font-size:15px;display:flex;align-items:center;gap:8px;line-height:1.4;width:100%;outline:none}
+.schm .inp:focus{border:2px solid #006d30;padding:9px 13px}
+.schm .inp:disabled,.schm .fs:disabled{background:#eef2ef;border-style:dashed;color:#3d4a3d}
+.schm .ro-f{background:#eef2ef;border-style:dashed;color:#3d4a3d}
+.schm .lbl{font-size:12px;color:#3d4a3d;margin-bottom:6px;font-weight:700;display:block}
+.schm .mt{display:flex;justify-content:space-between;align-items:flex-start}
+.schm .mv{font:800 30px/1 Manrope;margin-top:14px}
+.schm .mv small{font:700 14px 'Hanken Grotesk';color:#5d3fe0;margin-left:6px}
+.schm .bn{display:flex;gap:10px;padding:12px 16px;border-radius:8px;font-size:14px;line-height:1.45;align-items:flex-start;font-weight:600}
+.schm .bn .ms{font-size:20px}
+.schm .bn-r{background:#fbe9e7;color:#ba1a1a;border:1px solid #ba1a1a}
+.schm .bn-n{background:#e9edeb;color:#181c1e}
+.schm .bn-g{background:#e2f3e7;color:#006d30}
+.schm .bn-w{background:#fff4e0;color:#8a5a00;border:1px solid #8a5a00}
+.schm .err{border:2px solid #ba1a1a !important}
+.schm .et{color:#ba1a1a;font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;margin-top:6px}
+.schm .et .ms{font-size:18px}
+.schm .sk{background:#e2e8e4;border-radius:6px}
+.schm .empty{color:#3d4a3d;text-align:center;padding:40px 16px;line-height:1.5;display:flex;flex-direction:column;align-items:center;gap:12px}
+.schm .empty .ms{font-size:40px;color:#9aa79d}
+.schm .tr{display:grid;align-items:center;gap:16px;padding:12px 24px;border-bottom:1px solid #e1e8e3}
+.schm .th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#3d4a3d;font-weight:700;border-bottom:1px solid #bccaba}
+.schm .er{background:#fbe9e7;color:#ba1a1a}
+.schm .dlg{width:600px;max-width:calc(100vw - 48px);gap:20px;box-shadow:0 16px 48px rgba(0,0,0,.2);max-height:calc(100vh - 48px);overflow-y:auto;overflow-x:hidden}
+.schm .dft{display:flex;justify-content:flex-end;gap:8px;border-top:1px solid #e1e8e3;padding-top:20px;flex-wrap:wrap}
+.schm .stoast{background:#181c1e;color:#fff;border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:center;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.2);line-height:1.4}
+.schm .stoast .ms{color:#00ab4f;font-size:20px}
+.schm .stoast.err .ms{color:#ff8a80}
+.schm .stoast.info .ms{color:#bccaba}
+.schm .dd{background:#fff;border:1px solid #bccaba;border-radius:12px;padding:8px;box-shadow:0 8px 24px rgba(0,40,20,.12);display:flex;flex-direction:column}
+.schm .dd > div{display:flex;align-items:center;gap:12px;min-height:44px;padding:6px 12px;border-radius:8px;font-size:15px;cursor:pointer}
+.schm .dd > div:hover{background:#f0f8f2}
+.schm .dd .hl{background:#f0f8f2;color:#006d30;font-weight:700}
+.schm .st{text-decoration:line-through;color:#6b766e;font-weight:500}
+.schm .fc{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid #bccaba;background:#fff;color:#3d4a3d;white-space:nowrap;flex:none;cursor:pointer}
+.schm .fc.on{background:#e2f3e7;border-color:#e2f3e7;color:#006d30}
+.schm .fc.red{border-color:#ba1a1a;color:#ba1a1a}
+.schm .fc.red.on{background:#fbe9e7}
+.schm .fs{min-height:40px;padding:0 10px 0 12px;border:1px solid #bccaba;border-radius:8px;background:#fff;font:inherit;font-size:14px;color:#181c1e;width:100%}
+.schm .ty{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid #bccaba;background:#fff;color:#181c1e;white-space:nowrap;flex:none}
+.schm .ty .ms{font-size:16px;color:#006d30}
+.schm .ac{display:inline-flex;align-items:center;gap:4px;height:24px;padding:0 8px;border-radius:4px;font-size:12px;font-weight:700;white-space:nowrap;flex:none;border:1.5px solid #bccaba;color:#3d4a3d;background:#fff}
+.schm .ac-1{border-color:#006d30;color:#006d30}
+.schm .tip{position:relative;background:#181c1e;color:#fff;font-size:12px;font-weight:600;padding:6px 10px;border-radius:6px;white-space:nowrap}
+.schm .cb{width:20px;height:20px;border:2px solid #3d4a3d;border-radius:4px;display:grid;place-items:center;flex:none;background:#fff}
+.schm .cb.on{background:#006d30;border-color:#006d30;color:#fff}
+.schm .cb .ms{font-size:16px}
+.schm .stp{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:#3d4a3d;cursor:pointer}
+.schm .stp i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:800 13px Manrope;font-style:normal;background:#e9edeb}
+.schm .stp.on{color:#006d30}
+.schm .stp.on i{background:#006d30;color:#fff}
+.schm .stp.off{opacity:.45;cursor:default}
+.schm .inner{background:#f7fafc;border:1px solid #bccaba;border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.schm .inner.hl{outline:3px solid #006d30;outline-offset:2px}
+.schm .ex{border:1.5px dashed #9aa79d;border-radius:12px;background:repeating-linear-gradient(135deg,#eef2ef 0 10px,#f7faf8 10px 20px);display:flex;align-items:center;justify-content:center;color:#3d4a3d;font-size:14px;font-weight:600;gap:8px;text-align:center}
+.schm .lv{min-height:52px;border:1.5px solid #bccaba;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font:800 17px Manrope;background:#fff;cursor:pointer;user-select:none}
+.schm .lv small{font:500 12px 'Hanken Grotesk'}
+.schm .lv.on{background:#0E9344;border-color:#0E9344;color:#fff}
+.schm .lv.sel{border:2px solid #006d30;color:#006d30;background:#f0f8f2}
+.schm .lv.ro{border-style:dashed;color:#3d4a3d;cursor:default}
+.schm .lv.ro.on{border-style:solid;color:#fff;opacity:.75}
+.schm .mh{height:56px;display:flex;align-items:center;gap:8px;padding:0 16px;background:#f7fafc;border-bottom:1px solid #e1e8e3;flex:none}
+.schm .tabs{height:72px;flex:none;display:grid;background:#fff;border-top:1px solid #bccaba;padding:8px 4px 12px}
+.schm .tab{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;color:#3d4a3d;font-weight:600;cursor:pointer;text-align:center}
+.schm .tab .ms{width:56px;height:30px;border-radius:15px;display:grid;place-items:center}
+.schm .tab.on{color:#006d30;font-weight:800}
+.schm .tab.on .ms{background:#00ab4f;color:#fff}
+.schm .abar{background:#fff;border:1px solid #bccaba;border-radius:12px;padding:12px;display:flex;gap:8px;align-items:center;position:sticky;bottom:84px;z-index:4;box-shadow:0 -4px 16px rgba(0,40,20,.08)}
+.schm .clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5;font-size:14px;color:#3d4a3d}
+.schm .sc{font-size:12px;padding:3px 8px;border-radius:6px;background:#eef2ef;color:#3d4a3d;font-weight:600;white-space:nowrap}
+.schm .mxc{height:34px;border-left:1px solid #e1e8e3;display:grid;place-items:center;padding:3px}
+.schm .mxc:hover{outline:2px solid #006d30;outline-offset:-2px}
+.schm .tw{flex-shrink:0;overflow-x:auto}
+.schm .tw .tr,.schm .tw > .row{min-width:940px}
+.schm .mxw{flex-shrink:0;overflow-x:auto !important}
+.schm .mxw > div{min-width:900px}
+.schm .demo{background:#181c1e;color:#fff;padding:10px 16px;font-size:13px;flex:none}
+.schm .dtag{font:700 12px ui-monospace,Menlo,monospace;background:#5d3fe0;color:#fff;padding:3px 8px;border-radius:4px}
+.schm .dl{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#bccaba;font-weight:700}
+.schm .dseg{display:flex;flex-wrap:wrap;gap:2px;background:#2c3133;border-radius:8px;padding:2px}
+.schm .dsb{background:transparent;border:0;color:#e1e8e3;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:600;white-space:nowrap}
+.schm .dsb.on{background:#fff;color:#181c1e}
+.schm .dbtn{background:#2c3133;color:#fff;border:1px solid #4a5254;border-radius:8px;padding:7px 12px;font-size:13px;font-weight:700;white-space:nowrap}
+.schm .ovl{position:fixed;inset:0;background:rgba(24,28,30,.45);z-index:60;display:flex;align-items:center;justify-content:center;padding:24px}
+.schm .ovl.m{align-items:flex-end;padding:0}
+.schm .sheetx{background:#fff;border-radius:16px 16px 0 0;padding:16px 16px 28px;width:100%;max-height:90vh;overflow:auto;gap:14px}
+.schm .toastx{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);z-index:70;max-width:min(560px,calc(100vw - 32px))}
+.schm .main{overflow-y:auto}
+</style>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0E9344"></rect><rect x="30" y="34" width="40" height="36" rx="5" fill="none" stroke="#fff" stroke-width="5"></rect><path d="M30 44h40M40 28v10M60 28v10" stroke="#fff" stroke-width="5" stroke-linecap="round"></path></svg></template>
+</helmet>
+<div id="app" class="schm" style="width:{{ appW }};margin:0 auto;min-height:{{ appMinH }};height:{{ appH }};display:flex;flex-direction:column;background:#f7fafc">
+<sc-if value="{{ showDemo }}" hint-placeholder-val="{{ false }}">
+<div class="demo">
+  <div class="row" style="gap:10px;flex-wrap:wrap"><span class="dtag">Демо-панель · не часть продукта</span><span class="sp"></span><button class="dbtn" onClick="{{ togglePanel }}">{{ panelLbl }}</button></div>
+  <sc-if value="{{ panelOpen }}" hint-placeholder-val="{{ true }}">
+    <div class="row" style="flex-wrap:wrap;gap:14px;margin-top:10px;align-items:flex-end">
+      <sc-for list="{{ demoGroups }}" as="g" hint-placeholder-count="4">
+        <div class="col" style="gap:4px"><span class="dl">{{ g.t }}</span><div class="dseg"><sc-for list="{{ g.opts }}" as="o" hint-placeholder-count="3"><button class="{{ o.cls }}" onClick="{{ o.on }}">{{ o.t }}</button></sc-for></div></div>
+      </sc-for>
+      <div class="row" style="gap:8px;flex-wrap:wrap"><button class="dbtn" onClick="{{ simTaken }}">Имитировать: место заняли</button><button class="dbtn" onClick="{{ reset }}">Сбросить демо</button></div>
+    </div>
+  </sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ showDh }}" hint-placeholder-val="{{ false }}"><div class="dh"><span class="logo">Лидерборд ТПУ</span><span class="hav">{{ P.ini }}</span></div></sc-if>
+<sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}"><div class="mh"><sc-if value="{{ hasBack }}" hint-placeholder-val="{{ false }}"><span class="ms" style="cursor:pointer" onClick="{{ back }}">arrow_back</span></sc-if><span class="logo" style="flex:1;font-size:20px">{{ mobTitle }}</span><span class="hav">{{ P.ini }}</span></div></sc-if>
+<div style="display:flex;flex:1;align-items:stretch;min-height:0">
+<sc-if value="{{ desk }}" hint-placeholder-val="{{ true }}"><div class="sb"><div class="sbu"><span class="sav">{{ P.ini }}</span><span class="b m">{{ P.name }}</span><span class="cap">{{ P.sub }}</span></div><sc-for list="{{ menu }}" as="m" hint-placeholder-count="4"><div class="{{ m.cls }}" onClick="{{ m.on }}"><span class="ms">{{ m.ic }}</span>{{ m.t }}</div></sc-for></div></sc-if>
+<div class="main" style="padding:{{ mainPad }}"><div class="wrap col" style="gap:24px;margin:0 auto">
+
+<sc-if value="{{ V.off }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">wifi_off</span>Нет связи. Показаны последние сохранённые данные, изменения не сохранятся.</div></sc-if>
+<sc-if value="{{ V.loading }}" hint-placeholder-val="{{ false }}"><div class="col" style="gap:16px"><div class="sk" style="height:40px;width:50%"></div><div class="sk" style="height:96px"></div><div class="sk" style="height:96px"></div><div class="sk" style="height:96px;width:70%"></div></div></sc-if>
+<sc-if value="{{ V.err }}" hint-placeholder-val="{{ false }}"><div class="card col" style="gap:16px"><div class="bn bn-r"><span class="ms">error</span>Не удалось загрузить данные: ошибка сервера. Повторите через минуту.</div><button class="btn2" style="align-self:flex-start" onClick="{{ retry }}"><span class="ms">refresh</span>Повторить</button></div></sc-if>
+<sc-if value="{{ V.deny }}" hint-placeholder-val="{{ false }}"><div class="card"><div class="empty" style="padding:64px 16px"><span class="ms">lock</span><span class="m b" style="font-size:20px;color:#181c1e">Нет доступа</span><span>{{ V.denyT }}</span><button class="btn2" onClick="{{ toLk }}">Вернуться в личный кабинет</button></div></div></sc-if>
+<sc-if value="{{ V.stub }}" hint-placeholder-val="{{ false }}"><div class="card"><div class="empty" style="padding:64px 16px"><span class="ms">computer</span><span class="m b" style="font-size:20px;color:#181c1e">Экран организатора рассчитан на компьютер</span><button class="btn2" onClick="{{ toLk }}">Вернуться в личный кабинет</button></div></div></sc-if>
+
+<sc-if value="{{ R.rating }}" hint-placeholder-val="{{ false }}"><h1 class="{{ ptCls }}">Рейтинг</h1><div class="ex" style="height:320px"><span class="ms">leaderboard</span>Рейтинг · существующий раздел, без изменений</div></sc-if>
+<sc-if value="{{ R.settings }}" hint-placeholder-val="{{ false }}"><h1 class="{{ ptCls }}">Настройки</h1><div class="ex" style="height:320px"><span class="ms">settings</span>Настройки · существующий раздел, без изменений</div></sc-if>
+<sc-if value="{{ R.sheets }}" hint-placeholder-val="{{ false }}"><h1 class="{{ ptCls }}">Оценочные листы</h1><div class="ex" style="height:320px"><span class="ms">assignment</span>Оценочные листы · существующий раздел, без изменений</div></sc-if>
+
+<sc-if value="{{ R.lk }}" hint-placeholder-val="{{ true }}">
+  <h1 class="{{ ptCls }}">Личный кабинет</h1>
+  <div class="ex" style="height:110px"><span class="ms">badge</span>Карточка профиля · существующий блок, без изменений</div>
+  <h2 class="ct" style="font-size:24px">Мои выступления</h2>
+  <sc-if value="{{ lk.empty }}" hint-placeholder-val="{{ false }}"><div class="card"><div class="empty"><span class="ms">event_note</span><span>Выступлений пока нет. Карточка появится, когда организатор начнёт собирать расписание.</span></div></div></sc-if>
+  <div style="display:grid;grid-template-columns:{{ g3 }};gap:20px">
+    <sc-for list="{{ lk.cards }}" as="c" hint-placeholder-count="1">
+      <div class="card col" style="gap:10px;padding:20px">
+        <div class="row" style="gap:8px;flex-wrap:wrap"><span class="ty"><span class="ms">co_present</span>Предзащита</span><sc-if value="{{ c.isPub }}" hint-placeholder-val="{{ false }}"><span class="{{ c.bdCls }}"><span class="ms">{{ c.bdIc }}</span>{{ c.bdT }}</span></sc-if><sc-if value="{{ c.notPub }}" hint-placeholder-val="{{ true }}"><span class="cap">20 октября</span></sc-if></div>
+        <span class="b" style="font-size:17px;line-height:1.3">{{ c.team }}</span>
+        <sc-if value="{{ c.isPub }}" hint-placeholder-val="{{ false }}"><span class="m b" style="font-size:24px;line-height:1.2">{{ c.time }}</span><sc-if value="{{ c.was }}" hint-placeholder-val="{{ false }}"><span class="cap">Было: <span class="st">{{ c.was }}</span></span></sc-if></sc-if>
+        <div class="meta"><span class="ms">location_on</span>{{ c.place }}</div>
+        <sc-if value="{{ c.isCol }}" hint-placeholder-val="{{ false }}">
+          <div class="bn bn-n" style="align-items:center"><span class="ms">schedule</span>Отметьте время до {{ c.dl }}</div>
+          <span class="cap">Отмечено {{ c.used }} из {{ c.lim }} минут</span>
+          <div class="bar"><i style="width:{{ c.pct }}"></i></div>
+          <button class="btn" style="align-self:stretch" onClick="{{ c.onMarks }}">Отметить время</button>
+        </sc-if>
+        <sc-if value="{{ c.lim0 }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">info</span>{{ c.lim0T }}</div></sc-if>
+        <sc-if value="{{ c.isWait }}" hint-placeholder-val="{{ false }}"><span class="bd b-n" style="align-self:flex-start"><span class="ms">hourglass_top</span>Расписание готовится</span><span class="cap">Время выступления появится здесь после публикации расписания.</span></sc-if>
+        <div class="row" style="gap:16px;flex-wrap:wrap"><button class="lnk" onClick="{{ c.onAnn }}">Открыть анонс</button><sc-if value="{{ c.showMk }}" hint-placeholder-val="{{ false }}"><button class="lnk" onClick="{{ c.onMarks }}">Мои отметки</button></sc-if></div>
+      </div>
+    </sc-for>
+  </div>
+  <h2 class="ct" style="font-size:24px">Ближайшие мероприятия</h2>
+  <div style="display:grid;grid-template-columns:{{ g3 }};gap:20px">
+    <sc-for list="{{ st1 }}" as="e" hint-placeholder-count="2">
+      <div class="card col" style="gap:12px;padding:20px">
+        <span class="ty" style="align-self:flex-start"><span class="ms">{{ e.ic }}</span>{{ e.type }}</span>
+        <h3 class="ct">{{ e.name }}</h3>
+        <div class="col" style="gap:6px"><div class="meta"><span class="ms">event</span>{{ e.date }}</div><div class="meta"><span class="ms">location_on</span>Учебный корпус № 10</div></div>
+        <div class="clamp">{{ e.desc }}</div>
+        <div class="col" style="gap:8px;margin-top:auto;padding-top:4px">
+          <sc-if value="{{ e.hasBtn }}" hint-placeholder-val="{{ false }}"><button class="{{ e.btnCls }}" style="align-self:flex-start" onClick="{{ e.on }}">Записаться</button></sc-if>
+          <sc-if value="{{ e.note }}" hint-placeholder-val="{{ false }}"><span class="cap">{{ e.note }}</span></sc-if>
+          <button class="lnk" style="align-self:flex-start" onClick="{{ e.onOpen }}">Открыть анонс</button>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</sc-if>
+
+<sc-if value="{{ R.annPre }}" hint-placeholder-val="{{ false }}">
+  <div style="display:grid;grid-template-columns:{{ annCols }};gap:32px;align-items:start">
+    <div class="col" style="gap:16px">
+      <div class="cap"><button class="lnk" onClick="{{ toLk }}">Личный кабинет</button> /</div>
+      <h1 class="{{ ptCls }}">Предзащита, осень 2026</h1>
+      <div class="row" style="flex-wrap:wrap"><span class="ty"><span class="ms">co_present</span>Предзащита</span><span class="meta"><span class="ms">event</span>20 октября 2026, 10:00–17:00</span><span class="meta"><span class="ms">location_on</span>Учебный корпус № 10</span></div>
+      <div style="line-height:1.6;color:#3d4a3d;max-width:640px">Команды показывают промежуточные результаты проектов экспертной комиссии. На доклад — 7 минут, на вопросы — 5 минут. По итогам предзащиты определяются команды, которые выйдут на защиту. Возьмите ноутбук с работающим прототипом.</div>
+    </div>
+    <div class="col" style="gap:16px">
+      <sc-for list="{{ annBlocks }}" as="b" hint-placeholder-count="1">
+        <div class="card col" style="gap:10px;padding:20px">
+          <h2 class="ct">Расписание вашей команды</h2>
+          <span class="b">{{ b.team }}</span>
+          <sc-if value="{{ b.changed }}" hint-placeholder-val="{{ false }}"><span class="bd b-w" style="align-self:flex-start"><span class="ms">update</span>Слот изменён организатором</span></sc-if>
+          <sc-if value="{{ b.isPub }}" hint-placeholder-val="{{ false }}"><span class="m b" style="font-size:28px;line-height:1.2">{{ b.time }}</span></sc-if>
+          <sc-if value="{{ b.was }}" hint-placeholder-val="{{ false }}"><span class="cap">Было: <span class="st">{{ b.was }}</span></span></sc-if>
+          <div class="meta"><span class="ms">location_on</span>{{ b.meta }}</div>
+          <sc-if value="{{ b.wait }}" hint-placeholder-val="{{ false }}"><span class="bd b-n" style="align-self:flex-start"><span class="ms">hourglass_top</span>Расписание готовится</span></sc-if>
+          <sc-if value="{{ b.isPub }}" hint-placeholder-val="{{ false }}"><span class="cap">Приходите за 10 минут до начала слота.</span></sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ R.annAcc }}" hint-placeholder-val="{{ false }}">
+  <div class="cap"><button class="lnk" onClick="{{ toLk }}">Личный кабинет</button> /</div>
+  <h1 class="{{ ptCls }}">Акселератор ИШИТР</h1>
+  <div class="row" style="flex-wrap:wrap"><span class="ty"><span class="ms">rocket_launch</span>Акселератор</span><span class="meta"><span class="ms">event</span>12 ноября 2026, 10:00–17:00</span><span class="meta"><span class="ms">location_on</span>Учебный корпус № 10</span></div>
+  <div style="line-height:1.6;color:#3d4a3d;max-width:760px">Однодневный интенсив с практикующими разработчиками. Выберите одно направление: весь день вы проведёте с его тренерами.</div>
+  <sc-if value="{{ AN.pre }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">schedule</span>Запись откроется 1 ноября в 10:00</div></sc-if>
+  <sc-if value="{{ AN.closed }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">lock</span>Запись закрыта 10 ноября</div></sc-if>
+  <sc-if value="{{ AN.mine }}" hint-placeholder-val="{{ false }}"><div class="bn bn-g" style="align-items:center"><span class="ms">how_to_reg</span>{{ AN.mine }}</div></sc-if>
+  <sc-if value="{{ AN.notStu }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">info</span>Записываются студенты. Вы видите анонс без кнопок записи.</div></sc-if>
+  <div class="row"><h2 class="ct sp" style="font-size:24px">Направления</h2><span class="cap">Запись до 10 ноября</span></div>
+  <div style="display:grid;grid-template-columns:{{ g3 }};gap:20px">
+    <sc-for list="{{ AN.dirs }}" as="x" hint-placeholder-count="3">
+      <div class="card col" style="gap:12px;padding:20px">
+        <div class="row" style="align-items:flex-start"><h3 class="ct sp">{{ x.name }}</h3><span class="{{ x.capCls }}">{{ x.left }}</span></div>
+        <span class="cap">{{ x.room }} · {{ x.tr }}</span>
+        <sc-if value="{{ x.hasBar }}" hint-placeholder-val="{{ false }}"><div class="bar"><i style="width:{{ x.pct }}"></i></div></sc-if>
+        <sc-if value="{{ x.hasBtn }}" hint-placeholder-val="{{ false }}"><button class="{{ x.btnCls }}" onClick="{{ x.on }}">{{ x.btn }}</button></sc-if>
+      </div>
+    </sc-for>
+  </div>
+</sc-if>
+
+<sc-if value="{{ R.menSch }}" hint-placeholder-val="{{ false }}">
+  <h1 class="{{ ptCls }}">Расписание</h1>
+  <sc-if value="{{ MS.empty }}" hint-placeholder-val="{{ false }}"><div class="card"><div class="empty"><span class="ms">groups</span><span>Сейчас нет команд, для которых собирают отметки или опубликовано расписание.</span></div></div></sc-if>
+  <sc-if value="{{ MS.has }}" hint-placeholder-val="{{ false }}">
+    <div class="col" style="gap:4px"><span class="b" style="font-size:18px">{{ evName }}</span><span class="cap">{{ MS.sub }}</span></div>
+    <div class="col" style="gap:12px">
+      <sc-for list="{{ MS.rows }}" as="c" hint-placeholder-count="2">
+        <div class="lr cl" style="align-items:flex-start;padding:16px" onClick="{{ c.on }}">
+          <div class="col sp" style="gap:8px;min-width:0">
+            <span class="b" style="line-height:1.3">{{ c.team }}</span>
+            <span class="cap">{{ c.room }}</span>
+            <span class="{{ c.stCls }}" style="align-self:flex-start">{{ c.st }}</span>
+            <span class="cap">Отмечено {{ c.used }} из {{ c.lim }} минут</span>
+            <div class="bar" style="max-width:420px"><i style="width:{{ c.pct }}"></i></div>
+          </div>
+          <span class="ms" style="color:#3d4a3d">chevron_right</span>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+</sc-if>
+<sc-if value="{{ R.marks }}" hint-placeholder-val="{{ false }}">
+  <sc-if value="{{ MK.noSch }}" hint-placeholder-val="{{ false }}"><div class="card"><div class="empty"><span class="ms">edit_calendar</span><span>Сбор отметок ещё не открыт.</span></div></div></sc-if>
+  <sc-if value="{{ MK.ok }}" hint-placeholder-val="{{ false }}">
+    <sc-if value="{{ desk }}" hint-placeholder-val="{{ true }}"><div class="cap"><button class="lnk" onClick="{{ toMen }}">Расписание</button> /</div></sc-if>
+    <div class="phd" style="align-items:flex-start">
+      <div class="col" style="gap:4px"><h1 class="pts">{{ MK.team }}</h1><span class="cap">{{ evName }} · {{ evDate }} · {{ MK.room }}</span><span class="cap">{{ MK.sub }}</span></div>
+      <sc-if value="{{ MK.deskSave }}" hint-placeholder-val="{{ false }}"><div class="row" style="gap:12px"><sc-if value="{{ MK.saveSt }}" hint-placeholder-val="{{ false }}"><span class="{{ MK.saveStCls }}">{{ MK.saveSt }}</span></sc-if><button class="btn" onClick="{{ MK.onSave }}">{{ MK.saveLbl }}</button></div></sc-if>
+    </div>
+    <sc-if value="{{ MK.saveErr }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">wifi_off</span>{{ MK.saveErr }}</div></sc-if>
+    <sc-if value="{{ MK.closedBn }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">lock</span>{{ MK.closedBn }}</div></sc-if>
+    <sc-if value="{{ MK.lim0 }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">info</span>{{ MK.lim0T }}</div></sc-if>
+    <sc-if value="{{ MK.pub }}" hint-placeholder-val="{{ false }}"><div class="card col" style="padding:16px 20px;gap:6px;border:2px solid #006d30;max-width:480px"><sc-if value="{{ MK.pub.ch }}" hint-placeholder-val="{{ false }}"><span class="bd b-w" style="align-self:flex-start"><span class="ms">update</span>Слот изменён организатором</span></sc-if><span class="cap">Выступление № {{ MK.pub.num }}</span><span class="m b" style="font-size:28px">{{ MK.pub.time }}</span><sc-if value="{{ MK.pub.was }}" hint-placeholder-val="{{ false }}"><span class="cap">Было: <span class="st">{{ MK.pub.was }}</span></span></sc-if><span class="cap">{{ MK.room }} · корпус 10</span></div></sc-if>
+    <div style="display:grid;grid-template-columns:{{ MK.cols }};gap:24px;align-items:start">
+      <div class="card col" style="gap:12px;padding:{{ cardPad }}">
+        <span class="lbl" style="margin:0">Когда команда прийти не может</span>
+        <div style="display:grid;grid-template-columns:{{ MK.tileCols }};gap:8px"><sc-for list="{{ MK.pre }}" as="x" hint-placeholder-count="7"><div class="{{ x.cls }}" onClick="{{ x.on }}">{{ x.t }}<small>{{ x.e }}</small></div></sc-for></div>
+        <sc-if value="{{ MK.hasBreak }}" hint-placeholder-val="{{ true }}"><div class="lv ro" style="background:#e9edeb;min-height:40px;font-size:14px">{{ MK.breakT }}</div></sc-if>
+        <div style="display:grid;grid-template-columns:{{ MK.tileCols }};gap:8px"><sc-for list="{{ MK.post }}" as="x" hint-placeholder-count="12"><div class="{{ x.cls }}" onClick="{{ x.on }}">{{ x.t }}<small>{{ x.e }}</small></div></sc-for></div>
+        <sc-if value="{{ MK.edit }}" hint-placeholder-val="{{ false }}"><span class="cap">Нажмите на слот, чтобы отметить его вместе со сменой ({{ MK.st20 }} минут). Повторное нажатие снимает отметку.</span></sc-if>
+      </div>
+      <div class="col" style="gap:16px">
+        <sc-if value="{{ MK.showCounter }}" hint-placeholder-val="{{ false }}"><div class="card col" style="padding:16px 20px;gap:8px"><div class="row"><span class="b sp">Отмечено {{ MK.used }} из {{ MK.lim }} минут</span><span class="cap">осталось {{ MK.left }}</span></div><div class="bar"><i style="width:{{ MK.pct }}"></i></div></div></sc-if>
+        <sc-if value="{{ MK.fullBn }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">info</span>Лимит исчерпан. Чтобы отметить другое время, удалите одну из отметок.</div></sc-if>
+        <sc-if value="{{ MK.edit }}" hint-placeholder-val="{{ false }}">
+          <div class="card col" style="padding:16px 20px;gap:10px">
+            <span class="lbl" style="margin:0">Интервал</span>
+            <sc-if value="{{ MK.hint }}" hint-placeholder-val="{{ false }}"><span class="cap g b">{{ MK.hint }}</span></sc-if>
+            <div class="row" style="gap:8px;align-items:flex-end"><label class="sp"><span class="lbl">С</span><input type="text" inputmode="numeric" placeholder="чч:мм" class="{{ MK.aCls }}" value="{{ MK.fa }}" onChange="{{ MK.onA }}"></label><span style="padding-bottom:14px">—</span><label class="sp"><span class="lbl">По</span><input type="text" inputmode="numeric" placeholder="чч:мм" class="{{ MK.bCls }}" value="{{ MK.fb }}" onChange="{{ MK.onB }}"></label></div>
+            <sc-if value="{{ MK.errT }}" hint-placeholder-val="{{ false }}"><div class="et" style="margin:0"><span class="ms">error</span>{{ MK.errT }}</div></sc-if>
+            <label><span class="lbl">Причина</span><input class="{{ MK.rCls }}" placeholder="Например, «Врач»" value="{{ MK.fr }}" onChange="{{ MK.onR }}"></label>
+            <sc-if value="{{ MK.errR }}" hint-placeholder-val="{{ false }}"><div class="et" style="margin:0"><span class="ms">error</span>{{ MK.errR }}</div></sc-if>
+            <button class="btn2 w" onClick="{{ MK.onAdd }}"><span class="ms">add</span>Добавить</button>
+          </div>
+        </sc-if>
+        <span class="lbl" style="margin:0">Отметки</span>
+        <sc-if value="{{ MK.empty }}" hint-placeholder-val="{{ false }}"><div class="card"><div class="empty" style="padding:20px 8px"><span class="ms">edit_calendar</span><span>{{ MK.emptyT }}</span></div></div></sc-if>
+        <sc-for list="{{ MK.list }}" as="k" hint-placeholder-count="1"><div class="lr"><div class="col sp" style="gap:2px"><span class="b">{{ k.tm }}</span><span class="cap">{{ k.r }}</span></div><span class="cap" style="white-space:nowrap">{{ k.min }}</span><sc-if value="{{ k.showSt }}" hint-placeholder-val="{{ false }}"><span class="{{ k.stCls }}">{{ k.st }}</span></sc-if><sc-if value="{{ k.showDel }}" hint-placeholder-val="{{ false }}"><button class="ms" style="color:#3d4a3d;background:none;border:0;padding:4px" onClick="{{ k.on }}">delete</button></sc-if></div></sc-for>
+        <div class="cap row" style="gap:6px"><span class="ms" style="font-size:16px">visibility_off</span>Причину видят только организатор и вы</div>
+      </div>
+    </div>
+    <sc-if value="{{ MK.mobSave }}" hint-placeholder-val="{{ false }}"><div class="abar"><sc-if value="{{ MK.saveSt }}" hint-placeholder-val="{{ false }}"><span class="{{ MK.saveStCls }}">{{ MK.saveSt }}</span></sc-if><button class="btn" style="flex:1" onClick="{{ MK.onSave }}">{{ MK.saveLbl }}</button></div></sc-if>
+  </sc-if>
+</sc-if>
+
+<sc-if value="{{ R.events }}" hint-placeholder-val="{{ false }}">
+  <h1 class="pt">Мероприятия</h1>
+  <div class="card tw" style="padding:0">
+    <div class="tr th" style="grid-template-columns:minmax(0,1fr) 170px 180px 200px 32px"><span>Название</span><span>Тип</span><span>Дата</span><span>Расписание</span><span></span></div>
+    <sc-for list="{{ evRows }}" as="r" hint-placeholder-count="3">
+      <div class="tr" style="grid-template-columns:minmax(0,1fr) 170px 180px 200px 32px;cursor:pointer" onClick="{{ r.on }}"><span class="b">{{ r.name }}</span><span><span class="ty"><span class="ms">{{ r.ic }}</span>{{ r.type }}</span></span><span class="cap">{{ r.date }}</span><span><sc-if value="{{ r.hasSch }}" hint-placeholder-val="{{ false }}"><span class="{{ r.sch.cls }}"><span class="ms">{{ r.sch.ic }}</span>{{ r.sch.t }}</span></sc-if></span><span class="ms" style="color:#3d4a3d">chevron_right</span></div>
+    </sc-for>
+  </div>
+</sc-if>
+
+<sc-if value="{{ R.evPre }}" hint-placeholder-val="{{ false }}">
+  <div class="phd">
+    <div><div class="cap"><button class="lnk" onClick="{{ toEvents }}">Мероприятия</button> /</div><h1 class="pt" style="margin-top:8px">Предзащита, осень 2026</h1>
+      <div class="row" style="margin-top:12px;flex-wrap:wrap"><span class="ty"><span class="ms">co_present</span>Предзащита</span><span class="meta"><span class="ms">event</span>20 октября 2026, 10:00–17:00</span><span class="meta"><span class="ms">location_on</span>Учебный корпус № 10</span></div>
+      <div class="row" style="margin-top:12px;flex-wrap:wrap"><span class="cap">Публикация</span><span class="bd b-g"><span class="ms">public</span>Опубликовано</span><span class="cap" style="margin-left:8px">Приём оценок</span><span class="{{ EV.grCls }}">{{ EV.grT }}</span><span class="cap" style="margin-left:8px">Расписание</span><span class="{{ sch.cls }}"><span class="ms">{{ sch.ic }}</span>{{ sch.t }}</span></div>
+    </div>
+    <div class="col" style="gap:6px;align-items:flex-end"><div class="row" style="gap:8px;flex-wrap:wrap;justify-content:flex-end"><sc-if value="{{ EV.showExcel }}" hint-placeholder-val="{{ false }}"><button class="btn2" onClick="{{ onExcel }}"><span class="ms">upload_file</span>Импорт из Excel</button></sc-if><button class="btn2" onClick="{{ toSched }}"><span class="ms">event_note</span>Расписание</button><button class="{{ EV.gradeCls }}" onClick="{{ onGrade }}">{{ EV.gradeLbl }}</button></div><sc-if value="{{ EV.tip }}" hint-placeholder-val="{{ false }}"><span class="tip">{{ EV.tip }}</span></sc-if></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+    <div class="card"><div class="mt"><span class="cap">Аудиторий</span><span class="ms g">meeting_room</span></div><div class="mv">{{ EV.roomsN }}</div></div>
+    <div class="card"><div class="mt"><span class="cap">Команд</span><span class="ms g">groups</span></div><div class="mv">{{ EV.teamsN }}</div></div>
+    <div class="card"><div class="mt"><span class="cap">Внесли отметки</span><span class="ms g">edit_calendar</span></div><div class="mv">{{ EV.wm }}<small>из {{ EV.teamsN }}</small></div><div class="bar" style="margin-top:12px"><i style="width:{{ EV.wmPct }}"></i></div></div>
+    <div class="card col" style="gap:6px"><div class="mt"><span class="cap">Оценочный лист</span><span class="ms g">assignment</span></div><span class="b" style="margin-top:6px">Предзащита ИТ, базовый</span><span class="cap">4 критерия · макс. 8</span></div>
+  </div>
+  <div class="row" style="justify-content:space-between"><h2 class="ct" style="font-size:24px">Аудитории</h2><span class="cap">Порядок выступления задаёт расписание</span></div>
+  <div class="col" style="gap:16px">
+    <sc-for list="{{ EV.rooms }}" as="r" hint-placeholder-count="3"><div class="card row" style="flex-wrap:wrap"><h3 class="ct">{{ r.room }}</h3><span class="cap">{{ r.cap }}</span><span class="sp"></span><button class="{{ r.printCls }}" onClick="{{ onPrint }}"><span class="ms">print</span>Печать бланка</button></div></sc-for>
+  </div>
+</sc-if>
+
+<sc-if value="{{ R.evDef }}" hint-placeholder-val="{{ false }}">
+  <div class="phd">
+    <div><div class="cap"><button class="lnk" onClick="{{ toEvents }}">Мероприятия</button> /</div><h1 class="pt" style="margin-top:8px">Защита, осень 2026</h1>
+      <div class="row" style="margin-top:12px;flex-wrap:wrap"><span class="ty"><span class="ms">workspace_premium</span>Защита</span><span class="meta"><span class="ms">event</span>15 декабря 2026, 10:00–17:00</span><span class="cap" style="margin-left:8px">Расписание</span><span class="bd b-n"><span class="ms">event_busy</span>Не настроено</span></div>
+    </div>
+    <div class="row" style="gap:8px"><button class="btn2" onClick="{{ onExcel }}"><span class="ms">upload_file</span>Импорт из Excel</button></div>
+  </div>
+  <div class="card col" style="gap:16px">
+    <div class="row" style="flex-wrap:wrap"><h2 class="ct sp">Команды из предзащиты</h2><span class="cap">Предзащита, осень 2026 · команд в мероприятии: {{ EV.teamsN }}</span></div>
+    <div class="bn bn-n" style="align-items:center"><span class="ms">info</span>Аудитории раскладывает организатор, время выступления задаст расписание.</div>
+    <div class="ex" style="height:160px">Таблица команд с отметками · без изменений</div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ R.evAcc }}" hint-placeholder-val="{{ false }}">
+  <div class="phd">
+    <div><div class="cap"><button class="lnk" onClick="{{ toEvents }}">Мероприятия</button> /</div><h1 class="pt" style="margin-top:8px">Акселератор ИШИТР</h1>
+      <div class="row" style="margin-top:12px;flex-wrap:wrap"><span class="ty"><span class="ms">rocket_launch</span>Акселератор</span><span class="meta"><span class="ms">event</span>12 ноября 2026, 10:00–17:00</span><span class="bd b-g"><span class="ms">public</span>Опубликовано</span><span class="{{ AC.stCls }}"><span class="ms">how_to_reg</span>{{ AC.stT }}</span></div>
+    </div>
+    <button class="btn2" onClick="{{ AC.onBtn }}">{{ AC.btn }}</button>
+  </div>
+  <div class="card col" style="gap:20px;max-width:1040px">
+    <div class="row"><h2 class="ct sp">Направления</h2><span class="cap">Записалось {{ AC.total }}</span></div>
+    <sc-for list="{{ AC.dirs }}" as="x" hint-placeholder-count="3">
+      <div class="inner">
+        <div class="row" style="cursor:pointer" onClick="{{ x.tog }}"><span class="b">Направление {{ x.n }} · {{ x.name }}</span><span class="{{ x.capCls }}">{{ x.left }}</span><span class="sp"></span><span class="ms" style="color:#3d4a3d">{{ x.chev }}</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) 200px 200px;gap:16px">
+          <div><span class="lbl">Роль</span><div class="inp ro-f">{{ x.name }}</div></div>
+          <div><span class="lbl">Аудитория</span><div class="inp ro-f">{{ x.room }}</div></div>
+          <label><span class="lbl">Лимит мест</span><input class="inp" type="number" min="0" value="{{ x.lim }}" onChange="{{ x.onLim }}" placeholder="Без лимита"><span class="cap">Пусто — без лимита</span></label>
+        </div>
+        <sc-if value="{{ x.over }}" hint-placeholder-val="{{ false }}"><div class="bn bn-w"><span class="ms">warning</span>{{ x.over }}</div></sc-if>
+        <sc-if value="{{ x.open }}" hint-placeholder-val="{{ false }}">
+          <div class="col" style="gap:0;border-top:1px solid #e1e8e3;padding-top:12px">
+            <div class="row" style="margin-bottom:8px"><span class="lbl sp" style="margin:0">Записавшиеся · {{ x.cnt }}</span><button class="lnk" onClick="{{ onDl }}"><span class="ms" style="font-size:18px">download</span>Скачать список</button></div>
+            <sc-if value="{{ x.empty }}" hint-placeholder-val="{{ false }}"><span class="cap" style="padding:12px 0">На направление пока никто не записался.</span></sc-if>
+            <sc-for list="{{ x.people }}" as="p" hint-placeholder-count="4"><div class="row" style="min-height:52px;border-bottom:1px solid #e1e8e3"><span class="av">{{ p.ini }}</span><span class="b sp">{{ p.name }}</span><span class="cap" style="width:120px">{{ p.g }}</span><span class="cap" style="width:140px">{{ p.d }}</span></div></sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+</sc-if>
+<sc-if value="{{ R.sched }}" hint-placeholder-val="{{ false }}">
+  <div class="cap"><button class="lnk" onClick="{{ toEvents }}">Мероприятия</button> / <button class="lnk" onClick="{{ toEvPre }}">{{ evName }}</button> /</div>
+  <div class="row"><h1 class="pt">Расписание</h1><span class="{{ sch.cls }}"><span class="ms">{{ sch.ic }}</span>{{ sch.t }}</span></div>
+  <div class="row" style="gap:12px;flex-wrap:wrap"><sc-for list="{{ steps }}" as="x" hint-placeholder-count="5"><span class="{{ x.cls }}" onClick="{{ x.on }}"><i>{{ x.n }}</i>{{ x.t }}</span><sc-if value="{{ x.line }}" hint-placeholder-val="{{ true }}"><span style="width:32px;height:2px;background:#bccaba"></span></sc-if></sc-for></div>
+
+  <sc-if value="{{ W1.on }}" hint-placeholder-val="{{ false }}">
+    <sc-if value="{{ W1.locked }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">lock</span>Расписание опубликовано: состав и аудитории заблокированы. Добавить команду можно в свободный слот на шаге 5.</div></sc-if>
+    <div class="card col" style="gap:20px">
+      <h2 class="ct">Правило допуска</h2>
+      <div><span class="lbl">Статус команды в витрине</span><div class="row" style="gap:8px"><sc-for list="{{ W1.chips }}" as="c" hint-placeholder-count="3"><span class="{{ c.cls }}" onClick="{{ c.on }}">{{ c.t }}</span></sc-for></div></div>
+      <div><span class="lbl">Команда начала работу в семестре</span><div class="row" style="gap:8px;max-width:460px"><input class="{{ W1.fromCls }}" style="flex:1" placeholder="дд.мм.гггг" value="{{ W1.from }}" onChange="{{ W1.onFrom }}" onBlur="{{ W1.blur }}" disabled="{{ W1.locked }}"><span>—</span><input class="{{ W1.toCls }}" style="flex:1" placeholder="дд.мм.гггг" value="{{ W1.to }}" onChange="{{ W1.onTo }}" onBlur="{{ W1.blur }}" disabled="{{ W1.locked }}"></div></div>
+      <div class="row" style="flex-wrap:wrap"><button class="{{ W1.pullCls }}" onClick="{{ W1.onPull }}"><span class="ms">download</span>Подтянуть команды</button><span class="cap">В витрине {{ W1.poolN }} команд отделения · по правилу подходят ещё {{ W1.fitN }}</span></div>
+    </div>
+    <sc-if value="{{ W1.none }}" hint-placeholder-val="{{ false }}"><div class="card"><div class="empty"><span class="ms">groups</span><span>Команд пока нет. Настройте правило и подтяните команды из витрины.</span></div></div></sc-if>
+    <sc-if value="{{ W1.has }}" hint-placeholder-val="{{ false }}">
+      <div class="row" style="flex-wrap:wrap"><sc-for list="{{ W1.roomChips }}" as="c" hint-placeholder-count="5"><span class="{{ c.cls }}" onClick="{{ c.on }}">{{ c.t }}</span></sc-for><span class="sp"></span>
+        <sc-if value="{{ W1.canEdit }}" hint-placeholder-val="{{ true }}"><div style="position:relative;width:380px"><input class="inp" placeholder="Добавить команду по названию" value="{{ W1.q }}" onChange="{{ W1.onQ }}"><sc-if value="{{ W1.hasRes }}" hint-placeholder-val="{{ false }}"><div class="dd" style="position:absolute;left:0;right:0;top:52px;z-index:5"><sc-for list="{{ W1.res }}" as="x" hint-placeholder-count="3"><div onClick="{{ x.on }}"><span class="sp">{{ x.n }}</span><span class="cap">{{ x.sub }}</span></div></sc-for></div></sc-if><sc-if value="{{ W1.noRes }}" hint-placeholder-val="{{ false }}"><div class="dd" style="position:absolute;left:0;right:0;top:52px;z-index:5"><span class="cap" style="padding:10px 12px">Ничего не найдено среди команд вне мероприятия</span></div></sc-if></div></sc-if>
+      </div>
+      <div class="card tw" style="padding:0">
+        <div class="tr th" style="grid-template-columns:minmax(0,1fr) 160px 110px 110px 150px 40px"><span>Команда</span><span>Наставник</span><span>Статус</span><span>Начало</span><span>Аудитория</span><span></span></div>
+        <sc-for list="{{ W1.rows }}" as="r" hint-placeholder-count="8">
+          <div class="tr" style="grid-template-columns:minmax(0,1fr) 160px 110px 110px 150px 40px;padding-top:8px;padding-bottom:8px"><span class="row" style="gap:8px"><span class="b">{{ r.n }}</span><sc-if value="{{ r.added }}" hint-placeholder-val="{{ false }}"><span class="bd b-n">добавлена вручную</span></sc-if></span><span>{{ r.m }}</span><span class="cap">{{ r.st }}</span><span class="cap">{{ r.dt }}</span><select class="{{ r.cls }}" value="{{ r.room }}" onChange="{{ r.onRoom }}" disabled="{{ W1.locked }}"><option value="">Выберите</option><option value="301">ауд. 301</option><option value="303">ауд. 303</option><option value="305">ауд. 305</option></select><sc-if value="{{ W1.canEdit }}" hint-placeholder-val="{{ true }}"><button class="ms" title="Убрать из мероприятия" style="color:#3d4a3d;font-size:20px;background:none;border:0" onClick="{{ r.onDel }}">close</button></sc-if></div>
+        </sc-for>
+        <sc-if value="{{ W1.rowsEmpty }}" hint-placeholder-val="{{ false }}"><div class="cap" style="padding:16px 24px">В этом фильтре команд нет.</div></sc-if>
+      </div>
+      <div class="row" style="justify-content:flex-end"><button class="btn" onClick="{{ W1.onNext }}">Далее</button></div>
+    </sc-if>
+  </sc-if>
+
+  <sc-if value="{{ W2.on }}" hint-placeholder-val="{{ false }}">
+    <sc-if value="{{ W2.lockBn }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">lock</span>Расписание опубликовано: сетка и параметры заблокированы.</div></sc-if>
+    <sc-if value="{{ W2.liveBn }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">info</span>{{ W2.liveBn }}</div></sc-if>
+    <div class="card" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+      <label><span class="lbl">Выступление, минут</span><input class="{{ W2.durCls }}" type="number" min="1" value="{{ W2.dur }}" onChange="{{ W2.onDur }}" disabled="{{ W2.locked }}"></label>
+      <label><span class="lbl">Смена, минут</span><input class="{{ W2.gapCls }}" type="number" min="0" value="{{ W2.gap }}" onChange="{{ W2.onGap }}" disabled="{{ W2.locked }}"></label>
+      <div><span class="lbl">Время мероприятия</span><div class="inp ro-f">10:00–17:00 · из карточки</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px">
+      <sc-for list="{{ W2.rooms }}" as="x" hint-placeholder-count="3">
+        <div class="{{ x.box }}" style="background:#fff">
+          <h3 class="ct">{{ x.room }}</h3>
+          <div><span class="lbl">Кофебрейк</span><div class="row" style="gap:8px"><input class="inp sp" type="text" inputmode="numeric" placeholder="чч:мм" value="{{ x.b0 }}" onChange="{{ x.onB0 }}" onBlur="{{ x.blur }}" disabled="{{ W2.locked }}"><span>—</span><input class="inp sp" type="text" inputmode="numeric" placeholder="чч:мм" value="{{ x.b1 }}" onChange="{{ x.onB1 }}" onBlur="{{ x.blur }}" disabled="{{ W2.locked }}"></div><sc-if value="{{ x.brErr }}" hint-placeholder-val="{{ false }}"><div class="et"><span class="ms">error</span>{{ x.brErr }}</div></sc-if></div>
+          <span class="{{ x.cls }}" style="align-self:flex-start;font-size:14px;padding:4px 12px">{{ x.line }}</span>
+          <span class="cap">{{ x.hint }}</span>
+          <div class="row" style="gap:4px;flex-wrap:wrap"><sc-for list="{{ x.chips }}" as="c" hint-placeholder-count="19"><span class="sc">{{ c.n }} · {{ c.t }}</span></sc-for></div>
+        </div>
+      </sc-for>
+    </div>
+    <div class="row" style="justify-content:space-between"><button class="btn2" onClick="{{ W2.onBack }}">Назад</button><div class="row"><sc-if value="{{ W2.nextErr }}" hint-placeholder-val="{{ false }}"><span class="et" style="margin:0">{{ W2.nextErr }}</span></sc-if><button class="{{ W2.nextCls }}" onClick="{{ W2.onNext }}">Далее</button></div></div>
+  </sc-if>
+
+  <sc-if value="{{ W3.on }}" hint-placeholder-val="{{ false }}">
+    <sc-if value="{{ W3.pre }}" hint-placeholder-val="{{ false }}">
+      <div class="card col" style="gap:16px;max-width:1040px"><h2 class="ct">Дедлайн</h2><label style="max-width:320px"><span class="lbl">Наставники вносят отметки до</span><input class="inp" value="{{ W3.dl }}" onChange="{{ W3.onDl }}"></label></div>
+    </sc-if>
+    <sc-if value="{{ W3.col }}" hint-placeholder-val="{{ false }}">
+      <sc-if value="{{ W3.after }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">lock_clock</span>Дедлайн прошёл: наставники больше не могут менять отметки. Черновик строится только по кнопке «Построить».</div></sc-if>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+        <div class="card"><div class="mt"><span class="cap">Внесли отметки</span><span class="ms g">groups</span></div><div class="mv">{{ W3.wm }}<small>из {{ W3.total }}</small></div><div class="bar" style="margin-top:12px"><i style="width:{{ W3.wmPct }}"></i></div></div>
+        <div class="card"><div class="mt"><span class="cap">Отметок</span><span class="ms g">edit_calendar</span></div><div class="mv">{{ W3.marksN }}</div></div>
+        <div class="card"><div class="mt"><span class="cap">Дедлайн</span><span class="ms g">schedule</span></div><div class="mv" style="font-size:24px">{{ W3.dlTxt }}</div></div>
+      </div>
+    </sc-if>
+    <div class="card tw" style="padding:0">
+      <div class="row" style="padding:20px 24px 12px"><h2 class="ct sp">Лимит отметок на команду</h2><span class="cap row" style="gap:4px"><span class="ms" style="font-size:16px">lock</span>Считает система: (слотов − команд) × (выступление + смена)</span></div>
+      <div class="tr th" style="grid-template-columns:minmax(0,1fr) 100px 100px 100px 120px 200px"><span>Аудитория</span><span>Слотов</span><span>Команд</span><span>Запас</span><span>Внесли</span><span>Лимит</span></div>
+      <sc-for list="{{ W3.limits }}" as="l" hint-placeholder-count="3"><div class="tr" style="grid-template-columns:minmax(0,1fr) 100px 100px 100px 120px 200px"><span class="b">{{ l.room }}</span><span>{{ l.s }}</span><span>{{ l.t }}</span><span>{{ l.k }}</span><span>{{ l.v }}</span><span class="m b">{{ l.lim }}</span></div></sc-for>
+      <div class="cap" style="padding:12px 24px">Если запас 0, лимит 0: наставники этой аудитории увидят сообщение, что отметить время нельзя.</div>
+    </div>
+    <sc-if value="{{ W3.showReasons }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r"><span class="ms">error</span><div class="col" style="gap:6px"><span>Нельзя открыть сбор отметок:</span><sc-for list="{{ W3.reasons }}" as="z" hint-placeholder-count="2"><span>• {{ z.t }} <button class="lnk" style="color:#ba1a1a" onClick="{{ z.on }}">{{ z.lt }}</button></span></sc-for></div></div></sc-if>
+    <sc-if value="{{ W3.pre }}" hint-placeholder-val="{{ false }}"><div class="row" style="justify-content:space-between"><button class="btn2" onClick="{{ W3.onBack }}">Назад</button><button class="btn" onClick="{{ W3.onOpen }}"><span class="ms">campaign</span>{{ W3.openLbl }}</button></div></sc-if>
+    <sc-if value="{{ W3.col }}" hint-placeholder-val="{{ false }}"><div class="row"><span class="cap sp">«Построить» закрывает сбор: наставники больше не смогут менять отметки.</span><button class="btn" onClick="{{ W3.onBuild }}"><span class="ms">auto_awesome</span>{{ W3.buildLbl }}</button></div></sc-if>
+    <sc-if value="{{ W3.post }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">lock</span>Сбор отметок закрыт. Отметки и их статусы — на шаге «Разбор».</div></sc-if>
+    <sc-if value="{{ W3.col }}" hint-placeholder-val="{{ false }}"><div class="card tw" style="padding:0">
+      <div class="row" style="padding:20px 24px 12px;flex-wrap:wrap"><h2 class="ct">Отметки наставников</h2><span class="bd b-v"><span class="ms">visibility</span>Причины видите только вы</span><div style="flex-basis:100%;height:0"></div><div class="seg"><sc-for list="{{ MT.stSeg }}" as="o" hint-placeholder-count="4"><span class="{{ o.cls }}" onClick="{{ o.on }}">{{ o.t }}</span></sc-for></div><div class="seg"><sc-for list="{{ MT.roomSeg }}" as="o" hint-placeholder-count="4"><span class="{{ o.cls }}" onClick="{{ o.on }}">{{ o.t }}</span></sc-for></div></div>
+      <sc-if value="{{ MT.teamF }}" hint-placeholder-val="{{ false }}"><div class="row" style="padding:0 24px 12px"><span class="chip">Команда: {{ MT.teamF }}</span><button class="lnk" onClick="{{ MT.clearTeam }}">Сбросить фильтр</button></div></sc-if>
+      <div class="tr th" style="grid-template-columns:minmax(0,1fr) 130px 60px 110px minmax(0,.8fr) 120px 250px"><span>Команда</span><span>Наставник</span><span>Ауд.</span><span>Время</span><span>Причина</span><span>Статус</span><span></span></div>
+      <sc-for list="{{ MT.rows }}" as="k" hint-placeholder-count="6">
+        <div class="tr" style="grid-template-columns:minmax(0,1fr) 130px 60px 110px minmax(0,.8fr) 120px 250px;font-size:15px;padding-top:8px;padding-bottom:8px"><span class="b">{{ k.team }}</span><span>{{ k.m }}</span><span>{{ k.room }}</span><span class="m b">{{ k.tm }}</span><span>{{ k.r }}</span><span><span class="{{ k.stCls }}">{{ k.st }}</span></span><span class="row" style="gap:8px;justify-content:flex-end"><sc-if value="{{ MT.canAct }}" hint-placeholder-val="{{ true }}"><button class="{{ k.okCls }}" style="height:36px;padding:0 12px" onClick="{{ k.onOk }}">Принять</button><button class="{{ k.noCls }}" style="height:36px;padding:0 12px" onClick="{{ k.onNo }}">Отклонить</button></sc-if></span></div>
+      </sc-for>
+      <sc-if value="{{ MT.empty }}" hint-placeholder-val="{{ false }}"><div class="empty" style="padding:24px"><span class="ms">edit_calendar</span><span>Отметок нет.</span></div></sc-if>
+    </div></sc-if>
+  </sc-if>
+
+  <sc-if value="{{ W4.on }}" hint-placeholder-val="{{ false }}">
+    <div class="row" style="justify-content:flex-end;gap:8px;flex-wrap:wrap"><sc-if value="{{ W4.pubNote }}" hint-placeholder-val="{{ false }}"><span class="cap">{{ W4.pubNote }}</span></sc-if><sc-if value="{{ W4.draft }}" hint-placeholder-val="{{ true }}"><button class="btn2" onClick="{{ W4.onRebuild }}"><span class="ms">refresh</span>{{ W4.rebuildLbl }}</button><button class="{{ W4.pubCls }}" onClick="{{ W4.onPub }}"><span class="ms">public</span>Опубликовать</button></sc-if></div>
+    <sc-if value="{{ W4.pubBn }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n" style="align-items:center"><span class="ms">lock</span>Расписание опубликовано. Изменить слот команды можно на шаге 5.</div></sc-if>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+      <div class="card"><div class="mt"><span class="cap">Поставлено</span><span class="ms g">event_available</span></div><div class="mv">{{ W4.placedN }}<small>из {{ W4.total }}</small></div><div class="bar" style="margin-top:12px"><i style="width:{{ W4.ppct }}"></i></div></div>
+      <div class="card"><div class="mt"><span class="cap">Не поставлено</span><span class="ms" style="color:{{ W4.unColor }}">event_busy</span></div><div class="mv" style="color:{{ W4.unColor }}">{{ W4.unN }}</div></div>
+      <div class="card"><div class="mt"><span class="cap">Отметки на проверке</span><span class="ms g">rule</span></div><div class="mv">{{ W4.pendN }}<small>из {{ W4.marksN }}</small></div></div>
+      <div class="card col" style="gap:6px"><div class="mt"><span class="cap">Seed</span><span class="ms g">casino</span></div><input class="inp m b" style="font-size:22px;margin-top:6px;min-height:44px" value="{{ W4.seed }}" onChange="{{ W4.onSeedIn }}" disabled="{{ W4.pubLock }}"><sc-if value="{{ W4.draft }}" hint-placeholder-val="{{ true }}"><button class="lnk" style="align-self:flex-start" onClick="{{ W4.onSeed }}">{{ W4.seedLbl }}</button></sc-if></div>
+    </div>
+    <h2 class="ct" style="font-size:24px">Что не сложилось</h2>
+    <sc-if value="{{ W4.allOk }}" hint-placeholder-val="{{ false }}"><div class="bn bn-g" style="align-items:center"><span class="ms">check_circle</span>Все команды поставлены.</div></sc-if>
+    <sc-for list="{{ W4.shortage }}" as="p" hint-placeholder-count="1">
+      <div class="inner err" style="background:#fff;gap:12px">
+        <div class="row" style="gap:8px;flex-wrap:wrap"><span class="bd b-r">Не поставлено {{ p.n }}</span><span class="cap">{{ p.room }}</span></div>
+        <span class="b" style="font-size:17px">{{ p.reason }}</span>
+        <span class="cap">{{ p.detail }}</span>
+        <div class="col" style="gap:4px"><sc-for list="{{ p.teams }}" as="t" hint-placeholder-count="2"><span style="font-size:14px">• {{ t.name }} · {{ t.mentor }}</span></sc-for></div>
+        <div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn" style="height:40px" onClick="{{ p.onAdd }}"><span class="ms">add</span>Добавить слоты</button><button class="btn2" style="height:40px" onClick="{{ p.onShrink }}"><span class="ms">free_breakfast</span>Сократить кофебрейк</button></div>
+      </div>
+    </sc-for>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+      <sc-for list="{{ W4.blocks }}" as="p" hint-placeholder-count="0">
+        <div class="inner err" style="background:#fff;gap:10px">
+          <div class="row" style="gap:8px"><span class="bd b-r">Не поставлена</span><span class="cap">{{ p.room }}</span></div>
+          <span class="b" style="line-height:1.3">{{ p.team }}</span>
+          <span class="cap">{{ p.mentor }}</span>
+          <span style="font-size:14px;line-height:1.5">{{ p.reason }}</span>
+          <div class="row" style="gap:8px;flex-wrap:wrap"><sc-if value="{{ p.hasMark }}" hint-placeholder-val="{{ false }}"><button class="btn2" style="height:40px" onClick="{{ p.onShow }}">Показать отметку</button></sc-if><button class="btn2" style="height:40px" onClick="{{ p.onPlace }}">{{ p.placeLbl }}</button></div>
+        </div>
+      </sc-for>
+    </div>
+    <sc-for list="{{ W4.warns }}" as="w" hint-placeholder-count="0"><div class="bn bn-w"><span class="ms">warning</span>{{ w.t }}</div></sc-for>
+    <div class="card tw" style="padding:0">
+      <div class="row" style="padding:20px 24px 12px;flex-wrap:wrap"><h2 class="ct">Отметки наставников</h2><span class="bd b-v"><span class="ms">visibility</span>Причины видите только вы</span><div style="flex-basis:100%;height:0"></div><div class="seg"><sc-for list="{{ MT.stSeg }}" as="o" hint-placeholder-count="4"><span class="{{ o.cls }}" onClick="{{ o.on }}">{{ o.t }}</span></sc-for></div><div class="seg"><sc-for list="{{ MT.roomSeg }}" as="o" hint-placeholder-count="4"><span class="{{ o.cls }}" onClick="{{ o.on }}">{{ o.t }}</span></sc-for></div></div>
+      <sc-if value="{{ MT.teamF }}" hint-placeholder-val="{{ false }}"><div class="row" style="padding:0 24px 12px"><span class="chip">Команда: {{ MT.teamF }}</span><button class="lnk" onClick="{{ MT.clearTeam }}">Сбросить фильтр</button></div></sc-if>
+      <div class="tr th" style="grid-template-columns:minmax(0,1fr) 130px 60px 110px minmax(0,.8fr) 120px 250px"><span>Команда</span><span>Наставник</span><span>Ауд.</span><span>Время</span><span>Причина</span><span>Статус</span><span></span></div>
+      <sc-for list="{{ MT.rows }}" as="k" hint-placeholder-count="6">
+        <div class="tr" style="grid-template-columns:minmax(0,1fr) 130px 60px 110px minmax(0,.8fr) 120px 250px;font-size:15px;padding-top:8px;padding-bottom:8px"><span class="b">{{ k.team }}</span><span>{{ k.m }}</span><span>{{ k.room }}</span><span class="m b">{{ k.tm }}</span><span>{{ k.r }}</span><span><span class="{{ k.stCls }}">{{ k.st }}</span></span><span class="row" style="gap:8px;justify-content:flex-end"><sc-if value="{{ MT.canAct }}" hint-placeholder-val="{{ true }}"><button class="{{ k.okCls }}" style="height:36px;padding:0 12px" onClick="{{ k.onOk }}">Принять</button><button class="{{ k.noCls }}" style="height:36px;padding:0 12px" onClick="{{ k.onNo }}">Отклонить</button></sc-if></span></div>
+      </sc-for>
+      <sc-if value="{{ MT.empty }}" hint-placeholder-val="{{ false }}"><div class="empty" style="padding:24px"><span class="ms">edit_calendar</span><span>Отметок нет.</span></div></sc-if>
+    </div>
+    <div class="card col" style="gap:16px">
+      <div class="row" style="flex-wrap:wrap"><h2 class="ct sp">Матрица «команды × слоты»</h2><div class="seg"><sc-for list="{{ W4.mxSeg }}" as="o" hint-placeholder-count="3"><span class="{{ o.cls }}" onClick="{{ o.on }}">{{ o.t }}</span></sc-for></div></div>
+      <div class="row" style="gap:16px;flex-wrap:wrap"><span class="cap row" style="gap:6px"><span class="cb on"><span class="ms">check</span></span>Слот команды</span><span class="cap row" style="gap:6px"><span class="cb on"><span class="ms">push_pin</span></span>Закреплена</span><span class="cap row" style="gap:6px"><span class="ex" style="width:20px;height:20px;border-radius:4px"></span>Отметка наставника</span><span class="cap row" style="gap:6px"><span style="width:20px;height:20px;background:#e9edeb;border-radius:4px"></span>Кофебрейк</span><span class="cap row" style="gap:6px"><span style="width:20px;height:20px;background:#fff4e0;border:1px solid #8a5a00;border-radius:4px"></span>Конфликт</span></div>
+      <div class="mxw" style="border:1px solid #bccaba;border-radius:8px;overflow:hidden">
+        <div style="display:grid;grid-template-columns:{{ W4.mxCols }};border-bottom:1px solid #bccaba;background:#f7fafc"><span class="cap b" style="padding:8px 12px">Команда</span><sc-for list="{{ W4.mxHead }}" as="h" hint-placeholder-count="20"><span class="cap b" style="padding:8px 0;text-align:center;font-size:11px">{{ h }}</span></sc-for></div>
+        <sc-for list="{{ W4.mx }}" as="r" hint-placeholder-count="17">
+          <div style="display:grid;grid-template-columns:{{ W4.mxCols }};border-bottom:1px solid #e1e8e3;background:{{ r.bg }}">
+            <span class="{{ r.nameCls }}" style="padding:8px 12px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="{{ r.name }}">{{ r.name }}</span>
+            <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="20"><span class="mxc" style="background:{{ c.bg }};cursor:{{ c.cur }}" onClick="{{ c.click }}"><sc-if value="{{ c.own }}" hint-placeholder-val="{{ false }}"><span class="cb on"><span class="ms">{{ c.ic }}</span></span></sc-if><sc-if value="{{ c.mk }}" hint-placeholder-val="{{ false }}"><span class="ex" style="width:100%;height:100%;border-radius:4px"></span></sc-if></span></sc-for>
+          </div>
+        </sc-for>
+      </div>
+      <span class="cap">Нажмите на ячейку: «Поставить сюда», «Закрепить» или «Снять». Строки не поставленных команд стоят последними и выделены красным.</span>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ W5.on }}" hint-placeholder-val="{{ false }}">
+    <sc-if value="{{ W5.draft }}" hint-placeholder-val="{{ false }}">
+      <div class="card col" style="gap:16px;max-width:760px">
+        <h2 class="ct">Публикация</h2>
+        <span style="line-height:1.5">{{ W5.sum }}</span>
+        <sc-if value="{{ W5.blockT }}" hint-placeholder-val="{{ false }}"><div class="bn bn-r"><span class="ms">error</span>{{ W5.blockT }}</div></sc-if>
+        <div class="row"><button class="btn2" onClick="{{ W5.onBack }}">К разбору</button><span class="sp"></span><button class="{{ W5.pubCls }}" onClick="{{ W5.onPub }}"><span class="ms">public</span>Опубликовать</button></div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ W5.pub }}" hint-placeholder-val="{{ false }}">
+      <div class="row" style="justify-content:flex-end;gap:8px"><button class="btn2" onClick="{{ onPrint }}"><span class="ms">print</span>{{ printLbl }}</button><button class="{{ EV.gradeCls }}" onClick="{{ onGrade }}">{{ EV.gradeLbl }}</button></div>
+      <div class="bn bn-n" style="align-items:center"><span class="ms">lock</span>Сетка заблокирована. Можно изменить слот команды или поставить команду в свободный слот.</div>
+      <div class="card tw" style="padding:0">
+        <div class="row" style="padding:16px 24px;flex-wrap:wrap"><div class="seg"><sc-for list="{{ W5.seg }}" as="o" hint-placeholder-count="3"><span class="{{ o.cls }}" onClick="{{ o.on }}">{{ o.t }}</span></sc-for></div><span class="cap sp">{{ W5.info }}</span></div>
+        <div class="tr th" style="grid-template-columns:56px 140px minmax(0,1fr) 180px 240px"><span>№</span><span>Время</span><span>Команда</span><span>Наставник</span><span></span></div>
+        <sc-for list="{{ W5.rows }}" as="r" hint-placeholder-count="10">
+          <div class="tr" style="grid-template-columns:56px 140px minmax(0,1fr) 180px 240px;padding-top:8px;padding-bottom:8px"><span class="num">{{ r.n }}</span><span class="m b">{{ r.tm }}</span><span class="row" style="gap:8px;flex-wrap:wrap"><span class="{{ r.nameCls }}">{{ r.team }}</span><sc-if value="{{ r.pin }}" hint-placeholder-val="{{ false }}"><span class="ms" style="font-size:18px;color:#006d30">push_pin</span></sc-if><sc-if value="{{ r.ch }}" hint-placeholder-val="{{ false }}"><span class="bd b-w">Изменён</span></sc-if></span><span>{{ r.m }}</span><span style="justify-self:end"><sc-if value="{{ r.free }}" hint-placeholder-val="{{ false }}"><button class="btn2" style="height:36px;padding:0 12px" onClick="{{ r.onAdd }}"><span class="ms">add</span>Добавить команду в слот</button></sc-if><sc-if value="{{ r.busy }}" hint-placeholder-val="{{ true }}"><button class="lnk" onClick="{{ r.onChg }}">Изменить слот</button></sc-if></span></div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </sc-if>
+</sc-if>
+</div></div>
+</div>
+<sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}"><div class="tabs" style="grid-template-columns:{{ tabCols }};position:sticky;bottom:0;z-index:5"><sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4"><div class="{{ t.cls }}" onClick="{{ t.on }}"><span class="ms">{{ t.ic }}</span>{{ t.t }}</div></sc-for></div></sc-if>
+<sc-if value="{{ D.on }}" hint-placeholder-val="{{ false }}"><div class="{{ D.ovl }}" onClick="{{ D.close }}"><div class="{{ D.box }}" onClick="{{ D.stop }}">
+<sc-if value="{{ D.pull }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:24px">Подтянуть команды?</h2>
+  <div class="row"><span class="bd b-g">Добавим {{ DP.addN }}</span><span class="bd b-n">Пропустим {{ DP.skipN }}</span></div>
+  <sc-if value="{{ DP.noNew }}" hint-placeholder-val="{{ false }}"><div class="bn bn-n"><span class="ms">info</span>Новых команд по этому правилу нет. Ручные изменения не сбрасываются.</div></sc-if>
+  <sc-if value="{{ DP.hasSkip }}" hint-placeholder-val="{{ false }}"><div style="border:1px solid #bccaba;border-radius:8px;overflow:auto;max-height:320px">
+    <div class="tr th" style="grid-template-columns:minmax(0,1fr) 230px;padding:10px 16px"><span>Пропущена</span><span>Причина</span></div>
+    <sc-for list="{{ DP.skip }}" as="r" hint-placeholder-count="4"><div class="tr" style="grid-template-columns:minmax(0,1fr) 230px;padding:10px 16px;font-size:14px"><span>{{ r.n }}</span><span class="cap">{{ r.r }}</span></div></sc-for>
+  </div></sc-if>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="{{ DP.btnCls }}" onClick="{{ DP.on }}">{{ DP.btn }}</button></div>
+</sc-if>
+<sc-if value="{{ D.build }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:24px">Построить расписание?</h2>
+  <div style="line-height:1.5">Сбор отметок закроется: наставники больше не смогут менять отметки. Команды расставятся по слотам с учётом отметок «На проверке» и «Принята», seed {{ DB.seed }}.</div>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="btn" onClick="{{ DB.on }}"><span class="ms">auto_awesome</span>{{ DB.lbl }}</button></div>
+</sc-if>
+<sc-if value="{{ D.pub }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:24px">Опубликовать расписание?</h2>
+  <div style="line-height:1.5">{{ DU.text }}</div>
+  <div class="bn bn-n"><span class="ms">lock</span>Сетка и параметры будут заблокированы. Менять можно будет только слоты отдельных команд.</div>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="btn" onClick="{{ DU.on }}">{{ DU.lbl }}</button></div>
+</sc-if>
+<sc-if value="{{ D.cell }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct">{{ DC.title }}</h2>
+  <span class="cap">{{ DC.sub }}</span>
+  <sc-for list="{{ DC.notes }}" as="n" hint-placeholder-count="0"><div class="{{ n.cls }}"><span class="ms">{{ n.ic }}</span>{{ n.t }}</div></sc-for>
+  <div class="dd"><sc-for list="{{ DC.opts }}" as="o" hint-placeholder-count="1"><div class="hl" onClick="{{ o.on }}"><span class="ms">{{ o.ic }}</span>{{ o.t }}</div></sc-for></div>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Закрыть</button></div>
+</sc-if>
+<sc-if value="{{ D.swap }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:24px">Поменять местами?</h2>
+  <div style="line-height:1.5">{{ DS.text }}</div>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="btn" onClick="{{ DS.on }}">Поменять</button></div>
+</sc-if>
+<sc-if value="{{ D.addSlots }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:24px">{{ DA.title }}</h2>
+  <div style="line-height:1.5">{{ DA.text }}</div>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="{{ DA.cls }}" onClick="{{ DA.on }}">{{ DA.lbl }}</button></div>
+</sc-if>
+<sc-if value="{{ D.chg }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:24px">Изменить слот</h2>
+  <span class="b">{{ DG.team }}</span>
+  <span class="cap">Сейчас: {{ DG.cur }}</span>
+  <div><span class="lbl">Новый слот · свободные в {{ DG.room }}</span><div class="dd" style="max-height:260px;overflow:auto"><sc-for list="{{ DG.opts }}" as="o" hint-placeholder-count="2"><div class="{{ o.cls }}" onClick="{{ o.on }}"><span class="sp">{{ o.t }}</span><sc-if value="{{ o.note }}" hint-placeholder-val="{{ false }}"><span class="bd b-w">есть отметка наставника</span></sc-if></div></sc-for></div><sc-if value="{{ DG.none }}" hint-placeholder-val="{{ false }}"><span class="cap">Свободных слотов в этой аудитории нет.</span></sc-if></div>
+  <div class="bn bn-n"><span class="ms">info</span>Команда закрепится. Студенты и наставник увидят новое время с бейджем «Слот изменён организатором».</div>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="{{ DG.cls }}" onClick="{{ DG.on }}">{{ DG.lbl }}</button></div>
+</sc-if>
+<sc-if value="{{ D.addT }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:24px">Добавить команду в слот {{ DT.tm }}</h2>
+  <span class="cap">{{ DT.room }} · {{ evDate }}</span>
+  <label><span class="lbl">Команда</span><input class="inp" placeholder="Начните вводить название" value="{{ DT.q }}" onChange="{{ DT.onQ }}"></label>
+  <sc-if value="{{ DT.has }}" hint-placeholder-val="{{ false }}"><div class="dd" style="max-height:240px;overflow:auto"><sc-for list="{{ DT.res }}" as="o" hint-placeholder-count="2"><div class="{{ o.cls }}" onClick="{{ o.on }}"><span class="sp">{{ o.t }}</span><span class="cap">{{ o.sub }}</span></div></sc-for></div></sc-if>
+  <div class="bn bn-n"><span class="ms">info</span>Команда добавится в мероприятие, закрепится в этом слоте и увидит его в личном кабинете.</div>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="{{ DT.cls }}" onClick="{{ DT.on }}">{{ DT.lbl }}</button></div>
+</sc-if>
+<sc-if value="{{ D.excel }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:24px">Импорт из Excel</h2>
+  <div style="line-height:1.5">Загрузите файл .xlsx со списком команд и аудиторий.</div>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="btn" onClick="{{ DX.on }}"><span class="ms">upload_file</span>{{ DX.lbl }}</button></div>
+</sc-if>
+<sc-if value="{{ D.reg }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:22px">Записаться на «{{ DR.name }}»?</h2>
+  <span style="line-height:1.5">{{ DR.text }}</span>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="btn" onClick="{{ DR.on }}">{{ DR.lbl }}</button></div>
+</sc-if>
+<sc-if value="{{ D.sw }}" hint-placeholder-val="{{ false }}">
+  <h2 class="ct" style="font-size:22px">Перейти на «{{ DR.name }}»?</h2>
+  <span style="line-height:1.5">Запись на «{{ DR.old }}» отменится, место освободится. Вернуться можно, только если там останутся места.</span>
+  <div class="dft"><button class="btn2" onClick="{{ D.close }}">Отмена</button><button class="btn" onClick="{{ DR.onSw }}">{{ DR.swLbl }}</button></div>
+</sc-if>
+<sc-if value="{{ D.accErr }}" hint-placeholder-val="{{ false }}">
+  <div class="bn bn-r"><span class="ms">error</span>Места закончились, пока вы выбирали</div>
+  <span style="line-height:1.5">Последнее место на «{{ DR.name }}» только что занял другой студент. {{ DR.errTail }}</span>
+  <div class="dft"><button class="btn" onClick="{{ D.close }}">Понятно</button></div>
+</sc-if>
+</div></div></sc-if>
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><div class="toastx"><div class="{{ toast.cls }}"><span class="ms">{{ toast.ic }}</span><span>{{ toast.msg }}</span></div></div></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = this.init();
+  P = {
+    stu: { name: 'Иванов Максим', sub: 'Группа 8К41', ini: 'И', stu: true },
+    petrov: { name: 'Петров Андрей', sub: 'Наставник · Отделение ИТ', ini: 'П', mentor: 'Петров А. С.' },
+    sokolova: { name: 'Соколова Елена', sub: 'Наставник · Отделение ИТ', ini: 'С', mentor: 'Соколова Е. В.' },
+    org: { name: 'Петрова Анна', sub: 'Организатор · Отделение ИТ', ini: 'П', mentor: null, org: true }
+  };
+  init() {
+    return { role: 'stu', now: 'before', net: 'ok', panel: true, route: { n: 'lk' }, loading: true, toast: null, dlg: null, busy: {}, draft: null, f: this.f0(), d: this.data(), forceW: null, w: typeof window !== 'undefined' ? window.innerWidth : 1440 };
+  }
+  f0() { return { q: '', roomF: 'all', mSt: 'all', mRoom: 'all', mTeam: null, mxRoom: '301', pubRoom: '301', hl: null, hlTeam: null, openDir: { be: true }, openTried: false }; }
+  data() {
+    const R301 = ['Навигатор по стипендиям', 'Система бронирования аудиторий', 'Автоматизированная система графиков', 'Трекер посещаемости занятий', 'Платформа поиска стажировок', 'Цифровой двойник лаборатории', 'Поиск соседей по общежитию', 'Агрегатор научных семинаров', 'Бот расписания столовой', 'Умный кампус', 'Обмен конспектами', 'Журнал практик', 'Сервис заказа справок', 'Каталог студклубов', 'Напоминания о дедлайнах', 'Карта Wi-Fi кампуса', 'Учёт читательских билетов'];
+    const R303 = ['Портфолио выпускника', 'Электронная очередь в деканат', 'Чат-бот приёмной комиссии', 'Мобильный гид по кампусу', 'Сервис обмена учебниками', 'Карта доступной среды', 'Учёт лабораторного оборудования', 'Платформа волонтёрства', 'Голосования студсовета', 'Трекер спортивных секций', 'Квиз для первокурсников', 'Бронирование переговорных', 'Сканер посещаемости', 'Помощник куратора', 'Маркет студенческих услуг', 'Планировщик курсовых', 'Бот технической поддержки'];
+    const R305 = ['Анализ нагрузки преподавателей', 'Поиск попутчиков', 'Онлайн-библиотека методичек', 'Конструктор расписания экзаменов', 'Лента новостей института', 'Трекер привычек студента', 'Сервис аренды инвентаря', 'Распознавание конспектов', 'Помощник по английскому', 'Тренажёр собеседований', 'Мониторинг аудиторий', 'Чат для научных групп', 'Учёт часов практики', 'Онлайн-приёмная ректора', 'Карта столовых', 'Бот для иностранных студентов'];
+    const M = { '301': ['Орлов И. А.', 'Белова И. С.', 'Григорьев П. Л.'], '303': ['Козлов Д. В.', 'Смирнова Е. И.', 'Новикова А. М.'], '305': ['Лебедева Н. П.', 'Фёдоров К. Р.'] };
+    const SPEC = { 'Умный кампус': 'Петров А. С.', 'Электронная очередь в деканат': 'Петров А. С.', 'Анализ нагрузки преподавателей': 'Соколова Е. В.', 'Поиск попутчиков': 'Соколова Е. В.', 'Онлайн-библиотека методичек': 'Ковалёва Н. А.' };
+    const dates = ['2026-02-03', '2026-02-10', '2026-02-17', '2026-02-24', '2026-03-03', '2026-03-12'];
+    const teams = []; let i = 0;
+    const add = (list, room) => list.forEach((n, j) => { i++; teams.push({ id: 't' + i, name: n + ' · весна 2026', mentor: SPEC[n] || M[room][j % M[room].length], status: 'В работе', start: dates[i % 6], home: (n === 'Навигатор по стипендиям' || n === 'Портфолио выпускника') ? null : room, inEvent: false, room: null }); });
+    add(R301, '301'); add(R303, '303'); add(R305, '305');
+    const SK = [['Конструктор резюме', 'Заморожен', '2026-02-10'], ['Квест по истории ТПУ', 'Заморожен', '2026-03-03'], ['Виртуальный музей', 'Заморожен', '2026-02-17'], ['Сервис буккроссинга', 'Заморожен', '2026-02-24'], ['Парковка кампуса', 'Закрыт', '2026-02-03'], ['Студенческий таймбанк', 'Закрыт', '2026-03-12'], ['Онлайн-запись в спортзал', 'В работе', '2025-09-15', 1], ['Бот для старост', 'В работе', '2025-10-01', 1], ['Медиатека института', 'В работе', '2025-09-22', 1], ['Обратная связь по курсам', 'В работе', '2025-11-10', 1], ['Трекер олимпиад', 'В работе', '2025-12-01', 1], ['Платформа менторства', 'В работе', '2025-09-08', 1]];
+    SK.forEach(([n, st, dt, au], j) => { i++; teams.push({ id: 't' + i, name: n + (au ? ' · осень 2025' : ' · весна 2026'), mentor: ['Орлов И. А.', 'Козлов Д. В.', 'Лебедева Н. П.'][j % 3], status: st, start: dt, home: null, inEvent: false, room: null }); });
+    const MF = ['Илья', 'Артём', 'Кирилл', 'Егор', 'Тимур', 'Глеб', 'Роман', 'Денис', 'Олег', 'Марк', 'Лев'], ML = ['Сафонов', 'Кузьмин', 'Захаров', 'Борисов', 'Морозов', 'Волков', 'Титов', 'Егоров', 'Павлов', 'Никитин', 'Соловьёв'];
+    const FF = ['Дарья', 'Лейла', 'Полина', 'Софья', 'Алина', 'Вера', 'Ксения', 'Мария', 'Анна', 'Ева', 'Яна'], FL = ['Кузнецова', 'Ахметова', 'Миронова', 'Голубева', 'Орлова', 'Зайцева', 'Карпова', 'Белякова', 'Ершова', 'Ильина', 'Тихонова'];
+    let k = 0;
+    const ppl = n => Array.from({ length: n }, () => { k++; const fem = k % 2 === 0; const name = fem ? FL[(k * 7) % 11] + ' ' + FF[(k * 3) % 11] : ML[(k * 5) % 11] + ' ' + MF[(k * 4) % 11]; return { name, g: ['8К41', '8К42', '8К31', '8К32', '8К21'][k % 5], d: ((k % 17) + 1) + ' октября' }; });
+    const dirs = [
+      { id: 'be', name: 'Бэкенд', room: '301', tr: 'Орлов И. А., Белова И. С.', cap: 20, people: ppl(14) },
+      { id: 'fe', name: 'Фронтенд', room: '303', tr: 'Козлов Д. В.', cap: 20, people: ppl(19) },
+      { id: 'sa', name: 'Системный анализ', room: '305', tr: 'Лебедева Н. П.', cap: null, people: ppl(8) }
+    ];
+    return { teams, stuTeam: teams.find(t => t.name.startsWith('Умный кампус')).id, rule: { st: { 'В работе': true, 'Заморожен': false, 'Закрыт': false }, from: '2026-02-01', to: '2026-06-30' }, grid: { dur: '15', gap: '5', br: { '301': [750, 780], '303': [720, 750], '305': [780, 810] } }, sch: 'none', step: 0, deadline: (this.props && this.props.deadline) || '17.10.2026, 18:00', marks: [], seeded: false, seed: 183726, place: {}, pins: {}, unpl: [], pubSnap: null, grading: false, acc: { st: 'open', mine: null, dirs }, fk: 0 };
+  }
+  seedMarks(d) {
+    const MK = [['Бот расписания столовой', 960, 1000, 'Экзамен в другом вузе'], ['Трекер посещаемости занятий', 600, 620, 'Врач'], ['Платформа поиска стажировок', 900, 920, 'Олимпиада'], ['Каталог студклубов', 780, 820, 'Конференция'], ['Журнал практик', 640, 660, 'Врач'], ['Карта доступной среды', 970, 1010, 'Врач'], ['Голосования студсовета', 600, 620, 'Экзамен в другом вузе'], ['Сканер посещаемости', 750, 790, 'Олимпиада'], ['Помощник куратора', 890, 910, 'Практика на предприятии'], ['Онлайн-приёмная ректора', 950, 1010, 'Экзамен в другом вузе'], ['Тренажёр собеседований', 600, 640, 'Врач'], ['Карта столовых', 810, 830, 'Соревнования']];
+    const out = [];
+    MK.forEach(([n, a, b, r], i) => { const t = d.teams.find(x => x.name.startsWith(n + ' ·')); if (t && t.inEvent) out.push({ id: 's' + i, team: t.id, a, b, r, st: 'r', author: t.mentor }); });
+    return out;
+  }
+  fm(m) { return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
+  pm(s) { const x = /^(\d{1,2}):(\d{2})/.exec(s || ''); return x ? +x[1] * 60 + +x[2] : null; }
+  pl(n, a, b, c) { n = Math.abs(n) % 100; const n1 = n % 10; if (n > 10 && n < 20) return c; if (n1 > 1 && n1 < 5) return b; if (n1 === 1) return a; return c; }
+  num(id) { return +id.slice(1); }
+  dmy(s) { const p = (s || '').split('-'); return p.length === 3 ? p[2] + '.' + p[1] + '.' + p[0] : s; }
+  dlTxt(v) { const M = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']; const x = /^(\d{1,2})\.(\d{1,2})\.(\d{4}),?\s*(\d{1,2}:\d{2})$/.exec((v || '').trim()); return x && M[+x[2] - 1] ? (+x[1]) + ' ' + M[+x[2] - 1] + ', ' + x[4] : v; }
+  gen(g, room) { const [b0, b1] = g.br[room]; const d = +g.dur, p = +g.gap; const r = []; if (!(d > 0) || !(p >= 0)) return r; let t = 600, k = 0; while (t + d <= 1020 && k++ < 600) { if (t < b1 && t + d > b0) { t = b1; continue; } r.push(t); t += d + p; } return r; }
+  rng(seed) { let a = seed >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  shuffle(arr, r) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  nIn(d, r) { return d.teams.filter(t => t.inEvent && t.room === r).length; }
+  limOf(d, r) { return Math.max(0, this.gen(d.grid, r).length - this.nIn(d, r)) * ((+d.grid.dur || 0) + (+d.grid.gap || 0)); }
+  usedOf(d, team, marks) { const t = d.teams.find(x => x.id === team); if (!t || !t.room) return 0; const dur = +d.grid.dur || 0, st = dur + (+d.grid.gap || 0); const ms = marks.filter(m => m.team === team); return this.gen(d.grid, t.room).filter(x => ms.some(m => m.a < x + dur && m.b > x)).length * st; }
+  why(d, t) { if (!d.rule.st[t.status]) return 'Статус «' + t.status + '» не допущен'; if (t.start < d.rule.from || t.start > d.rule.to) return 'Начала работу вне семестра'; return null; }
+  openReasons(d) {
+    const ev = d.teams.filter(t => t.inEvent), out = [];
+    if (!ev.length) out.push({ t: 'В мероприятии нет команд', step: 0, lt: 'к шагу 1' });
+    const nr = ev.filter(t => !t.room).length;
+    if (nr) out.push({ t: nr + ' ' + this.pl(nr, 'команда', 'команды', 'команд') + ' без аудитории', step: 0, lt: 'к шагу 1' });
+    ['301', '303', '305'].forEach(r => { const k = this.gen(d.grid, r).length - this.nIn(d, r); if (k < 0) out.push({ t: 'в ауд. ' + r + ' не хватает ' + (-k) + ' ' + this.pl(-k, 'слота', 'слотов', 'слотов'), step: 1, lt: 'к шагу 2' }); });
+    return out;
+  }
+  build(d, mode) {
+    const g = d.grid, dur = +g.dur, fm = this.fm;
+    const teams = d.teams.filter(t => t.inEvent && t.room).sort((a, b) => this.num(a.id) - this.num(b.id));
+    const r = this.rng(+d.seed || 0); const order = this.shuffle(teams.map(t => t.id), r);
+    const byId = Object.fromEntries(teams.map(t => [t.id, t]));
+    const act = d.marks.filter(m => m.st !== 'x' && byId[m.team]);
+    const cur = d.place, place = {}, unpl = [], busy = [];
+    for (const room of ['301', '303', '305']) {
+      const slots = this.gen(g, room), rt = order.filter(id => byId[id].room === room);
+      const match = {}, locked = new Set();
+      for (const id of rt) { const c = cur[id]; if (c && c.room === room && slots.includes(c.t) && (d.pins[id] || mode === 'fill') && match[c.t] === undefined) { match[c.t] = id; if (d.pins[id]) locked.add(c.t); } }
+      const conf = (id, s) => busy.filter(b => b.mentor === byId[id].mentor && b.room !== room && s < b.t + dur && s + dur > b.t);
+      const mk = id => act.filter(m => m.team === id);
+      const al = {}; rt.forEach(id => { al[id] = slots.filter(s => !locked.has(s) && !mk(id).some(m => m.a < s + dur && m.b > s) && !conf(id, s).length); });
+      const aug = (id, vis) => { for (const s of al[id]) { if (vis.has(s)) continue; vis.add(s); const o = match[s]; if (o === undefined || (!locked.has(s) && aug(o, vis))) { match[s] = id; return true; } } return false; };
+      const placed = new Set(Object.values(match));
+      rt.forEach(id => { if (!placed.has(id)) aug(id, new Set()); });
+      const inM = new Set(Object.values(match));
+      Object.keys(match).forEach(k => { const id = match[k]; place[id] = { room, t: +k }; busy.push({ mentor: byId[id].mentor, t: +k, room, id }); });
+      const free = slots.filter(s => match[s] === undefined);
+      rt.filter(id => !inM.has(id)).forEach(id => {
+        const why = [];
+        const ms = mk(id).filter(m => free.some(s => m.a < s + dur && m.b > s));
+        if (ms.length) why.push('наставник отметил ' + ms.map(m => fm(m.a) + '–' + fm(m.b) + ' («' + (m.st === 'a' ? 'Принята' : 'На проверке') + '»)').join(', '));
+        const cf = [...new Set(free.flatMap(s => conf(id, s)).map(b => fm(b.t) + ' в ауд. ' + b.room))];
+        if (cf.length) why.push('в это время наставник с другой командой: ' + cf.join(', '));
+        unpl.push({ id, room, text: free.length ? 'Свободны ' + free.map(fm).join(', ') + ', но ' + (why.join('; ') || 'они заняты закреплёнными командами') + '.' : 'Свободных слотов нет.' });
+      });
+    }
+    d.place = place; d.unpl = unpl;
+    Object.keys(d.pins).forEach(id => { if (!place[id]) delete d.pins[id]; });
+  }
+  reconcile(d) { if (d.sch === 'draft') this.build(d, 'fill'); }
+  addPlan(d, r) {
+    const g = d.grid, dur = +g.dur, st = dur + (+g.gap); const [b0, b1] = g.br[r];
+    const before = this.gen(g, r); const need = Math.max(0, this.nIn(d, r) - before.length);
+    let t = 600, s0 = null; while (t + dur <= 1020) { if (t < b1 && t + dur > b0) { s0 = t; break; } t += st; }
+    if (s0 == null || need === 0) return { can: false, need };
+    const nb0 = Math.min(s0 + need * st, b1);
+    const after = this.gen({ ...g, br: { ...g.br, [r]: [nb0, b1] } }, r);
+    const added = after.filter(x => !before.includes(x));
+    return { can: added.length > 0, need, nb0, b1, added };
+  }
+
+  componentDidMount() {
+    this._rs = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this._rs);
+    this._rs(); requestAnimationFrame(this._rs); setTimeout(this._rs, 300);
+    window.__proto = this;
+    window.__scn = (k, extra) => {
+      const d = this.data();
+      d.teams.forEach(t => { if (!this.why(d, t)) { t.inEvent = true; t.room = t.home; } });
+      d.teams.find(t => t.name.startsWith('Навигатор')).room = '301'; d.teams.find(t => t.name.startsWith('Портфолио')).room = '303';
+      d.sch = 'setup'; d.step = 1;
+      if (k >= 2) { d.sch = 'collect'; d.step = 2; d.seeded = true; d.marks = this.seedMarks(d); }
+      if (k >= 3) { d.grid.br['303'] = [720, 830]; d.sch = 'draft'; d.step = 3; this.build(d, 'full'); }
+      if (k >= 4) { d.grid.br['303'][0] = this.addPlan(d, '303').nb0; this.build(d, 'fill'); d.sch = 'pub'; d.pubSnap = JSON.parse(JSON.stringify(d.place)); d.step = 4; }
+      this.setState({ d, loading: false, dlg: null, ...(extra || {}) });
+    };
+    if (this.props.embed) { this.setState({ role: this.props.role || 'stu', now: this.props.now || 'before', net: this.props.net || 'ok' }); setTimeout(() => this.go(this.props.page || 'lk', this.props.pageParams || {}), 0); } else this.go('lk');
+    this.sync();
+  }
+  componentDidUpdate(pp) {
+    const p = this.props; if (!p.embed) return;
+    if (p.resetKey !== pp.resetKey) { this.setState({ ...this.init(), role: p.role || 'stu', now: p.now || 'before', net: p.net || 'ok' }); setTimeout(() => this.go(p.page || 'lk'), 0); return; }
+    if (p.role !== pp.role || p.pageKey !== pp.pageKey) { this.setState({ role: p.role || 'stu' }); setTimeout(() => this.go(p.page || 'lk', p.pageParams || {}), 0); }
+    if (p.now && p.now !== pp.now) this.setState({ now: p.now });
+    if (p.net && p.net !== pp.net) this.setState({ net: p.net });
+    this.sync();
+  }
+  sync() {
+    if (!this.props.embed || !this.props.onSync) return;
+    const s = JSON.stringify(this.summary()); if (s === this._last) return; this._last = s; this.props.onSync(JSON.parse(s));
+  }
+  summary() {
+    const d = this.state.d, dur = +d.grid.dur || 0, ev = d.teams.filter(t => t.inEvent), occ = {};
+    ev.forEach(t => { const p = d.place[t.id]; if (p) (occ[p.room] = occ[p.room] || []).push(p.t); });
+    Object.values(occ).forEach(a => a.sort((x, y) => x - y));
+    const num = id => { const p = d.place[id]; return p ? occ[p.room].indexOf(p.t) + 1 : null; };
+    const tm = t => this.fm(t) + '–' + this.fm(t + dur);
+    const s = ev.find(t => t.id === d.stuTeam); let stu = null;
+    if (s && s.room && ['collect', 'draft', 'pub'].includes(d.sch)) {
+      const p = d.place[s.id];
+      if (d.sch === 'pub' && p) { const o = d.pubSnap && d.pubSnap[s.id], ch = !o || o.room !== p.room || o.t !== p.t; stu = { pub: true, team: s.name, time: tm(p.t), num: num(s.id), room: p.room, ch, was: o && ch ? tm(o.t) : '' }; }
+      else stu = { pub: false, team: s.name, room: s.room };
+    }
+    return { sch: d.sch, teams: ev.map(t => { const p = d.place[t.id]; return { id: t.id, name: t.name, room: p ? p.room : t.room, t: p ? p.t : null }; }), stu };
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._rs); }
+  setD(fn) { const d = JSON.parse(JSON.stringify(this.state.d)); fn(d); this.setState({ d }); return d; }
+  setF(o) { this.setState(s => ({ f: { ...s.f, ...o } })); }
+  dlg(x) { this.setState({ dlg: x }); }
+  toast(msg, kind) { this.setState({ toast: { msg, kind: kind || 'ok' } }); clearTimeout(this._tt); this._tt = setTimeout(() => this.setState({ toast: null }), 3200); }
+  act(key, fn, msg, o = {}) {
+    if (this.state.busy[key] === 's') return;
+    this.setState(s => ({ busy: { ...s.busy, [key]: 's' } }));
+    setTimeout(() => {
+      const net = this.state.net;
+      if (net !== 'ok') {
+        this.setState(s => ({ busy: { ...s.busy, [key]: null } }));
+        const m = net === 'off' ? (o.offMsg || 'Нет связи. Изменения не сохранены. Проверьте интернет и повторите.') : 'Не удалось сохранить: ошибка сервера. Повторите попытку.';
+        this.toast(m, 'err'); if (o.onFail) o.onFail(m); return;
+      }
+      fn();
+      this.setState(s => ({ busy: { ...s.busy, [key]: 'ok' } }));
+      if (msg) this.toast(msg);
+      setTimeout(() => this.setState(s => ({ busy: { ...s.busy, [key]: null } })), 1500);
+    }, o.ms || 600);
+  }
+  lb(key, base, sv, ok) { const b = this.state.busy[key]; return b === 's' ? (sv || 'Сохраняем…') : b === 'ok' ? (ok || 'Сохранено') : base; }
+  go(n, p = {}) {
+    if (this.props.embed && (n.indexOf('x:') === 0 || n === 'events' || n === 'event' || n === 'lk')) { if (this.props.onNav) this.props.onNav(n.replace('x:', ''), p); return; }
+    const draft = n === 'marks' ? this.mkDraft(p.team) : null;
+    this.setState({ route: { ...p, n }, loading: true, dlg: null, draft });
+    clearTimeout(this._lt); this._lt = setTimeout(() => this.setState({ loading: false }), 450);
+    try { window.scrollTo(0, 0); } catch (e) {}
+  }
+  mkDraft(team) { return { team, marks: this.state.d.marks.filter(m => m.team === team).map(m => ({ ...m })), dirty: false, form: { a: '', b: '', r: '' }, err: {}, saveErr: null }; }
+  setRole(r) { this.setState({ role: r }); this.go(this.state.route.n, this.state.route); }
+  reset() { const keep = { forceW: this.state.forceW, w: this.state.w, panel: this.state.panel }; this.setState({ ...this.init(), ...keep }); this.go('lk'); setTimeout(() => this.toast('Демо сброшено к исходным данным', 'info'), 50); }
+  fake(d) { d.fk = (d.fk || 0) + 1; const N = ['Громов Савелий', 'Лаптева Ника', 'Чернов Арсений', 'Власова Мила', 'Комаров Святослав', 'Рябова Злата', 'Фомин Ярослав', 'Субботина Варвара']; return { name: N[d.fk % N.length], g: '8К' + (20 + d.fk % 25), d: '18 октября' }; }
+  simTaken() {
+    const s = this.state, d = s.d, dl = s.dlg, L = x => x.cap == null ? null : x.cap - x.people.length;
+    let tg = dl && (dl.k === 'reg' || dl.k === 'sw') ? d.acc.dirs.find(x => x.id === dl.dir) : null;
+    if (!tg || L(tg) == null || L(tg) <= 0) tg = d.acc.dirs.filter(x => L(x) != null && L(x) > 0 && x.id !== d.acc.mine).sort((a, b) => L(a) - L(b))[0];
+    if (!tg) { this.toast('Нет направлений со свободными местами и лимитом', 'info'); return; }
+    this.setD(z => { const x = z.acc.dirs.find(y => y.id === tg.id); while (x.people.length < x.cap) x.people.push(this.fake(z)); });
+    this.toast('Демо: другие студенты заняли оставшиеся места на «' + tg.name + '»', 'info');
+  }
+  tile(x) {
+    const s = this.state, d = s.d, dr = s.draft; if (!dr) return;
+    const t = d.teams.find(z => z.id === dr.team), dur = +d.grid.dur, st = dur + (+d.grid.gap);
+    if (d.sch === 'pub') return;
+    if (!(d.sch === 'collect' && s.now === 'before')) { this.toast('Сбор отметок закрыт: отметки только для просмотра', 'info'); return; }
+    const L = this.limOf(d, t.room); if (L === 0) { this.toast('В этой аудитории отметить время нельзя', 'info'); return; }
+    const touching = dr.marks.filter(m => m.a < x + dur && m.b > x);
+    if (touching.length) { this.setState({ draft: { ...dr, marks: dr.marks.filter(m => !touching.includes(m)), dirty: true, saveErr: null } }); this.toast('Отметка ' + touching.map(m => this.fm(m.a) + '–' + this.fm(m.b)).join(', ') + ' снята. Не забудьте сохранить', 'info'); return; }
+    const U = this.usedOf(d, t.id, dr.marks);
+    if (U + st > L) { this.toast('Можно отметить не больше ' + L + ' минут. Осталось ' + (L - U), 'err'); return; }
+    this.setState({ draft: { ...dr, form: { ...dr.form, a: this.fm(x), b: this.fm(x + st) }, err: {} } });
+  }
+  setForm(k, v) { this.setState(s => ({ draft: { ...s.draft, form: { ...s.draft.form, [k]: v }, err: {} } })); }
+  addMark() {
+    const s = this.state, d = s.d, dr = s.draft, f = dr.form, t = d.teams.find(z => z.id === dr.team);
+    const a = this.pm(f.a), b = this.pm(f.b), err = {}, L = this.limOf(d, t.room);
+    if (a == null) err.a = 'Укажите начало интервала'; if (b == null) err.b = 'Укажите конец интервала';
+    let nm = null;
+    if (a != null && b != null) {
+      if (b <= a) err.t = 'Конец должен быть позже начала';
+      else if (a < 600 || b > 1020) err.t = 'Интервал должен быть в пределах 10:00–17:00';
+      else { nm = { id: 'n' + Date.now(), team: t.id, a, b, r: f.r.trim(), st: 'r', author: t.mentor }; const U = this.usedOf(d, t.id, dr.marks), U2 = this.usedOf(d, t.id, dr.marks.concat([nm])); if (U2 > L) err.t = 'Можно отметить не больше ' + L + ' минут. Осталось ' + (L - U); }
+    }
+    if (!f.r.trim()) err.r = 'Укажите причину';
+    if (Object.keys(err).length) { this.setState({ draft: { ...dr, err } }); return; }
+    this.setState({ draft: { ...dr, marks: dr.marks.concat([nm]), dirty: true, saveErr: null, form: { a: '', b: '', r: '' }, err: {} } });
+    this.toast('Интервал ' + f.a + '–' + f.b + ' добавлен. Нажмите «Сохранить»', 'info');
+  }
+  delMark(id) { const dr = this.state.draft; this.setState({ draft: { ...dr, marks: dr.marks.filter(m => m.id !== id), dirty: true } }); this.toast('Отметка удалена. Не забудьте сохранить', 'info'); }
+  saveMarks() {
+    this.act('save', () => {
+      const dr = this.state.draft;
+      this.setD(d => { d.marks = d.marks.filter(m => m.team !== dr.team).concat(dr.marks.map(m => ({ ...m }))); });
+      this.setState(s => ({ draft: { ...s.draft, dirty: false, saveErr: null } }));
+    }, 'Отметки сохранены. Организатор видит их со статусом «На проверке»', { offMsg: 'Нет связи. Отметки не сохранены. Проверьте интернет и нажмите «Сохранить» ещё раз.', onFail: m => this.setState(s => ({ draft: { ...s.draft, saveErr: m } })) });
+  }
+  setRoom(id, v) {
+    const t = this.state.d.teams.find(x => x.id === id);
+    this.setD(d => { const z = d.teams.find(x => x.id === id); z.room = v || null; if (d.place[id] && d.place[id].room !== v) { delete d.place[id]; delete d.pins[id]; } this.reconcile(d); });
+    this.toast(v ? '«' + t.name + '» → ауд. ' + v + '. Сохранено' : 'Аудитория снята');
+  }
+  delTeam(id) {
+    const t = this.state.d.teams.find(x => x.id === id);
+    this.setD(d => { const z = d.teams.find(x => x.id === id); z.inEvent = false; z.room = null; delete d.place[id]; delete d.pins[id]; d.unpl = d.unpl.filter(u => u.id !== id); });
+    this.toast('Команда «' + t.name + '» убрана из мероприятия');
+  }
+  addSearch(id) {
+    const t = this.state.d.teams.find(x => x.id === id);
+    this.setD(d => { const z = d.teams.find(x => x.id === id); z.inEvent = true; z.room = null; z.added = true; if (d.sch === 'none') d.sch = 'setup'; });
+    this.setF({ q: '', roomF: 'all' }); this.toast('«' + t.name + '» добавлена. Выберите аудиторию');
+  }
+  pullDo() {
+    this.act('pull', () => {
+      let n = 0;
+      this.setD(d => { d.teams.forEach(t => { if (!t.inEvent && !this.why(d, t)) { t.inEvent = true; t.room = t.home; n++; } }); if (d.sch === 'none') d.sch = 'setup'; this.reconcile(d); });
+      this.setState({ dlg: null }); this.toast('Добавлено ' + n + ' ' + this.pl(n, 'команда', 'команды', 'команд'));
+    }, null, { ms: 700 });
+  }
+  iso(v) { const x = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec((v || '').trim()); return x && +x[2] >= 1 && +x[2] <= 12 && +x[1] >= 1 && +x[1] <= 31 ? x[3] + '-' + x[2] + '-' + x[1] : null; }
+  dateIn(k, v) { this.setF({ dr: { ...(this.state.f.dr || {}), [k]: v } }); const iso = this.iso(v); if (iso) this.setD(z => { z.rule[k] = iso; }); }
+  brIn(r, i, v) { this.setF({ br: { ...(this.state.f.br || {}), [r + i]: v } }); if (/^\d{1,2}:\d{2}$/.test(v.trim()) && this.pm(v) <= 1440) this.setBr(r, i, v.trim()); }
+  setBr(r, i, v) { const m = this.pm(v); if (m == null) return; this.setD(d => { d.grid.br[r][i] = m; this.reconcile(d); }); }
+  openCollect() {
+    this.setF({ openTried: true });
+    if (this.openReasons(this.state.d).length) return;
+    this.act('open', () => { this.setD(d => { d.sch = 'collect'; if (!d.seeded) { d.seeded = true; d.marks = d.marks.concat(this.seedMarks(d)); } }); this.setF({ openTried: false }); }, 'Сбор отметок открыт. Наставники получили карточки в личном кабинете', { ms: 700 });
+  }
+  buildDo(mode, key) {
+    this.act(key || 'build', () => {
+      const d = this.setD(z => { if (key === 'seed') z.seed = 100000 + Math.floor(Math.random() * 900000); z.sch = 'draft'; z.step = 3; this.build(z, 'full'); });
+      const ev = d.teams.filter(t => t.inEvent), p = ev.filter(t => d.place[t.id]).length;
+      this.setState({ dlg: null }); this.toast((key === 'seed' ? 'Seed ' + d.seed + ': п' : 'П') + 'оставлено ' + p + ' из ' + ev.length + (p < ev.length ? ', не поставлено ' + (ev.length - p) : ''));
+    }, null, { ms: 900 });
+  }
+  markSt(id, st) {
+    const d0 = this.state.d;
+    this.setD(d => { d.marks.find(m => m.id === id).st = st; });
+    this.toast(st === 'x' ? (d0.sch === 'draft' ? 'Отметка отклонена. Нажмите «Перестроить», чтобы она перестала мешать' : 'Отметка отклонена: при построении она не учитывается') : 'Отметка принята');
+  }
+  cellPut() {
+    const { team, t, room } = this.state.dlg, d = this.state.d;
+    const occ = Object.keys(d.place).find(id => d.place[id].room === room && d.place[id].t === t);
+    if (occ && occ !== team) { this.dlg({ k: 'swap', a: team, b: occ, t, room }); return; }
+    const nm = d.teams.find(x => x.id === team).name;
+    this.setD(z => { z.place[team] = { room, t }; z.pins[team] = true; z.unpl = z.unpl.filter(u => u.id !== team); });
+    this.dlg(null); this.toast('«' + nm + '» поставлена в ' + this.fm(t) + ' и закреплена');
+  }
+  cellPin() {
+    const { team } = this.state.dlg, on = !this.state.d.pins[team];
+    this.setD(z => { if (on) z.pins[team] = true; else delete z.pins[team]; });
+    this.dlg(null); this.toast(on ? 'Команда закреплена: при перестроении не сдвинется' : 'Закрепление снято');
+  }
+  swapDo() {
+    const { a, b, t, room } = this.state.dlg, d = this.state.d, A = d.teams.find(x => x.id === a).name;
+    this.setD(z => { const old = z.place[a]; z.place[a] = { room, t }; z.pins[a] = true; z.unpl = z.unpl.filter(u => u.id !== a); if (old && old.room === room) { z.place[b] = old; z.pins[b] = true; } else { delete z.place[b]; delete z.pins[b]; z.unpl.push({ id: b, room, text: 'Слот ' + this.fm(t) + ' вручную отдан команде «' + A + '».' }); } });
+    this.dlg(null); this.toast('Команды поменялись местами и закреплены');
+  }
+  addSlotsDo() {
+    const r = this.state.dlg.room, p = this.addPlan(this.state.d, r); if (!p.can) return;
+    this.act('slots', () => {
+      const d = this.setD(z => { z.grid.br[r][0] = p.nb0; this.build(z, 'fill'); });
+      const ev = d.teams.filter(t => t.inEvent), pl = ev.filter(t => d.place[t.id]).length;
+      this.dlg(null); this.toast('Добавлено ' + p.added.length + ' ' + this.pl(p.added.length, 'слот', 'слота', 'слотов') + ' в ауд. ' + r + '. Поставлено ' + pl + ' из ' + ev.length);
+    }, null, { ms: 700 });
+  }
+  shrink(r) { const p = this.addPlan(this.state.d, r); this.setD(z => { z.step = 1; }); this.setF({ hl: r }); this.toast('Сократите кофебрейк в ауд. ' + r + ': не хватает ' + p.need + ' ' + this.pl(p.need, 'слота', 'слотов', 'слотов') + '. Команды поставятся автоматически', 'info'); }
+  publishDo() { this.act('pub', () => { this.setD(z => { z.sch = 'pub'; z.pubSnap = JSON.parse(JSON.stringify(z.place)); z.step = 4; }); this.dlg(null); }, 'Расписание опубликовано. Команды видят свои слоты', { ms: 800 }); }
+  chgDo() {
+    const { team, sel } = this.state.dlg; if (sel == null) return;
+    this.act('chg', () => { this.setD(z => { z.place[team] = { room: z.place[team].room, t: sel }; z.pins[team] = true; }); this.dlg(null); }, 'Слот изменён. Команда и наставник видят новое время');
+  }
+  addTDo() {
+    const { room, t, sel } = this.state.dlg; if (!sel) return;
+    this.act('addT', () => { this.setD(z => { const x = z.teams.find(y => y.id === sel); x.inEvent = true; x.room = room; x.added = true; z.place[sel] = { room, t }; z.pins[sel] = true; }); this.dlg(null); }, 'Команда добавлена в слот ' + this.fm(t) + ' и закреплена');
+  }
+  regDo(sw) {
+    const dir = this.state.dlg.dir;
+    const full = () => { const x = this.state.d.acc.dirs.find(y => y.id === dir); return x.cap != null && x.people.length >= x.cap; };
+    if (full()) { this.dlg({ k: 'accErr', dir, sw }); return; }
+    this.act(sw ? 'sw' : 'reg', () => {
+      if (full()) { this.dlg({ k: 'accErr', dir, sw }); return; }
+      const nm = this.state.d.acc.dirs.find(y => y.id === dir).name;
+      this.setD(z => { z.acc.dirs.forEach(x => { x.people = x.people.filter(p => !p.me); }); z.acc.dirs.find(x => x.id === dir).people.push({ name: 'Иванов Максим', g: '8К41', d: '18 октября', me: true }); z.acc.mine = dir; });
+      this.dlg(null); this.toast(sw ? 'Вы перешли на «' + nm + '». Прежняя запись отменена' : 'Вы записаны на «' + nm + '»');
+    }, null);
+  }
+  cancelReg() { this.act('cancel', () => { this.setD(z => { z.acc.dirs.forEach(x => { x.people = x.people.filter(p => !p.me); }); z.acc.mine = null; }); }, 'Запись отменена, место освободилось'); }
+  renderVals() { return this.vals(); }
+  vals() {
+    const s = this.state, d = s.d, f = s.f, fm = this.fm, R3 = ['301', '303', '305'], pl = this.pl.bind(this);
+    const emb = !!this.props.embed, W = s.forceW || s.w || (typeof window !== 'undefined' ? window.innerWidth : 0) || 1440, mob = emb ? !!this.props.narrow : W < 760, desk = !mob;
+    const EVN = this.props.evName || 'Предзащита, осень 2026', EVD = this.props.evDate || '20 октября';
+    const P = this.P[s.role];
+    const dur = +d.grid.dur || 0, gap = +d.grid.gap || 0, st20 = dur + gap;
+    const evT = d.teams.filter(t => t.inEvent).sort((a, b) => this.num(a.id) - this.num(b.id));
+    const byId = Object.fromEntries(d.teams.map(t => [t.id, t]));
+    const SL = {}; R3.forEach(r => { SL[r] = this.gen(d.grid, r); });
+    const nIn = r => evT.filter(t => t.room === r).length;
+    const lim = r => r ? Math.max(0, SL[r].length - nIn(r)) * st20 : 0;
+    const evIds = new Set(evT.map(t => t.id));
+    const marks = d.marks.filter(m => evIds.has(m.team));
+    const used = (id, ms) => this.usedOf(d, id, ms);
+    const pct = (a, b) => b ? Math.min(100, Math.round(a / b * 100)) + '%' : '0%';
+    const tm = t => fm(t) + '–' + fm(t + dur);
+    const occ = {}; R3.forEach(r => { occ[r] = {}; });
+    evT.forEach(t => { const p = d.place[t.id]; if (p && occ[p.room]) occ[p.room][p.t] = t.id; });
+    const numOf = id => { const p = d.place[id]; if (!p) return null; return Object.keys(occ[p.room]).map(Number).sort((a, b) => a - b).indexOf(p.t) + 1; };
+    const schOn = ['collect', 'draft', 'pub'].includes(d.sch);
+    const changed = id => { if (d.sch !== 'pub' || !d.pubSnap) return null; const p = d.place[id], o = d.pubSnap[id]; if (!p) return null; if (!o) return { was: '' }; if (o.room !== p.room || o.t !== p.t) return { was: tm(o.t) }; return null; };
+    const myTeams = P.stu ? evT.filter(t => t.id === d.stuTeam) : evT.filter(t => t.mentor === P.mentor);
+    const visTeams = schOn ? myTeams.filter(t => t.room) : [];
+    const hasMenSch = !!P.mentor && visTeams.length > 0;
+    const rn = s.route.n, collectOpen = d.sch === 'collect' && s.now === 'before';
+    const dlT = this.dlTxt(d.deadline);
+    const ST = { r: ['На проверке', 'bd b-n'], a: ['Принята', 'bd b-g'], x: ['Отклонена', 'bd b-r'] };
+    const SCH = { none: ['Не настроено', 'event_busy', 'bd b-n'], setup: ['Настройка', 'tune', 'bd b-n'], collect: ['Сбор отметок', 'edit_calendar', 'bd b-v'], draft: ['Черновик', 'draft', 'bd b-v'], pub: ['Опубликовано', 'event_available', 'bd b-g'] };
+    const sch = { t: SCH[d.sch][0], ic: SCH[d.sch][1], cls: SCH[d.sch][2] };
+    const seg = (list, cur, fn) => list.map(([k, t]) => ({ t, cls: cur === k ? 'on' : '', on: () => fn(k) }));
+
+    const it = [['leaderboard', 'Рейтинг', 'rating'], ['person', 'Личный кабинет', 'lk']];
+    if (P.org) { if (hasMenSch) it.push(['g', 'Наставник'], ['event_note', 'Расписание', 'menSch']); it.push(['g', 'Организатор'], ['assignment', 'Оценочные листы', 'sheets'], ['event', 'Мероприятия', 'events'], ['g', ' ']); }
+    else if (hasMenSch) it.push(['event_note', 'Расписание', 'menSch']);
+    it.push(['settings', 'Настройки', 'settings']);
+    if (emb && P.org) { it.length = 0; it.push(['leaderboard', 'Рейтинг', 'x:rating'], ['person', 'Личный кабинет', 'x:lk'], ['g', 'Эксперт'], ['fact_check', 'Мои предзащиты', 'x:expert'], ['g', 'Организатор'], ['assignment', 'Оценочные листы', 'x:sheets'], ['event', 'Мероприятия', 'events'], ['g', ' '], ['settings', 'Настройки', 'x:settings']); }
+    const actK = { event: 'events', sched: 'events', marks: 'menSch', annPre: 'lk', annAcc: 'lk' }[rn] || rn;
+    const menu = it.map(([ic, t, k]) => ic === 'g' ? { cls: 'mg', ic: '', t, on: null } : { cls: 'mi' + (k === actK ? ' on' : ''), ic, t, on: () => this.go(k) });
+    let tb = it.filter(x => x[0] !== 'g'); if (tb.length > 4) tb = tb.filter(x => x[2] !== 'settings' && x[2] !== 'sheets');
+    const tabs = tb.map(([ic, t, k]) => ({ ic, t: t === 'Личный кабинет' ? 'Кабинет' : t, cls: 'tab' + (k === actK ? ' on' : ''), on: () => this.go(k) }));
+
+    const orgR = ['events', 'event', 'sched'];
+    const mTeam = rn === 'marks' ? byId[s.route.team] : null;
+    let deny = null;
+    if (orgR.includes(rn) && !P.org) deny = 'Этот раздел открыт только организаторам мероприятия.';
+    if (rn === 'menSch' && !P.mentor) deny = 'Этот раздел открыт только наставникам команд и организаторам мероприятия.';
+    if (rn === 'marks' && (!P.mentor || !mTeam || mTeam.mentor !== P.mentor)) deny = mTeam ? 'Вы не наставник команды «' + mTeam.name + '». Отметки и причины видит только её наставник.' : 'Команда не найдена.';
+    const dataR = !['rating', 'settings', 'sheets'].includes(rn);
+    const stub = !deny && mob && orgR.includes(rn);
+    const ld = s.loading;
+    const V = { loading: ld, err: !ld && s.net === 'err' && dataR && !deny && !stub, deny: !ld && !!deny, denyT: deny || '', stub: !ld && stub, off: !ld && s.net === 'off' && dataR && !deny && !stub };
+    const ok = !ld && !deny && !stub && !(s.net === 'err' && dataR);
+    const R = {}; ['lk', 'rating', 'settings', 'sheets', 'annPre', 'annAcc', 'menSch', 'marks', 'events', 'sched'].forEach(k => { R[k] = ok && rn === k; });
+    R.evPre = ok && rn === 'event' && s.route.id === 'pre'; R.evDef = ok && rn === 'event' && s.route.id === 'def'; R.evAcc = ok && rn === 'event' && s.route.id === 'acc';
+
+    const cardOf = t => {
+      const isMen = !!P.mentor && t.mentor === P.mentor, p = d.place[t.id], L = lim(t.room), U = used(t.id, marks);
+      const base = { team: t.name, isMen, showMk: isMen, onAnn: () => this.go('annPre'), onMarks: () => this.go('marks', { team: t.id }), place: 'ауд. ' + t.room + ' · корпус 10', isPub: false, notPub: true, isCol: false, lim0: false, isWait: false, was: '', dl: dlT };
+      if (d.sch === 'pub' && p) { const ch = changed(t.id); return { ...base, isPub: true, notPub: false, time: (s.now === 'day' ? 'Сегодня, ' : EVD + ', ') + tm(p.t), slot: tm(p.t), place: 'ауд. ' + p.room + ' · корпус 10 · выступление № ' + numOf(t.id), was: ch && ch.was ? ch.was : '', ch: !!ch, bdCls: ch ? 'bd b-w' : 'bd b-g', bdIc: ch ? 'update' : 'event_available', bdT: ch ? 'Слот изменён организатором' : 'Расписание опубликовано' }; }
+      if (isMen && collectOpen) { if (L === 0) return { ...base, lim0: true, lim0T: 'В ауд. ' + t.room + ' слотов столько же, сколько команд, поэтому отметить время нельзя. Если команда не может прийти, напишите организатору.' }; return { ...base, isCol: true, showMk: false, used: U, lim: L, pct: pct(U, L) }; }
+      return { ...base, isWait: true };
+    };
+    const lkCards = visTeams.map(cardOf);
+    const acc = d.acc, mineDir = acc.dirs.find(x => x.id === acc.mine);
+    const leftOf = x => x.cap == null ? null : Math.max(0, x.cap - x.people.length);
+    let accE = { hasBtn: false, note: 'Записываются студенты', btnCls: 'btn', on: null };
+    if (P.stu) {
+      if (acc.st === 'pre') accE = { hasBtn: true, btnCls: 'btn dis', note: 'Запись откроется 1 ноября в 10:00', on: null };
+      else if (acc.st === 'open') accE = mineDir ? { hasBtn: false, note: 'Вы записаны на «' + mineDir.name + '»' } : { hasBtn: true, btnCls: 'btn', note: '', on: () => this.go('annAcc') };
+      else accE = { hasBtn: false, note: mineDir ? 'Запись закрыта. Вы записаны на «' + mineDir.name + '»' : 'Запись закрыта' };
+    }
+    const st1 = [
+      { type: 'Предзащита', ic: 'co_present', name: 'Предзащита, осень 2026', date: '20 октября 2026, 10:00–17:00', desc: 'Команды показывают промежуточные результаты проектов экспертной комиссии. На доклад — 7 минут, на вопросы — 5 минут.', hasBtn: false, note: '', on: null, btnCls: 'btn', onOpen: () => this.go('annPre') },
+      emb ? null : { type: 'Акселератор', ic: 'rocket_launch', name: 'Акселератор ИШИТР', date: '12 ноября 2026, 10:00–17:00', desc: 'Однодневный интенсив с практикующими разработчиками. Выберите одно направление.', ...accE, onOpen: () => this.go('annAcc') }
+    ];
+    const annBlocks = visTeams.map(t => { const c = cardOf(t); return { team: t.name, isPub: c.isPub, time: c.isPub ? c.slot : '', meta: c.isPub ? c.place.replace(' · корпус 10', '') : 'ауд. ' + t.room, wait: !c.isPub, changed: !!c.ch, was: c.was }; });
+    const AN = {
+      pre: acc.st === 'pre', closed: acc.st === 'closed', notStu: !P.stu,
+      mine: P.stu && mineDir ? 'Вы записаны на «' + mineDir.name + '», ауд. ' + mineDir.room : '',
+      dirs: acc.dirs.map(x => {
+        const L = leftOf(x), full = L === 0, isMine = acc.mine === x.id && P.stu;
+        let left = x.cap == null ? 'Без лимита' : full ? 'Мест нет' : 'Осталось ' + L + ' из ' + x.cap; if (isMine) left = 'Вы записаны';
+        let btn = '', btnCls = 'btn w', on = null, hasBtn = false;
+        if (P.stu && acc.st === 'open') { hasBtn = true; if (isMine) { btn = this.lb('cancel', 'Отменить запись', 'Отменяем…', 'Отменено'); btnCls = 'btn2 w'; on = () => this.cancelReg(); } else if (full) { btn = 'Мест нет'; btnCls = 'btn w dis'; } else if (acc.mine) { btn = 'Перейти сюда'; btnCls = 'btn2 w'; on = () => this.dlg({ k: 'sw', dir: x.id }); } else { btn = 'Записаться'; on = () => this.dlg({ k: 'reg', dir: x.id }); } }
+        if (P.stu && acc.st === 'pre') { hasBtn = true; btn = 'Записаться'; btnCls = 'btn w dis'; }
+        return { name: x.name, room: 'ауд. ' + x.room, tr: x.tr, left, capCls: isMine ? 'bd b-g' : full ? 'bd b-r' : x.cap == null ? 'bd b-n' : 'bd b-g', hasBar: x.cap != null && acc.st !== 'closed', pct: x.cap ? pct(x.people.length, x.cap) : '0%', hasBtn, btn, btnCls, on };
+      })
+    };
+
+    const MS = { empty: !visTeams.length, has: visTeams.length > 0, sub: EVD + ' · ' + (collectOpen ? 'сбор отметок до ' + dlT : d.sch === 'collect' ? 'дедлайн прошёл, сбор закрыт' : d.sch === 'draft' ? 'сбор отметок закрыт, расписание готовится' : 'расписание опубликовано'),
+      rows: visTeams.map(t => { const c = cardOf(t), L = lim(t.room), U = used(t.id, marks); const st = c.isPub ? (c.ch ? ['Слот изменён организатором', 'bd b-w'] : [c.slot + ' · № ' + numOf(t.id), 'bd b-g']) : collectOpen ? ['Сбор до ' + dlT, 'bd b-v'] : ['Расписание готовится', 'bd b-n']; return { team: t.name, room: 'ауд. ' + t.room, st: st[0], stCls: st[1], used: U, lim: L, pct: pct(U, L), on: () => this.go('marks', { team: t.id }) }; }) };
+
+    let MK = { ok: false, noSch: false };
+    if (R.marks && mTeam) {
+      if (!schOn || !mTeam.room) MK.noSch = true;
+      else {
+        const dr = s.draft && s.draft.team === mTeam.id ? s.draft : this.mkDraft(mTeam.id);
+        const r = mTeam.room, sl = SL[r], b0 = d.grid.br[r][0], b1 = d.grid.br[r][1];
+        const L = lim(r), U = used(mTeam.id, dr.marks), left = L - U, edit = collectOpen && L > 0;
+        const p = d.place[mTeam.id], isPub = d.sch === 'pub' && !!p;
+        const fa = this.pm(dr.form.a), fb = this.pm(dr.form.b);
+        const tiles = sl.map(x => { const mk = dr.marks.some(m => m.a < x + dur && m.b > x); const sel = fa === x && fb === x + st20 && !mk; let cls; if (isPub) cls = p.t === x ? 'lv on' : 'lv ro'; else if (!edit) cls = mk ? 'lv ro on' : 'lv ro'; else if (mk) cls = 'lv on'; else if (sel) cls = 'lv sel'; else if (left < st20) cls = 'lv ro'; else cls = 'lv'; return { t: fm(x), e: '–' + fm(x + dur), cls, x, on: () => this.tile(x) }; });
+        const pre = tiles.filter(x => x.x + dur <= b0), post = tiles.filter(x => x.x + dur > b0);
+        const list = dr.marks.slice().sort((a, b) => a.a - b.a).map(m => ({ tm: fm(m.a) + '–' + fm(m.b), r: m.r, min: this.usedOf(d, mTeam.id, [m]) + ' мин', st: ST[m.st][0], stCls: ST[m.st][1], showSt: !collectOpen, showDel: edit, on: () => this.delMark(m.id) }));
+        const er = dr.err || {}, ch = changed(mTeam.id);
+        const saveSt = dr.dirty ? 'Есть изменения' : s.busy.save === 'ok' ? 'Сохранено' : '';
+        MK = { ok: true, noSch: false, team: mTeam.name, room: 'ауд. ' + r, sub: collectOpen ? 'Сбор до ' + dlT : d.sch === 'pub' ? 'Расписание опубликовано' : 'Сбор отметок закрыт',
+          edit, deskSave: edit && desk, mobSave: edit && mob, saveLbl: this.lb('save', 'Сохранить'), onSave: () => this.saveMarks(), saveSt, saveStCls: dr.dirty ? 'bd b-w' : 'bd b-g', saveErr: dr.saveErr || '',
+          closedBn: d.sch === 'collect' && !collectOpen ? 'Дедлайн прошёл. Сбор отметок закрыт, расписание готовится.' : d.sch === 'draft' ? 'Сбор отметок закрыт. Расписание готовится.' : '',
+          lim0: collectOpen && L === 0, lim0T: 'В ауд. ' + r + ' слотов столько же, сколько команд, поэтому отметить время нельзя. Если команда не может прийти, напишите организатору.',
+          pub: isPub ? { num: numOf(mTeam.id), time: (s.now === 'day' ? 'Сегодня, ' : '') + tm(p.t), ch: !!ch, was: ch && ch.was ? ch.was : '' } : null,
+          cols: mob ? 'minmax(0,1fr)' : 'minmax(0,1fr) 380px', tileCols: mob ? 'repeat(4,minmax(0,1fr))' : emb ? 'repeat(auto-fill,minmax(64px,1fr))' : 'repeat(5,minmax(0,1fr))', pre, post, hasBreak: pre.length > 0 && post.length > 0 && b1 > b0, breakT: 'Кофебрейк ' + fm(b0) + '–' + fm(b1), st20,
+          showCounter: L > 0 && !isPub, used: U, lim: L, left, pct: pct(U, L), fullBn: edit && left < st20,
+          hint: edit && dr.form.a && dr.form.b && !dr.form.r ? 'Укажите причину и нажмите «Добавить»' : '',
+          fa: dr.form.a, fb: dr.form.b, fr: dr.form.r, aCls: 'inp' + (er.a || er.t ? ' err' : ''), bCls: 'inp' + (er.b || er.t ? ' err' : ''), rCls: 'inp' + (er.r ? ' err' : ''), errT: er.t || er.a || er.b || '', errR: er.r || '',
+          onA: e => this.setForm('a', e.target.value), onB: e => this.setForm('b', e.target.value), onR: e => this.setForm('r', e.target.value), onAdd: () => this.addMark(), list, empty: !list.length, emptyT: edit ? 'Отметок нет. Если команда может прийти в любое время, ничего отмечать не нужно.' : 'Отметок нет.' };
+      }
+    }
+
+    const noRoom = evT.filter(t => !t.room).length;
+    const rs = R3.map(r => { const S = SL[r].length, n = nIn(r); return { r, S, n, k: S - n }; });
+    const brOk = R3.every(r => d.grid.br[r][1] > d.grid.br[r][0]);
+    const gridOk = evT.length > 0 && rs.every(x => x.k >= 0) && dur > 0 && gap >= 0 && brOk;
+    const later = ['draft', 'pub'].includes(d.sch), locked = d.sch === 'pub';
+    const can = i => i === 0 || (i <= 2 && evT.length > 0) || (i >= 3 && later);
+    const done = [evT.length > 0 && noRoom === 0, gridOk, later, d.sch === 'pub', d.sch === 'pub'];
+    const steps = ['Команды и аудитории', 'Сетка', 'Сбор отметок', 'Разбор', 'Публикация'].map((t, i) => ({ t, n: done[i] && i !== d.step ? '✓' : String(i + 1), cls: 'stp' + (i === d.step ? ' on' : '') + (can(i) ? '' : ' off'), line: i < 4, on: () => { if (can(i)) this.setD(z => { z.step = i; }); } }));
+    const goStep = i => () => this.setD(z => { z.step = i; });
+
+    const pool = d.teams.filter(t => !t.inEvent);
+    const addL = pool.filter(t => !this.why(d, t)), skipL = pool.filter(t => this.why(d, t));
+    const q = f.q.trim().toLowerCase();
+    const res = q.length >= 2 ? pool.filter(t => t.name.toLowerCase().includes(q)).slice(0, 6).map(t => ({ n: t.name, sub: t.status + ' · ' + t.mentor, on: () => this.addSearch(t.id) })) : [];
+    const W1rows = evT.filter(t => f.roomF === 'all' || (f.roomF === 'none' ? !t.room : t.room === f.roomF)).sort((a, b) => (a.room ? 1 : 0) - (b.room ? 1 : 0) || (a.room || '').localeCompare(b.room || '') || this.num(a.id) - this.num(b.id))
+      .map(t => ({ n: t.name, m: t.mentor, st: t.status, dt: this.dmy(t.start), room: t.room || '', cls: 'fs' + (t.room ? '' : ' err'), added: !!t.added, onRoom: e => this.setRoom(t.id, e.target.value), onDel: () => this.delTeam(t.id) }));
+    const W1 = { on: d.step === 0, locked, canEdit: !locked,
+      chips: ['В работе', 'Заморожен', 'Закрыт'].map(x => ({ t: x, cls: 'fc' + (d.rule.st[x] ? ' on' : ''), on: () => { if (!locked) this.setD(z => { z.rule.st[x] = !z.rule.st[x]; }); } })),
+      from: (f.dr || {}).from != null ? f.dr.from : this.dmy(d.rule.from), to: (f.dr || {}).to != null ? f.dr.to : this.dmy(d.rule.to),
+      fromCls: 'inp' + ((f.dr || {}).from != null && !this.iso(f.dr.from) ? ' err' : ''), toCls: 'inp' + ((f.dr || {}).to != null && !this.iso(f.dr.to) ? ' err' : ''),
+      onFrom: e => this.dateIn('from', e.target.value), onTo: e => this.dateIn('to', e.target.value), blur: () => { const r = f.dr || {}; if (!Object.keys(r).some(k => !this.iso(r[k]))) this.setF({ dr: {} }); },
+      poolN: d.teams.length, fitN: addL.length, pullCls: locked ? 'btn dis' : 'btn', onPull: () => this.dlg({ k: 'pull' }),
+      none: !evT.length, has: evT.length > 0,
+      roomChips: [['all', 'Все · ' + evT.length], ['301', 'ауд. 301 · ' + nIn('301')], ['303', 'ауд. 303 · ' + nIn('303')], ['305', 'ауд. 305 · ' + nIn('305')], ['none', 'Без аудитории · ' + noRoom]].map(([k, t]) => ({ t, cls: 'fc' + (f.roomF === k ? ' on' : '') + (k === 'none' && noRoom ? ' red' : ''), on: () => this.setF({ roomF: k }) })),
+      q: f.q, onQ: e => this.setF({ q: e.target.value }), res, hasRes: res.length > 0, noRes: q.length >= 2 && !res.length,
+      rows: W1rows, rowsEmpty: !W1rows.length, onNext: goStep(1) };
+
+    const W2 = { on: d.step === 1, locked, lockBn: locked,
+      liveBn: d.sch === 'collect' ? 'Сбор отметок открыт. При изменении сетки слоты и лимиты пересчитаются сразу, внесённые отметки сохранятся.' : d.sch === 'draft' ? 'Черновик построен. При изменении сетки команды из исчезнувших слотов и не поставленные команды расставятся автоматически.' : '',
+      dur: d.grid.dur, gap: d.grid.gap, durCls: 'inp' + (dur > 0 ? '' : ' err'), gapCls: 'inp' + (String(d.grid.gap).trim() !== '' && gap >= 0 ? '' : ' err'),
+      onDur: e => { const v = e.target.value; this.setD(z => { z.grid.dur = v; this.reconcile(z); }); }, onGap: e => { const v = e.target.value; this.setD(z => { z.grid.gap = v; this.reconcile(z); }); },
+      rooms: rs.map(x => { const [b0, b1] = d.grid.br[x.r]; const sl = SL[x.r]; const hl = f.hl === x.r && x.k < 0;
+        const raw = f.br || {};
+        return { room: 'ауд. ' + x.r, b0: raw[x.r + '0'] != null ? raw[x.r + '0'] : fm(b0), b1: raw[x.r + '1'] != null ? raw[x.r + '1'] : fm(b1), onB0: e => this.brIn(x.r, 0, e.target.value), onB1: e => this.brIn(x.r, 1, e.target.value), blur: () => this.setF({ br: {} }), brErr: b1 <= b0 ? 'Конец кофебрейка должен быть позже начала' : '',
+          line: 'Слотов ' + x.S + ' · команд ' + x.n + ' · запас ' + (x.k < 0 ? '−' + (-x.k) : x.k), cls: x.k < 0 ? 'bd b-r' : x.k <= 1 ? 'bd b-w' : 'bd b-g', box: (x.k < 0 || b1 <= b0 ? 'inner err' : 'inner') + (f.hl === x.r ? ' hl' : ''),
+          hint: x.k < 0 ? 'Не хватает ' + (-x.k) + ' ' + pl(-x.k, 'слота', 'слотов', 'слотов') + (hl ? ': сократите кофебрейк или выступление' : '') : (sl.length ? 'Первый слот ' + fm(sl[0]) + ', последний ' + tm(sl[sl.length - 1]) + ' · лимит отметок ' + x.k * st20 + ' минут' : 'Слотов нет'),
+          chips: sl.map((t, i) => ({ n: i + 1, t: fm(t) })) }; }),
+      nextCls: gridOk ? 'btn' : 'btn dis', nextErr: !gridOk ? (rs.filter(x => x.k < 0).map(x => 'В ауд. ' + x.r + ' не хватает ' + (-x.k) + ' ' + pl(-x.k, 'слота', 'слотов', 'слотов')).join('. ') || (!evT.length ? 'Сначала добавьте команды' : 'Проверьте поля сетки')) : '',
+      onNext: () => { if (gridOk) this.setD(z => { z.step = 2; }); }, onBack: goStep(0) };
+
+    const reasons = this.openReasons(d);
+    const wm = evT.filter(t => marks.some(m => m.team === t.id)).length;
+    const W3 = { on: d.step === 2, pre: d.sch === 'none' || d.sch === 'setup', col: d.sch === 'collect', post: later, after: s.now !== 'before',
+      dl: d.deadline, onDl: e => this.setD(z => { z.deadline = e.target.value; }), dlTxt: dlT,
+      limits: rs.map(x => ({ room: 'ауд. ' + x.r, s: x.S, t: x.n, k: x.k < 0 ? '−' + (-x.k) : x.k, v: evT.filter(t => t.room === x.r && marks.some(m => m.team === t.id)).length + ' из ' + x.n, lim: x.k <= 0 ? '0 · отметить нельзя' : x.k * st20 + ' минут' })),
+      showReasons: f.openTried && reasons.length > 0 && d.sch !== 'collect', reasons: reasons.map(z => ({ ...z, on: goStep(z.step) })),
+      openLbl: this.lb('open', 'Открыть сбор отметок', 'Открываем…', 'Сбор открыт'), onOpen: () => this.openCollect(), onBack: goStep(1),
+      wm, total: evT.length, wmPct: pct(wm, evT.length), marksN: marks.length, buildLbl: this.lb('build', 'Построить', 'Строим…', 'Построено'), onBuild: () => this.dlg({ k: 'build' }) };
+
+    const mrows = marks.filter(m => (f.mSt === 'all' || m.st === f.mSt) && (f.mRoom === 'all' || byId[m.team].room === f.mRoom) && (!f.mTeam || m.team === f.mTeam))
+      .sort((a, b) => (byId[a.team].room || '').localeCompare(byId[b.team].room || '') || a.a - b.a)
+      .map(m => { const t = byId[m.team]; return { team: t.name, m: t.mentor, room: t.room || '—', tm: fm(m.a) + '–' + fm(m.b), r: m.r, st: ST[m.st][0], stCls: ST[m.st][1], okCls: m.st === 'a' ? 'btn dis' : 'btn2', noCls: m.st === 'x' ? 'btn2 dis' : 'btn2', onOk: () => this.markSt(m.id, 'a'), onNo: () => this.markSt(m.id, 'x') }; });
+    const MT = { rows: mrows, empty: !mrows.length, canAct: d.sch !== 'pub',
+      stSeg: seg([['all', 'Все'], ['r', 'На проверке'], ['a', 'Принятые'], ['x', 'Отклонённые']], f.mSt, k => this.setF({ mSt: k })),
+      roomSeg: seg([['all', 'Все'], ['301', '301'], ['303', '303'], ['305', '305']], f.mRoom, k => this.setF({ mRoom: k })),
+      teamF: f.mTeam && byId[f.mTeam] ? byId[f.mTeam].name : '', clearTeam: () => this.setF({ mTeam: null }) };
+
+    const placedN = evT.filter(t => d.place[t.id]).length;
+    const unplT = later ? evT.filter(t => !d.place[t.id]) : [];
+    const uOrder = id => { const i = d.unpl.findIndex(u => u.id === id); return i < 0 ? 999 : i; };
+    const shortage = [], blocks = [];
+    const blockCard = (t, reason) => { const hasMark = marks.some(m => m.team === t.id && m.st !== 'x'); return { team: t.name, room: t.room ? 'ауд. ' + t.room : 'без аудитории', mentor: t.mentor, reason, hasMark, onShow: () => this.setF({ mTeam: t.id, mSt: 'all', mRoom: 'all' }), placeLbl: t.room ? 'Поставить вручную' : 'К шагу 1', onPlace: t.room ? () => { this.setF({ mxRoom: t.room, hlTeam: t.id }); this.toast('Строка команды выделена в матрице. Нажмите на свободную ячейку', 'info'); } : goStep(0) }; };
+    evT.filter(t => !t.room && later).forEach(t => blocks.push(blockCard(t, 'Не выбрана аудитория.')));
+    R3.forEach(r => {
+      const x = rs.find(z => z.r === r), U = unplT.filter(t => t.room === r).sort((a, b) => uOrder(a.id) - uOrder(b.id)); if (!U.length) return;
+      const def = Math.max(0, x.n - x.S), sh = U.slice(0, def), rest = U.slice(def);
+      if (sh.length) shortage.push({ room: 'ауд. ' + r, n: sh.length, reason: 'Не хватает ' + def + ' ' + pl(def, 'слота', 'слотов', 'слотов'), detail: 'В ауд. ' + r + ' ' + x.S + ' ' + pl(x.S, 'слот', 'слота', 'слотов') + ', команд ' + x.n + '.', teams: sh.map(t => ({ name: t.name, mentor: t.mentor })), onAdd: () => this.dlg({ k: 'addSlots', room: r }), onShrink: () => this.shrink(r) });
+      rest.forEach(t => { const u = d.unpl.find(z => z.id === t.id); blocks.push(blockCard(t, u ? u.text : 'Команда появилась после построения. Нажмите «Перестроить» или поставьте вручную.')); });
+    });
+    const warns = [];
+    if (later) {
+      const pt = evT.filter(t => d.place[t.id]);
+      for (let i = 0; i < pt.length; i++) for (let j = i + 1; j < pt.length; j++) { const a = pt[i], b = pt[j], pa = d.place[a.id], pb = d.place[b.id]; if (a.mentor === b.mentor && pa.room !== pb.room && pa.t < pb.t + dur && pa.t + dur > pb.t) warns.push({ t: a.mentor + ' в одно время в двух аудиториях: ауд. ' + pa.room + ' «' + a.name + '» ' + tm(pa.t) + ' и ауд. ' + pb.room + ' «' + b.name + '» ' + tm(pb.t) + '. Это предупреждение, публиковать можно.' }); }
+      pt.forEach(t => { const p = d.place[t.id]; const m = marks.find(z => z.team === t.id && z.st !== 'x' && z.a < p.t + dur && z.b > p.t); if (m) warns.push({ t: '«' + t.name + '» стоит в ' + tm(p.t) + ', а наставник отметил ' + fm(m.a) + '–' + fm(m.b) + ' («' + ST[m.st][0] + '»).' }); });
+    }
+    const mr = f.mxRoom, msl = SL[mr], mb0 = d.grid.br[mr][0], mb1 = d.grid.br[mr][1];
+    const brIdx = msl.findIndex((t, i) => i > 0 && msl[i - 1] + dur <= mb0 && t >= mb1);
+    const cols = []; msl.forEach((t, i) => { if (i === brIdx) cols.push({ br: true }); cols.push({ t }); });
+    const rowsT = evT.filter(t => t.room === mr).sort((a, b) => { const pa = d.place[a.id], pb = d.place[b.id]; if (pa && pb) return pa.t - pb.t; if (pa) return -1; if (pb) return 1; return this.num(a.id) - this.num(b.id); });
+    const mx = rowsT.map(t => { const p = d.place[t.id]; const ms = marks.filter(m => m.team === t.id && m.st !== 'x'); const short = t.name.replace(' · весна 2026', '').replace(' · осень 2025', '');
+      return { name: short, nameCls: p ? 'b' : 'b er', bg: f.hlTeam === t.id ? '#f0f8f2' : '#fff',
+        cells: cols.map(c => { if (c.br) return { bg: '#e9edeb', own: false, mk: false, ic: '', click: null, cur: 'default' }; const own = !!p && p.t === c.t; const mk = ms.some(m => m.a < c.t + dur && m.b > c.t); const taken = occ[mr][c.t] && occ[mr][c.t] !== t.id; return { bg: own && mk ? '#fff4e0' : taken ? '#f7fafc' : 'transparent', own, mk: mk && !own, ic: d.pins[t.id] ? 'push_pin' : 'check', click: () => { if (d.sch === 'draft') this.dlg({ k: 'cell', team: t.id, t: c.t, room: mr }); else this.toast('Расписание опубликовано: меняйте слоты на шаге 5', 'info'); }, cur: 'pointer' }; }) }; });
+    const W4 = { on: d.step === 3, draft: d.sch === 'draft', pubBn: d.sch === 'pub', pubLock: d.sch !== 'draft', placedN, total: evT.length, ppct: pct(placedN, evT.length), unN: unplT.length, unColor: unplT.length ? '#ba1a1a' : '#006d30',
+      pendN: marks.filter(m => m.st === 'r').length, marksN: marks.length, seed: String(d.seed), onSeedIn: e => { const v = e.target.value.replace(/\D/g, '').slice(0, 9); this.setD(z => { z.seed = v; }); },
+      seedLbl: this.lb('seed', 'Другой seed', 'Строим…', 'Готово'), onSeed: () => this.buildDo('full', 'seed'), rebuildLbl: this.lb('rebuild', 'Перестроить', 'Строим…', 'Перестроено'), onRebuild: () => this.buildDo('full', 'rebuild'),
+      pubCls: unplT.length ? 'btn dis' : 'btn', pubNote: d.sch === 'draft' && unplT.length ? 'Сначала поставьте ' + unplT.length + ' ' + pl(unplT.length, 'команду', 'команды', 'команд') : '', onPub: () => { if (!unplT.length) this.dlg({ k: 'pub' }); },
+      allOk: later && !unplT.length, shortage, blocks, warns,
+      mxSeg: seg(R3.map(r => [r, 'ауд. ' + r]), mr, k => this.setF({ mxRoom: k })), mxCols: '220px repeat(' + cols.length + ',minmax(0,1fr))', mxHead: cols.map(c => c.br ? 'Пер.' : fm(c.t)), mx };
+
+    const pr = f.pubRoom;
+    const W5 = { on: d.step === 4, draft: d.sch === 'draft', pub: d.sch === 'pub',
+      sum: placedN + ' ' + pl(placedN, 'команда', 'команды', 'команд') + ' в трёх аудиториях увидят время и номер выступления в личном кабинете. Наставники тоже.',
+      blockT: unplT.length ? 'Не поставлено ' + unplT.length + ' ' + pl(unplT.length, 'команда', 'команды', 'команд') + '. Публикация недоступна.' : '',
+      pubCls: unplT.length ? 'btn dis' : 'btn', onPub: () => { if (!unplT.length) this.dlg({ k: 'pub' }); }, onBack: goStep(3),
+      seg: seg(R3.map(r => [r, 'ауд. ' + r]), pr, k => this.setF({ pubRoom: k })),
+      info: nIn(pr) + ' ' + pl(nIn(pr), 'команда', 'команды', 'команд') + ' · ' + SL[pr].length + ' слотов · свободно ' + (SL[pr].length - Object.keys(occ[pr]).length),
+      rows: SL[pr].map(t => { const id = occ[pr][t]; if (id) { const x = byId[id]; return { busy: true, free: false, n: numOf(id), tm: tm(t), team: x.name, m: x.mentor, pin: !!d.pins[id], ch: !!changed(id), nameCls: 'b', onChg: () => this.dlg({ k: 'chg', team: id, sel: null }) }; } return { busy: false, free: true, n: '', tm: tm(t), team: 'Свободный слот', m: '', pin: false, ch: false, nameCls: 'cap', onAdd: () => this.dlg({ k: 'addT', room: pr, t, q: '', sel: null }) }; }) };
+
+    const grading = emb ? !!this.props.grading : d.grading;
+    const EV = { grT: grading ? 'Открыт' : 'Не открыт', grCls: grading ? 'ac ac-1' : 'ac', gradeCls: d.sch === 'pub' && !grading ? 'btn' : 'btn dis', gradeLbl: grading ? 'Приём оценок открыт' : this.lb('grade', 'Открыть приём оценок', 'Открываем…', 'Открыт'), tip: d.sch !== 'pub' ? 'Сначала опубликуйте расписание' : '',
+      showExcel: d.sch === 'none', roomsN: R3.length, teamsN: evT.length, wm, wmPct: pct(wm, evT.length),
+      rooms: R3.map(r => ({ room: 'ауд. ' + r, cap: nIn(r) + ' ' + pl(nIn(r), 'команда', 'команды', 'команд'), printCls: d.sch === 'pub' ? 'btn2' : 'btn2 dis' })) };
+    const evRows = [
+      { name: 'Предзащита, осень 2026', type: 'Предзащита', ic: 'co_present', date: '20 октября 2026', hasSch: true, sch, on: () => this.go('event', { id: 'pre' }) },
+      { name: 'Защита, осень 2026', type: 'Защита', ic: 'workspace_premium', date: '15 декабря 2026', hasSch: true, sch: { t: 'Не настроено', ic: 'event_busy', cls: 'bd b-n' }, on: () => this.go('event', { id: 'def' }) },
+      { name: 'Акселератор ИШИТР', type: 'Акселератор', ic: 'rocket_launch', date: '12 ноября 2026', hasSch: false, sch, on: () => this.go('event', { id: 'acc' }) }
+    ];
+    const AC = { stT: acc.st === 'open' ? 'Запись открыта до 10 ноября' : acc.st === 'pre' ? 'Запись откроется 1 ноября' : 'Запись закрыта', stCls: acc.st === 'open' ? 'bd b-v' : 'bd b-n', btn: acc.st === 'open' ? 'Закрыть запись' : 'Открыть запись',
+      onBtn: () => { const v = acc.st === 'open' ? 'closed' : 'open'; this.setD(z => { z.acc.st = v; }); this.toast(v === 'open' ? 'Запись открыта' : 'Запись закрыта'); },
+      total: acc.dirs.reduce((a, x) => a + x.people.length, 0),
+      dirs: acc.dirs.map((x, i) => { const open = !!f.openDir[x.id]; return { n: i + 1, name: x.name, room: 'ауд. ' + x.room, lim: x.cap == null ? '' : String(x.cap), onLim: e => { const v = e.target.value.trim(); this.setD(z => { z.acc.dirs.find(y => y.id === x.id).cap = v === '' ? null : Math.max(0, parseInt(v, 10) || 0); }); },
+        left: x.cap == null ? 'Без лимита · ' + x.people.length : x.people.length + ' из ' + x.cap, capCls: x.cap != null && x.people.length >= x.cap ? 'bd b-r' : x.cap == null ? 'bd b-n' : 'bd b-g',
+        over: x.cap != null && x.people.length > x.cap ? 'Лимит меньше числа записавшихся: записи сохранены, новых не будет.' : '', open, chev: open ? 'expand_less' : 'expand_more', tog: () => this.setF({ openDir: { ...f.openDir, [x.id]: !open } }),
+        cnt: x.people.length, empty: !x.people.length, people: x.people.map(p => ({ name: p.name, g: p.g, d: p.d, ini: p.name.split(' ').map(w => w[0]).join('') })) }; }) };
+
+    const dl = s.dlg || {};
+    const D = { on: !!s.dlg, ovl: mob ? 'ovl m' : 'ovl', box: mob ? 'sheetx col' : 'card col dlg', close: () => this.dlg(null), stop: e => e.stopPropagation() };
+    ['pull', 'build', 'pub', 'cell', 'swap', 'addSlots', 'chg', 'addT', 'excel', 'reg', 'sw', 'accErr'].forEach(k => { D[k] = dl.k === k; });
+    const DP = { addN: addL.length, skipN: skipL.length, noNew: !addL.length, hasSkip: skipL.length > 0, skip: skipL.map(t => ({ n: t.name, r: this.why(d, t) })), btn: this.lb('pull', 'Добавить ' + addL.length, 'Добавляем…', 'Добавлено'), btnCls: addL.length ? 'btn' : 'btn dis', on: () => this.pullDo() };
+    const DB = { seed: d.seed, lbl: this.lb('build', 'Построить', 'Строим…', 'Построено'), on: () => this.buildDo('full', 'build') };
+    const DU = { text: placedN + ' ' + pl(placedN, 'команда', 'команды', 'команд') + ' в трёх аудиториях увидят время и номер выступления в личном кабинете. Наставники тоже.', lbl: this.lb('pub', 'Опубликовать', 'Публикуем…', 'Опубликовано'), on: () => this.publishDo() };
+    let DC = { title: '', sub: '', notes: [], opts: [] };
+    if (dl.k === 'cell') { const t = byId[dl.team], p = d.place[dl.team], own = p && p.t === dl.t && p.room === dl.room, oid = occ[dl.room][dl.t], notes = [];
+      if (oid && oid !== dl.team) notes.push({ cls: 'bn bn-n', ic: 'info', t: 'Слот занят командой «' + byId[oid].name + '».' });
+      const m = marks.find(z => z.team === dl.team && z.st !== 'x' && z.a < dl.t + dur && z.b > dl.t); if (m) notes.push({ cls: 'bn bn-w', ic: 'warning', t: 'Наставник отметил ' + fm(m.a) + '–' + fm(m.b) + ' («' + ST[m.st][0] + '»).' });
+      const cf = evT.filter(z => z.id !== dl.team && z.mentor === t.mentor && d.place[z.id] && d.place[z.id].room !== dl.room && d.place[z.id].t < dl.t + dur && d.place[z.id].t + dur > dl.t); cf.forEach(z => notes.push({ cls: 'bn bn-w', ic: 'warning', t: t.mentor + ' в это время в ауд. ' + d.place[z.id].room + ' с командой «' + z.name + '». Поставить можно, появится предупреждение.' }));
+      DC = { title: t.name.replace(' · весна 2026', '') + ' · ' + tm(dl.t), sub: 'ауд. ' + dl.room + (p ? ' · сейчас ' + tm(p.t) : ' · не поставлена'), notes,
+        opts: own ? [d.pins[dl.team] ? { ic: 'push_pin', t: 'Снять закрепление', on: () => this.cellPin() } : { ic: 'push_pin', t: 'Закрепить', on: () => this.cellPin() }] : [{ ic: oid ? 'swap_horiz' : 'input', t: 'Поставить сюда', on: () => this.cellPut() }] }; }
+    let DS = { text: '', on: () => this.swapDo() };
+    if (dl.k === 'swap') { const A = byId[dl.a], B = byId[dl.b], pa = d.place[dl.a]; DS.text = 'Слот ' + tm(dl.t) + ' занят командой «' + B.name + '». ' + (pa && pa.room === dl.room ? 'Она перейдёт в слот ' + tm(pa.t) + ', «' + A.name + '» — в ' + tm(dl.t) + '. Обе команды закрепятся.' : '«' + A.name + '» встанет в ' + tm(dl.t) + ' и закрепится, а «' + B.name + '» попадёт в «Не поставлены».'); }
+    let DA = { title: '', text: '', cls: 'btn dis', lbl: '', on: () => this.addSlotsDo() };
+    if (dl.k === 'addSlots') { const p = this.addPlan(d, dl.room); DA = { ...DA, title: 'Добавить слоты в ауд. ' + dl.room, text: p.can ? 'Появятся ' + p.added.map(tm).join(', ') + ' перед кофебрейком. Кофебрейк станет ' + fm(p.nb0) + '–' + fm(p.b1) + ', остальные слоты не сдвинутся. Не поставленные команды встанут в новые слоты.' : 'Добавить слоты без сдвига нельзя: день заполнен до 17:00. Сократите выступление или кофебрейк на шаге «Сетка».', cls: p.can ? 'btn' : 'btn dis', lbl: this.lb('slots', 'Добавить ' + (p.added ? p.added.length : 0) + ' ' + pl(p.added ? p.added.length : 0, 'слот', 'слота', 'слотов'), 'Добавляем…', 'Добавлено') }; }
+    let DG = { team: '', cur: '', room: '', opts: [], none: false, cls: 'btn dis', lbl: 'Сохранить', on: () => this.chgDo() };
+    if (dl.k === 'chg') { const t = byId[dl.team], p = d.place[dl.team]; const fr = SL[p.room].filter(x => !occ[p.room][x]); DG = { ...DG, team: t.name, cur: tm(p.t) + ' · № ' + numOf(t.id), room: 'ауд. ' + p.room, none: !fr.length, cls: dl.sel != null ? 'btn' : 'btn dis', lbl: this.lb('chg', 'Сохранить'), opts: fr.map(x => ({ t: tm(x) + ' · свободен', cls: dl.sel === x ? 'hl' : '', note: marks.some(m => m.team === t.id && m.st !== 'x' && m.a < x + dur && m.b > x), on: () => this.dlg({ ...dl, sel: x }) })) }; }
+    let DT = { tm: '', room: '', q: '', res: [], has: false, cls: 'btn dis', lbl: 'Добавить', on: () => this.addTDo(), onQ: () => {} };
+    if (dl.k === 'addT') { const qq = (dl.q || '').trim().toLowerCase(); const cand = d.teams.filter(t => !(t.inEvent && d.place[t.id]) && (!qq || t.name.toLowerCase().includes(qq))).slice(0, 8); DT = { ...DT, tm: tm(dl.t), room: 'ауд. ' + dl.room, q: dl.q || '', onQ: e => this.dlg({ ...dl, q: e.target.value }), has: cand.length > 0, res: cand.map(t => ({ t: t.name, sub: t.inEvent ? 'в мероприятии, без слота' : 'не в мероприятии', cls: dl.sel === t.id ? 'hl' : '', on: () => this.dlg({ ...dl, sel: t.id }) })), cls: dl.sel ? 'btn' : 'btn dis', lbl: this.lb('addT', 'Добавить', 'Добавляем…', 'Добавлено') }; }
+    const DX = { lbl: this.lb('excel', 'Выбрать файл', 'Загружаем…', 'Загружено'), on: () => this.act('excel', () => this.dlg(null), 'Файл принят. Команды и аудитории загружены') };
+    let DR = { name: '', old: '', text: '', lbl: '', swLbl: '', errTail: '', on: () => this.regDo(false), onSw: () => this.regDo(true) };
+    if (dl.dir) { const x = acc.dirs.find(y => y.id === dl.dir), L = leftOf(x); DR = { ...DR, name: x.name, old: mineDir ? mineDir.name : '', text: (L == null ? 'Мест без ограничений.' : 'Осталось ' + L + ' из ' + x.cap + ' мест.') + ' Записаться можно только на одно направление, сменить его можно до 10 ноября.', lbl: this.lb('reg', 'Записаться', 'Записываем…', 'Готово'), swLbl: this.lb('sw', 'Перейти', 'Переводим…', 'Готово'), errTail: dl.sw && mineDir ? 'Ваша запись на «' + mineDir.name + '» сохранена.' : 'Выберите другое направление.' }; }
+
+    const ttc = s.toast;
+    return {
+      evName: EVN, evDate: EVD,
+      appW: s.forceW && !emb ? s.forceW + 'px' : '100%', appMinH: emb ? '0' : '100vh', appH: emb ? '100%' : 'auto', showDemo: !emb, showDh: desk && !emb, mob, desk, P, menu, tabs, tabCols: 'repeat(' + tabs.length + ',minmax(0,1fr))', mainPad: mob ? '16px 16px 24px' : '32px', cardPad: mob ? '16px' : '24px',
+      ptCls: mob ? 'pts' : 'pt', g3: mob ? 'minmax(0,1fr)' : emb ? 'repeat(auto-fill,minmax(260px,1fr))' : 'repeat(3,minmax(0,1fr))', annCols: mob ? 'minmax(0,1fr)' : emb ? 'repeat(auto-fit,minmax(320px,1fr))' : 'minmax(0,1fr) 400px',
+      hasBack: ['annPre', 'annAcc', 'marks'].includes(rn), back: () => this.go(rn === 'marks' ? 'menSch' : 'lk'), mobTitle: { annPre: 'Анонс', annAcc: 'Анонс', marks: 'Отметки' }[rn] || 'Лидерборд ТПУ',
+      panelOpen: s.panel, panelLbl: s.panel ? 'Свернуть' : 'Развернуть', togglePanel: () => this.setState({ panel: !s.panel }),
+      demoGroups: [
+        { t: 'Роль', opts: [['stu', 'Студент Иванов М.'], ['petrov', 'Наставник Петров А. С.'], ['sokolova', 'Наставник Соколова Е. В.'], ['org', 'Организатор']].map(([k, t]) => ({ t, cls: 'dsb' + (s.role === k ? ' on' : ''), on: () => this.setRole(k) })) },
+        { t: 'Акселератор', opts: [['pre', 'Не открыто'], ['open', 'Открыто'], ['closed', 'Закрыто']].map(([k, t]) => ({ t, cls: 'dsb' + (acc.st === k ? ' on' : ''), on: () => this.setD(z => { z.acc.st = k; }) })) },
+        { t: 'Сейчас', opts: [['before', 'До дедлайна'], ['after', 'После дедлайна'], ['day', 'День мероприятия']].map(([k, t]) => ({ t, cls: 'dsb' + (s.now === k ? ' on' : ''), on: () => this.setState({ now: k }) })) },
+        { t: 'Сеть', opts: [['ok', 'Норма'], ['err', 'Сбой сервера'], ['off', 'Нет связи']].map(([k, t]) => ({ t, cls: 'dsb' + (s.net === k ? ' on' : ''), on: () => { this.setState({ net: k }); this.go(rn, s.route); } })) }
+      ],
+      simTaken: () => this.simTaken(), reset: () => this.reset(), retry: () => this.go(rn, s.route),
+      toLk: () => this.go('lk'), toMen: () => this.go('menSch'), toEvents: () => this.go('events'), toEvPre: () => this.go('event', { id: 'pre' }), toSched: () => this.go('sched'),
+      onExcel: () => this.dlg({ k: 'excel' }), onGrade: () => { if (emb) { if (d.sch === 'pub' && !grading && this.props.onGrade) this.props.onGrade(); return; } if (d.sch === 'pub' && !d.grading) this.act('grade', () => this.setD(z => { z.grading = true; }), 'Приём оценок открыт'); },
+      onPrint: () => this.act('print', () => {}, 'Бланк сформирован и отправлен на печать'), printLbl: this.lb('print', 'Печать', 'Готовим…', 'Готово'), onDl: () => this.act('dl', () => {}, 'Список записавшихся скачан'),
+      V, R, lk: { cards: lkCards, empty: !lkCards.length }, st1: st1.filter(Boolean), annBlocks, AN, MS, MK, sch, steps, W1, W2, W3, W4, W5, MT, EV, evRows, AC,
+      D, DP, DB, DU, DC, DS, DA, DG, DT, DX, DR,
+      toast: ttc ? { msg: ttc.msg, cls: 'stoast' + (ttc.kind === 'err' ? ' err' : ttc.kind === 'info' ? ' info' : ''), ic: ttc.kind === 'err' ? 'error' : ttc.kind === 'info' ? 'info' : 'check_circle' } : null
+    };
+  }
+}
+</script>
+</body>
+</html>
