@@ -429,7 +429,7 @@
       <h2 class="ct">Правило допуска</h2>
       <div><span class="lbl">Статус команды в витрине</span><div class="row" style="gap:8px"><sc-for list="{{ W1.chips }}" as="c" hint-placeholder-count="3"><span class="{{ c.cls }}" onClick="{{ c.on }}">{{ c.t }}</span></sc-for></div></div>
       <div><span class="lbl">Команда начала работу в семестре</span><div class="row" style="gap:8px;max-width:460px"><input class="{{ W1.fromCls }}" style="flex:1" placeholder="дд.мм.гггг" value="{{ W1.from }}" onChange="{{ W1.onFrom }}" onBlur="{{ W1.blur }}" disabled="{{ W1.locked }}"><span>—</span><input class="{{ W1.toCls }}" style="flex:1" placeholder="дд.мм.гггг" value="{{ W1.to }}" onChange="{{ W1.onTo }}" onBlur="{{ W1.blur }}" disabled="{{ W1.locked }}"></div></div>
-      <div class="row" style="flex-wrap:wrap"><button class="{{ W1.pullCls }}" onClick="{{ W1.onPull }}"><span class="ms">download</span>Подтянуть команды</button><span class="cap">В витрине {{ W1.poolN }} команд отделения · по правилу подходят ещё {{ W1.fitN }}</span></div>
+      <div class="row" style="flex-wrap:wrap"><button class="{{ W1.pullCls }}" onClick="{{ W1.onPull }}"><span class="ms">download</span>Подтянуть команды</button><span class="cap">Команд отделения в витрине: {{ W1.poolN }} · по правилу подходят ещё {{ W1.fitN }}</span></div>
     </div>
     <sc-if value="{{ W1.none }}" hint-placeholder-val="{{ false }}"><div class="card"><div class="empty"><span class="ms">groups</span><span>Команд пока нет. Настройте правило и подтяните команды из витрины.</span></div></div></sc-if>
     <sc-if value="{{ W1.has }}" hint-placeholder-val="{{ false }}">

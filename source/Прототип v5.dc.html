@@ -593,7 +593,7 @@ textarea{resize:vertical}
                 <div class="col" style="gap:20px;max-width:980px">
                   <div class="card col" style="gap:14px">
                     <h2 class="ct">Основное</h2>
-                    <div><div class="lbl">Название</div><input class="{{ cr.nameCls }}" placeholder="Например, Предзащита, весна 2027" value="{{ cr.name }}" onChange="{{ cr.setName }}"><sc-if value="{{ cr.nameErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>Введите название</span></sc-if></div>
+                    <div><div class="lbl">Название</div><input class="{{ cr.nameCls }}" placeholder="{{ cr.namePh }}" value="{{ cr.name }}" onChange="{{ cr.setName }}"><sc-if value="{{ cr.nameErr }}" hint-placeholder-val="{{ false }}"><span class="et"><span class="ms">error</span>Введите название</span></sc-if></div>
                   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
                     <div><div class="lbl">Дата</div><input type="date" class="inp fill" value="{{ cr.date }}" onChange="{{ cr.setDate }}"></div>
                     <div><div class="lbl">Начало</div><input type="time" class="inp fill" value="{{ cr.t1 }}" onChange="{{ cr.setT1 }}"></div>
@@ -1256,7 +1256,7 @@ class Component extends DCLogic {
     this.oToast('Импортировано 16 команд в 2 аудитории. Добавьте экспертов', null, 5000);
   }
   oOpen() {
-    const ev = this.ev(this.state.oEv); if (!ev.pub) return;
+    const ev = this.ev(this.state.oEv); if (!ev.pub) { this.setState({ oOpenErr: 'Нельзя открыть приём оценок: сначала опубликуйте мероприятие', oErrRoom: null }); return; }
     if (ev.sched && (!this.state.sync || this.state.sync.sch !== 'pub')) { this.setState({ oOpenErr: 'Нельзя открыть приём оценок: сначала опубликуйте расписание. Эксперты оценивают команды в порядке слотов.', oErrRoom: null }); return; }
     const { parts, bad } = this.openReasons(ev);
     if (parts.length) { this.setState({ oOpenErr: 'Нельзя открыть приём оценок: ' + parts.join(', '), oErrRoom: bad ? bad.id : null, oErrLoose: !!ev.loose.length }); return; }
@@ -1284,7 +1284,7 @@ class Component extends DCLogic {
     const roles = [['org', 'Организатор'], ['stu', 'Студент'], ['petrov', 'Наставник Петров'], ['sokolova', 'Наставник Соколова'], ['tr', 'Тренер']].map(([k, t]) => ({ t, cls: S.role === k ? 'on' : '', pick: () => this.setState(s => ({ role: k, oDlg: null, oMenu: null, deny: false, stPage: k === 'tr' ? 'own' : 'lk', oPage: k === 'org' && s.oPage === 'sched' ? 'events' : s.oPage, smKey: s.smKey + 1 }), top) }));
     const days = [['2026-10-16', '16 октября · сбор отметок'], ['2026-10-18', '18 октября · дедлайн прошёл'], ['2026-10-20', '20 октября · предзащита'], ['2026-11-10', '10 ноября · после «Старт в ИТ»']].map(([k, t]) => ({ t, cls: S.today === k ? 'on' : '', pick: () => { this.setState({ today: k }); this.oToast('Дата в прототипе: ' + this.fmtDate(k)); } }));
     const fileCap = fl => sn(LB[fl.by].name) + ' · ' + fl.ext.toUpperCase() + ', ' + fl.size.toFixed(1).replace('.', ',') + ' МБ';
-    const fieldsV = (x, tried) => ({ name: x.name, nameCls: 'inp fill' + (tried && !x.name.trim() ? ' err' : ''), nameErr: tried && !x.name.trim(), setName: e => { x.name = e.target.value; this.touch(); },
+    const fieldsV = (x, tried) => ({ name: x.name, namePh: x.type === 'acc' ? 'Например, Акселератор «Старт в ИТ»' : x.type === 'def' ? 'Например, Защита, весна 2027' : 'Например, Предзащита, весна 2027', nameCls: 'inp fill' + (tried && !x.name.trim() ? ' err' : ''), nameErr: tried && !x.name.trim(), setName: e => { x.name = e.target.value; this.touch(); },
       date: x.date, setDate: e => { x.date = e.target.value; this.touch(); }, t1: x.t1, setT1: e => { x.t1 = e.target.value; this.touch(); }, t2: x.t2, setT2: e => { x.t2 = e.target.value; this.touch(); },
       t2Cls: 'inp fill' + (x.t2 <= x.t1 ? ' err' : ''), timeErr: x.t2 <= x.t1, place: x.place, setPlace: e => { x.place = e.target.value; this.touch(); }, desc: x.desc, setDesc: e => { x.desc = e.target.value; this.touch(); } });
     const dirV = (dirs, tried, pubTried, errDir) => { const er = this.dirErrs(dirs, tried); return dirs.map((d, i) => {
@@ -1387,7 +1387,7 @@ class Component extends DCLogic {
       .sort((a, b) => (this.past(a) - this.past(b)) || a.date.localeCompare(b.date)).map(x => {
         const d = x.dirs.find(dd => dd.tr.some(t => t.uid === ME)), past = this.past(x);
         return { name: x.name, when: this.when(x), dir: d.role, room: d.room + ', ' + x.place, co: d.tr.filter(t => t.uid !== ME).map(t => ({ ini: ini(LB[t.uid].name), short: sn(LB[t.uid].name) })), noCo: d.tr.length === 1,
-          bd: past ? 'Состоялся' : 'Предстоит', bdCls: past ? 'bd b-n' : 'bd b-v', btnCls: 'btn' + (past ? '' : ' dis'), tip: !past, files: past ? (d.files.length ? 'Выложено: ' + pl(d.files.length, 'файл', 'файла', 'файлов') : 'Файлов пока нет') : '', up: () => past && this.upOpen(x.id, d.id) };
+          bd: past ? 'Состоялся' : 'Предстоит', bdCls: past ? 'bd b-n' : 'bd b-v', btnCls: 'btn' + (past ? '' : ' dis'), tip: !past, files: past ? (d.files.length ? 'Выложено: ' + pl(d.files.length, 'файл', 'файла', 'файлов') : 'Файлов пока нет') : 'Выложить можно после окончания мероприятия', up: () => past && this.upOpen(x.id, d.id) };
       });
     const tr = { isMine: S.role === 'tr' && S.stPage === 'own', cards: tcs, empty: !tcs.length };
 
